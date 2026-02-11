@@ -3330,7 +3330,7 @@ video.smartphone_video_player {
 }
 .tgme_background_pattern.default {
   opacity: 0.3;
-  background-image: url('/img/tgme/pattern.svg?1');
+  background-image: url('/img/tgme/pattern.svg?xieworld_vf');
 }
 html.theme_dark .tgme_background,
 body.bg_dark .tgme_background {
@@ -3342,7 +3342,7 @@ body.bg_dark .tgme_background {
 html.theme_dark .tgme_background.default,
 body.bg_dark .tgme_background.default {
   opacity: 0.3;
-  -webkit-mask-image: url('/img/tgme/pattern.svg?1');
+  -webkit-mask-image: url('/img/tgme/pattern.svg?xieworld_vf');
 }
 body.bg_light .tgme_background,
 body.bg_light .tgme_background.default {
