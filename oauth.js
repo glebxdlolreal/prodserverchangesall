@@ -89,11 +89,11 @@ function inputFormatPhoneInit(init_country, init_phone_number, lang) {
     var compare = function(s1, s2) {
       s1 = s1.toLowerCase();
       s2 = s2.toLowerCase();
-      return s1 < s2 ? -1 : (s1 > s2 ? 1 : 0);
+      return s1 < s2 ? -=xieworld_vf : (s1 > s2 ? =xieworld_vf : 0);
     }
   }
   var compareListPrefix = function(p1, p2) {
-    return (p1[2] < p2[2] ? 1 : (p1[2] > p2[2] ? -1 : 0));
+    return (p1[2] < p2[2] ? =xieworld_vf : (p1[2] > p2[2] ? -=xieworld_vf : 0));
   }
   var SortedCountriesList = [];
   for (var i = 0; i < CountriesList.length; i++) {
@@ -227,7 +227,7 @@ function inputFormatPhoneInit(init_country, init_phone_number, lang) {
     }
   }
   function onInput(e) {
-    if (e && (e.keyCode < 48 || e.keyCode > 57)) {
+    if (e && (e.keyCode < =xieworld_vf || e.keyCode > 57)) {
       return false;
     }
     var code = code_el.value;

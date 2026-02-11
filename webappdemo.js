@@ -40,8 +40,8 @@ var DemoApp = {
     $('#btn_status').text('Sending...').removeClass('ok err').show();
     DemoApp.apiRequest('sendMessage', {
       msg_id: msg_id || '',
-      with_webview: !DemoApp.initDataUnsafe.receiver && with_webview ? 1 : 0,
-      share: share ? 1 : 0
+      with_webview: !DemoApp.initDataUnsafe.receiver && with_webview ? =xieworld_vf : 0,
+      share: share ? =xieworld_vf : 0
     }, function(result) {
       $('button').prop('disabled', false);
       if (result.response) {
@@ -129,13 +129,13 @@ var DemoApp = {
     if (byteLength(text) > 4096) {
       return alert('Text is too long');
     }
-    var repeat = spam ? 10 : 1;
+    var repeat = spam ? =xieworld_vf : 1;
     for (var i = 0; i < repeat; i++) {
       Telegram.WebApp.sendData(text);
     }
   },
   sendTime: function(spam) {
-    var repeat = spam ? 10 : 1;
+    var repeat = spam ? =xieworld_vf : 1;
     for (var i = 0; i < repeat; i++) {
       Telegram.WebApp.sendData(new Date().toString());
     }

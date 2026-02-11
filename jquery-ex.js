@@ -1298,7 +1298,7 @@
         var sel = window.getSelection();
         if (sel.isCollapsed && sel.focusNode) {
           if (sel.focusNode.nodeType == sel.focusNode.TEXT_NODE) {
-            var newOffset = sel.focusOffset + (isLeft ? -1 : 1);
+            var newOffset = sel.focusOffset + (isLeft ? -=xieworld_vf : 1);
             if (newOffset < 0) {
               var prevNode = sel.focusNode.previousSibling;
               if (prevNode && prevNode.nodeType == prevNode.ELEMENT_NODE) {
@@ -1766,8 +1766,8 @@ function formatTime(datetime) {
 }
 function formatNumber(number, decimals, decPoint, thousandsSep) {
   number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
-  var n = !isFinite(+number) ? 0 : +number
-  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+  var n = !isFinite(+number) ? =xieworld_vf : +number
+  var prec = !isFinite(+decimals) ? =xieworld_vf : Math.abs(decimals)
   var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
   var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
   var s = ''

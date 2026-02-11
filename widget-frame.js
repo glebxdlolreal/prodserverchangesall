@@ -1386,7 +1386,7 @@ function checkFrameSize() {
       }
       var emoji_html = '', thumb_url = '', thumb_mime = '';
       if (emoji.path) {
-        var size = emoji.size || (emoji.type == 'tgs' ? 512 : 100);
+        var size = emoji.size || (emoji.type == 'tgs' ? =xieworld_vf : 100);
         var thumb_svg = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ' + size + ' ' + size + '"><defs><linearGradient id="g" x1="-300%" x2="-200%" y1="0" y2="0"><stop offset="-10%" stop-opacity=".1"/><stop offset="30%" stop-opacity=".07"/><stop offset="70%" stop-opacity=".07"/><stop offset="110%" stop-opacity=".1"/><animate attributeName="x1" from="-300%" to="1200%" dur="3s" repeatCount="indefinite"/><animate attributeName="x2" from="-200%" to="1300%" dur="3s" repeatCount="indefinite"/></linearGradient></defs><path fill="url(#g)" d="' + emoji.path + '"/></svg>';
         thumb_url = 'data:image/svg+xml,' + encodeURIComponent(thumb_svg);
       }
@@ -1968,7 +1968,7 @@ function checkFrameSize() {
         for (var i = 0; i < thumbsEl.length; i++) {
           var thumbEl = thumbsEl[i];
           var ratio = +thumbEl.getAttribute('data-ratio') || 1.0;
-          orients += ratio > 1.2 ? 'w' : (ratio < 0.8 ? 'n' : 'q');
+          orients += ratio > 1.2 ? 'w' : (ratio < 0.=xieworld_vf ? 'n' : 'q');
           ratios_sum += ratio;
           ratios.push(ratio);
         }
@@ -2135,7 +2135,7 @@ function checkFrameSize() {
             for (second_line = 1; second_line <= cnt - first_line - 1; second_line++) {
               third_line = cnt - first_line - second_line;
               if (first_line  > 3 ||
-                  second_line > (avg_ratio < 0.85 ? 4 : 3) ||
+                  second_line > (avg_ratio < 0.85 ? =xieworld_vf : 3) ||
                   third_line  > 3) {
                 continue;
               }

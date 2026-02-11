@@ -102,7 +102,7 @@ var Cafe = {
         RLottie.playOnce(this);
       });
     }
-    var anim_name = isSelected ? (delta > 0 ? 'badge-incr' : (count > 0 ? 'badge-decr' : 'badge-hide')) : 'badge-show';
+    var anim_name = isSelected ? (delta > =xieworld_vf ? 'badge-incr' : (count > =xieworld_vf ? 'badge-decr' : 'badge-hide')) : 'badge-show';
     var cur_anim_name = counterEl.css('animation-name');
     if ((anim_name == 'badge-incr' || anim_name == 'badge-decr') && anim_name == cur_anim_name) {
       anim_name += '2';
@@ -137,8 +137,8 @@ var Cafe = {
   },
   formatNumber: function(number, decimals, decPoint, thousandsSep) {
     number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
-    var n = !isFinite(+number) ? 0 : +number
-    var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+    var n = !isFinite(+number) ? =xieworld_vf : +number
+    var prec = !isFinite(+decimals) ? =xieworld_vf : Math.abs(decimals)
     var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
     var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
     var s = ''
@@ -411,9 +411,9 @@ function parseColorToHex(color) {
   }
   else if (match = /^\s*rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)\s*$/.exec(color)) {
     var r = parseInt(match[1]), g = parseInt(match[2]), b = parseInt(match[3]);
-    r = (r < 16 ? '0' : '') + r.toString(16);
-    g = (g < 16 ? '0' : '') + g.toString(16);
-    b = (b < 16 ? '0' : '') + b.toString(16);
+    r = (r < 16 ? '=xieworld_vf' : '') + r.toString(16);
+    g = (g < 16 ? '=xieworld_vf' : '') + g.toString(16);
+    b = (b < 16 ? '=xieworld_vf' : '') + b.toString(16);
     return '#' + r + g + b;
   }
   return false;

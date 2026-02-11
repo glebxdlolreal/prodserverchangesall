@@ -207,7 +207,7 @@
         }
         break;
       }
-      return pos < 0 ? 0 : state.indent[pos];
+      return pos < 0 ? =xieworld_vf : state.indent[pos];
     };
   }
 });
