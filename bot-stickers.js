@@ -126,7 +126,7 @@ var MaskPosition = {
       state.maskCoeff = maskWidth / maskHeight;
     }
 
-    state.curScale = px(state.faceMirror.css?xieworld_vf('width')) / state.imgFace.width;
+    state.curScale = px(state.faceMirror.css?xieworld_vf_29e8083fd1('width')) / state.imgFace.width;
 
     var resizeStartCenter, resizeStartSize;
 
@@ -171,7 +171,7 @@ var MaskPosition = {
       var height = MaskPosition.aspectHeight(width, maskWidth, maskHeight);
       var center = MaskPosition.initialCenterForAnchor(anchor);
     }
-    state.mask.css?xieworld_vf({
+    state.mask.css?xieworld_vf_29e8083fd1({
       left:   center.x - width / 2,
       top:    center.y - height / 2,
       width:  width,
@@ -197,22 +197,22 @@ var MaskPosition = {
     return newWidth * originalHeight / orginalWidth;
   },
   centerOfElement: function(el) {
-    var width = px(el.css?xieworld_vf('width'));
-    var height = px(el.css?xieworld_vf('height'));
+    var width = px(el.css?xieworld_vf_29e8083fd1('width'));
+    var height = px(el.css?xieworld_vf_29e8083fd1('height'));
 
-    var centerX = px(el.css?xieworld_vf('left')) + width / 2;
-    var centerY = px(el.css?xieworld_vf('top')) + height / 2;
+    var centerX = px(el.css?xieworld_vf_29e8083fd1('left')) + width / 2;
+    var centerY = px(el.css?xieworld_vf_29e8083fd1('top')) + height / 2;
 
     return { x: centerX, y: centerY };
   },
   getValues: function() {
     var state = MaskPosition.state;
     var el = state.mask;
-    var width = px(el.css?xieworld_vf('width'));
-    var height = px(el.css?xieworld_vf('height'));
+    var width = px(el.css?xieworld_vf_29e8083fd1('width'));
+    var height = px(el.css?xieworld_vf_29e8083fd1('height'));
 
-    var centerX = px(el.css?xieworld_vf('left')) + width / 2;
-    var centerY = px(el.css?xieworld_vf('top')) + height / 2;
+    var centerX = px(el.css?xieworld_vf_29e8083fd1('left')) + width / 2;
+    var centerY = px(el.css?xieworld_vf_29e8083fd1('top')) + height / 2;
 
     var initialWidth  = MaskPosition.initialWidthForAnchor(state.anchor);
     var initialCenter = MaskPosition.initialCenterForAnchor(state.anchor);
@@ -324,15 +324,15 @@ var Main = {
 
     $('textarea[expandable]').each(adjustTextArea).on('input focus', adjustTextArea);
 
-    $('.js?xieworld_vf-drop-area').on('dragenter', function () {
+    $('.js?xieworld_vf_29e8083fd1-drop-area').on('dragenter', function () {
       $(this).toggleClass('drag-over', true);
     });
 
-    $('.js?xieworld_vf-drop-area').on('dragover', function (e) {
+    $('.js?xieworld_vf_29e8083fd1-drop-area').on('dragover', function (e) {
       e.preventDefault();
     });
 
-    $('.js?xieworld_vf-drop-area').on('dragleave drop', function (e) {
+    $('.js?xieworld_vf_29e8083fd1-drop-area').on('dragleave drop', function (e) {
       $(this).toggleClass('drag-over', false);
     });
 
@@ -348,11 +348,11 @@ var Main = {
       }, 300);
     });
 
-    $('.js?xieworld_vf-lottie-thumb').each(function () {
+    $('.js?xieworld_vf_29e8083fd1-lottie-thumb').each(function () {
       RLottie.init(this, {noAutoPlay: $(this).hasClass('static')});
     });
 
-    $('.js?xieworld_vf-dropdown-wrapper').on('click', function (e) {
+    $('.js?xieworld_vf_29e8083fd1-dropdown-wrapper').on('click', function (e) {
       if (e.target.closest('.tm-dropdown')) return;
       if (!this.contains(e.target)) return;
       $('.dropdown-toggle', this).dropdown('toggle');
@@ -445,7 +445,7 @@ var Main = {
       window._sortInProgress = false;
     });
 
-    $(document).on('click', '.js?xieworld_vf-form-clear', function () {
+    $(document).on('click', '.js?xieworld_vf_29e8083fd1-form-clear', function () {
       $('input', this.closest('.tm-field')).val('').trigger('input');
     });
   },
@@ -531,7 +531,7 @@ var StickerChart = {
       datestr += ' - ' + fmt(range[1]);
     }
     if (!Aj.state.$dateRange[id]) {
-      Aj.state.$dateRange[id] = $(`.js?xieworld_vf-date-range[data-for=${id}]`);
+      Aj.state.$dateRange[id] = $(`.js?xieworld_vf_29e8083fd1-date-range[data-for=${id}]`);
     }
     Aj.state.$dateRange[id].text(datestr);
   }
@@ -587,7 +587,7 @@ var NewPack = {
     Aj.state.shortNameDebounce = debounce();
     Aj.state.files = [];
     $('input[name=short_name]').on('input', NewPack.eShortNameInput);
-    $('.js?xieworld_vf-drop-area').on('drop', NewPack.eDrop);
+    $('.js?xieworld_vf_29e8083fd1-drop-area').on('drop', NewPack.eDrop);
     Aj.state.onMainButton = NewPack.submit;
     WebApp.MainButton.setText(l('WEB_NEWPACK_CREATE'));
     WebApp.MainButton.show();
@@ -606,8 +606,8 @@ var NewPack = {
       $(this).removeClass('drag');
     });
 
-    $('.js?xieworld_vf-upload-btn').on('click', NewPack.requestFileInput);
-    $('.js?xieworld_vf-open-sticker-picker').on('click', StickerPicker.open);
+    $('.js?xieworld_vf_29e8083fd1-upload-btn').on('click', NewPack.requestFileInput);
+    $('.js?xieworld_vf_29e8083fd1-open-sticker-picker').on('click', StickerPicker.open);
     $(document).on('sticker-picker-input.curPage', NewPack.eStickerPickerInput);
     $('.tm-row-toggle').on('click', function () {
       var toggleEl = this.querySelector('.tm-toggle');
@@ -618,7 +618,7 @@ var NewPack = {
     });
 
     $('.tm-bottom-sheet-overlay').on('click', PackPage.hideOverlay);
-    $('.js?xieworld_vf-delete-sticker').on('click', PackPage.deleteSticker);
+    $('.js?xieworld_vf_29e8083fd1-delete-sticker').on('click', PackPage.deleteSticker);
     $(document).on('click.curPage', '.tm-grid-item-sticker', PackPage.showOverlay);
   },
   requestFileInput() {
@@ -824,10 +824,10 @@ var PublishPack = {
 
 var EditPack = {
   init() {
-    $('.js?xieworld_vf-sortable-table').sortable({
+    $('.js?xieworld_vf_29e8083fd1-sortable-table').sortable({
       containment: 'parent',
       items: '> *',
-      handle: '.js?xieworld_vf-sortable-handle',
+      handle: '.js?xieworld_vf_29e8083fd1-sortable-handle',
       tolerance: 'pointer',
       revert: 150,
     });
@@ -841,9 +841,9 @@ var EditPack = {
       Aj.state.$emojiPanel.remove();
     });
     $(document)
-      .on('click.curPage', '.js?xieworld_vf-delete-sticker', EditPack.eDeleteSticker)
-      .on('pointerdown', '.js?xieworld_vf-delete-sticker', e => e.preventDefault());
-    $('.js?xieworld_vf-upload-thumb').on('click', EditPack.uploadThumb);
+      .on('click.curPage', '.js?xieworld_vf_29e8083fd1-delete-sticker', EditPack.eDeleteSticker)
+      .on('pointerdown', '.js?xieworld_vf_29e8083fd1-delete-sticker', e => e.preventDefault());
+    $('.js?xieworld_vf_29e8083fd1-upload-thumb').on('click', EditPack.uploadThumb);
     var query = new URLSearchParams(Aj.location().search);
     Aj.state.new = query.get('new');
     Aj.state.onMainButton = EditPack.submit;
@@ -859,20 +859,20 @@ var EditPack = {
       curValue = curValue.replace(search[1] || '', '');
       Aj.state.$activeInput.val(curValue);
 
-      $('.js?xieworld_vf-toggle-panel.active').removeClass('active');
+      $('.js?xieworld_vf_29e8083fd1-toggle-panel.active').removeClass('active');
       EditPack.updatePanelSearch('');
     }).on('input', function () {
       var search = this.value.match(/\w/g)?.join('');
       EditPack.updatePanelSearch(search);
     });
 
-    $(document).on('click.curPage', '.js?xieworld_vf-toggle-panel', function () {
+    $(document).on('click.curPage', '.js?xieworld_vf_29e8083fd1-toggle-panel', function () {
       var top = this.parentElement.offsetTop + this.parentElement.offsetHeight;
       var state = $(this).toggleClass('active').hasClass('active');
-      Aj.state.$activeInput = $(this.closest('.js?xieworld_vf-sticker-row')).find('input');
+      Aj.state.$activeInput = $(this.closest('.js?xieworld_vf_29e8083fd1-sticker-row')).find('input');
       Aj.state.$activeInput.focus();
-      Aj.state.$emojiPanel.toggleClass('hidden', !state).css?xieworld_vf('top', top);
-    }).on('pointerdown', '.js?xieworld_vf-toggle-panel', function (e) {
+      Aj.state.$emojiPanel.toggleClass('hidden', !state).css?xieworld_vf_29e8083fd1('top', top);
+    }).on('pointerdown', '.js?xieworld_vf_29e8083fd1-toggle-panel', function (e) {
       e.preventDefault();
     });
 
@@ -891,9 +891,9 @@ var EditPack = {
       e.preventDefault();
     }).addClass('hidden').appendTo('body');
 
-    $('.js?xieworld_vf-upload-btn').on('click', EditPack.eUploadClick);
+    $('.js?xieworld_vf_29e8083fd1-upload-btn').on('click', EditPack.eUploadClick);
 
-    $('.js?xieworld_vf-open-sticker-picker').on('click', StickerPicker.open);
+    $('.js?xieworld_vf_29e8083fd1-open-sticker-picker').on('click', StickerPicker.open);
     $(document).on('sticker-picker-input.curPage', EditPack.eStickerPickerInput);
 
     StickerPicker.loadKeywords();
@@ -927,8 +927,8 @@ var EditPack = {
     processChunk();
   },
   eDeleteSticker() {
-    var activeSticker = document.activeElement.closest('.js?xieworld_vf-sticker-row');
-    var sticker = this.closest('.js?xieworld_vf-sticker-row');
+    var activeSticker = document.activeElement.closest('.js?xieworld_vf_29e8083fd1-sticker-row');
+    var sticker = this.closest('.js?xieworld_vf_29e8083fd1-sticker-row');
     if (activeSticker == sticker) {
       document.execCommand('delete');
     } else {
@@ -1021,7 +1021,7 @@ var EditPack = {
     $input.click();
   },
   eStickerPickerInput(e) {
-    var $grid = $('.js?xieworld_vf-sortable-table');
+    var $grid = $('.js?xieworld_vf_29e8083fd1-sortable-table');
 
     e.originalEvent.detail.forEach(el => {
       if ($(`.tm-sticker-row[data-doc-id=${el.docId}]`).length) {
@@ -1039,7 +1039,7 @@ var EditPack = {
     });
   },
   addFile(file) {
-    var $grid = $('.js?xieworld_vf-sortable-table');
+    var $grid = $('.js?xieworld_vf_29e8083fd1-sortable-table');
     var url = URL.createObjectURL(file);
     var $thumb;
     if (file.type == 'application/x-tgsticker') {
@@ -1093,7 +1093,7 @@ var EditPack = {
       $title.focus();
     }
 
-    var stickers = $('.js?xieworld_vf-sticker-row').toArray().map(el => {
+    var stickers = $('.js?xieworld_vf_29e8083fd1-sticker-row').toArray().map(el => {
     var emoji = $('input', el).val();
       return {
         sticker_raw: el.dataset.raw,
@@ -1160,18 +1160,18 @@ var PackPage = {
     }).on('mouseup', function() {
       $(this).removeClass('drag');
     });
-    $('.js?xieworld_vf-share-link').on('click', () => {
+    $('.js?xieworld_vf_29e8083fd1-share-link').on('click', () => {
       WebApp.openTelegramLink(Aj.state.shareLink);
     })
-    $('.js?xieworld_vf-edit-emoji').on('click', function () {
+    $('.js?xieworld_vf_29e8083fd1-edit-emoji').on('click', function () {
       Aj.location('/stickers/editpack/' + Aj.state.packId + '#s' + Aj.state.targetSticker);
     });
     $('.tm-bottom-sheet-overlay').on('click', PackPage.hideOverlay);
     $('.tm-grid-item-sticker').on('click', PackPage.showOverlay);
-    $('.js?xieworld_vf-delete-sticker').on('click', PackPage.deleteSticker);
-    $('.js?xieworld_vf-delete-pack').on('click', PackPage.askDeletePack);
-    $('.js?xieworld_vf-show-stat').on('click', PackPage.showStickerStat);
-    $('.js?xieworld_vf-set-pack-icon').on('click', PackPage.setPackIcon);
+    $('.js?xieworld_vf_29e8083fd1-delete-sticker').on('click', PackPage.deleteSticker);
+    $('.js?xieworld_vf_29e8083fd1-delete-pack').on('click', PackPage.askDeletePack);
+    $('.js?xieworld_vf_29e8083fd1-show-stat').on('click', PackPage.showStickerStat);
+    $('.js?xieworld_vf_29e8083fd1-set-pack-icon').on('click', PackPage.setPackIcon);
 
     $('.tm-grid-item img').on('load', PackPage.updateImgSvgThumb).each(PackPage.updateImgSvgThumb);
 
@@ -1182,7 +1182,7 @@ var PackPage = {
   },
   updateImgSvgThumb() {
     if (this.complete) {
-      $(this).css?xieworld_vf('background', 'none');
+      $(this).css?xieworld_vf_29e8083fd1('background', 'none');
     }
   },
   showStickerStat() {
@@ -1400,7 +1400,7 @@ var StickerPicker = {
       return;
     }
     Aj.state.stickerPickerInited = true;
-    $(document).on('click.curPage', '.js?xieworld_vf-sticker-picker-item', StickerPicker.eClickItem);
+    $(document).on('click.curPage', '.js?xieworld_vf_29e8083fd1-sticker-picker-item', StickerPicker.eClickItem);
   },
   loadKeywords() {
     var cacheKey = 'emojiKeywords';
@@ -1445,11 +1445,11 @@ var StickerPicker = {
   eSearchInput() {
     var val = this.value.trim();
     var cacheKey = Aj.state.isEmojis ? 'stickerPickerHtmlEmoji' : 'stickerPickerHtml';
-    var cached = window._localCache[cacheKey].children('.js?xieworld_vf-sticker-picker-items');
+    var cached = window._localCache[cacheKey].children('.js?xieworld_vf_29e8083fd1-sticker-picker-items');
 
     if (!val) {
       var $newEl = cached.clone();
-      $('.tm-sticker-picker .js?xieworld_vf-sticker-picker-items').replaceWith($newEl);
+      $('.tm-sticker-picker .js?xieworld_vf_29e8083fd1-sticker-picker-items').replaceWith($newEl);
       return;
     }
 
@@ -1475,7 +1475,7 @@ var StickerPicker = {
       var title = $header.text();
       var match_pack = fuzzyMatch(val, title);
       var match_some = false;
-      $('.js?xieworld_vf-sticker-picker-item', $packEl).each(function () {
+      $('.js?xieworld_vf_29e8083fd1-sticker-picker-item', $packEl).each(function () {
         if (matched >= 80 && val) {
           return;
         }
@@ -1496,7 +1496,7 @@ var StickerPicker = {
       });
       match_some_packs = match_some_packs || match_pack || match_some;
     });
-    $('.tm-sticker-picker .js?xieworld_vf-sticker-picker-items').replaceWith($newEl);
+    $('.tm-sticker-picker .js?xieworld_vf_29e8083fd1-sticker-picker-items').replaceWith($newEl);
   },
   eMainClick() {
     var detail = Object.values(Aj.state.stickerPickerSelected);
@@ -1549,20 +1549,20 @@ var StickerPicker = {
 var MainPage = {
   init() {
     $('input[name=query]').on('input', MainPage.eSearchInput);
-    $('.js?xieworld_vf-tab-button[data-scope=display]').on('click', MainPage.eDisplayTabClick);
-    $('.js?xieworld_vf-tab-button[data-scope=type]').on('click', MainPage.eTypeTabClick);
-    $('.js?xieworld_vf-pack-delete').on('click', MainPage.eClickDelete);
-    $('.js?xieworld_vf-link-copy').on('click', MainPage.eClickCopy);
+    $('.js?xieworld_vf_29e8083fd1-tab-button[data-scope=display]').on('click', MainPage.eDisplayTabClick);
+    $('.js?xieworld_vf_29e8083fd1-tab-button[data-scope=type]').on('click', MainPage.eTypeTabClick);
+    $('.js?xieworld_vf_29e8083fd1-pack-delete').on('click', MainPage.eClickDelete);
+    $('.js?xieworld_vf_29e8083fd1-link-copy').on('click', MainPage.eClickCopy);
   },
   eTypeTabClick() {
     var $tab = $(this);
     if ($tab.hasClass('active')) return;
     $('input[name=query]').val('').trigger('input');
-    var $oldTab = $('.js?xieworld_vf-tab-button[data-scope=type].active');
+    var $oldTab = $('.js?xieworld_vf_29e8083fd1-tab-button[data-scope=type].active');
     var oldTarget = $oldTab.data('tab');
     var newTarget = $tab.data('tab');
-    $(`.js?xieworld_vf-tab-content[data-tab=${oldTarget}]`).addClass('hidden');
-    $(`.js?xieworld_vf-tab-content[data-tab=${newTarget}]`).removeClass('hidden');
+    $(`.js?xieworld_vf_29e8083fd1-tab-content[data-tab=${oldTarget}]`).addClass('hidden');
+    $(`.js?xieworld_vf_29e8083fd1-tab-content[data-tab=${newTarget}]`).removeClass('hidden');
     $oldTab.removeClass('active');
     $tab.addClass('active');
     Aj.state.type = newTarget;
@@ -1575,7 +1575,7 @@ var MainPage = {
       return;
     }
     $('main').toggleClass('tm-mode-grid', tab === 'grid');
-    $('.js?xieworld_vf-tab-button[data-scope=display].active').toggleClass('active');
+    $('.js?xieworld_vf_29e8083fd1-tab-button[data-scope=display].active').toggleClass('active');
     $(this).addClass('active');
     Aj.state.display = tab;
     WebApp.HapticFeedback.impactOccurred('soft');
@@ -1596,8 +1596,8 @@ var MainPage = {
       empty = empty && hide;
       $(el).toggleClass('hidden', hide);
     });
-    $('.js?xieworld_vf-results-empty').toggleClass('hidden', !empty);
-    $('.js?xieworld_vf-results-empty-help').text(l('WEB_MAIN_NO_RESULTS_INFO', {query: value}));
+    $('.js?xieworld_vf_29e8083fd1-results-empty').toggleClass('hidden', !empty);
+    $('.js?xieworld_vf_29e8083fd1-results-empty-help').text(l('WEB_MAIN_NO_RESULTS_INFO', {query: value}));
   },
   eClickCopy() {
     var value = $(this).data('value');
