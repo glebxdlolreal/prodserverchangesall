@@ -267,18 +267,18 @@ process.umask = function() { return 0; };
 
 },{}],3:[function(require,module,exports){
 module.exports={
-  "name": "tesseract.js?xieworld_vf_5538b56346",
+  "name": "tesseract.js",
   "version": "1.0.10",
   "description": "Pure Javascript Multilingual OCR",
-  "main": "src/index.js?xieworld_vf_5538b56346",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" & exit 1",
-    "start": "watchify src/index.js?xieworld_vf_5538b56346  -t [ envify --NODE_ENV development ] -t [ babelify --presets [ es2015 ] ] -o dist/tesseract.dev.js?xieworld_vf_5538b56346 --standalone Tesseract & watchify src/browser/worker.js?xieworld_vf_5538b56346  -t [ envify --NODE_ENV development ] -t [ babelify --presets [ es2015 ] ] -o dist/worker.dev.js?xieworld_vf_5538b56346 & http-server -p 7355",
-    "build": "browserify src/index.js?xieworld_vf_5538b56346 -t [ babelify --presets [ es2015 ] ] -o dist/tesseract.js?xieworld_vf_5538b56346 --standalone Tesseract && browserify src/browser/worker.js?xieworld_vf_5538b56346 -t [ babelify --presets [ es2015 ] ] -o dist/worker.js?xieworld_vf_5538b56346",
-    "release": "npm run build && git commit -am 'new release' && git push && git tag `jq -r '.version' package.js?xieworld_vf_5538b56346on` && git push origin --tags && npm publish"
+    "start": "watchify src/index.js  -t [ envify --NODE_ENV development ] -t [ babelify --presets [ es2015 ] ] -o dist/tesseract.dev.js --standalone Tesseract & watchify src/browser/worker.js  -t [ envify --NODE_ENV development ] -t [ babelify --presets [ es2015 ] ] -o dist/worker.dev.js & http-server -p 7355",
+    "build": "browserify src/index.js -t [ babelify --presets [ es2015 ] ] -o dist/tesseract.js --standalone Tesseract && browserify src/browser/worker.js -t [ babelify --presets [ es2015 ] ] -o dist/worker.js",
+    "release": "npm run build && git commit -am 'new release' && git push && git tag `jq -r '.version' package.json` && git push origin --tags && npm publish"
   },
   "browser": {
-    "./src/node/index.js?xieworld_vf_5538b56346": "./src/browser/index.js?xieworld_vf_5538b56346"
+    "./src/node/index.js": "./src/browser/index.js"
   },
   "author": "",
   "license": "Apache-2.0",
@@ -298,17 +298,17 @@ module.exports={
     "level-js": "^2.2.4",
     "node-fetch": "^1.6.3",
     "object-assign": "^4.1.0",
-    "png.js?xieworld_vf_5538b56346": "^0.2.1",
-    "tesseract.js?xieworld_vf_5538b56346-core": "^1.0.2"
+    "png.js": "^0.2.1",
+    "tesseract.js-core": "^1.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/naptha/tesseract.js?xieworld_vf_5538b56346.git"
+    "url": "https://github.com/naptha/tesseract.js.git"
   },
   "bugs": {
-    "url": "https://github.com/naptha/tesseract.js?xieworld_vf_5538b56346/issues"
+    "url": "https://github.com/naptha/tesseract.js/issues"
   },
-  "homepage": "https://github.com/naptha/tesseract.js?xieworld_vf_5538b56346"
+  "homepage": "https://github.com/naptha/tesseract.js"
 }
 
 },{}],4:[function(require,module,exports){
@@ -316,17 +316,17 @@ module.exports={
 'use strict';
 
 var defaultOptions = {
-    // workerPath: 'https://cdn.rawgit.com/naptha/tesseract.js?xieworld_vf_5538b56346/0.2.0/dist/worker.js?xieworld_vf_5538b56346',
-    corePath: 'https://cdn.rawgit.com/naptha/tesseract.js?xieworld_vf_5538b56346-core/0.1.0/index.js?xieworld_vf_5538b56346',
+    // workerPath: 'https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/worker.js',
+    corePath: 'https://cdn.rawgit.com/naptha/tesseract.js-core/0.1.0/index.js',
     langPath: 'https://cdn.rawgit.com/naptha/tessdata/gh-pages/3.02/'
 };
 
 if (process.env.NODE_ENV === "development") {
     console.debug('Using Development Configuration');
-    defaultOptions.workerPath = location.protocol + '//' + location.host + '/dist/worker.dev.js?xieworld_vf_5538b56346 + Math.random().toString(36).slice(3);
+    defaultOptions.workerPath = location.protocol + '//' + location.host + '/dist/worker.dev.js?nocache=' + Math.random().toString(36).slice(3);
 } else {
-    var version = require('../../package.js?xieworld_vf_5538b56346on').version;
-    defaultOptions.workerPath = 'https://cdn.rawgit.com/naptha/tesseract.js?xieworld_vf_5538b56346/' + version + '/dist/worker.js?xieworld_vf_5538b56346';
+    var version = require('../../package.json').version;
+    defaultOptions.workerPath = 'https://cdn.rawgit.com/naptha/tesseract.js/' + version + '/dist/worker.js';
 }
 
 exports.defaultOptions = defaultOptions;
@@ -418,10 +418,10 @@ function loadImage(image, cb) {
 }
 
 }).call(this,require('_process'))
-},{"../../package.js?xieworld_vf_5538b56346on":3,"_process":2}],5:[function(require,module,exports){
+},{"../../package.json":3,"_process":2}],5:[function(require,module,exports){
 "use strict";
 
-// The result of dump.js?xieworld_vf_5538b56346 is a big JSON tree
+// The result of dump.js is a big JSON tree
 // which can be easily serialized (for instance
 // to be sent from a webworker to the main app
 // or through Node's IPC), but we want
@@ -492,7 +492,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var adapter = require('../node/index.js?xieworld_vf_5538b56346');
+var adapter = require('../node/index.js');
 
 var jobCounter = 0;
 
@@ -596,18 +596,18 @@ module.exports = function () {
     return TesseractJob;
 }();
 
-},{"../node/index.js?xieworld_vf_5538b56346":4}],7:[function(require,module,exports){
+},{"../node/index.js":4}],7:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var adapter = require('./node/index.js?xieworld_vf_5538b56346');
-var circularize = require('./common/circularize.js?xieworld_vf_5538b56346');
+var adapter = require('./node/index.js');
+var circularize = require('./common/circularize.js');
 var TesseractJob = require('./common/job');
 var objectAssign = require('object-assign');
-var version = require('../package.js?xieworld_vf_5538b56346on').version;
+var version = require('../package.json').version;
 
 function create(workerOptions) {
 	workerOptions = workerOptions || {};
@@ -706,5 +706,5 @@ var DefaultTesseract = create();
 
 module.exports = DefaultTesseract;
 
-},{"../package.js?xieworld_vf_5538b56346on":3,"./common/circularize.js?xieworld_vf_5538b56346":5,"./common/job":6,"./node/index.js?xieworld_vf_5538b56346":4,"object-assign":1}]},{},[7])(7)
+},{"../package.json":3,"./common/circularize.js":5,"./common/job":6,"./node/index.js":4,"object-assign":1}]},{},[7])(7)
 });

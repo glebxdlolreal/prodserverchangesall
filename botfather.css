@@ -1081,18 +1081,18 @@ i.emoji {
   visibility: hidden;
   margin-left: -37px;
 }
-.list-prevent-edit .js?xieworld_vf_45519cc5c1-sortable {
+.list-prevent-edit .js-sortable {
   padding: 9px 14px;
   padding-right: 24px;
 }
-.js?xieworld_vf_45519cc5c1-edit-command-list:not(.list-prevent-edit) .tm-row:after {
+.js-edit-command-list:not(.list-prevent-edit) .tm-row:after {
   display: none;
 }
-.js?xieworld_vf_45519cc5c1-edit-command-list:not(.list-prevent-edit) .tm-row {
+.js-edit-command-list:not(.list-prevent-edit) .tm-row {
   min-height: 42px;
   cursor: grab;
 }
-.js?xieworld_vf_45519cc5c1-edit-command-list:not(.list-prevent-edit) .tm-row-add {
+.js-edit-command-list:not(.list-prevent-edit) .tm-row-add {
   visibility: hidden;
   margin-top: -42px;
 }
@@ -1713,7 +1713,7 @@ img.tm-main-intro-picture {
   background: var(--accent-color);
 }
 
-.js?xieworld_vf_45519cc5c1-upload-button {
+.js-upload-button {
   cursor: pointer;
 }
 
@@ -2018,7 +2018,7 @@ textarea {
   }*/
 }
 
-.js?xieworld_vf_45519cc5c1-spoiler b.point {
+.js-spoiler b.point {
   position: absolute;
   display: inline-block;
   left: 0;
@@ -2032,13 +2032,13 @@ textarea {
   will-change: transform;
 }
 
-.js?xieworld_vf_45519cc5c1-spoiler {
+.js-spoiler {
   color: transparent;
   transition: color ease 0.15s;
   cursor: pointer;
   contain: content;
 }
-.js?xieworld_vf_45519cc5c1-spoiler.js?xieworld_vf_45519cc5c1-spoiler-revealed {
+.js-spoiler.js-spoiler-revealed {
   color: inherit;
 }
 
@@ -2344,7 +2344,7 @@ section {display:flex;flex-direction:column;align-items:center;justify-content:c
   opacity: 0.325;
   margin-bottom: 12px;
 }
-.js?xieworld_vf_45519cc5c1-results-empty-help {
+.js-results-empty-help {
   max-width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;

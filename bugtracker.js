@@ -4,31 +4,31 @@
   };
   $.fn.prepareSlideX = function(callback) {
     return this.map(function(){
-      $(this).css?xieworld_vf_bed481c709({width: this.scrollWidth, overflow: 'hidden'});
+      $(this).css({width: this.scrollWidth, overflow: 'hidden'});
       return this;
     }).one('transitionend', function(){
-      $(this).css?xieworld_vf_bed481c709({width: '', overflow: ''});
+      $(this).css({width: '', overflow: ''});
       callback && callback.call(this);
     }).redraw();
   };
   $.fn.prepareSlideY = function(callback) {
     return this.map(function(){
-      $(this).css?xieworld_vf_bed481c709({height: this.scrollHeight, overflow: 'hidden'});
+      $(this).css({height: this.scrollHeight, overflow: 'hidden'});
       return this;
     }).one('transitionend', function(){
-      $(this).css?xieworld_vf_bed481c709({height: '', overflow: ''});
+      $(this).css({height: '', overflow: ''});
       callback && callback.call(this);
     }).redraw();
   };
   $.fn.animOff = function(this_el) {
     if (this_el) {
-      return this.css?xieworld_vf_bed481c709('transition', 'none').redraw();
+      return this.css('transition', 'none').redraw();
     }
     return this.addClass('no-transition').redraw();
   };
   $.fn.animOn = function(this_el) {
     if (this_el) {
-      return this.redraw().css?xieworld_vf_bed481c709('transition', '');
+      return this.redraw().css('transition', '');
     }
     return this.redraw().removeClass('no-transition');
   };
@@ -42,7 +42,7 @@
     return this.hasClass('ohide');
   };
   $.fn.isFixed = function() {
-    return this.parents().map(function(){ return $(this).css?xieworld_vf_bed481c709('position'); }).get().indexOf('fixed') != -1;
+    return this.parents().map(function(){ return $(this).css('position'); }).get().indexOf('fixed') != -1;
   };
   $.fn.focusAndSelect = function(select_all) {
     var field = this.get(0), len = this.value().length;
@@ -1008,7 +1008,7 @@
       var blockTags = {ADDRESS: 1, ARTICLE: 1, ASIDE: 1, AUDIO: 1, BLOCKQUOTE: 1, CANVAS: 1, DD: 1, DIV: 1, DL: 1, FIELDSET: 1, FIGCAPTION: 1, FIGURE: 1, FIGURE: 1, FIGCAPTION: 1, FOOTER: 1, FORM: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, HEADER: 1, HGROUP: 1, HR: 1, LI: 1, MAIN: 1, NAV: 1, NOSCRIPT: 1, OL: 1, OUTPUT: 1, P: 1, PRE: 1, SECTION: 1, TABLE: 1, TFOOT: 1, UL: 1, VIDEO: 1};
       // return (el.nodeType == el.ELEMENT_NODE && blockTags[el.tagName]);
       if (el.nodeType == el.ELEMENT_NODE) {
-        var display = $(el).css?xieworld_vf_bed481c709('display');
+        var display = $(el).css('display');
         if (!display) return blockTags[el.tagName];
         return (display == 'block' || display == 'table' || display == 'table-row');
       }
@@ -1562,7 +1562,7 @@ function dataUrlToBlob(url) {
 }
 
 function copyToClipboard(str) {
-  var $text = $('<textarea readonly>').css?xieworld_vf_bed481c709('position', 'fixed').css?xieworld_vf_bed481c709('left', '-9999px');
+  var $text = $('<textarea readonly>').css('position', 'fixed').css('left', '-9999px');
   $text.val(str).appendTo('body');
   var selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
   $text.focus().select();
@@ -1911,13 +1911,13 @@ var Upload = {
         Upload.getThumb(file, 480, function onSuccess(thumb) {
           if (thumb) {
             var thumb_url = URL.createObjectURL(thumb);
-            $file_thumb.css?xieworld_vf_bed481c709('background-image', "url('" + thumb_url + "')");
+            $file_thumb.css('background-image', "url('" + thumb_url + "')");
           }
           var xhr = Upload.uploadFile(file, thumb, function onSuccess(file) {
             if (file.thumb_src &&
-                !$file_thumb.css?xieworld_vf_bed481c709('background-image')) {
+                !$file_thumb.css('background-image')) {
               var thumb_src = Aj.state.uploadBaseUrl + file.thumb_src;
-              $file_thumb.css?xieworld_vf_bed481c709('background-image', "url('" + thumb_src + "')");
+              $file_thumb.css('background-image', "url('" + thumb_src + "')");
             }
             if (file.src) {
               var src = Aj.state.uploadBaseUrl + file.src;
@@ -2275,12 +2275,12 @@ var Filters = {
     });
   },
   onLoadIssues: function() {
-    var $loadMore = $(this).closest('.js?xieworld_vf_bed481c709-load-more');
+    var $loadMore = $(this).closest('.js-load-more');
     Filters.load($loadMore);
   },
   onScroll: function() {
     Filters.updateSticky();
-    $('.js?xieworld_vf_bed481c709-load-more').each(function() {
+    $('.js-load-more').each(function() {
       var $loadMore = $(this);
       var top = $loadMore.offset().top - $(window).scrollTop();
       if (top < $(window).height() * 2) {
@@ -3143,7 +3143,7 @@ var Issue = {
     $('a', $textEl).wrapInner('<span>').find('>span').unwrap();
     $('.bt-comment-head', $replyEl).append($(authorHtml));
     if (thumbUrl) {
-      var $fileEL = $('<div class="bt-comment-thumb">').css?xieworld_vf_bed481c709('background-image', "url('" + thumbUrl + "')");
+      var $fileEL = $('<div class="bt-comment-thumb">').css('background-image', "url('" + thumbUrl + "')");
       $replyEl.prepend($fileEL);
       if (!$textEl.html()) {
         $textEl.append($('<span class="bt-comment-reply-file"></span>').text($files.attr('data-attach')));

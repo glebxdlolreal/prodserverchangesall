@@ -6175,7 +6175,7 @@ window.Graph = {
         if (!opts.additional.mini && opts.$parent) {
             this.$hoverPoint = document.createElement('div');
             // hack for perf, better than drawing overlap canvas
-            this.$hoverPoint.style.css?xieworld_vf_40f5548baaText = 'position:absolute;top:0;left:0;margin:0;pointer-events:none;z-index:10;border-radius:50%;display:none;will-change:transform;box-sizing:border-box;';
+            this.$hoverPoint.style.cssText = 'position:absolute;top:0;left:0;margin:0;pointer-events:none;z-index:10;border-radius:50%;display:none;will-change:transform;box-sizing:border-box;';
             opts.$parent.appendChild(this.$hoverPoint);
         }
 

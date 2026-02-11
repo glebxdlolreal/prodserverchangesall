@@ -240,7 +240,7 @@ var TPopups = {
     if (document.activeElement) {
       document.activeElement.blur();
     }
-    if (ge1('.js?xieworld_vf_2ff3bbcb16-popup_box', popup_el)) {
+    if (ge1('.js-popup_box', popup_el)) {
       addEvent(popup_el, 'click', function(e) {
         if (elInBody(e.target) &&
             !hasClass(e.target, 'js-popup_box') &&
@@ -249,7 +249,7 @@ var TPopups = {
         }
       });
     }
-    gec('.js?xieworld_vf_2ff3bbcb16-popup_close', function() {
+    gec('.js-popup_close', function() {
       addEvent(this, 'click', function() {
         TPopups.close(popup_el);
       });
@@ -264,7 +264,7 @@ var TPopups = {
       popup_id = popup_el.__puid;
     } else {
       popup_id = TPopups._list.pop();
-      gec('.js?xieworld_vf_2ff3bbcb16-popup_container', function() {
+      gec('.js-popup_container', function() {
         if (popup_id == this.__puid) {
           popup_el = this;
           return false;
@@ -283,7 +283,7 @@ var TPopups = {
       document.body.style.overflow = '';
     }
     removeEvent(popup_el, 'click');
-    gec('.js?xieworld_vf_2ff3bbcb16-popup_close', function() {
+    gec('.js-popup_close', function() {
       removeEvent(this, 'click');
     }, popup_el);
     addClass(popup_el, 'hide');
@@ -295,7 +295,7 @@ var TPopups = {
     }
   },
   setPosition: function(popul_el) {
-    var popup_box = ge1('.js?xieworld_vf_2ff3bbcb16-popup_box', popul_el);
+    var popup_box = ge1('.js-popup_box', popul_el);
     if (!popup_box) return;
     getCoords(function(coords) {
       var style      = window.getComputedStyle(popul_el);
@@ -312,8 +312,8 @@ var TPopups = {
   show: function(html, buttons, options) {
     options = options || {};
     var popup_el = newEl('div', 'tgme_popup_container js-popup_container tgme_popup_alert hide', '<div class="tgme_popup js-popup_box"><div class="tgme_popup_body"><div class="tgme_popup_text js-popup_text"></div><div class="tgme_popup_buttons js-popup_buttons"></div></div></div>');
-    var text_el = ge1('.js?xieworld_vf_2ff3bbcb16-popup_text', popup_el);
-    var buttons_el = ge1('.js?xieworld_vf_2ff3bbcb16-popup_buttons', popup_el);
+    var text_el = ge1('.js-popup_text', popup_el);
+    var buttons_el = ge1('.js-popup_buttons', popup_el);
     setHtml(text_el, html);
     var enterBtn = null, onEnterPress = null;
     for (var i = 0; i < buttons.length; i++) {
@@ -1129,7 +1129,7 @@ function checkFrameSize() {
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.async = true;
-            script.src = TBaseUrl + 'js/libwebp-0.2.0.js?xieworld_vf_2ff3bbcb16';
+            script.src = TBaseUrl + 'js/libwebp-0.2.0.js';
             script.onerror = function() {
               webpFallbackSupport = false;
               applyCallbacks(webpCallbacks, webpNativeSupport, webpFallbackSupport);
@@ -1379,7 +1379,7 @@ function checkFrameSize() {
       failed_callback();
       return;
     }
-    xhrJsonRequest('/i/emoji/' + emoji_id + '.js?xieworld_vf_2ff3bbcb16on', function(emoji) {
+    xhrJsonRequest('/i/emoji/' + emoji_id + '.json', function(emoji) {
       if (emoji.error) {
         failed_callback();
         return;
@@ -1494,7 +1494,7 @@ function checkFrameSize() {
           }
         }
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_text', function() {
+      gec('.js-message_text', function() {
         TPost.initSpoilers(this, !gpeByClass(this, 'service_message'));
         TPost.initBlockquotes(this);
         gec('tg-emoji', function() {
@@ -1506,13 +1506,13 @@ function checkFrameSize() {
           });
         }, this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_reply_text', function() {
+      gec('.js-message_reply_text', function() {
         TPost.initSpoilers(this);
         gec('tg-emoji', function() {
           TEmoji.init(this);
         }, this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_emoji_bg', function() {
+      gec('.js-message_emoji_bg', function() {
         var color = getComputedStyle(this).getPropertyValue('--user-accent-color');
         if (!color) {
           color = getComputedStyle(this).getPropertyValue('--accent-color');
@@ -1527,17 +1527,17 @@ function checkFrameSize() {
           this.style.setProperty('--user-icons-bg', 'url(' + url + ')');
         });
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-poll', function() {
+      gec('.js-poll', function() {
         gec('tg-emoji', function() {
           TEmoji.init(this);
         }, this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_reactions', function() {
+      gec('.js-message_reactions', function() {
         gec('tg-emoji', function() {
           TEmoji.init(this);
         }, this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_footer.compact', function() {
+      gec('.js-message_footer.compact', function() {
         var timeEl = ge1('time[datetime]', this)
           , textEl = this.previousElementSibling;
         if (textEl && hasClass(textEl, 'js-message_media')) {
@@ -1550,7 +1550,7 @@ function checkFrameSize() {
           var text_rect = textEl.getBoundingClientRect();
   
           textEl.__inited = true;
-          var infoEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_info', this);
+          var infoEl = ge1('.js-message_info', this);
           if (infoEl) {
             var shadowEl = document.createElement('span');
             shadowEl.style.display = 'inline-block';
@@ -1562,33 +1562,33 @@ function checkFrameSize() {
           }
         }
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_video_player', function() {
+      gec('.js-message_video_player', function() {
         TVideo.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_photo', function() {
+      gec('.js-message_photo', function() {
         TPhoto.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_grouped_wrap', function() {
+      gec('.js-message_grouped_wrap', function() {
         TGrouped.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_roundvideo_player', function() {
+      gec('.js-message_roundvideo_player', function() {
         TRoundVideo.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-message_voice_player', function() {
+      gec('.js-message_voice_player', function() {
         TVoice.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-sticker_image', function() {
+      gec('.js-sticker_image', function() {
         TSticker.init(this, function() {
           addClass(postEl, 'media_not_supported');
           removeClass(postEl, 'no_bubble');
         });
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-sticker_thumb', function() {
+      gec('.js-sticker_thumb', function() {
         TSticker.init(this);
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-tgsticker_image', function() {
+      gec('.js-tgsticker_image', function() {
         var stickerEl = this;
-        var effectEl = ge1('.js?xieworld_vf_2ff3bbcb16-tgsticker_effect', postEl);
+        var effectEl = ge1('.js-tgsticker_effect', postEl);
         if (effectEl) {
           addEventOnce(this, 'tg:play', function() {
             RLottie.playOnce(effectEl);
@@ -1602,7 +1602,7 @@ function checkFrameSize() {
           playUntilEnd: this.hasAttribute('data-is-dice')
         });
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-tgsticker_effect', function() {
+      gec('.js-tgsticker_effect', function() {
         RLottie.init(this, {noAutoPlay: true});
         var effectEl = this;
         addEvent(this, 'tg:play', function() {
@@ -1612,7 +1612,7 @@ function checkFrameSize() {
           effectEl.style.visibility = 'hidden';
         });
       }, postEl);
-      gec('.js?xieworld_vf_2ff3bbcb16-videosticker', function() {
+      gec('.js-videosticker', function() {
         TVideoSticker.init(this, function() {
           addClass(postEl, 'media_not_supported');
           removeClass(postEl, 'no_bubble');
@@ -1736,10 +1736,10 @@ function checkFrameSize() {
       playerEl = geById(playerEl);
       if (!playerEl || playerEl.__inited) return;
       playerEl.__inited = true;
-      var videoEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_video', playerEl)
-        , videoBluredEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_video_blured', playerEl)
-        , playEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_video_play', playerEl)
-        , durationEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_video_duration', playerEl)
+      var videoEl = ge1('.js-message_video', playerEl)
+        , videoBluredEl = ge1('.js-message_video_blured', playerEl)
+        , playEl = ge1('.js-message_video_play', playerEl)
+        , durationEl = ge1('.js-message_video_duration', playerEl)
         , inGroup = hasClass(playerEl, 'grouped_media_wrap')
         , looped
         , overTo;
@@ -1878,8 +1878,8 @@ function checkFrameSize() {
       groupedWrapEl = geById(groupedWrapEl);
       if (!groupedWrapEl || groupedWrapEl.__inited) return;
       groupedWrapEl.__inited = true;
-      var groupedEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_grouped', groupedWrapEl)
-        , groupedLayerEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_grouped_layer', groupedEl)
+      var groupedEl = ge1('.js-message_grouped', groupedWrapEl)
+        , groupedLayerEl = ge1('.js-message_grouped_layer', groupedEl)
         , thumbsEl = groupedLayerEl.children
         , margin_w = +groupedWrapEl.getAttribute('data-margin-w') || 2
         , margin_h = +groupedWrapEl.getAttribute('data-margin-h') || 2;
@@ -2259,10 +2259,10 @@ function checkFrameSize() {
       playerEl = geById(playerEl);
       if (!playerEl || playerEl.__inited) return;
       playerEl.__inited = true;
-      var videoEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_roundvideo', playerEl)
-        , playEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_roundvideo_play', playerEl)
-        , progressEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_roundvideo_progress', playerEl)
-        , durationEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_roundvideo_duration', playerEl)
+      var videoEl = ge1('.js-message_roundvideo', playerEl)
+        , playEl = ge1('.js-message_roundvideo_play', playerEl)
+        , progressEl = ge1('.js-message_roundvideo_progress', playerEl)
+        , durationEl = ge1('.js-message_roundvideo_duration', playerEl)
         , playing = false;
       if (!videoEl) return;
 
@@ -2382,10 +2382,10 @@ function checkFrameSize() {
       playerEl = geById(playerEl);
       if (!playerEl || playerEl.__inited) return;
       playerEl.__inited = true;
-      var audioEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_voice', playerEl)
-        , durationEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_voice_duration', playerEl)
-        , progressEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_voice_progress', playerEl)
-        , progressWrapEl = ge1('.js?xieworld_vf_2ff3bbcb16-message_voice_progress_wrap', playerEl)
+      var audioEl = ge1('.js-message_voice', playerEl)
+        , durationEl = ge1('.js-message_voice_duration', playerEl)
+        , progressEl = ge1('.js-message_voice_progress', playerEl)
+        , progressWrapEl = ge1('.js-message_voice_progress_wrap', playerEl)
         , player = null
         , isOGG = audioEl.hasAttribute('data-ogg')
         , seekTo = null
@@ -2546,12 +2546,12 @@ function checkFrameSize() {
         }
       }
 
-      loadLib(TBaseUrl + 'js/ogvjs/ogv-support.js?xieworld_vf_2ff3bbcb16', function(success) {
+      loadLib(TBaseUrl + 'js/ogvjs/ogv-support.js', function(success) {
         if (!success) return;
         if (isOGG &&
             OGVCompat.hasWebAudio() &&
             OGVCompat.supported('OGVPlayer')) {
-          loadLib(TBaseUrl + 'js/ogvjs/ogv.js?xieworld_vf_2ff3bbcb16', function(success) {
+          loadLib(TBaseUrl + 'js/ogvjs/ogv.js', function(success) {
             if (!success) return;
             player = new OGVPlayer();
             player.src = audioEl.src;
@@ -2589,15 +2589,15 @@ function checkFrameSize() {
       options = options || {};
       TWidgetPost.options = options;
 
-      gec('.js?xieworld_vf_2ff3bbcb16-widget_message', function() {
+      gec('.js-widget_message', function() {
         TPost.init(this, {tgs_workers_limit: 1});
-        addEvent(ge('.js?xieworld_vf_2ff3bbcb16-poll_option', this), 'click', TWidgetPost.eSelectPollOption);
-        addEvent(ge('.js?xieworld_vf_2ff3bbcb16-poll_vote_btn', this), 'click', TWidgetPost.eSendVotes);
+        addEvent(ge('.js-poll_option', this), 'click', TWidgetPost.eSelectPollOption);
+        addEvent(ge('.js-poll_vote_btn', this), 'click', TWidgetPost.eSendVotes);
       });
       initWidgetFrame({
         auto_height: true,
         onVisible: function() {
-          gec('.js?xieworld_vf_2ff3bbcb16-widget_message', function() {
+          gec('.js-widget_message', function() {
             TPost.view(this);
           });
         }
@@ -2632,7 +2632,7 @@ function checkFrameSize() {
         return false;
       }
       toggleClass(this, 'selected');
-      toggleClass(poll_el, 'selected', ge('.js?xieworld_vf_2ff3bbcb16-poll_option.selected', poll_el).length > 0);
+      toggleClass(poll_el, 'selected', ge('.js-poll_option.selected', poll_el).length > 0);
       if (!hasClass(poll_el, 'multiple')) {
         TWidgetPost.sendPollVote(poll_el, this);
       }
@@ -2652,7 +2652,7 @@ function checkFrameSize() {
       if (!poll_el || hasClass(poll_el, 'sending')) {
         return false;
       }
-      var option_els = ge('.js?xieworld_vf_2ff3bbcb16-poll_option.selected', poll_el);
+      var option_els = ge('.js-poll_option.selected', poll_el);
       var options = TWidgetPost.options || {};
       var post_el = gpeByClass(option_el, 'js-widget_message');
       if (!post_el) {
@@ -2679,12 +2679,12 @@ function checkFrameSize() {
         removeClass(poll_el, 'sending');
         if (result.media_html) {
           var media_wrap = newEl('div', '', result.media_html);
-          var media_html = getHtml('.js?xieworld_vf_2ff3bbcb16-poll', media_wrap);
+          var media_html = getHtml('.js-poll', media_wrap);
           setHtml(poll_el, media_html);
-          addEvent(ge('.js?xieworld_vf_2ff3bbcb16-poll_option', poll_el), 'click', TWidgetPost.eSelectPollOption);
-          addEvent(ge('.js?xieworld_vf_2ff3bbcb16-poll_vote_btn', poll_el), 'click', TWidgetPost.eSendVotes);
+          addEvent(ge('.js-poll_option', poll_el), 'click', TWidgetPost.eSelectPollOption);
+          addEvent(ge('.js-poll_vote_btn', poll_el), 'click', TWidgetPost.eSendVotes);
         }
-        toggleClass(poll_el, 'selected', ge('.js?xieworld_vf_2ff3bbcb16-poll_option.selected', poll_el).length > 0);
+        toggleClass(poll_el, 'selected', ge('.js-poll_option.selected', poll_el).length > 0);
       });
     }
   };
@@ -2794,7 +2794,7 @@ function checkFrameSize() {
         removeClass(document.body, 'emoji_default');
         addClass(document.body, 'emoji_image');
       }
-      gec('.js?xieworld_vf_2ff3bbcb16-sticker_thumb', function() {
+      gec('.js-sticker_thumb', function() {
         TSticker.init(this);
       });
     }

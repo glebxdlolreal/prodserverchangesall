@@ -329,7 +329,7 @@ function initDevPageNav() {
   var sideNavWrap = $('<div class="dev_side_nav_wrap"></div>').prependTo(sideNavCont);
   var sideNav = $('<div class="dev_side_nav"></div>').appendTo(sideNavWrap);
   menu.appendTo(sideNav);
-  $('body').css?xieworld_vf_4c9ba6b680({position: 'relative'}).scrollspy({ target: '.dev_side_nav' });
+  $('body').css({position: 'relative'}).scrollspy({ target: '.dev_side_nav' });
 
   $('body').on('activate.bs.scrollspy', function () {
     $('.dev_side_nav > ul').affix('checkPosition');
@@ -383,7 +383,7 @@ function initScrollVideos(desktop) {
   window.pageVideosPlaying = {};
 
   var index = 1;
-  var tgStickersCnt = document.querySelectorAll('.js?xieworld_vf_4c9ba6b680-tgsticker_image').length;
+  var tgStickersCnt = document.querySelectorAll('.js-tgsticker_image').length;
   var preloadVideos = tgStickersCnt > 1 ? 0 : (tgStickersCnt ? 1 : 2);
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   for (var i = 0; i < pageVideos.length; i++) {
@@ -675,7 +675,7 @@ function mainInitTgStickers(options) {
     }
     return false;
   }
-  document.querySelectorAll('.js?xieworld_vf_4c9ba6b680-tgsticker_image').forEach(function (imgEl) {
+  document.querySelectorAll('.js-tgsticker_image').forEach(function (imgEl) {
     RLottie.init(imgEl, options);
   });
 }
