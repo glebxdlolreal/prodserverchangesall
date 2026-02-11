@@ -171,7 +171,7 @@ function backToTopResize () {
       dwidth = Math.max(window.innerWidth, document.documentElement.clientWidth, 0),
       dheight = Math.max(window.innerHeight, document.documentElement.clientHeight);
 
-  curVisible = pageContentWrapEl && left > =xieworld_vf && dwidth > 640;
+  curVisible = pageContentWrapEl && left > 130 && dwidth > 640;
   toTopWrapEl.style.width = left + 'px';
   toTopEl.style.height = dheight + 'px';
   backToTopScroll();
@@ -384,7 +384,7 @@ function initScrollVideos(desktop) {
 
   var index = 1;
   var tgStickersCnt = document.querySelectorAll('.js-tgsticker_image').length;
-  var preloadVideos = tgStickersCnt > 1 ? =xieworld_vf : (tgStickersCnt ? =xieworld_vf : 2);
+  var preloadVideos = tgStickersCnt > 1 ? 0 : (tgStickersCnt ? 1 : 2);
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   for (var i = 0; i < pageVideos.length; i++) {
     var videoEl = pageVideos[i];
@@ -575,7 +575,7 @@ function mainInitRetinaVideos() {
     sources = (videoEl.getAttribute('data-sources')||'').split(',');
     sourceEl = document.createElement('source');
     sourceEl.type = 'video/mp4';
-    sourceEl.src = sources[isRetina ? =xieworld_vf : 0];
+    sourceEl.src = sources[isRetina ? 1 : 0];
     videoEl.appendChild(sourceEl);
     videoEl.classList.remove('video__init_retina');
     videoEl.setAttribute('preload', 'auto');

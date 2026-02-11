@@ -872,13 +872,13 @@ a.tl_main_download_link:hover:after {
   margin: -150px 0 0 -152px;
   width: 304px;
   height: 240px;
-  background: url(../img/SiteiOS.jpg?2) 50% =xieworld_vf no-repeat;
+  background: url(../img/SiteiOS.jpg?2) 50% 0 no-repeat;
 }
 .tl_main_download_image__android {
   margin: -150px 0 0 -152px;
   width: 304px;
   height: 240px;
-  background: url(../img/SiteAndroid.jpg?2) 50% =xieworld_vf no-repeat;
+  background: url(../img/SiteAndroid.jpg?2) 50% 0 no-repeat;
 }
 
 .tl_main_video_player {
@@ -4293,7 +4293,7 @@ html.theme_dark .tgme_page_embed_code {
 }
 .tlb_blog_logo {
   display: inline-block;
-  background: url(/img/blog/BlogLogo1x.png?1) =xieworld_vf 0 no-repeat;
+  background: url(/img/blog/BlogLogo1x.png?1) 0 0 no-repeat;
   width: 146px;
   height: 20px;
   background-size: 146px 20px;
@@ -4714,7 +4714,7 @@ i.tl_telegram_share_icon {
 }
 
 .td_screenshot_tdirect {
-  background: url(/img/tdirect.jpg?1) 50% =xieworld_vf no-repeat;
+  background: url(/img/tdirect.jpg?1) 50% 0 no-repeat;
   background-size: 300px 360px;
   height: 360px;
   margin: 40px 20px;

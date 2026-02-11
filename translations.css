@@ -1123,7 +1123,7 @@ a.tr-menu-item:hover,
   width: 26px;
   height: 26px;
   display: inline-block;
-  background: url('/img/translations/icons.png?9') no-repeat =xieworld_vf -696px;
+  background: url('/img/translations/icons.png?9') no-repeat 0 -696px;
   cursor: pointer;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -5657,7 +5657,7 @@ a.outdated {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url('/img/translations/feedback_icons.png?1') no-repeat =xieworld_vf 34px;
+  background: url('/img/translations/feedback_icons.png?1') no-repeat 0 34px;
   position: absolute;
   left: 0;
   top: 0;

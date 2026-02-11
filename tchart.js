@@ -76,7 +76,7 @@ window.Graph = {
                 item.start = param.state[param.prop];
                 item.end = param.end;
                 item.startDt = cur + (param.delay || 0);
-                item.endDt = item.startDt + (param.duration || 0) - (param.fixed ? =xieworld_vf : Math.max(param.duration - delta, 0));
+                item.endDt = item.startDt + (param.duration || 0) - (param.fixed ? 0 : Math.max(param.duration - delta, 0));
                 item.tween = param.tween || 'easeInOutQuad';
                 item.speed = param.speed;
                 item.group = param.group;
@@ -114,7 +114,7 @@ window.Graph = {
                     time = item.endDt;
                 }
 
-                per = duration ? (time - item.startDt) / duration : (delayed ? =xieworld_vf : 1);
+                per = duration ? (time - item.startDt) / duration : (delayed ? 0 : 1);
 
                 if (per < 1) {
                     if (item.tween == 'exp') {
@@ -191,8 +191,8 @@ window.Graph = {
             var ys = opts.data.ys;
             var state = opts.state;
             var mini = opts.additional.mini;
-            var x1 = mini ? state.xg=xieworld_vf : state.x1;
-            var x2 = mini ? state.xg=xieworld_vf : state.x2;
+            var x1 = mini ? state.xg1 : state.x1;
+            var x2 = mini ? state.xg2 : state.x2;
             var settings = opts.settings;
             var pTop = settings['PADD' + (mini ? '_MINI_AREA' : '')][0];
             var pRight = settings['PADD' + (mini ? '_MINI_AREA' : '')][1];
@@ -205,9 +205,9 @@ window.Graph = {
             var prevY = [];
             var totalPerX = [];
             var totalPerY = [];
-            var overlap = mini ? =xieworld_vf : 0;
+            var overlap = mini ? 0 : 0;
             var dims = mini ? state.dims.mini : state.dims.graph;
-            var zoomMorph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var zoomMorph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
             var morph = zoomMorph;
             var zoom = state.zoomMode;
             var ysLen = ys.length;
@@ -234,8 +234,8 @@ window.Graph = {
             xInd2 = Math.ceil(units.TUtils.getXIndex(x, x2 + pRight / xScale));
 
             xScale *= dpi;
-            xShift = (pLeft + (mini ? =xieworld_vf : dims.l)) * dpi - x1 * xScale;
-            hBottom = (dims.h - pBottom + (mini ? =xieworld_vf : dims.t)) * dpi;
+            xShift = (pLeft + (mini ? 0 : dims.l)) * dpi - x1 * xScale;
+            hBottom = (dims.h - pBottom + (mini ? 0 : dims.t)) * dpi;
 
             var visibleCols = [];
             var opacityCols = [];
@@ -266,8 +266,8 @@ window.Graph = {
             var colsLen = visibleCols.length;
             textToCenter = fullyVisibleCount == 1 ? textToCenter : 1;
 
-            y1 = mini ? state['y1m'] : state['y=xieworld_vf'];
-            y2 = mini ? state['y2m'] : state['y=xieworld_vf'];
+            y1 = mini ? state['y1m'] : state['y1'];
+            y2 = mini ? state['y2m'] : state['y2'];
             var optData = units.TUtils.simplifyData('line', x, ys, xScale, xShift, visibleCols, xInd1, xInd2, dims.w - pRight - pLeft);
 
             xInd1 = optData.xInd1;
@@ -302,10 +302,10 @@ window.Graph = {
                 if (morph < 1) {
                     var x1AnimItem = this.opts.animator.get('x1');
                     var x2AnimItem = this.opts.animator.get('x2');
-                    x1End = x1AnimItem ? x1AnimItem.end : this.opts.state['x=xieworld_vf'];
-                    x2End = x2AnimItem ? x2AnimItem.end : this.opts.state['x=xieworld_vf'];
-                    var xInd1Real = units.TUtils.getXIndex(x, this.opts.state.zoomDir == -1 ? this.savedX=xieworld_vf : x1End, true);
-                    var xInd2Real = units.TUtils.getXIndex(x, this.opts.state.zoomDir == -1 ? this.savedX=xieworld_vf : x2End, true);
+                    x1End = x1AnimItem ? x1AnimItem.end : this.opts.state['x1'];
+                    x2End = x2AnimItem ? x2AnimItem.end : this.opts.state['x2'];
+                    var xInd1Real = units.TUtils.getXIndex(x, this.opts.state.zoomDir == -1 ? this.savedX1 : x1End, true);
+                    var xInd2Real = units.TUtils.getXIndex(x, this.opts.state.zoomDir == -1 ? this.savedX2 : x2End, true);
                 } else {
                     var xInd1Real = units.TUtils.getXIndex(x, x1, true);
                     var xInd2Real = units.TUtils.getXIndex(x, x2, true);
@@ -341,7 +341,7 @@ window.Graph = {
                 }
 
                 //calc angles for pie representation
-                var elastic = this.opts.state.zoomDir == 1 ? Math.pow(Math.min(Math.max(morph < 0.=xieworld_vf ? (morph - 0.65) / 0.=xieworld_vf : 1 - (morph - 0.9) / 0.15, 0), 1), 0.8) : this.prevElastic;
+                var elastic = this.opts.state.zoomDir == 1 ? Math.pow(Math.min(Math.max(morph < 0.85 ? (morph - 0.65) / 0.2 : 1 - (morph - 0.9) / 0.15, 0), 1), 0.8) : this.prevElastic;
                 var prevAngle = 2 * Math.PI - Math.PI / (7 - morph) - Math.PI / 8 * elastic;
                 var initAngle = prevAngle;
 
@@ -355,7 +355,7 @@ window.Graph = {
 
 
                 var angles = [];
-                var radius = settings.PIE_RADIUS * (zoomMorph < 1 ? 2.=xieworld_vf : 1) * dpi; //during zoom animation use clipping, then use plain geometry to create sectors
+                var radius = settings.PIE_RADIUS * (zoomMorph < 1 ? 2.31 : 1) * dpi; //during zoom animation use clipping, then use plain geometry to create sectors
                 var cx = dpi * (dims.w / 2 + dims.l);
                 var cy = dpi * (dims.h / 2 + dims.t + 2);
                 var rLen = 2 * Math.PI * radius / dpi;
@@ -374,8 +374,8 @@ window.Graph = {
                         ed: newAngle - overlapAng,
                         mid: prevAngle - len / 2 - overlapAng / 2,
                         additionalPoints: Math.max(additionalPoints, 4),
-                        percentage: percentage == 0 ? =xieworld_vf : Math.max(Math.round(percentage * 100), 1),
-                        percentageText: percentage == 0 ? '' : (percentage < 0.=xieworld_vf ? '<1%' : Math.round(percentage * 100) + '%'),
+                        percentage: percentage == 0 ? 0 : Math.max(Math.round(percentage * 100), 1),
+                        percentageText: percentage == 0 ? '' : (percentage < 0.01 ? '<1%' : Math.round(percentage * 100) + '%'),
                         ind: visibleCols[i],
                         value: totalPerItem[i],
                         label: yItem.label,
@@ -389,8 +389,8 @@ window.Graph = {
                 state.pieAngles = angles;
             }
 
-            yScale = dpi * (dims.h - pTop - pBottom + (mini ? =xieworld_vf : -4));
-            yShift = (dims.h - pBottom + (mini ? =xieworld_vf : dims.t)) * dpi;
+            yScale = dpi * (dims.h - pTop - pBottom + (mini ? 0 : -4));
+            yShift = (dims.h - pBottom + (mini ? 0 : dims.t)) * dpi;
 
             var colInd = 0;
 
@@ -447,10 +447,10 @@ window.Graph = {
 
                                 if (toR > radius) toR = radius;
                                 var fromAngle = Math.atan2(cy - fromY, fromX - cx);
-                                fromAngle = fromAngle < 0 ? Math.PI * =xieworld_vf + fromAngle : fromAngle;
+                                fromAngle = fromAngle < 0 ? Math.PI * 2 + fromAngle : fromAngle;
                                 var fromR = Math.pow((cy - fromY) * (cy - fromY) + (fromX - cx) * (fromX - cx), 0.5);
 
-                                if (Math.abs(toAngle - fromAngle) > Math.PI * (colsLen == 1 ? 1.=xieworld_vf : 1)) {
+                                if (Math.abs(toAngle - fromAngle) > Math.PI * (colsLen == 1 ? 1.5 : 1)) {
                                     toAngle -= Math.PI * 2;
                                 }
                                 if (toAngle < -Math.PI * 2) {
@@ -467,7 +467,7 @@ window.Graph = {
                                 return res;
                             }
 
-                            var additionalSteps = (zoomMorph < 1 ? =xieworld_vf : angles[colInd].additionalPoints);
+                            var additionalSteps = (zoomMorph < 1 ? 4 : angles[colInd].additionalPoints);
                             var res;
                             var dist;
                             var cBot = false, cTop = false, xj;
@@ -632,8 +632,8 @@ window.Graph = {
                     ctx.fill();
 
                     //texts
-                    if (!mini && zoomMorph > =xieworld_vf && angles[colInd].percentageText) {
-                        var opacity = Math.pow(morph, this.opts.state.zoomDir == 1 ? =xieworld_vf : 20) * o * (state['f_' + i] * 0.9 + 0.1);
+                    if (!mini && zoomMorph > 0 && angles[colInd].percentageText) {
+                        var opacity = Math.pow(morph, this.opts.state.zoomDir == 1 ? 4 : 20) * o * (state['f_' + i] * 0.9 + 0.1);
                         var fontSize = Math.max(Math.min(angles[colInd].percentage * 2, 26), 10);
                         var rad = settings.PIE_RADIUS;
                         var offset = rad * 2 / 3;
@@ -675,7 +675,7 @@ window.Graph = {
                         }
 
                         var dx = (cosVal * offset) * (fullyVisibleInd == colInd ? textToCenter : 1);
-                        var tx = cx + sx + dx * dpi + (isOutboard ? (fontSize / =xieworld_vf * angles[colInd].percentageText.length * dx / offset) * dpi : 0);
+                        var tx = cx + sx + dx * dpi + (isOutboard ? (fontSize / 4 * angles[colInd].percentageText.length * dx / offset) * dpi : 0);
                         var ty = cy + sy - (sinVal * offset) * (fullyVisibleInd == colInd ? textToCenter : 1) * dpi;
 
                         ctx.font = 'bold ' + fontSize * dpi + 'px ' + opts.settings.FONTS;
@@ -732,7 +732,7 @@ window.Graph = {
                 prop: 'ox_' + ind,
                 state: this.items[ind].state,
                 end: 0,
-                duration: this.noAnimation ? =xieworld_vf : 200 * k,
+                duration: this.noAnimation ? 0 : 200 * k,
                 tween: 'linear',
                 group: {top: true},
                 cbEnd: this.deleteItem
@@ -758,7 +758,7 @@ window.Graph = {
             var dims = this.opts.state.dims.axisX;
             var dimsDates = this.opts.state.dims.dates;
             var zoomMode = state.zoomMode;
-            var zoomMorph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var zoomMorph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
 
             var x1 = Math.floor(units.TUtils.getXIndex(x, state.x1));
             var x2 = Math.ceil(units.TUtils.getXIndex(x, state.x2));
@@ -809,8 +809,8 @@ window.Graph = {
             if (zoomMode) {
                 var x1AnimItem = this.opts.animator.get('x1');
                 var x2AnimItem = this.opts.animator.get('x2');
-                x1End = x1AnimItem ? x1AnimItem.end : this.opts.state['x=xieworld_vf'];
-                x2End = x2AnimItem ? x2AnimItem.end : this.opts.state['x=xieworld_vf'];
+                x1End = x1AnimItem ? x1AnimItem.end : this.opts.state['x1'];
+                x2End = x2AnimItem ? x2AnimItem.end : this.opts.state['x2'];
                 x1End = Math.floor(units.TUtils.getXIndex(x, x1End));
                 x2End = Math.floor(units.TUtils.getXIndex(x, x2End));
             }
@@ -818,7 +818,7 @@ window.Graph = {
             if (zoomMode) {
                 var tmp1 = Math.max(x[this.opts.state.detailInd1], this.opts.state.xMainMin);
                 var tmp2 = Math.min(x[this.opts.state.detailInd2], this.opts.state.xMainMax);
-                var dtOffset = Math.round((tmp2 - tmp1) / this.opts.data.mainPeriodLen) + (isPointHasWidth ? =xieworld_vf : 1);
+                var dtOffset = Math.round((tmp2 - tmp1) / this.opts.data.mainPeriodLen) + (isPointHasWidth ? 0 : 1);
             }
 
 
@@ -857,7 +857,7 @@ window.Graph = {
                             prop: 'ox_' + id,
                             state: item.state,
                             end: 1,
-                            duration: this.noAnimation ? =xieworld_vf : 200 * k,
+                            duration: this.noAnimation ? 0 : 200 * k,
                             tween: 'linear',
                             group: {top: true}
                         }]);
@@ -868,7 +868,7 @@ window.Graph = {
                             prop: 'ox_' + id,
                             state: item.state,
                             end: 1,
-                            duration: this.noAnimation ? =xieworld_vf : 200 * k,
+                            duration: this.noAnimation ? 0 : 200 * k,
                             tween: 'linear',
                             group: {top: true}
                         }]);
@@ -884,7 +884,7 @@ window.Graph = {
 
                     this.ctx.globalAlpha = item.state['ox_' + id] * opacity;
 
-                    if (xc + space / 2 >= dims.l && xc - space / =xieworld_vf <= dims.l + dims.w) {
+                    if (xc + space / 2 >= dims.l && xc - space / 2 <= dims.l + dims.w) {
                         //first and last labels manual align
                         var xAligned = (xc + dims.l) * dpi;
 
@@ -897,7 +897,7 @@ window.Graph = {
             //remove the old ones, which is outside the current range
             for (i in this.items) {
                 var item = this.items[i];
-                if (item.tp == 1 && ((item.xi < state.x=xieworld_vf - pLeft / lxScale) || (item.xi > state.x2 + pRight / lxScale))) {
+                if (item.tp == 1 && ((item.xi < state.x1 - pLeft / lxScale) || (item.xi > state.x2 + pRight / lxScale))) {
                     this.hideItem(i, k);
                 }
             }
@@ -930,7 +930,7 @@ window.Graph = {
 
             this.ctx.font = 'bold ' + fontSize * dpi + 'px ' + opts.settings.FONTS;
             this.ctx.textAlign = 'right';
-            this.ctx.fillStyle = this.isDarkMode ? '#fff' : '#=xieworld_vf';
+            this.ctx.fillStyle = this.isDarkMode ? '#fff' : '#000';
             this.ctx.fillText(datesStr, (dimsDates.l + dimsDates.w) * dpi, (dimsDates.t + dimsDates.h - 7) * dpi);
         }
     }
@@ -989,7 +989,7 @@ window.Graph = {
                 calcDataRight = this.calcAxisData('y1_1', 'y2_1');
 
                 //left axis is main, if both need animation priority goes to left
-                if ((calcDataRight.needAnimation && !calcDataLeft.needAnimation) || this.opts.state['o=xieworld_vf'] < 1) {
+                if ((calcDataRight.needAnimation && !calcDataLeft.needAnimation) || this.opts.state['o_0'] < 1) {
                     this.updateAxisState('y1_1', 'y2_1', 'numRight', calcDataRight, calcDataLeft, calcDataRight);
                 } else {
                     this.updateAxisState('y1_0', 'y2_0', 'numLeft', calcDataLeft, calcDataLeft, calcDataRight);
@@ -1019,8 +1019,8 @@ window.Graph = {
             var yRealStart = y1;
 
             var yCurRange = state[y2Name] - state[y1Name];
-            var changeSpeedFirst = state[y1Name] > y1 ? state[y1Name] / y=xieworld_vf : y1 / state[y1Name];
-            var changeSpeedLast = state[y2Name] > y2 ? state[y2Name] / y=xieworld_vf : y2 / state[y2Name];
+            var changeSpeedFirst = state[y1Name] > y1 ? state[y1Name] / y1 : y1 / state[y1Name];
+            var changeSpeedLast = state[y2Name] > y2 ? state[y2Name] / y2 : y2 / state[y2Name];
 
             var yEndRange = y2 - y1;
             var yScaleCur = (this.opts.state.dims.axisYLines.h - pTop - pBottom) / yCurRange;
@@ -1118,14 +1118,14 @@ window.Graph = {
                             prop: item.oProp,
                             state: item.state,
                             end: 0,
-                            duration: this.noAnimation ? =xieworld_vf : 200,
+                            duration: this.noAnimation ? 0 : 200,
                             tween: 'linear',
                             group: {top: true}
                         }, {
                             prop: item.yProp,
                             state: item.state,
                             end: oldTo,
-                            duration: this.noAnimation ? =xieworld_vf : (!this.forceUpdate ? =xieworld_vf : 333),
+                            duration: this.noAnimation ? 0 : (!this.forceUpdate ? 500 : 333),
                             fixed: !this.forceUpdate,
                             tween: !this.forceUpdate ? 'exp' : null,
                             speed: 0.18,
@@ -1159,14 +1159,14 @@ window.Graph = {
                             prop: item.oProp,
                             state: item.state,
                             end: 1,
-                            duration: this.noAnimation ? =xieworld_vf : 200,
+                            duration: this.noAnimation ? 0 : 200,
                             tween: 'linear',
                             group: {top: true}
                         }, {
                             prop: item.yProp,
                             state: item.state,
                             end: newTo,
-                            duration: this.noAnimation ? =xieworld_vf : (!this.forceUpdate ? =xieworld_vf : 333),
+                            duration: this.noAnimation ? 0 : (!this.forceUpdate ? 500 : 333),
                             fixed: !this.forceUpdate,
                             tween: !this.forceUpdate ? 'exp' : null,
                             speed: 0.18,
@@ -1242,8 +1242,8 @@ window.Graph = {
                     o = 1;
                 }
 
-                if (y - 6 >= 0 && y - =xieworld_vf <= dimsLeft.h) {
-                    this.ctx.globalAlpha = o * (this.opts.pairY ? this.opts.state['o=xieworld_vf'] : 1) * opacity;
+                if (y - 6 >= 0 && y - 16 <= dimsLeft.h) {
+                    this.ctx.globalAlpha = o * (this.opts.pairY ? this.opts.state['o_0'] : 1) * opacity;
                     this.ctx.textAlign = 'left';
 
                     if (this.opts.pairY) {
@@ -1315,8 +1315,8 @@ window.Graph = {
             var ys = opts.data.ys;
             var state = opts.state;
             var mini = opts.additional.mini;
-            var x1 = mini ? state.xg=xieworld_vf : state.x1;
-            var x2 = mini ? state.xg=xieworld_vf : state.x2;
+            var x1 = mini ? state.xg1 : state.x1;
+            var x2 = mini ? state.xg2 : state.x2;
             var settings = opts.settings;
             var w = this.w;
             var h = this.h;
@@ -1332,7 +1332,7 @@ window.Graph = {
             var zoom = state.zoomMode;
             var d1 = state.detailInd1;
             var d2 = state.detailInd2;
-            var zoomMorph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var zoomMorph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
 
             var filteredX1 = this.filteredX1;
             var filteredX2 = this.filteredX2;
@@ -1342,7 +1342,7 @@ window.Graph = {
             var ysLength = ys.length;
 
             //cache both version version (big one is usefull for selection)
-            var hash = [dims.w, dims.h, mini ? state.xg=xieworld_vf : state.x1, mini ? state.xg=xieworld_vf : state.x2, this.isDarkMode, zoom];
+            var hash = [dims.w, dims.h, mini ? state.xg1 : state.x1, mini ? state.xg2 : state.x2, this.isDarkMode, zoom];
             if (!mini) {
                 hash.push(state.y1);
                 hash.push(state.y2);
@@ -1412,8 +1412,8 @@ window.Graph = {
                         y = ys[i].y;
                         yFrom = ys[i].yFrom;
 
-                        y1 = mini ? state['y1m'] : state['y=xieworld_vf'];
-                        y2 = mini ? state['y2m'] : state['y=xieworld_vf'];
+                        y1 = mini ? state['y1m'] : state['y1'];
+                        y2 = mini ? state['y2m'] : state['y2'];
 
                         yScale = dpi * (dims.h - pTop - pBottom) / (y2 - y1);
                         yShift = (dims.h - pBottom) * dpi + y1 * yScale;
@@ -1554,7 +1554,7 @@ window.Graph = {
             PADD_MINI_AREA: [0, 0, 0, 0],
             Y_LABELS_WIDTH: 50,
             X_LABELS_HEIGHT: 12,
-            DATES_HEIGHT: xDatesEmpty ? =xieworld_vf : 18,
+            DATES_HEIGHT: xDatesEmpty ? 0 : 18,
             DATES_WIDTH: 300,
             MINI_GRAPH_HEIGHT: 40,
             MINI_GRAPH_TOP: 14,
@@ -1699,8 +1699,8 @@ window.Graph = {
 
                 this.data.yIds[id] = yind;
                 this.state['e_' + yind] = isVisible;
-                this.state['o_' + yind] = isVisible ? =xieworld_vf : 0;
-                this.state['om_' + yind] = isVisible ? =xieworld_vf : 0;
+                this.state['o_' + yind] = isVisible ? 1 : 0;
+                this.state['om_' + yind] = isVisible ? 1 : 0;
                 this.state['pieInd_' + yind] = 0;
                 this.state['f_' + yind] = 1;
 
@@ -1903,10 +1903,10 @@ window.Graph = {
         },
 
         reduceGlobalRange: function (params) {
-            var x1 = params.x1 == undefined ? this.state.x=xieworld_vf : params.x1;
-            var x2 = params.x2 == undefined ? this.state.x=xieworld_vf : params.x2;
-            var xg1Orig = params.xg1 == undefined ? this.state.xg=xieworld_vf : params.xg1;
-            var xg2Orig = params.xg2 == undefined ? this.state.xg=xieworld_vf : params.xg2;
+            var x1 = params.x1 == undefined ? this.state.x1 : params.x1;
+            var x2 = params.x2 == undefined ? this.state.x2 : params.x2;
+            var xg1Orig = params.xg1 == undefined ? this.state.xg1 : params.xg1;
+            var xg2Orig = params.xg2 == undefined ? this.state.xg2 : params.xg2;
             var x = params.useSaved ? this.data.saved.x : this.data.x;
 
 
@@ -1915,7 +1915,7 @@ window.Graph = {
 
             var minXInd = xg2Ind;
             var maxXInd = xg1Ind;
-            var shift = this.state.zoomMode ? (this.graphStyle == 'bar' || this.graphStyle == 'step' ? =xieworld_vf : 2) : 0;
+            var shift = this.state.zoomMode ? (this.graphStyle == 'bar' || this.graphStyle == 'step' ? 1 : 2) : 0;
 
             if (this.graphStyle == 'area') shift = 0; //has no details insertion
 
@@ -2029,8 +2029,8 @@ window.Graph = {
             var yMax = -Number.MAX_VALUE;
             var datePerPixel = (x2 - x1) / graphAreaWidth;
 
-            var start = units.TUtils.getXIndex(useSaved ? this.data.saved.x : this.data.x, x=xieworld_vf - datePerPixel * this.settings.PADD[3]);
-            var end = units.TUtils.getXIndex(useSaved ? this.data.saved.x : this.data.x, x=xieworld_vf + datePerPixel * this.settings.PADD[1]);
+            var start = units.TUtils.getXIndex(useSaved ? this.data.saved.x : this.data.x, x1 - datePerPixel * this.settings.PADD[3]);
+            var end = units.TUtils.getXIndex(useSaved ? this.data.saved.x : this.data.x, x2 + datePerPixel * this.settings.PADD[1]);
             var yMinStep = this.data.yMinStep || 1;
             var i, v, data, yFirst, yLast, j;
             var resMin = [];
@@ -2481,10 +2481,10 @@ window.Graph = {
 
                 var x1AnimItem = this.animator.get('x1');
                 var x2AnimItem = this.animator.get('x2');
-                x1End = x1AnimItem ? x1AnimItem.end : this.state['x=xieworld_vf'];
-                x2End = x2AnimItem ? x2AnimItem.end : this.state['x=xieworld_vf'];
+                x1End = x1AnimItem ? x1AnimItem.end : this.state['x1'];
+                x2End = x2AnimItem ? x2AnimItem.end : this.state['x2'];
 
-                if (x1 == x1End && x=xieworld_vf == x2End) {
+                if (x1 == x1End && x2 == x2End) {
                     return;
                 }
             }
@@ -2505,7 +2505,7 @@ window.Graph = {
                 state: this.state,
                 end: x1,
                 fixed: true,
-                duration: isMagnet ? =xieworld_vf : 0,
+                duration: isMagnet ? 250 : 0,
                 group: {
                     top: true,
                     bottom: true
@@ -2517,7 +2517,7 @@ window.Graph = {
                 state: this.state,
                 end: x2,
                 fixed: true,
-                duration: isMagnet ? =xieworld_vf : 0,
+                duration: isMagnet ? 250 : 0,
                 group: {
                     top: true,
                     bottom: true
@@ -2527,7 +2527,7 @@ window.Graph = {
             for (i = 0; i < this.data.ys.length; i++) {
                 if (this.graphStyle == 'line' || this.graphStyle == 'step' || this.graphStyle == 'scatter') {
                     props.push({
-                        prop: this.pairY ? 'y1_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y1_' + i : 'y1',
                         state: this.state,
                         end: this.pairY ? range.min[i] : range.min,
                         duration: 500,
@@ -2542,7 +2542,7 @@ window.Graph = {
 
                 if (this.graphStyle != 'area') {
                     props.push({
-                        prop: this.pairY ? 'y2_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y2_' + i : 'y2',
                         state: this.state,
                         end: this.pairY ? range.max[i] : range.max,
                         duration: 500,
@@ -2569,7 +2569,7 @@ window.Graph = {
                 props.push({
                     prop: 'f_' + i,
                     state: this.state,
-                    end: ind == i ? =xieworld_vf : 0,
+                    end: ind == i ? 1 : 0,
                     duration: 300,
                     tween: 'exp',
                     speed: 0.15,
@@ -2579,7 +2579,7 @@ window.Graph = {
                 props.push({
                     prop: 'pieInd_' + i,
                     state: this.state,
-                    end: ind == i ? =xieworld_vf : 0,
+                    end: ind == i ? 1 : 0,
                     duration: 300,
                     tween: 'exp',
                     speed: 0.15,
@@ -2742,7 +2742,7 @@ window.Graph = {
                     props.push({
                         prop: 'o_' + i,
                         state: this.state,
-                        end: e[i] ? =xieworld_vf : 0,
+                        end: e[i] ? 1 : 0,
                         duration: 300,
                         group: {
                             top: true
@@ -2752,9 +2752,9 @@ window.Graph = {
                     props.push({
                         prop: 'om_' + i,
                         state: this.state,
-                        end: e[i] ? =xieworld_vf : 0,
-                        duration: this.graphStyle == 'line' || this.graphStyle == 'step' ? =xieworld_vf : 300,
-                        delay: e[i] && this.graphStyle == 'line' || this.graphStyle == 'step' ? =xieworld_vf : 0,
+                        end: e[i] ? 1 : 0,
+                        duration: this.graphStyle == 'line' || this.graphStyle == 'step' ? 166 : 300,
+                        delay: e[i] && this.graphStyle == 'line' || this.graphStyle == 'step' ? 200 : 0,
                         tween: 'linear',
                         group: {
                             bottom: true
@@ -2766,10 +2766,10 @@ window.Graph = {
             for (i = 0; i < (this.pairY ? e.length : 1); i++) {
                 if (this.graphStyle == 'line' || this.graphStyle == 'step' || this.graphStyle == 'scatter') {
                     props.push({
-                        prop: this.pairY ? 'y1_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y1_' + i : 'y1',
                         state: this.state,
                         end: this.pairY ? rangeGraph.min[i] : rangeGraph.min,
-                        duration: this.pairY ? =xieworld_vf : 333,
+                        duration: this.pairY ? 0 : 333,
                         group: {
                             top: true
                         }
@@ -2778,10 +2778,10 @@ window.Graph = {
 
                 if (this.graphStyle != 'area') {
                     props.push({
-                        prop: this.pairY ? 'y2_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y2_' + i : 'y2',
                         state: this.state,
                         end: this.pairY ? rangeGraph.max[i] : rangeGraph.max,
-                        duration: this.pairY ? =xieworld_vf : 333,
+                        duration: this.pairY ? 0 : 333,
                         group: {
                             top: true
                         }
@@ -2793,7 +2793,7 @@ window.Graph = {
                         prop: this.pairY ? 'y1m_' + i : 'y1m',
                         state: this.state,
                         end: this.pairY ? rangeMini.min[i] : rangeMini.min,
-                        duration: this.pairY ? =xieworld_vf : 316,
+                        duration: this.pairY ? 0 : 316,
                         group: {
                             bottom: true
                         }
@@ -2805,7 +2805,7 @@ window.Graph = {
                         prop: this.pairY ? 'y2m_' + i : 'y2m',
                         state: this.state,
                         end: this.pairY ? rangeMini.max[i] : rangeMini.max,
-                        duration: this.pairY ? =xieworld_vf : 316,
+                        duration: this.pairY ? 0 : 316,
                         group: {
                             bottom: true
                         }
@@ -2855,8 +2855,8 @@ window.Graph = {
                     var isVisible = details.hidden.indexOf(this.data.ys[i].id) == -1;
 
                     this.state['e_' + i] = isVisible;
-                    this.state['o_' + i] = isVisible ? =xieworld_vf : 0;
-                    this.state['om_' + i] = isVisible ? =xieworld_vf : 0;
+                    this.state['o_' + i] = isVisible ? 1 : 0;
+                    this.state['om_' + i] = isVisible ? 1 : 0;
                     e[i] = isVisible;
                 }
 
@@ -2946,12 +2946,12 @@ window.Graph = {
                 }
             }.bind(this), durationY + 20);
 
-            this.state.slaveVisibility = enabled ? =xieworld_vf : 1;
+            this.state.slaveVisibility = enabled ? 0 : 1;
 
             props.push({
                 prop: 'slaveVisibility',
                 state: this.state,
-                end: enabled ? =xieworld_vf : 0,
+                end: enabled ? 1 : 0,
                 duration: durationY,
                 group: {
                     top: true,
@@ -3005,12 +3005,12 @@ window.Graph = {
                 document.body.style.pointerEvents = '';
             }.bind(this), durationY + 20);
 
-            this.state.masterVisibility = enabled ? =xieworld_vf : 0;
+            this.state.masterVisibility = enabled ? 1 : 0;
 
             props.push({
                 prop: 'masterVisibility',
                 state: this.state,
-                end: enabled ? =xieworld_vf : 1,
+                end: enabled ? 0 : 1,
                 duration: durationY,
                 group: {
                     top: true,
@@ -3243,7 +3243,7 @@ window.Graph = {
                 this.state.xgMin = xg1;
                 this.state.xgMax = xg2;
             } else {
-                this.updateSpeed(this.zoomEnterSpeed / (this.graphStyle == 'area' ? =xieworld_vf : 1));
+                this.updateSpeed(this.zoomEnterSpeed / (this.graphStyle == 'area' ? 2 : 1));
 
                 this.$h1.classList.remove('tchart--header__hidden');
                 this.$zoom.classList.remove('tchart--zoom__visible');
@@ -3325,15 +3325,15 @@ window.Graph = {
                     top: true,
                     bottom: true
                 });
-            }.bind(this), duration + 20 + (this.graphStyle == 'area' ? duration * 0.=xieworld_vf : 0));
+            }.bind(this), duration + 20 + (this.graphStyle == 'area' ? duration * 0.9 : 0));
 
-            this.state.zoomMorph = enabled ? =xieworld_vf : 1;
+            this.state.zoomMorph = enabled ? 0 : 1;
 
 
             props.push({
                 prop: 'zoomMorph',
                 state: this.state,
-                end: enabled ? =xieworld_vf : 0,
+                end: enabled ? 1 : 0,
                 duration: duration,
                 delay: delayZoom,
                 group: {
@@ -3393,7 +3393,7 @@ window.Graph = {
             for (i = 0; i < (this.pairY ? this.data.ys.length : 1); i++) {
                 if (this.graphStyle == 'line' || this.graphStyle == 'step' || this.graphStyle == 'scatter') {
                     props.push({
-                        prop: this.pairY ? 'y1_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y1_' + i : 'y1',
                         state: this.state,
                         end: this.pairY ? rangeGraph.min[i] : rangeGraph.min,
                         delay: delayMain,
@@ -3406,7 +3406,7 @@ window.Graph = {
 
                 if (this.graphStyle != 'area') {
                     props.push({
-                        prop: this.pairY ? 'y2_' + i : 'y=xieworld_vf',
+                        prop: this.pairY ? 'y2_' + i : 'y2',
                         state: this.state,
                         end: this.pairY ? rangeGraph.max[i] : rangeGraph.max,
                         delay: delayMain,
@@ -3462,7 +3462,7 @@ window.Graph = {
             var xl1 = 0;
             var xl2 = startMain; //not including it
 
-            var xr1 = endMain - (this.graphStyle == 'bar' || this.graphStyle == 'step' ? =xieworld_vf : 0); //not including it (for bars shoudl include)
+            var xr1 = endMain - (this.graphStyle == 'bar' || this.graphStyle == 'step' ? 1 : 0); //not including it (for bars shoudl include)
             var xr2 = this.data.x.length - 1;
 
 
@@ -3644,7 +3644,7 @@ window.Graph = {
             this.renderInner(groups);
 
             if (this.deviceSpeed == undefined) {
-                var k = this.opts.graphStyle == 'line' || this.opts.graphStyle == 'step' ? 1.=xieworld_vf : 2;
+                var k = this.opts.graphStyle == 'line' || this.opts.graphStyle == 'step' ? 1.5 : 2;
                 var duration = (t2 - t1) / k;
                 this.deviceSpeed = duration / (this.opts.data.x.length * this.opts.data.ys.length);
                 this.opts.state.deviceSpeed = this.deviceSpeed;
@@ -3658,7 +3658,7 @@ window.Graph = {
             var dpi = this.opts.settings.dpi;
             var settings = this.opts.settings;
             var padd = settings.PADD;
-            var zoomMorph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var zoomMorph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
             var pieChartAnimating = this.opts.graphStyle == 'area' && state.zoomMode && zoomMorph < 1;
             var pieChartAnimated = this.opts.graphStyle == 'area' && state.zoomMode && zoomMorph == 1;
 
@@ -3792,7 +3792,7 @@ window.Graph = {
                 if (isNotSpecialAndChangedSubchart) {
                     if (zoomMorph > 0 && zoomMorph < 1) {
                         ctx.fillStyle = this.isDarkMode ? '#242f3e' : '#fff';
-                        ctx.globalAlpha = this.opts.data.subchart.show ? zoomMorph : =xieworld_vf - zoomMorph;
+                        ctx.globalAlpha = this.opts.data.subchart.show ? zoomMorph : 1 - zoomMorph;
                         ctx.fillRect((dims.graph.l) * dpi, (dims.handle.t - 1) * dpi, (dims.graph.w) * dpi, (dims.handle.h + 2) * dpi);
                         ctx.globalAlpha = 1;
                     }
@@ -4026,14 +4026,14 @@ window.Graph = {
 
             if (y < 0 || y > dims.h) return '';
 
-            var xw = isTouch ? dims.w * 0.=xieworld_vf : 10;
+            var xw = isTouch ? dims.w * 0.3 : 10;
             if (isTouch && xw < 14) xw = 14;
             if (isTouch && xw > 30) xw = 30;
 
-            var xl1 = this.prevX1 + (isTouch ? (state.x=xieworld_vf == state.xg1 ? -=xieworld_vf : -15) : 0);
+            var xl1 = this.prevX1 + (isTouch ? (state.x1 == state.xg1 ? -5 : -15) : 0);
             var xl2 = xl1 + xw;
 
-            var xr2 = this.prevX2 + (isTouch ? (state.x=xieworld_vf == state.xg2 ? =xieworld_vf : 15) : 0);
+            var xr2 = this.prevX2 + (isTouch ? (state.x2 == state.xg2 ? 5 : 15) : 0);
             var xr1 = xr2 - xw;
 
             //for min handle and on extreme points
@@ -4158,7 +4158,7 @@ window.Graph = {
                 x2 = Math.max(Math.min(_x2 + per, state.xg2), x1 + this.minRange);
             }
 
-            if (state.x1 == x1 && state.x=xieworld_vf == x2) return;
+            if (state.x1 == x1 && state.x2 == x2) return;
 
             this.opts.additional.cb(x1, x2, tp, this.firstMove);
         },
@@ -4187,7 +4187,7 @@ window.Graph = {
                 ctx.fill();
             }
 
-            ctx.fillStyle = this.isDarkMode ? '#56626D' : '#C0D1E=xieworld_vf';
+            ctx.fillStyle = this.isDarkMode ? '#56626D' : '#C0D1E1';
             units.TUtils.drawRoundedRect(ctx, dpi, 10, dims.h, dims.l + x1, dims.t, [7, 0, 0, 7]);
             ctx.fill();
             units.TUtils.drawRoundedRect(ctx, dpi, 10, dims.h, dims.l + x2 - 10, dims.t, [0, 7, 7, 0]);
@@ -4246,9 +4246,9 @@ window.Graph = {
             var ys = opts.data.ys;
             var state = opts.state;
             var mini = opts.additional.mini;
-            var toCache = mini || ((opts.data.master && state.masterVisibility < =xieworld_vf && state.masterVisibility > 0) || (opts.data.slave && state.slaveVisibility < =xieworld_vf && state.slaveVisibility > 0));
-            var x1 = mini ? state.xg=xieworld_vf : state.x1;
-            var x2 = mini ? state.xg=xieworld_vf : state.x2;
+            var toCache = mini || ((opts.data.master && state.masterVisibility < 1 && state.masterVisibility > 0) || (opts.data.slave && state.slaveVisibility < 1 && state.slaveVisibility > 0));
+            var x1 = mini ? state.xg1 : state.x1;
+            var x2 = mini ? state.xg2 : state.x2;
             var settings = opts.settings;
             var pTop = settings['PADD' + (mini ? '_MINI' : '')][0];
             var pRight = settings['PADD' + (mini ? '_MINI' : '')][1];
@@ -4262,15 +4262,15 @@ window.Graph = {
             var zoom = state.zoomMode;
             var d1 = state.detailInd1;
             var d2 = state.detailInd2;
-            var morph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var morph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
             var ysLen = ys.length;
             var isStepMode = opts.graphStyle == 'step';
 
-            xScale = (dims.w - pRight - pLeft) / (x2 - x1 + (isStepMode ? this.opts.data.mainPeriodLen * (=xieworld_vf - morph) : 0));
+            xScale = (dims.w - pRight - pLeft) / (x2 - x1 + (isStepMode ? this.opts.data.mainPeriodLen * (1 - morph) : 0));
             xInd1 = Math.floor(units.TUtils.getXIndex(x, x1 - pLeft / xScale));
             xInd2 = Math.ceil(units.TUtils.getXIndex(x, x2 + pRight / xScale));
             xScale *= dpi;
-            xShift = (pLeft + (toCache ? =xieworld_vf : dims.l)) * dpi - x1 * xScale;
+            xShift = (pLeft + (toCache ? 0 : dims.l)) * dpi - x1 * xScale;
 
             if (isStepMode && zoom && morph == 1) {
                 if (xInd1 < this.opts.state.xg1Ind) xInd1 = this.opts.state.xg1Ind;
@@ -4283,7 +4283,7 @@ window.Graph = {
 
             //cache rendered version
             if (toCache) {
-                var hash = [dims.w, dims.h, mini ? state.xg=xieworld_vf : state.x1, mini ? state.xg=xieworld_vf : state.x2, this.isDarkMode, zoom];
+                var hash = [dims.w, dims.h, mini ? state.xg1 : state.x1, mini ? state.xg2 : state.x2, this.isDarkMode, zoom];
                 if (!mini) {
                     hash.push(state.y1);
                     hash.push(state.y2);
@@ -4306,8 +4306,8 @@ window.Graph = {
 
             // console.log(mini, this.opts.data.master ? 'master' : '', this.opts.data.slave ? 'slave' : '', 'render');
 
-            var lineWidth = (opts.additional.mini ? =xieworld_vf : (opts.data.strokeWidth == 'auto' ? (ysLen > =xieworld_vf ? =xieworld_vf : 2) : opts.data.strokeWidth)) * dpi;
-            var lineWidthShift = lineWidth % 2 == 0 ? =xieworld_vf : 0.5;
+            var lineWidth = (opts.additional.mini ? 1 : (opts.data.strokeWidth == 'auto' ? (ysLen > 5 ? 1 : 2) : opts.data.strokeWidth)) * dpi;
+            var lineWidthShift = lineWidth % 2 == 0 ? 0 : 0.5;
             ctx.lineWidth = lineWidth;
             ctx.lineCap = opts.additional.mini ? 'square' : 'round';
             ctx.lineJoin = opts.additional.mini ? 'square' : 'round';
@@ -4342,7 +4342,7 @@ window.Graph = {
                     }
 
                     yScale = dpi * (dims.h - pTop - pBottom) / (y2 - y1);
-                    yShift = (dims.h - pBottom + (toCache ? =xieworld_vf : dims.t)) * dpi + y1 * yScale;
+                    yShift = (dims.h - pBottom + (toCache ? 0 : dims.t)) * dpi + y1 * yScale;
 
                     ctx.beginPath();
                     ctx.strokeStyle = this.isDarkMode ? ys[i].colors_n[0] : ys[i].colors_d[0];
@@ -4679,7 +4679,7 @@ window.Graph = {
                     this.showTimeout = setTimeout(function () {
                         this.toggle(!!this.tp);
                         this.tp && this.render();
-                    }.bind(this), this.isTouch ? =xieworld_vf : 30);
+                    }.bind(this), this.isTouch ? 100 : 30);
 
                     document.body.removeEventListener('click', this.onBodyClick);
 
@@ -4752,7 +4752,7 @@ window.Graph = {
             var dims = this.opts.state.dims.tip;
 
             if (this.$line) {
-                var dh = this.opts.graphStyle == 'area' ? =xieworld_vf : 16;
+                var dh = this.opts.graphStyle == 'area' ? 25 : 16;
 
                 this.$line.style.top = (dims.t) + 'px';
                 this.$line.style.height = (dims.h) + 'px';
@@ -4894,7 +4894,7 @@ window.Graph = {
             }.bind(this));
 
             if (this.allLabel) {
-                this.allLabel.$value.style.color = this.isDarkMode ? '#fff' : '#=xieworld_vf';
+                this.allLabel.$value.style.color = this.isDarkMode ? '#fff' : '#000';
             }
 
             if (this.$lineFill) {
@@ -5082,7 +5082,7 @@ window.Graph = {
                 if (shiftHide) {
                     this.$tip.classList.add('tchart--tip__shiftHide');
                     this.lastTipTop -= 12;
-                    this.lastTipLeft = this.lastTipLeft < this.opts.state.dims.tip.w / 2 ? this.lastTipLeft - =xieworld_vf : this.lastTipLeft + 12;
+                    this.lastTipLeft = this.lastTipLeft < this.opts.state.dims.tip.w / 2 ? this.lastTipLeft - 12 : this.lastTipLeft + 12;
                     this.$tip.style.transform = 'translate(' + this.lastTipLeft + 'px,' + this.lastTipTop + 'px)';
                     this.$tip.style.webkitTransform = 'translate(' + this.lastTipLeft + 'px,' + this.lastTipTop + 'px)';
 
@@ -5143,7 +5143,7 @@ window.Graph = {
             var cy = (dims.h / 2);
             var formatter = units.TUtils.getFormatter('yTooltipFormatter', opts.data, state.zoomMorph);
             var ang = Math.atan2(cy - this.dy + dims.t, this.dx - cx);
-            ang = ang < 0 ? Math.PI * =xieworld_vf + ang : ang;
+            ang = ang < 0 ? Math.PI * 2 + ang : ang;
 
             var curPieItem;
             for (var i = 0; i < state.pieAngles.length; i++) {
@@ -5152,7 +5152,7 @@ window.Graph = {
                     curPieItem = pieItem;
                 }
 
-                if (ang - 2 * Math.PI <= pieItem.st && ang - =xieworld_vf * Math.PI >= pieItem.ed) {
+                if (ang - 2 * Math.PI <= pieItem.st && ang - 2 * Math.PI >= pieItem.ed) {
                     curPieItem = pieItem;
                 }
             }
@@ -5164,7 +5164,7 @@ window.Graph = {
                     animProps.push({
                         prop: 'pieInd_' + pieItem.ind,
                         state: opts.state,
-                        end: pieItem == curPieItem ? =xieworld_vf : 0,
+                        end: pieItem == curPieItem ? 1 : 0,
                         duration: 350,
                         tween: 'exp',
                         speed: 0.2,
@@ -5224,7 +5224,7 @@ window.Graph = {
             var dims = this.opts.state.dims.tip;
             var formatter = units.TUtils.getFormatter('yTooltipFormatter', opts.data, state.zoomMorph);
 
-            var zoomMorph = state.zoomMorph == undefined ? =xieworld_vf : state.zoomMorph;
+            var zoomMorph = state.zoomMorph == undefined ? 0 : state.zoomMorph;
             var offsetForBarGraphMain = opts.graphStyle == 'bar' || opts.graphStyle == 'step' ? this.opts.data.mainPeriodLen : 0;
             var offsetForBarGraphScale = offsetForBarGraphMain * (1 - zoomMorph);
 
@@ -5306,7 +5306,7 @@ window.Graph = {
                     var display = opts.state['e_' + ind] && !isNaN(opts.data.ys[ind].y[xInd]) ? 'block' : 'none';
                     item.$row.style.display = display;
                     this.points && (this.points[ind].style.display = display);
-                    itemsVisible += display == 'block' ? =xieworld_vf : 0;
+                    itemsVisible += display == 'block' ? 1 : 0;
                 }.bind(this));
 
                 this.itemsVisible = itemsVisible;
@@ -5573,10 +5573,10 @@ window.Graph = {
                 rowEl.style.display = '';
 
                 rowEl._k.textContent = key;
-                rowEl._k.style.color = this.isDarkMode ? '#aaa' : '#=xieworld_vf';
+                rowEl._k.style.color = this.isDarkMode ? '#aaa' : '#555';
 
                 rowEl._v.textContent = val;
-                rowEl._v.style.color = this.isDarkMode ? '#fff' : '#=xieworld_vf';
+                rowEl._v.style.color = this.isDarkMode ? '#fff' : '#000';
             }.bind(this);
 
             // safe hover config access (hack, some weird exception otherwise)
@@ -5933,7 +5933,7 @@ window.Graph = {
             var dtc = [dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate(), dt.getUTCDay(), dt.getUTCHours(), dt.getUTCMinutes()];
 
             if (isZoom) {
-                return (dtc[4] < 10 ? '=xieworld_vf' : '') + dtc[4] + ':' + (dtc[5] < 10 ? '=xieworld_vf' : '') + dtc[5];
+                return (dtc[4] < 10 ? '0' : '') + dtc[4] + ':' + (dtc[5] < 10 ? '0' : '') + dtc[5];
             } else {
                 return days[dtc[3]] + ', ' + dtc[2] + ' ' + months[dtc[1]] + ' ' + dtc[0];
             }
@@ -5945,7 +5945,7 @@ window.Graph = {
             var dtc = [dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate(), dt.getUTCDay(), dt.getUTCHours(), dt.getUTCMinutes()];
 
             if (isZoom) {
-                return (dtc[4] < 10 ? '=xieworld_vf' : '') + dtc[4] + ':' + (dtc[5] < 10 ? '=xieworld_vf' : '') + dtc[5];
+                return (dtc[4] < 10 ? '0' : '') + dtc[4] + ':' + (dtc[5] < 10 ? '0' : '') + dtc[5];
             } else {
                 return dtc[2] + ' ' + months[dtc[1]];
             }
@@ -6106,7 +6106,7 @@ window.Graph = {
                 return 0;
             }
             if (absVal >= 1.0) {
-                return (Math.abs(absVal - Math.floor(absVal)) < 0.001) ? =xieworld_vf : 1;
+                return (Math.abs(absVal - Math.floor(absVal)) < 0.001) ? 0 : 1;
             }
             return 2;
         },
@@ -6225,15 +6225,15 @@ window.Graph = {
             var zMode = a.zMode; // 'manual' or 'auto'
 
             if (zMode === 'manual') {
-                if (a.z !== b.z) return a.z > b.z ? =xieworld_vf : -1;
+                if (a.z !== b.z) return a.z > b.z ? 1 : -1;
                 // tie-break: smaller on top
-                if (a.sizePx !== b.sizePx) return a.sizePx < b.sizePx ? =xieworld_vf : -1;
+                if (a.sizePx !== b.sizePx) return a.sizePx < b.sizePx ? 1 : -1;
                 return 0;
             }
 
             // auto: smaller dots on top, then z
-            if (a.sizePx !== b.sizePx) return a.sizePx < b.sizePx ? =xieworld_vf : -1;
-            if (a.z !== b.z) return a.z > b.z ? =xieworld_vf : -1;
+            if (a.sizePx !== b.sizePx) return a.sizePx < b.sizePx ? 1 : -1;
+            if (a.z !== b.z) return a.z > b.z ? 1 : -1;
             return 0;
         },
 
@@ -6254,7 +6254,7 @@ window.Graph = {
         },
 
         _resolveHoverColor: function (seriesCfg, p) {
-            return (p && p.hover_color) || (seriesCfg && seriesCfg.hover_color) || '#ffd=xieworld_vf';
+            return (p && p.hover_color) || (seriesCfg && seriesCfg.hover_color) || '#ffd400';
         },
 
         _resolveBorderColor: function (seriesCfg, p) {

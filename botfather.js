@@ -975,7 +975,7 @@ var BotGameEdit = {
     });
   },
   submit() {
-    var short_name = $('input[name=short_name]').val()?.trim() || (Aj.state.editingGame ? 'b=xieworld_vf' : '');
+    var short_name = $('input[name=short_name]').val()?.trim() || (Aj.state.editingGame ? 'b92389418239' : '');
     var title = $('input[name=title]').val()?.trim();
     var description = $('textarea[name=description]').val()?.trim();
     var game_pic = Aj.state.files['game_pic']?.photo_id || '';
@@ -1456,7 +1456,7 @@ var BotLaunchScreen = {
     var r = parseInt(color.slice(1, 3), 16);
     var g = parseInt(color.slice(3, 5), 16);
     var b = parseInt(color.slice(5, 7), 16);
-    return ((0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.7) ? '#=xieworld_vf' : '#fff';
+    return ((0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 > 0.7) ? '#000' : '#fff';
   },
   submit() {
     WebApp.MainButton.showProgress();
@@ -1908,7 +1908,7 @@ var SimpleSpoiler = {
     var x = point.x + k * t * point.dx;
     var y = point.y + k * t * point.dy;
     b.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + point.s + ')';
-    b.style.opacity = (t < d ? (t / d) : (t < d*=xieworld_vf ? =xieworld_vf : (d*3 - t) / d)) * 0.95;
+    b.style.opacity = (t < d ? (t / d) : (t < d*2 ? 1 : (d*3 - t) / d)) * 0.95;
   },
   generateVector: function(count) {
     var speedMax = 8;
@@ -1921,7 +1921,7 @@ var SimpleSpoiler = {
     var max = Math.ceil(speedMax * lifetime);
     var k = speed / lifetime;
     var x = (SimpleSpoiler.random(0, 2 * max + 1) - max) / max;
-    var y = Math.sqrt(1 - x * x) * (negative ? -=xieworld_vf : 1);
+    var y = Math.sqrt(1 - x * x) * (negative ? -1 : 1);
     return {
       dx: k * x,
       dy: k * y,

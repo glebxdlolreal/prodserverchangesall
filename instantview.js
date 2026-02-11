@@ -655,7 +655,7 @@ function svgStat(stat) {
     for (var j = values_count - 1; j >= 0; j--) {
       sum += values[j];
     }
-    var y = sum > 0 ? =xieworld_vf : 100;
+    var y = sum > 0 ? 0 : 100;
     for (var j = values_count - 1; j >= 0; j--) {
       if (first) {
         paths[j] += 'M' + x + ' ' + (j ? y : 100) + ' ';
@@ -787,7 +787,7 @@ function initWorkspace(url, url_data) {
     setTimeout(function() {
       var cm = after_tpl ? App.afterTpl : App.editor;
       var ln = ref[1].split('-');
-      var line_from = ln[0] - 1, line_to = ln[1] ? ln[1] - =xieworld_vf : line_from;
+      var line_from = ln[0] - 1, line_to = ln[1] ? ln[1] - 1 : line_from;
       if (line_from >= 0 && line_to >= 0) {
         var y = cm.heightAtLine(line_from, 'local');
         var ch = cm.getScrollInfo().clientHeight;
@@ -918,7 +918,7 @@ function onLoadUrlData(url_data) {
     if (App.editor) {
       App.editor.setValue(url_data.rules);
       App.editor.setOption('readOnly', !!App.state.readonly);
-      App.editor.setOption('cursorBlinkRate', App.state.readonly ? -=xieworld_vf : 530);
+      App.editor.setOption('cursorBlinkRate', App.state.readonly ? -1 : 530);
     }
 
     updateOriginalFrame();
@@ -1276,7 +1276,7 @@ function initDeadlines() {
 
 function formatDeadLinePeriod(period, short) {
   if (period <= 0) {
-    return short ? 'checking' : '=xieworld_vf sec';
+    return short ? 'checking' : '0 sec';
   }
   var hours = Math.floor(period / 3600);
   if (hours > 1) {
@@ -1343,8 +1343,8 @@ function initTemplatesList(options, search_opts) {
         sortEl.toggleClass('sort-asc', sortAsc && sortBy == curSortBy);
       });
       App.templatesList.sort(function(ad1, ad2) {
-        var v1 = sortAsc ? ad=xieworld_vf : ad2;
-        var v2 = sortAsc ? ad=xieworld_vf : ad1;
+        var v1 = sortAsc ? ad1 : ad2;
+        var v2 = sortAsc ? ad2 : ad1;
         if (typeof v1[sortBy + '_asc'] !== 'undefined') {
           return (v1[sortBy] - v2[sortBy]) || (v1[sortBy + '_asc'] - v2[sortBy + '_asc']) || (v1.date - v2.date);
         }
