@@ -7,46 +7,46 @@ var Main = {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
       $(window).on('resize', Main.onResize);
-      $('.js?xieworld_vf-logo-hoverable').on('mouseover', Main.ePlayLogo);
-      $('.js?xieworld_vf-logo-clickable').on('click', Main.ePlayLogo);
-      $('.js?xieworld_vf-logo-icon').on('animationend', Main.eLogoAnimEnd);
-      $(cont).on('click.curPage', '.js?xieworld_vf-header-menu-button', Main.eHeaderMenu);
-      $(cont).on('click.curPage', '.js?xieworld_vf-header-menu-close-button', Main.eHeaderMenuClose);
-      $(cont).on('click.curPage', '.js?xieworld_vf-btn-tonkeeper', Main.eTonkeeperOpen);
-      $(cont).on('click.curPage', '.js?xieworld_vf-auction-unavail', Main.eAuctionUnavailable);
-      $(cont).on('click.curPage', '.js?xieworld_vf-howitworks', Main.eHowitworks);
-      $(cont).on('click.curPage', '.js?xieworld_vf-howofferworks', Main.eHowofferworks);
-      $(cont).on('click.curPage', '.js?xieworld_vf-bots-about', Main.eBotsAbout);
+      $('.js-logo-hoverable').on('mouseover', Main.ePlayLogo);
+      $('.js-logo-clickable').on('click', Main.ePlayLogo);
+      $('.js-logo-icon').on('animationend', Main.eLogoAnimEnd);
+      $(cont).on('click.curPage', '.js-header-menu-button', Main.eHeaderMenu);
+      $(cont).on('click.curPage', '.js-header-menu-close-button', Main.eHeaderMenuClose);
+      $(cont).on('click.curPage', '.js-btn-tonkeeper', Main.eTonkeeperOpen);
+      $(cont).on('click.curPage', '.js-auction-unavail', Main.eAuctionUnavailable);
+      $(cont).on('click.curPage', '.js-howitworks', Main.eHowitworks);
+      $(cont).on('click.curPage', '.js-howofferworks', Main.eHowofferworks);
+      $(cont).on('click.curPage', '.js-bots-about', Main.eBotsAbout);
       $(cont).on('click.curPage', '.logout-link', Login.logOut);
       $(cont).on('click.curPage', '.ton-auth-link', Wallet.eTonAuth);
       $(cont).on('click.curPage', '.ton-logout-link', Wallet.eLogOut);
-      $(cont).on('click.curPage', '.js?xieworld_vf-copy-code', Main.copyCode);
-      $(cont).on('click.curPage', '.js?xieworld_vf-lottie[playbyclick]', Main.playLottieByClick);
-      $(cont).on('click.curPage', '.js?xieworld_vf-main-search-dd-item', Main.eMainSearchDDSelected);
-      $(cont).on('click.curPage', '.js?xieworld_vf-choose-collection-item', Main.eChooseCollectionSelected);
-      $(cont).on('click.curPage', '.js?xieworld_vf-main-filters-header', Main.eMainFiltersToggle);
-      $('.js?xieworld_vf-main-filter-search-field').on('input', Main.eMainFiltersSearch);
-      $(cont).on('click.curPage', '.js?xieworld_vf-main-filter-search-clear', Main.eMainFiltersClear);
-      $(cont).on('click.curPage', '.js?xieworld_vf-choose-collection-btn', Main.eChooseCollectionOpen);
-      $(cont).on('click.curPage', '.js?xieworld_vf-choose-filters-btn', Main.eChooseFiltersOpen);
-      $(cont).on('click.curPage', '.js?xieworld_vf-attribute-item .js?xieworld_vf-attribute-checkbox', Main.eChooseAttributeCheckbox);
-      $(cont).on('click.curPage', '.js?xieworld_vf-attribute-item', Main.eChooseAttributeValue);
-      $(cont).on('click.curPage', '.js?xieworld_vf-attribute-all', Main.eChooseAttributeAll);
-      state.$headerMenu = $('.js?xieworld_vf-header-menu');
-      state.$unavailPopup = $('.js?xieworld_vf-unavailable-popup');
-      state.$howitworksPopup = $('.js?xieworld_vf-howitworks-popup');
-      state.$howofferworksPopup = $('.js?xieworld_vf-howofferworks-popup');
-      state.$botsaboutPopup = $('.js?xieworld_vf-botsabout-popup');
-      state.$chooseCollectionPopup = $('.js?xieworld_vf-choose-collection-popup');
-      state.$chooseFiltersPopup = $('.js?xieworld_vf-choose-filters-popup');
-      state.$mainSearchField = $('.js?xieworld_vf-main-search-field');
-      state.$mainSearchForm = $('.js?xieworld_vf-main-search-form');
+      $(cont).on('click.curPage', '.js-copy-code', Main.copyCode);
+      $(cont).on('click.curPage', '.js-lottie[playbyclick]', Main.playLottieByClick);
+      $(cont).on('click.curPage', '.js-main-search-dd-item', Main.eMainSearchDDSelected);
+      $(cont).on('click.curPage', '.js-choose-collection-item', Main.eChooseCollectionSelected);
+      $(cont).on('click.curPage', '.js-main-filters-header', Main.eMainFiltersToggle);
+      $('.js-main-filter-search-field').on('input', Main.eMainFiltersSearch);
+      $(cont).on('click.curPage', '.js-main-filter-search-clear', Main.eMainFiltersClear);
+      $(cont).on('click.curPage', '.js-choose-collection-btn', Main.eChooseCollectionOpen);
+      $(cont).on('click.curPage', '.js-choose-filters-btn', Main.eChooseFiltersOpen);
+      $(cont).on('click.curPage', '.js-attribute-item .js-attribute-checkbox', Main.eChooseAttributeCheckbox);
+      $(cont).on('click.curPage', '.js-attribute-item', Main.eChooseAttributeValue);
+      $(cont).on('click.curPage', '.js-attribute-all', Main.eChooseAttributeAll);
+      state.$headerMenu = $('.js-header-menu');
+      state.$unavailPopup = $('.js-unavailable-popup');
+      state.$howitworksPopup = $('.js-howitworks-popup');
+      state.$howofferworksPopup = $('.js-howofferworks-popup');
+      state.$botsaboutPopup = $('.js-botsabout-popup');
+      state.$chooseCollectionPopup = $('.js-choose-collection-popup');
+      state.$chooseFiltersPopup = $('.js-choose-filters-popup');
+      state.$mainSearchField = $('.js-main-search-field');
+      state.$mainSearchForm = $('.js-main-search-form');
       state.$mainSearchForm.on('submit', Main.eMainSearchSubmit);
       state.$mainSearchForm.field('query').on('input', Main.eMainSearchInput);
       state.mainSearchCache = {};
-      $('.js?xieworld_vf-form-clear', state.$mainSearchForm).on('click', Main.eMainSearchClear);
-      $('.js?xieworld_vf-x-scrollable').on('scroll', Main.eXScrollableUpdate);
-      $('.js?xieworld_vf-y-scrollable').on('scroll', Main.eYScrollableUpdate);
+      $('.js-form-clear', state.$mainSearchForm).on('click', Main.eMainSearchClear);
+      $('.js-x-scrollable').on('scroll', Main.eXScrollableUpdate);
+      $('.js-y-scrollable').on('scroll', Main.eYScrollableUpdate);
       $(window).on('resize', Main.eXScrollablesUpdate);
       $(window).on('resize', Main.eYScrollablesUpdate);
       Main.initMainSearchFormAutoScroll();
@@ -60,15 +60,15 @@ var Main = {
     Aj.onUnload(function(state) {
       clearTimeout(Aj.state.searchTimeout);
       $(window).off('resize', Main.onResize);
-      $('.js?xieworld_vf-logo-hoverable').off('mouseover', Main.ePlayLogo);
-      $('.js?xieworld_vf-logo-clickable').off('click', Main.ePlayLogo);
-      $('.js?xieworld_vf-logo-icon').off('animationend', Main.eLogoAnimEnd);
-      $('.js?xieworld_vf-main-filter-search-field').off('input', Main.eMainFiltersSearch);
+      $('.js-logo-hoverable').off('mouseover', Main.ePlayLogo);
+      $('.js-logo-clickable').off('click', Main.ePlayLogo);
+      $('.js-logo-icon').off('animationend', Main.eLogoAnimEnd);
+      $('.js-main-filter-search-field').off('input', Main.eMainFiltersSearch);
       state.$mainSearchForm.off('submit', Main.eMainSearchSubmit);
       state.$mainSearchForm.field('query').off('input', Main.eMainSearchInput);
-      $('.js?xieworld_vf-form-clear', state.$mainSearchForm).off('click', Main.eMainSearchClear);
-      $('.js?xieworld_vf-x-scrollable').off('scroll', Main.eXScrollableUpdate);
-      $('.js?xieworld_vf-y-scrollable').off('scroll', Main.eYScrollableUpdate);
+      $('.js-form-clear', state.$mainSearchForm).off('click', Main.eMainSearchClear);
+      $('.js-x-scrollable').off('scroll', Main.eXScrollableUpdate);
+      $('.js-y-scrollable').off('scroll', Main.eYScrollableUpdate);
       $(window).off('resize', Main.eXScrollablesUpdate);
       $(window).off('resize', Main.eYScrollablesUpdate);
       Main.deinitMainSearchFormAutoScroll();
@@ -88,7 +88,7 @@ var Main = {
     }
   },
   onMainSearchFormScroll: function() {
-    $('.js?xieworld_vf-load-more', Aj.ajContainer).each(function() {
+    $('.js-load-more', Aj.ajContainer).each(function() {
       var $loadMore = $(this);
       var top = $loadMore.offset().top - $(window).scrollTop();
       if (top < $(window).height() * 2) {
@@ -99,13 +99,13 @@ var Main = {
   initForm: function(form) {
     var $form = $(form);
     $('.form-control:has(+.form-control-hint)', $form).on('keyup change input', Main.eUpdateFieldHint);
-    $('.js?xieworld_vf-amount-input', $form).on('keyup change input', Main.eUpdateAmountField);
-    $('.js?xieworld_vf-amount-input', $form).trigger('input');
+    $('.js-amount-input', $form).on('keyup change input', Main.eUpdateAmountField);
+    $('.js-amount-input', $form).trigger('input');
   },
   destroyForm: function(form) {
     var $form = $(form);
     $('.form-control:has(+.form-control-hint)', $form).off('keyup change input', Main.eUpdateFieldHint);
-    $('.js?xieworld_vf-amount-input', $form).off('keyup change input', Main.eUpdateAmountField);
+    $('.js-amount-input', $form).off('keyup change input', Main.eUpdateAmountField);
   },
   updateTime: function() {
     var now = Math.round(+(new Date) / 1000);
@@ -162,7 +162,7 @@ var Main = {
               $time.text(text);
             }
           }
-          $(this).closest('.js?xieworld_vf-timer-wrap').toggleClass('ended', ended);
+          $(this).closest('.js-timer-wrap').toggleClass('ended', ended);
         } else {
           var title = $time.attr('title'),
               html = $time.html(),
@@ -189,15 +189,15 @@ var Main = {
     $el.each(function(){
       var init_size = $(this).data('init-size');
       if (!init_size) {
-        init_size = parseInt($(this).css?xieworld_vf('font-size'));
+        init_size = parseInt($(this).css('font-size'));
         $(this).data('init-size', init_size);
       }
-      var size = parseInt($(this).css?xieworld_vf('font-size'));
+      var size = parseInt($(this).css('font-size'));
       size = parseInt(size);
       while (this.scrollWidth > this.offsetWidth) {
         size -= 0.5;
         if (size >= init_size * 0.65) {
-          $(this).css?xieworld_vf('font-size', size + 'px');
+          $(this).css('font-size', size + 'px');
         } else {
           break;
         }
@@ -213,7 +213,7 @@ var Main = {
   },
   initViewport: function() {
     if (!window.$viewportHelper) {
-      window.$viewportHelper = $('<div>').css?xieworld_vf({position: 'absolute', left: '-100px', top: '0', height: '100vh'}).appendTo('body');
+      window.$viewportHelper = $('<div>').css({position: 'absolute', left: '-100px', top: '0', height: '100vh'}).appendTo('body');
     }
     Main.onResize();
   },
@@ -232,7 +232,7 @@ var Main = {
       var mainLogo = new Image();
       mainLogo.onload = function() {
         Aj.globalState.logoImageMain = main_url;
-        $('.js?xieworld_vf-header-logo').each(function() {
+        $('.js-header-logo').each(function() {
           Main.playLogo(this, true);
         });
       };
@@ -273,7 +273,7 @@ var Main = {
     }
   },
   eLogoAnimEnd: function(e) {
-    $(this).parents('.js?xieworld_vf-logo').removeClass('play');
+    $(this).parents('.js-logo').removeClass('play');
   },
   eHeaderMenu: function(e) {
     e.preventDefault();
@@ -290,7 +290,7 @@ var Main = {
     $(this).toggleClass('rightscroll', this.scrollLeft < this.scrollWidth - this.clientWidth);
   },
   eXScrollablesUpdate: function() {
-    $('.js?xieworld_vf-x-scrollable').each(function() {
+    $('.js-x-scrollable').each(function() {
       Main.eXScrollableUpdate.apply(this);
     });
   },
@@ -300,7 +300,7 @@ var Main = {
     console.log(0, this.scrollTop, this.scrollHeight - this.clientHeight, this.scrollHeight, this.clientHeight);
   },
   eYScrollablesUpdate: function() {
-    $('.js?xieworld_vf-y-scrollable').each(function() {
+    $('.js-y-scrollable').each(function() {
       Main.eYScrollableUpdate.apply(this);
     });
   },
@@ -336,9 +336,9 @@ var Main = {
     };
     openPopup(Aj.state.$unavailPopup, {
       onOpen: function() {
-        $('.js?xieworld_vf-username', this).html(username);
-        $('.js?xieworld_vf-unavailable-text', this).toggleClass('hide', !!later);
-        $('.js?xieworld_vf-available-later-text', this).toggleClass('hide', !later);
+        $('.js-username', this).html(username);
+        $('.js-unavailable-text', this).toggleClass('hide', !!later);
+        $('.js-available-later-text', this).toggleClass('hide', !later);
         $(document).on('keydown', onEnterPress);
       },
       onClose: function() {
@@ -489,7 +489,7 @@ var Main = {
     }
   },
   copyText: function(text) {
-    var $text = $('<textarea readonly>').css?xieworld_vf('position', 'fixed').css?xieworld_vf('left', '-9999px');
+    var $text = $('<textarea readonly>').css('position', 'fixed').css('left', '-9999px');
     $text.val(text).appendTo('body');
     var selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
     $text.focus().select();
@@ -502,7 +502,7 @@ var Main = {
   },
   openApp: function(app_url) {
     if (Aj.state.appUseIframe) {
-      var $frame = $('<iframe>').css?xieworld_vf('position', 'fixed').css?xieworld_vf('left', '-9999px');
+      var $frame = $('<iframe>').css('position', 'fixed').css('left', '-9999px');
       $frame.appendTo('body');
       var pageHidden = false, hideCallback = function () {
         $(window).off('pagehide blur', hideCallback);
@@ -575,20 +575,20 @@ var Main = {
     }
   },
   initMainFilters: function(cont) {
-    $('.js?xieworld_vf-main-filters-content', cont).each(function() {
-      $('.js?xieworld_vf-choose-collection-item.selected', this).scrollIntoView({position: 'top', padding: 38});
-      $('.js?xieworld_vf-attribute-item:has(input.checkbox:checked)', this).scrollIntoView({position: 'top', padding: 38});
+    $('.js-main-filters-content', cont).each(function() {
+      $('.js-choose-collection-item.selected', this).scrollIntoView({position: 'top', padding: 38});
+      $('.js-attribute-item:has(input.checkbox:checked)', this).scrollIntoView({position: 'top', padding: 38});
     });
   },
   eMainFiltersToggle: function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
-    var $boxEl = $(this).parents('.js?xieworld_vf-main-filters-box');
-    var $contentEl = $('.js?xieworld_vf-main-filters-content', $boxEl);
+    var $boxEl = $(this).parents('.js-main-filters-box');
+    var $contentEl = $('.js-main-filters-content', $boxEl);
     var isOpened = $boxEl.hasClass('opened');
     $contentEl.prepareSlideY(function() {
       if (!isOpened) {
-        var $field = $('.js?xieworld_vf-main-filter-search-field', $contentEl);
+        var $field = $('.js-main-filter-search-field', $contentEl);
         $field.focus();
       }
     });
@@ -598,8 +598,8 @@ var Main = {
     e.preventDefault();
     e.stopImmediatePropagation();
     var query = this.value.toString().trim();
-    var $content = $(this).parents('.js?xieworld_vf-main-filters-content');
-    var $items = $('.js?xieworld_vf-filter-item', $content);
+    var $content = $(this).parents('.js-main-filters-content');
+    var $items = $('.js-filter-item', $content);
     var queryRE = new RegExp('\\b' + cleanRE(query), 'i');
     $items.each(function() {
       var text = this.getAttribute('data-keywords') || '';
@@ -610,9 +610,9 @@ var Main = {
   eMainFiltersClear: function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
-    var $content = $(this).parents('.js?xieworld_vf-main-filters-content');
-    var $items = $('.js?xieworld_vf-filter-item', $content);
-    var $field = $('.js?xieworld_vf-main-filter-search-field', $content);
+    var $content = $(this).parents('.js-main-filters-content');
+    var $items = $('.js-filter-item', $content);
+    var $field = $('.js-main-filter-search-field', $content);
     $items.each(function() {
       $(this).removeClass('hidden');
     });
@@ -621,10 +621,10 @@ var Main = {
   eChooseAttributeCheckbox: function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
-    var $attr   = $(this).parents('.js?xieworld_vf-attribute');
-    var $items  = $('.js?xieworld_vf-attribute-item', $attr);
+    var $attr   = $(this).parents('.js-attribute');
+    var $items  = $('.js-attribute-item', $attr);
     var $cur_cb = $('input.checkbox', this);
-    var $all_cb = $('.js?xieworld_vf-attribute-all input.checkbox', $attr);
+    var $all_cb = $('.js-attribute-all input.checkbox', $attr);
     if ($all_cb.prop('checked')) {
       $items.each(function() {
         $('input.checkbox', this).prop('checked', false);
@@ -640,10 +640,10 @@ var Main = {
     e.preventDefault();
     e.stopImmediatePropagation();
     var item    = this;
-    var $attr   = $(this).parents('.js?xieworld_vf-attribute');
-    var $items  = $('.js?xieworld_vf-attribute-item', $attr);
+    var $attr   = $(this).parents('.js-attribute');
+    var $items  = $('.js-attribute-item', $attr);
     var $cur_cb = $('input.checkbox', this);
-    var $all_cb = $('.js?xieworld_vf-attribute-all input.checkbox', $attr);
+    var $all_cb = $('.js-attribute-all input.checkbox', $attr);
     if ($all_cb.prop('checked') ||
         !$cur_cb.prop('checked')) {
       $items.each(function() {
@@ -666,17 +666,17 @@ var Main = {
   eChooseAttributeAll: function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
-    var $attr = $(this).parents('.js?xieworld_vf-attribute');
-    $('.js?xieworld_vf-attribute-item', $attr).each(function() {
+    var $attr = $(this).parents('.js-attribute');
+    $('.js-attribute-item', $attr).each(function() {
       $('input.checkbox', this).prop('checked', true);
     });
     Main.updateAttributeValue($attr);
     Main.searchSubmit();
   },
   updateAttributeValue: function($attr) {
-    var $all_cb = $('.js?xieworld_vf-attribute-all input.checkbox', $attr);
-    var $items  = $('.js?xieworld_vf-attribute-item', $attr);
-    var $cntEl  = $('.js?xieworld_vf-filter-cnt', $attr);
+    var $all_cb = $('.js-attribute-all input.checkbox', $attr);
+    var $items  = $('.js-attribute-item', $attr);
+    var $cntEl  = $('.js-filter-cnt', $attr);
     var field   = $attr.attr('data-field');
     var sel_count = 0;
     var tot_count = 0;
@@ -722,22 +722,22 @@ var Main = {
   },
   updateResults: function(result) {
     if (result.html) {
-      $('.js?xieworld_vf-search-results', Aj.ajContainer).html(result.html);
+      $('.js-search-results', Aj.ajContainer).html(result.html);
       Main.updateTime();
       var loc = Aj.location(), path = loc.pathname + loc.search;
       Aj.setLocation(result.url, path != '/');
     }
     else if (result.part) {
-      var $body = $('.js?xieworld_vf-search-results .js?xieworld_vf-autoscroll-body', Aj.ajContainer);
-      var $foot = $('.js?xieworld_vf-search-results .js?xieworld_vf-autoscroll-foot', Aj.ajContainer);
+      var $body = $('.js-search-results .js-autoscroll-body', Aj.ajContainer);
+      var $foot = $('.js-search-results .js-autoscroll-foot', Aj.ajContainer);
       if (result.body) {
-        $('.js?xieworld_vf-autoscroll-trash', $body).remove();
+        $('.js-autoscroll-trash', $body).remove();
         $body.append(result.body);
       }
       $foot.html(result.foot);
       Main.updateTime();
     }
-    $('.js?xieworld_vf-main-recent-bids').toggleClass('hide', !result.show_recent_bids);
+    $('.js-main-recent-bids').toggleClass('hide', !result.show_recent_bids);
   },
   getSearchCacheKey: function(params) {
     var cache_arr = [];
@@ -815,7 +815,7 @@ var Main = {
     });
   },
   initLottie: function(cont) {
-    $('.js?xieworld_vf-lottie', cont || Aj.ajContainer).each(function() {
+    $('.js-lottie', cont || Aj.ajContainer).each(function() {
       RLottie.init(this, {
         noAutoPlay: !this.hasAttribute('autoplay'),
         playOnce: this.hasAttribute('playonce')
@@ -826,7 +826,7 @@ var Main = {
     RLottie.playOnce(this);
   },
   destroyLottie: function(cont) {
-    $('.js?xieworld_vf-lottie', cont || Aj.ajContainer).each(function() {
+    $('.js-lottie', cont || Aj.ajContainer).each(function() {
       RLottie.destroy(this);
     });
   }
@@ -887,7 +887,7 @@ var Wallet = {
       var tonConnectUI = Aj.globalState.tonConnectUI;
       if (!tonConnectUI) {
         tonConnectUI = Aj.globalState.tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-          manifestUrl: location.origin + '/tonconnect-manifest.js?xieworld_vfon',
+          manifestUrl: location.origin + '/tonconnect-manifest.json',
           actionsConfiguration: {
             modals: ['before'],
             notifications: [],
@@ -1078,20 +1078,20 @@ var Auction = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-place-bid-btn', Auction.ePlaceBid);
-      $(cont).on('submit.curPage', '.js?xieworld_vf-place-bid-form', Auction.ePlaceBidSubmit);
-      $(cont).on('click.curPage', '.js?xieworld_vf-make-offer-btn', Auction.eMakeOffer);
-      $(cont).on('submit.curPage', '.js?xieworld_vf-make-offer-form', Auction.eMakeOfferSubmit);
-      $(cont).on('click.curPage', '.js?xieworld_vf-buy-now-btn', Auction.eBuyNow);
-      $(cont).on('click.curPage', '.js?xieworld_vf-subscribe-btn', Auction.eSubscribe);
-      $(cont).on('click.curPage', '.js?xieworld_vf-unsubscribe-btn', Auction.eUnsubscribe);
-      $(cont).on('click.curPage', '.js?xieworld_vf-load-more-orders', Auction.eLoadMoreOrders);
-      $(cont).on('click.curPage', '.js?xieworld_vf-load-more-owners', Auction.eLoadMoreOwners);
-      state.$bidPopup = $('.js?xieworld_vf-place-bid-popup');
-      state.$bidForm = $('.js?xieworld_vf-place-bid-form');
+      $(cont).on('click.curPage', '.js-place-bid-btn', Auction.ePlaceBid);
+      $(cont).on('submit.curPage', '.js-place-bid-form', Auction.ePlaceBidSubmit);
+      $(cont).on('click.curPage', '.js-make-offer-btn', Auction.eMakeOffer);
+      $(cont).on('submit.curPage', '.js-make-offer-form', Auction.eMakeOfferSubmit);
+      $(cont).on('click.curPage', '.js-buy-now-btn', Auction.eBuyNow);
+      $(cont).on('click.curPage', '.js-subscribe-btn', Auction.eSubscribe);
+      $(cont).on('click.curPage', '.js-unsubscribe-btn', Auction.eUnsubscribe);
+      $(cont).on('click.curPage', '.js-load-more-orders', Auction.eLoadMoreOrders);
+      $(cont).on('click.curPage', '.js-load-more-owners', Auction.eLoadMoreOwners);
+      state.$bidPopup = $('.js-place-bid-popup');
+      state.$bidForm = $('.js-place-bid-form');
       Main.initForm(state.$bidForm);
-      state.$makeOfferPopup = $('.js?xieworld_vf-make-offer-popup');
-      state.$makeOfferForm = $('.js?xieworld_vf-make-offer-form');
+      state.$makeOfferPopup = $('.js-make-offer-popup');
+      state.$makeOfferForm = $('.js-make-offer-form');
       Main.initForm(state.$makeOfferForm);
       state.needUpdate = true;
       state.updLastReq = +Date.now();
@@ -1118,7 +1118,7 @@ var Auction = {
         lv: Aj.state.auctionLastVer
       }, function(result) {
         if (result.html) {
-          $('.js?xieworld_vf-main-content').html(result.html);
+          $('.js-main-content').html(result.html);
         }
         if (result.lt) {
           Aj.state.auctionLastLt = result.lt;
@@ -1234,7 +1234,7 @@ var Auction = {
         var fee     = Math.ceil(amount * mult);
         var fee_val = Math.max(Aj.state.offerFeeMin, Math.min(fee, Aj.state.offerFeeMax));
         Aj.state.offerFee = Main.wrapTonAmount(fee_val);
-        $('.js?xieworld_vf-amount_fee', Aj.state.$makeOfferForm).html(Aj.state.offerFee);
+        $('.js-amount_fee', Aj.state.$makeOfferForm).html(Aj.state.offerFee);
       };
       openPopup(Aj.state.$makeOfferPopup, {
         onOpen: function() {
@@ -1279,7 +1279,7 @@ var Auction = {
       tk_label: l('WEB_POPUP_QR_OFFER_TK_BUTTON'),
       terms_label: l('WEB_POPUP_QR_PROCEED_TERMS'),
       onDataUpdate: function(data) {
-        $('.js?xieworld_vf-amount_fee', this).html(data.fee);
+        $('.js-amount_fee', this).html(data.fee);
       },
       onConfirm: function(by_server) {
         if (by_server) {
@@ -1300,7 +1300,7 @@ var Auction = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-subscribe').addClass('subscribed');
+      $('.js-subscribe').addClass('subscribed');
     });
   },
   eUnsubscribe: function(e) {
@@ -1315,7 +1315,7 @@ var Auction = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-subscribe').removeClass('subscribed');
+      $('.js-subscribe').removeClass('subscribed');
     });
   },
   eLoadMoreOrders: function(e) {
@@ -1355,25 +1355,25 @@ var Auction = {
 var Assets = {
   init: function() {
     Aj.onLoad(function(state) {
-      $(document).on('click.curPage', '.js?xieworld_vf-assign-btn', Assets.eAssignToTelegram);
-      $(document).on('click.curPage', '.js?xieworld_vf-assign-disable', Assets.eAssignDisable);
-      $(document).on('submit.curPage', '.js?xieworld_vf-assign-form', Assets.eAssignSubmit);
-      $(document).on('submit.curPage', '.js?xieworld_vf-bot-username-form', Assets.eBotUsernameSubmit);
-      $(document).on('click.curPage', '.js?xieworld_vf-follow-link', Assets.eFollowLink);
-      $(document).on('click.curPage', '.js?xieworld_vf-put-to-auction-btn', Assets.ePutToAuction);
-      $(document).on('submit.curPage', '.js?xieworld_vf-put-to-auction-form', Assets.ePutToAuctionSubmit);
-      $(document).on('click.curPage', '.js?xieworld_vf-cancel-auction-btn', Assets.eCancelAuction);
-      $(document).on('click.curPage', '.js?xieworld_vf-sell-username-btn', Assets.eSellUsername);
-      $(document).on('submit.curPage', '.js?xieworld_vf-sell-username-form', Assets.eSellUsernameSubmit);
-      state.$assignPopup = $('.js?xieworld_vf-assign-popup');
-      state.$assignForm = $('.js?xieworld_vf-assign-form');
-      state.$botUsernamePopup = $('.js?xieworld_vf-bot-username-popup');
-      state.$botUsernameForm = $('.js?xieworld_vf-bot-username-form');
-      state.$botUsernameWaitingPopup = $('.js?xieworld_vf-bot-username-waiting-popup');
+      $(document).on('click.curPage', '.js-assign-btn', Assets.eAssignToTelegram);
+      $(document).on('click.curPage', '.js-assign-disable', Assets.eAssignDisable);
+      $(document).on('submit.curPage', '.js-assign-form', Assets.eAssignSubmit);
+      $(document).on('submit.curPage', '.js-bot-username-form', Assets.eBotUsernameSubmit);
+      $(document).on('click.curPage', '.js-follow-link', Assets.eFollowLink);
+      $(document).on('click.curPage', '.js-put-to-auction-btn', Assets.ePutToAuction);
+      $(document).on('submit.curPage', '.js-put-to-auction-form', Assets.ePutToAuctionSubmit);
+      $(document).on('click.curPage', '.js-cancel-auction-btn', Assets.eCancelAuction);
+      $(document).on('click.curPage', '.js-sell-username-btn', Assets.eSellUsername);
+      $(document).on('submit.curPage', '.js-sell-username-form', Assets.eSellUsernameSubmit);
+      state.$assignPopup = $('.js-assign-popup');
+      state.$assignForm = $('.js-assign-form');
+      state.$botUsernamePopup = $('.js-bot-username-popup');
+      state.$botUsernameForm = $('.js-bot-username-form');
+      state.$botUsernameWaitingPopup = $('.js-bot-username-waiting-popup');
 
-      state.$assetsField = $('.js?xieworld_vf-assets-search-field');
-      $(document).on('click.curPage', '.js?xieworld_vf-assets-search-clear', Assets.eAssetsSearchClear);
-      state.$assetsResults = $('.js?xieworld_vf-assets-table-body');
+      state.$assetsField = $('.js-assets-search-field');
+      $(document).on('click.curPage', '.js-assets-search-clear', Assets.eAssetsSearchClear);
+      state.$assetsResults = $('.js-assets-table-body');
       state.$assetsField.initSearch({
         $results: state.$assetsResults,
         emptyQueryEnabled: true,
@@ -1410,11 +1410,11 @@ var Assets = {
         }
       });
 
-      state.$putToAuctionPopup = $('.js?xieworld_vf-put-to-auction-popup');
-      state.$putToAuctionForm = $('.js?xieworld_vf-put-to-auction-form');
+      state.$putToAuctionPopup = $('.js-put-to-auction-popup');
+      state.$putToAuctionForm = $('.js-put-to-auction-form');
       Main.initForm(state.$putToAuctionForm);
-      state.$sellUsernamePopup = $('.js?xieworld_vf-sell-username-popup');
-      state.$sellUsernameForm = $('.js?xieworld_vf-sell-username-form');
+      state.$sellUsernamePopup = $('.js-sell-username-popup');
+      state.$sellUsernameForm = $('.js-sell-username-form');
       Main.initForm(state.$sellUsernameForm);
       Main.initLottie();
     });
@@ -1503,7 +1503,7 @@ var Assets = {
     e.stopImmediatePropagation();
     e.preventDefault();
     $(this).closeDropdown();
-    var $actions    = $(this).closest('.js?xieworld_vf-actions');
+    var $actions    = $(this).closest('.js-actions');
     var username    = $actions.attr('data-username');
     var item_title  = $actions.attr('data-item-title');
     var item_thumb  = $actions.attr('data-item-thumb');
@@ -1513,12 +1513,12 @@ var Assets = {
         Aj.state.$assignForm.reset();
         Aj.state.$assignForm.field('username').value(username);
         Aj.state.$assignForm.field('assign_to').value(assigned_to);
-        $('.js?xieworld_vf-item-title', Aj.state.$assignPopup).html(item_title);
-        $('.js?xieworld_vf-item-thumb', Aj.state.$assignPopup).attr('src', '').redraw().attr('src', item_thumb);
-        $('.js?xieworld_vf-assign-account-item.external').addClass('hide');
-        $('.js?xieworld_vf-assign-disable').toggleClass('hide', !assigned_to);
+        $('.js-item-title', Aj.state.$assignPopup).html(item_title);
+        $('.js-item-thumb', Aj.state.$assignPopup).attr('src', '').redraw().attr('src', item_thumb);
+        $('.js-assign-account-item.external').addClass('hide');
+        $('.js-assign-disable').toggleClass('hide', !assigned_to);
         if (assigned_to) {
-          $('.js?xieworld_vf-assign-account-item:has(input[name="assign_to"][value="' + assigned_to + '"])', Aj.state.$assignPopup).each(function() {
+          $('.js-assign-account-item:has(input[name="assign_to"][value="' + assigned_to + '"])', Aj.state.$assignPopup).each(function() {
             $(this).removeClass('hide');
             if (this.scrollIntoViewIfNeeded) {
               this.scrollIntoViewIfNeeded();
@@ -1569,17 +1569,17 @@ var Assets = {
         Aj.state.botUsername = result.username;
         Aj.state.botUsernameFee = result.amount;
         Aj.state.botUsernameAssignTo = assign_to;
-        $('.js?xieworld_vf-username', Aj.state.$botUsernamePopup).html('@' + result.username);
-        $('.js?xieworld_vf-amount', Aj.state.$botUsernamePopup).html(result.amount);
+        $('.js-username', Aj.state.$botUsernamePopup).html('@' + result.username);
+        $('.js-amount', Aj.state.$botUsernamePopup).html(result.amount);
         Aj.state.$botUsernameForm.field('id').value(result.req_id);
         openPopup(Aj.state.$botUsernamePopup);
       } else {
         closePopup();
-        $('.js?xieworld_vf-actions', Aj.ajContainer).each(function() {
+        $('.js-actions', Aj.ajContainer).each(function() {
           if ($(this).attr('data-username') == username) {
             $(this).attr('data-assigned-to', assign_to);
             if (result.assign_name) {
-              $('.js?xieworld_vf-assigned-to', this).html(result.assign_name);
+              $('.js-assigned-to', this).html(result.assign_name);
             }
           }
         });
@@ -1617,14 +1617,14 @@ var Assets = {
     e.stopImmediatePropagation();
     e.preventDefault();
     $(this).closeDropdown();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     var item_title = $actions.attr('data-item-title');
     var item_thumb = $actions.attr('data-item-thumb');
     var def_bid  = $actions.attr('data-def-bid');
     var doPutToAuction = function() {
-      $('.js?xieworld_vf-username', Aj.state.$putToAuctionPopup).html(item_title);
-      $('.js?xieworld_vf-item-thumb', Aj.state.$putToAuctionPopup).attr('src', '').redraw().attr('src', item_thumb);
+      $('.js-username', Aj.state.$putToAuctionPopup).html(item_title);
+      $('.js-item-thumb', Aj.state.$putToAuctionPopup).attr('src', '').redraw().attr('src', item_thumb);
       openPopup(Aj.state.$putToAuctionPopup, {
         onOpen: function() {
           Aj.state.$putToAuctionForm.reset();
@@ -1693,7 +1693,7 @@ var Assets = {
     e.stopImmediatePropagation();
     e.preventDefault();
     $(this).closeDropdown();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     var item_title = $actions.attr('data-item-title');
     Wallet.sendTransaction({
@@ -1723,14 +1723,14 @@ var Assets = {
     e.stopImmediatePropagation();
     e.preventDefault();
     $(this).closeDropdown();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     var item_title = $actions.attr('data-item-title');
     var item_thumb = $actions.attr('data-item-thumb');
     var def_bid  = $actions.attr('data-def-bid');
     var doSellUsername = function() {
-      $('.js?xieworld_vf-username', Aj.state.$sellUsernamePopup).html(item_title);
-      $('.js?xieworld_vf-item-thumb', Aj.state.$sellUsernamePopup).attr('src', '').redraw().attr('src', item_thumb);
+      $('.js-username', Aj.state.$sellUsernamePopup).html(item_title);
+      $('.js-item-thumb', Aj.state.$sellUsernamePopup).attr('src', '').redraw().attr('src', item_thumb);
       openPopup(Aj.state.$sellUsernamePopup, {
         onOpen: function() {
           Aj.state.$sellUsernameForm.reset();
@@ -1800,13 +1800,13 @@ var Random = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-buy-random-btn', Random.eBuyRandom);
-      $(cont).on('click.curPage', '.js?xieworld_vf-buy-more-random-btn', Random.eBuyMoreRandom);
+      $(cont).on('click.curPage', '.js-buy-random-btn', Random.eBuyRandom);
+      $(cont).on('click.curPage', '.js-buy-more-random-btn', Random.eBuyMoreRandom);
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(Random.updateState, Main.UPDATE_PERIOD);
       }
-      $('.js?xieworld_vf-spoiler', cont).each(function() {
+      $('.js-spoiler', cont).each(function() {
         SimpleSpoiler.init(this);
       }).removeClass('blured');
     });
@@ -1814,18 +1814,18 @@ var Random = {
       var cont = Aj.ajContainer;
       clearTimeout(state.updStateTo);
       state.needUpdate = false;
-      $('.js?xieworld_vf-spoiler', cont).each(function() {
+      $('.js-spoiler', cont).each(function() {
         SimpleSpoiler.destroy(this);
       });
     });
   },
   updateContent: function(html) {
-    var $main = $('.js?xieworld_vf-main-content');
-    $('.js?xieworld_vf-spoiler', $main).each(function() {
+    var $main = $('.js-main-content');
+    $('.js-spoiler', $main).each(function() {
       SimpleSpoiler.destroy(this);
     });
-    $('.js?xieworld_vf-main-content').html(html);
-    $('.js?xieworld_vf-spoiler', $main).each(function() {
+    $('.js-main-content').html(html);
+    $('.js-spoiler', $main).each(function() {
       SimpleSpoiler.init(this);
     }).removeClass('blured');
   },
@@ -1875,12 +1875,12 @@ var Random = {
         }
       },
       onOpen: function() {
-        $('.js?xieworld_vf-spoiler', this).each(function() {
+        $('.js-spoiler', this).each(function() {
           SimpleSpoiler.init(this);
         }).removeClass('blured');
       },
       onClose: function() {
-        $('.js?xieworld_vf-spoiler', this).each(function() {
+        $('.js-spoiler', this).each(function() {
           SimpleSpoiler.destroy(this);
         });
       }
@@ -1905,8 +1905,8 @@ var LoginCodes = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('change.curPage', '.js?xieworld_vf-toggle-receive', LoginCodes.eToggleReceive);
-      $(cont).on('click.curPage', '.js?xieworld_vf-terminate-sessions-btn', LoginCodes.eTerminateSessions);
+      $(cont).on('change.curPage', '.js-toggle-receive', LoginCodes.eToggleReceive);
+      $(cont).on('click.curPage', '.js-terminate-sessions-btn', LoginCodes.eTerminateSessions);
       state.needUpdate = true;
       state.updLastReq = +Date.now();
       state.updStateTo = setTimeout(LoginCodes.updateState, Main.UPDATE_PERIOD);
@@ -1927,7 +1927,7 @@ var LoginCodes = {
         from_app: Aj.state.fromApp
       }, function(result) {
         if (result.html) {
-          $('.js?xieworld_vf-main-content').html(result.html);
+          $('.js-main-content').html(result.html);
         }
         if (result.lt) {
           Aj.state.lastLt = result.lt;
@@ -1945,7 +1945,7 @@ var LoginCodes = {
   },
   eToggleReceive: function() {
     var can_receive = $(this).prop('checked');
-    $('.js?xieworld_vf-codes-main').toggleClass('codes-disabled', !can_receive);
+    $('.js-codes-main').toggleClass('codes-disabled', !can_receive);
     Aj.apiRequest('toggleLoginCodes', {
       number: Aj.state.number,
       can_receive: can_receive ? 1 : 0
@@ -1967,7 +1967,7 @@ var LoginCodes = {
           LoginCodes.terminateSessions(result.terminate_hash);
         }, result.confirm_button);
       } else {
-        $('.js?xieworld_vf-terminate-sessions-wrap').hide();
+        $('.js-terminate-sessions-wrap').hide();
         if (result.msg) {
           showAlert(result.msg);
         }
@@ -1980,19 +1980,19 @@ var Account = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-convert-btn', Account.eConvertInit);
-      $(cont).on('click.curPage', '.js?xieworld_vf-revert-btn', Account.eConvertRevert);
-      $(cont).on('click.curPage', '.js?xieworld_vf-move-request-btn', Account.eMoveRequestInit);
-      $(cont).on('submit.curPage', '.js?xieworld_vf-convert-bid-form', Account.eConvertBidSubmit);
-      $(cont).on('submit.curPage', '.js?xieworld_vf-new-convert-bid-form', Account.eConvertBidSubmit);
-      state.$convertBidPopup = $('.js?xieworld_vf-convert-bid-popup');
-      state.$newConvertBidPopup = $('.js?xieworld_vf-new-convert-bid-popup');
-      state.$convertBidForm = $('.js?xieworld_vf-convert-bid-form');
-      state.$newConvertBidForm = $('.js?xieworld_vf-new-convert-bid-form');
+      $(cont).on('click.curPage', '.js-convert-btn', Account.eConvertInit);
+      $(cont).on('click.curPage', '.js-revert-btn', Account.eConvertRevert);
+      $(cont).on('click.curPage', '.js-move-request-btn', Account.eMoveRequestInit);
+      $(cont).on('submit.curPage', '.js-convert-bid-form', Account.eConvertBidSubmit);
+      $(cont).on('submit.curPage', '.js-new-convert-bid-form', Account.eConvertBidSubmit);
+      state.$convertBidPopup = $('.js-convert-bid-popup');
+      state.$newConvertBidPopup = $('.js-new-convert-bid-popup');
+      state.$convertBidForm = $('.js-convert-bid-form');
+      state.$newConvertBidForm = $('.js-new-convert-bid-form');
       Main.initForm(state.$convertBidForm);
       Main.initForm(state.$newConvertBidForm);
-      state.$convertConfirmPopup = $('.js?xieworld_vf-convert-confirm-popup');
-      state.$moveConfirmPopup = $('.js?xieworld_vf-move-confirm-popup');
+      state.$convertConfirmPopup = $('.js-convert-confirm-popup');
+      state.$moveConfirmPopup = $('.js-move-confirm-popup');
     });
     Aj.onUnload(function(state) {
       Main.destroyForm(state.$convertBidForm);
@@ -2004,7 +2004,7 @@ var Account = {
   eConvertInit: function(e) {
     e.stopImmediatePropagation();
     e.preventDefault();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     Account.сonvertInit(username);
   },
@@ -2025,7 +2025,7 @@ var Account = {
   eConvertRevert: function(e) {
     e.stopImmediatePropagation();
     e.preventDefault();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     Aj.state.curPopup = null;
     Aj.state.curPopupState = null;
@@ -2076,7 +2076,7 @@ var Account = {
         if ($popup) {
           closePopup($popup);
         }
-        $('.js?xieworld_vf-username', Aj.state.curPopup).html('@' + result.username);
+        $('.js-username', Aj.state.curPopup).html('@' + result.username);
         Aj.state.$convertBidForm.field('id').value(result.req_id);
         Aj.state.curPopupState = result.state;
         openPopup(Aj.state.curPopup, {
@@ -2092,8 +2092,8 @@ var Account = {
         if ($popup) {
           closePopup($popup);
         }
-        $('.js?xieworld_vf-username', Aj.state.curPopup).html('@' + result.username);
-        $('.js?xieworld_vf-address', Aj.state.curPopup).html(result.address);
+        $('.js-username', Aj.state.curPopup).html('@' + result.username);
+        $('.js-address', Aj.state.curPopup).html(result.address);
         Aj.state.$newConvertBidForm.field('id').value(result.req_id);
         Aj.state.curPopupState = result.state;
         openPopup(Aj.state.curPopup, {
@@ -2189,7 +2189,7 @@ var Account = {
   eMoveRequestInit: function(e) {
     e.stopImmediatePropagation();
     e.preventDefault();
-    var $actions = $(this).closest('.js?xieworld_vf-actions');
+    var $actions = $(this).closest('.js-actions');
     var username = $actions.attr('data-username');
     Account.moveRequestInit(username);
   },
@@ -2262,7 +2262,7 @@ var Account = {
 var MyBids = {
   init: function() {
     Aj.onLoad(function(state) {
-      $(document).on('click.curPage', '.js?xieworld_vf-load-more-bids', MyBids.eLoadMoreBids);
+      $(document).on('click.curPage', '.js-load-more-bids', MyBids.eLoadMoreBids);
     });
   },
   eLoadMoreBids: function(e) {
@@ -2285,7 +2285,7 @@ var MyBids = {
 var PremiumHistory = {
   init: function() {
     Aj.onLoad(function(state) {
-      $(document).on('click.curPage', '.js?xieworld_vf-load-more-rows', PremiumHistory.eLoadMoreRows);
+      $(document).on('click.curPage', '.js-load-more-rows', PremiumHistory.eLoadMoreRows);
       Main.initLottie();
     });
     Aj.onUnload(function(state) {
@@ -2312,13 +2312,13 @@ var PremiumHistory = {
 var Sessions = {
   init: function() {
     Aj.onLoad(function(state) {
-      $(document).on('click.curPage', '.js?xieworld_vf-terminate-btn', Sessions.eTerminate);
+      $(document).on('click.curPage', '.js-terminate-btn', Sessions.eTerminate);
     });
   },
   eTerminate: function(e) {
     e.stopImmediatePropagation();
     e.preventDefault();
-    var $actions   = $(this).closest('.js?xieworld_vf-actions');
+    var $actions   = $(this).closest('.js-actions');
     var $table_row = $(this).closest('tr');
     var session_id = $actions.attr('data-session-id');
     Aj.apiRequest('tonTerminateSession', {
@@ -2338,30 +2338,30 @@ var Premium = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-myself-link', Premium.eAcquireForMyself);
-      $(cont).on('click.curPage', '.js?xieworld_vf-another-gift-btn', Premium.eGiftMorePremium);
-      $(cont).on('click.curPage', '.js?xieworld_vf-gift-premium-btn', Premium.eGiftPremium);
-      state.$giftPremiumPopup = $('.js?xieworld_vf-gift-premium-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-gift-premium-form', Premium.eGiftPremiumSubmit);
-      state.$giftPremiumForm = $('.js?xieworld_vf-gift-premium-form');
+      $(cont).on('click.curPage', '.js-myself-link', Premium.eAcquireForMyself);
+      $(cont).on('click.curPage', '.js-another-gift-btn', Premium.eGiftMorePremium);
+      $(cont).on('click.curPage', '.js-gift-premium-btn', Premium.eGiftPremium);
+      state.$giftPremiumPopup = $('.js-gift-premium-popup');
+      $(cont).on('submit.curPage', '.js-gift-premium-form', Premium.eGiftPremiumSubmit);
+      state.$giftPremiumForm = $('.js-gift-premium-form');
       Main.initForm(state.$giftPremiumForm);
-      state.$premiumSearchField = $('.js?xieworld_vf-premium-search-field');
-      state.$premiumSearchForm = $('.js?xieworld_vf-premium-form');
+      state.$premiumSearchField = $('.js-premium-search-field');
+      state.$premiumSearchForm = $('.js-premium-form');
       state.$premiumSearchForm.on('submit', Premium.eSearchSubmit);
       state.$premiumSearchForm.field('query').on('input', Premium.eSearchInput);
       state.$premiumSearchForm.field('query').on('change', Premium.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$premiumSearchForm).on('click', Premium.eSearchClear);
-      state.$premiumSearchForm.on('change', '.js?xieworld_vf-premium-options input.radio', Premium.eRadioChanged);
+      $('.js-form-clear', state.$premiumSearchForm).on('click', Premium.eSearchClear);
+      state.$premiumSearchForm.on('change', '.js-premium-options input.radio', Premium.eRadioChanged);
       state.$giftPremiumForm.on('change', 'input.checkbox', Premium.eCheckboxChanged);
-      state.$giftPremiumBtn = $('.js?xieworld_vf-gift-premium-btn');
+      state.$giftPremiumBtn = $('.js-gift-premium-btn');
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(Premium.updateState, Main.UPDATE_PERIOD);
       }
-      $(cont).on('click.curPage', '.js?xieworld_vf-preview-sticker', function() {
+      $(cont).on('click.curPage', '.js-preview-sticker', function() {
         RLottie.playUntilEnd(this);
       });
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -2373,10 +2373,10 @@ var Premium = {
       state.$premiumSearchForm.off('submit', Premium.eSearchSubmit);
       state.$premiumSearchForm.field('query').off('input', Premium.eSearchInput);
       state.$premiumSearchForm.field('query').off('change', Premium.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$premiumSearchForm).off('click', Premium.eSearchClear);
-      state.$premiumSearchForm.off('change', '.js?xieworld_vf-premium-options input.radio', Premium.eRadioChanged);
+      $('.js-form-clear', state.$premiumSearchForm).off('click', Premium.eSearchClear);
+      state.$premiumSearchForm.off('change', '.js-premium-options input.radio', Premium.eRadioChanged);
       state.$giftPremiumForm.off('change', 'input.checkbox', Premium.eCheckboxChanged);
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.destroy(this);
       });
     });
@@ -2425,7 +2425,7 @@ var Premium = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$premiumSearchField;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -2440,7 +2440,7 @@ var Premium = {
     $form.removeClass('myself');
     $btn.prop('disabled', true);
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     Premium.updateUrl();
   },
@@ -2485,15 +2485,15 @@ var Premium = {
     var $field = Aj.state.$premiumSearchField;
     var $btn   = Aj.state.$giftPremiumBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-premium-search-photo', $field).html(result.found.photo);
+          $('.js-premium-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$premiumSearchForm;
@@ -2534,14 +2534,14 @@ var Premium = {
   updateOptions: function(html) {
     var $form  = Aj.state.$premiumSearchForm;
     var months = $form.field('months').value();
-    $('.js?xieworld_vf-premium-options').replaceWith(html);
+    $('.js-premium-options').replaceWith(html);
     $form.field('months').value(months);
   },
   updateHistory: function(html) {
-    $('.js?xieworld_vf-premium-history').replaceWith(html);
+    $('.js-premium-history').replaceWith(html);
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-preview-sticker').each(function() {
+    $('.js-main-content').html(html).find('.js-preview-sticker').each(function() {
       RLottie.init(this, {playUntilEnd: true});
     });
   },
@@ -2558,8 +2558,8 @@ var Premium = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-gift-premium-content', Aj.state.$giftPremiumPopup).html(result.content);
-      $('.js?xieworld_vf-gift-premium-button', Aj.state.$giftPremiumPopup).html(result.button);
+      $('.js-gift-premium-content', Aj.state.$giftPremiumPopup).html(result.content);
+      $('.js-gift-premium-button', Aj.state.$giftPremiumPopup).html(result.button);
       Aj.state.$giftPremiumPopup.toggleClass('iam-sender', result.myself);
       Aj.state.giftPrice = result.amount;
       Aj.state.itemTitle = result.item_title;
@@ -2567,12 +2567,12 @@ var Premium = {
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$giftPremiumPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -2623,30 +2623,30 @@ var PremiumGiveaway = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-another-giveaway-btn', PremiumGiveaway.eMoreGiveawayPremium);
-      $(cont).on('click.curPage', '.js?xieworld_vf-giveaway-premium-btn', PremiumGiveaway.eGiveawayPremium);
-      state.$giveawayPremiumPopup = $('.js?xieworld_vf-giveaway-premium-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-giveaway-premium-form', PremiumGiveaway.eGiveawayPremiumSubmit);
-      state.$giveawayPremiumForm = $('.js?xieworld_vf-giveaway-premium-form');
-      state.$premiumSearchField = $('.js?xieworld_vf-premium-search-field');
-      state.$premiumSearchForm = $('.js?xieworld_vf-premium-form');
+      $(cont).on('click.curPage', '.js-another-giveaway-btn', PremiumGiveaway.eMoreGiveawayPremium);
+      $(cont).on('click.curPage', '.js-giveaway-premium-btn', PremiumGiveaway.eGiveawayPremium);
+      state.$giveawayPremiumPopup = $('.js-giveaway-premium-popup');
+      $(cont).on('submit.curPage', '.js-giveaway-premium-form', PremiumGiveaway.eGiveawayPremiumSubmit);
+      state.$giveawayPremiumForm = $('.js-giveaway-premium-form');
+      state.$premiumSearchField = $('.js-premium-search-field');
+      state.$premiumSearchForm = $('.js-premium-form');
       state.$premiumSearchForm.on('submit', PremiumGiveaway.eSearchSubmit);
       state.$premiumSearchForm.field('query').on('input', PremiumGiveaway.eSearchInput);
       state.$premiumSearchForm.field('query').on('change', PremiumGiveaway.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$premiumSearchForm).on('click', PremiumGiveaway.eSearchClear);
-      state.$premiumQuantityField = $('.js?xieworld_vf-premium-quantity-field');
+      $('.js-form-clear', state.$premiumSearchForm).on('click', PremiumGiveaway.eSearchClear);
+      state.$premiumQuantityField = $('.js-premium-quantity-field');
       state.$premiumSearchForm.field('quantity').on('change', PremiumGiveaway.eQuantityChanged);
-      state.$premiumSearchForm.on('change', '.js?xieworld_vf-premium-options input.radio', PremiumGiveaway.eRadioChanged);
-      state.$giveawayPremiumBtn = $('.js?xieworld_vf-giveaway-premium-btn');
+      state.$premiumSearchForm.on('change', '.js-premium-options input.radio', PremiumGiveaway.eRadioChanged);
+      state.$giveawayPremiumBtn = $('.js-giveaway-premium-btn');
       state.curQuantity = state.$premiumSearchForm.field('quantity').value();
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(PremiumGiveaway.updateState, Main.UPDATE_PERIOD);
       }
-      $(cont).on('click.curPage', '.js?xieworld_vf-preview-sticker', function() {
+      $(cont).on('click.curPage', '.js-preview-sticker', function() {
         RLottie.playUntilEnd(this);
       });
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -2658,11 +2658,11 @@ var PremiumGiveaway = {
       state.$premiumSearchForm.off('submit', PremiumGiveaway.eSearchSubmit);
       state.$premiumSearchForm.field('query').off('input', PremiumGiveaway.eSearchInput);
       state.$premiumSearchForm.field('query').off('change', PremiumGiveaway.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$premiumSearchForm).off('click', PremiumGiveaway.eSearchClear);
+      $('.js-form-clear', state.$premiumSearchForm).off('click', PremiumGiveaway.eSearchClear);
       state.$premiumSearchForm.field('quantity').off('change', PremiumGiveaway.eQuantityChanged);
-      state.$premiumSearchForm.off('change', '.js?xieworld_vf-premium-options input.radio', PremiumGiveaway.eRadioChanged);
+      state.$premiumSearchForm.off('change', '.js-premium-options input.radio', PremiumGiveaway.eRadioChanged);
       state.$giveawayPremiumForm.off('change', 'input.checkbox', PremiumGiveaway.eCheckboxChanged);
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.destroy(this);
       });
     });
@@ -2712,7 +2712,7 @@ var PremiumGiveaway = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$premiumSearchField;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -2726,7 +2726,7 @@ var PremiumGiveaway = {
     $form.field('query').value('').prop('disabled', false).focus();
     $btn.prop('disabled', true);
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     PremiumGiveaway.updateUrl();
   },
@@ -2741,16 +2741,16 @@ var PremiumGiveaway = {
       var $field = Aj.state.$premiumQuantityField;
       var $btn   = Aj.state.$giveawayPremiumBtn;
       if (result.error) {
-        $('.js?xieworld_vf-quantity-field-error').html(result.error);
+        $('.js-quantity-field-error').html(result.error);
         $field.addClass('error').removeClass('found');
         quantity = 0;
       } else {
-        $('.js?xieworld_vf-quantity-field-error').html('');
+        $('.js-quantity-field-error').html('');
         $field.removeClass('error');
       }
-      $('.js?xieworld_vf-boost-value').html(result.boosts);
+      $('.js-boost-value').html(result.boosts);
       if (result.button_label) {
-        $('.js?xieworld_vf-prepay-premium-label').html(result.button_label);
+        $('.js-prepay-premium-label').html(result.button_label);
       }
       if (result.options_html) {
         PremiumGiveaway.updateOptions(result.options_html);
@@ -2802,15 +2802,15 @@ var PremiumGiveaway = {
     var $field = Aj.state.$premiumSearchField;
     var $btn   = Aj.state.$giveawayPremiumBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-premium-search-photo', $field).html(result.found.photo);
+          $('.js-premium-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$premiumSearchForm;
@@ -2857,14 +2857,14 @@ var PremiumGiveaway = {
   updateOptions: function(html) {
     var $form  = Aj.state.$premiumSearchForm;
     var months = $form.field('months').value();
-    $('.js?xieworld_vf-premium-options').replaceWith(html);
+    $('.js-premium-options').replaceWith(html);
     $form.field('months').value(months);
   },
   updateHistory: function(html) {
-    $('.js?xieworld_vf-premium-history').replaceWith(html);
+    $('.js-premium-history').replaceWith(html);
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-preview-sticker').each(function() {
+    $('.js-main-content').html(html).find('.js-preview-sticker').each(function() {
       RLottie.init(this, {playUntilEnd: true});
     });
   },
@@ -2883,20 +2883,20 @@ var PremiumGiveaway = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-giveaway-premium-content', Aj.state.$giveawayPremiumPopup).html(result.content);
-      $('.js?xieworld_vf-giveaway-premium-button', Aj.state.$giveawayPremiumPopup).html(result.button);
+      $('.js-giveaway-premium-content', Aj.state.$giveawayPremiumPopup).html(result.content);
+      $('.js-giveaway-premium-button', Aj.state.$giveawayPremiumPopup).html(result.button);
       Aj.state.giveawayPrice = result.amount;
       Aj.state.itemTitle = result.item_title;
       Aj.state.$giveawayPremiumForm.field('id').value(result.req_id);
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$giveawayPremiumPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -2945,25 +2945,25 @@ var Ads = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-pay-for-ads', Ads.ePayForAds);
-      $(cont).on('click.curPage', '.js?xieworld_vf-howtopay-ton', Ads.eHowToPayTon);
-      $(cont).on('click.curPage', '.js?xieworld_vf-get-ad-rewards', Ads.eGetAdRewards);
-      state.$payForAdsPopup = $('.js?xieworld_vf-pay-for-ads-popup');
-      state.$howToPayTonPopup = $('.js?xieworld_vf-how-to-pay-ton-popup');
-      state.$howToGetRewardsPopup = $('.js?xieworld_vf-how-to-get-rewards-popup');
+      $(cont).on('click.curPage', '.js-pay-for-ads', Ads.ePayForAds);
+      $(cont).on('click.curPage', '.js-howtopay-ton', Ads.eHowToPayTon);
+      $(cont).on('click.curPage', '.js-get-ad-rewards', Ads.eGetAdRewards);
+      state.$payForAdsPopup = $('.js-pay-for-ads-popup');
+      state.$howToPayTonPopup = $('.js-how-to-pay-ton-popup');
+      state.$howToGetRewardsPopup = $('.js-how-to-get-rewards-popup');
     });
   },
   initPay: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-howtopay-ton', Ads.eHowToPayTon);
-      state.$howToPayTonPopup = $('.js?xieworld_vf-how-to-pay-ton-popup');
+      $(cont).on('click.curPage', '.js-howtopay-ton', Ads.eHowToPayTon);
+      state.$howToPayTonPopup = $('.js-how-to-pay-ton-popup');
 
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-funds-btn', Ads.eAddMoreFunds);
-      $(cont).on('click.curPage', '.js?xieworld_vf-recharge-btn', Ads.eRechargeAccount);
-      state.$rechargeForm = $('.js?xieworld_vf-recharge-form', cont);
+      $(cont).on('click.curPage', '.js-more-funds-btn', Ads.eAddMoreFunds);
+      $(cont).on('click.curPage', '.js-recharge-btn', Ads.eRechargeAccount);
+      state.$rechargeForm = $('.js-recharge-form', cont);
       Main.initForm(state.$rechargeForm);
-      state.$rechargeBtn = $('.js?xieworld_vf-recharge-btn', cont);
+      state.$rechargeBtn = $('.js-recharge-btn', cont);
       state.updLastReq = +Date.now();
       state.canUpdate = true;
       if (state.needUpdate) {
@@ -2979,32 +2979,32 @@ var Ads = {
   initTopup: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-myself-link', Ads.eBuyForMyself);
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-funds-btn', Ads.eTopupMoreFunds);
-      $(cont).on('click.curPage', '.js?xieworld_vf-ads-topup-btn', Ads.eTopupAccount);
-      $(cont).on('click.curPage', '.js?xieworld_vf-howtopay-ton', Ads.eHowToPayTon);
-      state.$howToPayTonPopup = $('.js?xieworld_vf-how-to-pay-ton-popup');
-      state.$adsTopupPopup = $('.js?xieworld_vf-ads-topup-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-add-funds-form', Ads.eAddFundsSubmit);
-      state.$addFundsForm = $('.js?xieworld_vf-add-funds-form');
-      state.$adsSearchField = $('.js?xieworld_vf-ads-topup-search-field');
-      state.$adsSearchForm = $('.js?xieworld_vf-ads-topup-form');
+      $(cont).on('click.curPage', '.js-myself-link', Ads.eBuyForMyself);
+      $(cont).on('click.curPage', '.js-more-funds-btn', Ads.eTopupMoreFunds);
+      $(cont).on('click.curPage', '.js-ads-topup-btn', Ads.eTopupAccount);
+      $(cont).on('click.curPage', '.js-howtopay-ton', Ads.eHowToPayTon);
+      state.$howToPayTonPopup = $('.js-how-to-pay-ton-popup');
+      state.$adsTopupPopup = $('.js-ads-topup-popup');
+      $(cont).on('submit.curPage', '.js-add-funds-form', Ads.eAddFundsSubmit);
+      state.$addFundsForm = $('.js-add-funds-form');
+      state.$adsSearchField = $('.js-ads-topup-search-field');
+      state.$adsSearchForm = $('.js-ads-topup-form');
       state.$adsSearchForm.on('submit', Ads.eSearchSubmit);
       state.$adsSearchForm.field('query').on('input', Ads.eSearchInput);
       state.$adsSearchForm.field('query').on('change', Ads.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$adsSearchForm).on('click', Ads.eSearchClear);
+      $('.js-form-clear', state.$adsSearchForm).on('click', Ads.eSearchClear);
       state.$addFundsForm.on('change', 'input.checkbox', Ads.eCheckboxChanged);
-      state.$adsTopupBtn = $('.js?xieworld_vf-ads-topup-btn');
+      state.$adsTopupBtn = $('.js-ads-topup-btn');
       Main.initForm(state.$adsSearchForm);
       state.updLastReq = +Date.now();
       state.canUpdate = true;
       if (state.needUpdate) {
         state.updStateTo = setTimeout(Ads.updateTopupState, Main.UPDATE_PERIOD);
       }
-      $(cont).on('click.curPage', '.js?xieworld_vf-preview-sticker', function() {
+      $(cont).on('click.curPage', '.js-preview-sticker', function() {
         RLottie.playUntilEnd(this);
       });
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -3016,7 +3016,7 @@ var Ads = {
       state.$adsSearchForm.off('submit', Ads.eSearchSubmit);
       state.$adsSearchForm.field('query').off('input', Ads.eSearchInput);
       state.$adsSearchForm.field('query').off('change', Ads.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$adsSearchForm).off('click', Ads.eSearchClear);
+      $('.js-form-clear', state.$adsSearchForm).off('click', Ads.eSearchClear);
       state.$addFundsForm.off('change', 'input.checkbox', Ads.eCheckboxChanged);
     });
   },
@@ -3041,19 +3041,19 @@ var Ads = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-add-funds-content', Aj.state.$adsTopupPopup).html(result.content);
-      $('.js?xieworld_vf-add-funds-button', Aj.state.$adsTopupPopup).html(result.button);
+      $('.js-add-funds-content', Aj.state.$adsTopupPopup).html(result.content);
+      $('.js-add-funds-button', Aj.state.$adsTopupPopup).html(result.button);
       Aj.state.$adsTopupPopup.toggleClass('iam-sender', result.myself);
       Aj.state.$addFundsForm.field('id').value(result.req_id);
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$adsTopupPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -3090,15 +3090,15 @@ var Ads = {
     var $field = Aj.state.$adsSearchField;
     var $btn   = Aj.state.$adsBuyBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-search-photo', $field).html(result.found.photo);
+          $('.js-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$adsSearchForm;
@@ -3134,7 +3134,7 @@ var Ads = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$adsSearchForm;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -3147,7 +3147,7 @@ var Ads = {
     $form.field('query').value('').prop('disabled', false).focus();
     $form.removeClass('myself');
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     Ads.updateUrl();
   },
@@ -3186,13 +3186,13 @@ var Ads = {
   initWithdraw: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-howtopay-ton', Ads.eHowToPayTon);
-      state.$howToPayTonPopup = $('.js?xieworld_vf-how-to-pay-ton-popup');
+      $(cont).on('click.curPage', '.js-howtopay-ton', Ads.eHowToPayTon);
+      state.$howToPayTonPopup = $('.js-how-to-pay-ton-popup');
 
-      $(cont).on('click.curPage', '.js?xieworld_vf-withdraw-btn', Ads.eWithdrawRevenue);
-      state.$withdrawForm = $('.js?xieworld_vf-withdraw-form', cont);
+      $(cont).on('click.curPage', '.js-withdraw-btn', Ads.eWithdrawRevenue);
+      state.$withdrawForm = $('.js-withdraw-form', cont);
       Main.initForm(state.$withdrawForm);
-      state.$withdrawBtn = $('.js?xieworld_vf-withdraw-btn', cont);
+      state.$withdrawBtn = $('.js-withdraw-btn', cont);
       state.updLastReq = +Date.now();
       state.canUpdate = true;
       if (state.needUpdate) {
@@ -3313,10 +3313,10 @@ var Ads = {
     }
   },
   updateHistory: function(html) {
-    $('.js?xieworld_vf-premium-history').replaceWith(html);
+    $('.js-premium-history').replaceWith(html);
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-preview-sticker').each(function() {
+    $('.js-main-content').html(html).find('.js-preview-sticker').each(function() {
       RLottie.init(this, {playUntilEnd: true});
     });
   },
@@ -3421,35 +3421,35 @@ var Stars = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-myself-link', Stars.eBuyForMyself);
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-stars-btn', Stars.eBuyMoreStats);
-      $(cont).on('click.curPage', '.js?xieworld_vf-stars-buy-btn', Stars.eBuyStars);
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-options', Stars.eShowMoreOptions);
-      state.$starsBuyPopup = $('.js?xieworld_vf-buy-stars-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-buy-stars-form', Stars.eBuyStarsSubmit);
-      state.$starsBuyForm = $('.js?xieworld_vf-buy-stars-form');
-      state.$starsSearchField = $('.js?xieworld_vf-stars-search-field');
-      state.$starsSearchForm = $('.js?xieworld_vf-stars-form');
+      $(cont).on('click.curPage', '.js-myself-link', Stars.eBuyForMyself);
+      $(cont).on('click.curPage', '.js-more-stars-btn', Stars.eBuyMoreStats);
+      $(cont).on('click.curPage', '.js-stars-buy-btn', Stars.eBuyStars);
+      $(cont).on('click.curPage', '.js-more-options', Stars.eShowMoreOptions);
+      state.$starsBuyPopup = $('.js-buy-stars-popup');
+      $(cont).on('submit.curPage', '.js-buy-stars-form', Stars.eBuyStarsSubmit);
+      state.$starsBuyForm = $('.js-buy-stars-form');
+      state.$starsSearchField = $('.js-stars-search-field');
+      state.$starsSearchForm = $('.js-stars-form');
       state.$starsSearchForm.on('submit', Stars.eSearchSubmit);
       state.$starsSearchForm.field('query').on('input', Stars.eSearchInput);
       state.$starsSearchForm.field('query').on('change', Stars.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$starsSearchForm).on('click', Stars.eSearchClear);
-      state.$starsQuantityField = $('.js?xieworld_vf-stars-quantity-field');
-      $(cont).on('click.curPage', '.js?xieworld_vf-quantity-clear', Stars.eQuantityClear);
+      $('.js-form-clear', state.$starsSearchForm).on('click', Stars.eSearchClear);
+      state.$starsQuantityField = $('.js-stars-quantity-field');
+      $(cont).on('click.curPage', '.js-quantity-clear', Stars.eQuantityClear);
       state.$starsSearchForm.field('quantity').on('change', Stars.eQuantityChanged);
-      state.$starsSearchForm.on('change', '.js?xieworld_vf-stars-options input.radio', Stars.eRadioChanged);
+      state.$starsSearchForm.on('change', '.js-stars-options input.radio', Stars.eRadioChanged);
       state.$starsBuyForm.on('change', 'input.checkbox', Stars.eCheckboxChanged);
-      state.$starsBuyBtn = $('.js?xieworld_vf-stars-buy-btn');
+      state.$starsBuyBtn = $('.js-stars-buy-btn');
       state.curQuantity = state.$starsSearchForm.field('quantity').value();
       state.curStars = state.$starsSearchForm.field('stars').value();
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(Stars.updateState, Main.UPDATE_PERIOD);
       }
-      $(cont).on('click.curPage', '.js?xieworld_vf-preview-sticker', function() {
+      $(cont).on('click.curPage', '.js-preview-sticker', function() {
         RLottie.playUntilEnd(this);
       });
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -3461,11 +3461,11 @@ var Stars = {
       state.$starsSearchForm.off('submit', Stars.eSearchSubmit);
       state.$starsSearchForm.field('query').off('input', Stars.eSearchInput);
       state.$starsSearchForm.field('query').off('change', Stars.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$starsSearchForm).off('click', Stars.eSearchClear);
+      $('.js-form-clear', state.$starsSearchForm).off('click', Stars.eSearchClear);
       state.$starsSearchForm.field('quantity').off('change', Stars.eQuantityChanged);
-      state.$starsSearchForm.off('change', '.js?xieworld_vf-stars-options input.radio', Stars.eRadioChanged);
+      state.$starsSearchForm.off('change', '.js-stars-options input.radio', Stars.eRadioChanged);
       state.$starsBuyForm.off('change', 'input.checkbox', Stars.eCheckboxChanged);
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.destroy(this);
       });
     });
@@ -3511,7 +3511,7 @@ var Stars = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$starsSearchForm;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -3526,7 +3526,7 @@ var Stars = {
     $form.removeClass('myself');
     $btn.prop('disabled', true);
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     Stars.updateUrl();
   },
@@ -3541,8 +3541,8 @@ var Stars = {
       $field.focus();
     }
     Aj.state.curQuantity = 0;
-    $('.js?xieworld_vf-quantity-field-error').html('');
-    $('.js?xieworld_vf-cur-price').html('');
+    $('.js-quantity-field-error').html('');
+    $('.js-cur-price').html('');
     Stars.updateButton();
     Stars.updateUrl();
   },
@@ -3550,19 +3550,19 @@ var Stars = {
     var $form = Aj.state.$starsSearchForm;
     var stars = +$form.field('stars').value();
     var quantity = +$form.field('quantity').value();
-    $('.js?xieworld_vf-cur-price').html('');
+    $('.js-cur-price').html('');
     Aj.state.$starsQuantityField.addClass('loading').removeClass('play').redraw().addClass('play');
     Aj.apiRequest('updateStarsPrices', {
       stars: stars,
       quantity: quantity
     }, function(result) {
       if (result.error) {
-        $('.js?xieworld_vf-quantity-field-error').html(result.error);
+        $('.js-quantity-field-error').html(result.error);
         quantity = 0;
       } else {
-        $('.js?xieworld_vf-quantity-field-error').html('');
+        $('.js-quantity-field-error').html('');
       }
-      $('.js?xieworld_vf-cur-price').html(result.cur_price);
+      $('.js-cur-price').html(result.cur_price);
       if (result.options_html) {
         Stars.updateOptions(result.options_html);
       }
@@ -3572,7 +3572,7 @@ var Stars = {
       Aj.state.curQuantity = quantity;
       Aj.state.$starsQuantityField.removeClass('loading');
       Aj.state.curStars = 0;
-      $('.js?xieworld_vf-stars-options input.radio:checked').prop('checked', false);
+      $('.js-stars-options input.radio:checked').prop('checked', false);
       Stars.updateButton();
       Stars.updateUrl();
     });
@@ -3603,7 +3603,7 @@ var Stars = {
     var $form    = Aj.state.$starsSearchForm;
     var quantity = Aj.state.curQuantity || Aj.state.curStars;
     var btn_label = l('WEB_BUY_N_TELEGRAM_STARS_BUTTON', {n: quantity || 0, __format_number: true});
-    $('.js?xieworld_vf-stars-btn-label').html(btn_label);
+    $('.js-stars-btn-label').html(btn_label);
     Aj.state.$starsBuyBtn.prop('disabled', !quantity || !$form.field('recipient').value());
   },
   eSearchSubmit: function(e) {
@@ -3635,15 +3635,15 @@ var Stars = {
     var $field = Aj.state.$starsSearchField;
     var $btn   = Aj.state.$starsBuyBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-stars-search-photo', $field).html(result.found.photo);
+          $('.js-stars-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$starsSearchForm;
@@ -3684,9 +3684,9 @@ var Stars = {
   updateOptions: function(html) {
     var $form  = Aj.state.$starsSearchForm;
     var stars = $form.field('stars').value();
-    $('.js?xieworld_vf-stars-options').replaceWith(html);
+    $('.js-stars-options').replaceWith(html);
     $form.field('stars').value(stars);
-    $('.js?xieworld_vf-stars-options .tm-second-option:has(input:checked)').removeClass('tm-second-option');
+    $('.js-stars-options .tm-second-option:has(input:checked)').removeClass('tm-second-option');
   },
   eBuyStars: function(e) {
     e.stopImmediatePropagation();
@@ -3702,8 +3702,8 @@ var Stars = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-buy-stars-content', Aj.state.$starsBuyPopup).html(result.content);
-      $('.js?xieworld_vf-buy-stars-button', Aj.state.$starsBuyPopup).html(result.button);
+      $('.js-buy-stars-content', Aj.state.$starsBuyPopup).html(result.content);
+      $('.js-buy-stars-button', Aj.state.$starsBuyPopup).html(result.button);
       Aj.state.$starsBuyPopup.toggleClass('iam-sender', result.myself);
       Aj.state.$starsBuyPopup.toggleClass('bot-recipient', result.to_bot);
       Aj.state.starsPrice = result.amount;
@@ -3712,12 +3712,12 @@ var Stars = {
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$starsBuyPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -3765,10 +3765,10 @@ var Stars = {
   initWithdraw: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-withdraw-btn', Stars.eWithdrawRevenue);
-      state.$withdrawForm = $('.js?xieworld_vf-withdraw-form', cont);
+      $(cont).on('click.curPage', '.js-withdraw-btn', Stars.eWithdrawRevenue);
+      state.$withdrawForm = $('.js-withdraw-form', cont);
       Main.initForm(state.$withdrawForm);
-      state.$withdrawBtn = $('.js?xieworld_vf-withdraw-btn', cont);
+      state.$withdrawBtn = $('.js-withdraw-btn', cont);
       state.updLastReq = +Date.now();
       state.canUpdate = true;
       if (state.needUpdate) {
@@ -3813,7 +3813,7 @@ var Stars = {
     }
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-preview-sticker').each(function() {
+    $('.js-main-content').html(html).find('.js-preview-sticker').each(function() {
       RLottie.init(this, {playUntilEnd: true});
     });
   },
@@ -3878,32 +3878,32 @@ var StarsGiveaway = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-another-giveaway-btn', StarsGiveaway.eMoreGiveawayStars);
-      $(cont).on('click.curPage', '.js?xieworld_vf-giveaway-stars-btn', StarsGiveaway.eGiveawayStars);
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-options', StarsGiveaway.eShowMoreOptions);
-      state.$giveawayStarsPopup = $('.js?xieworld_vf-giveaway-stars-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-giveaway-stars-form', StarsGiveaway.eGiveawayStarsSubmit);
-      state.$giveawayStarsForm = $('.js?xieworld_vf-giveaway-stars-form');
-      state.$starsSearchField = $('.js?xieworld_vf-stars-search-field');
-      state.$starsSearchForm = $('.js?xieworld_vf-stars-form');
+      $(cont).on('click.curPage', '.js-another-giveaway-btn', StarsGiveaway.eMoreGiveawayStars);
+      $(cont).on('click.curPage', '.js-giveaway-stars-btn', StarsGiveaway.eGiveawayStars);
+      $(cont).on('click.curPage', '.js-more-options', StarsGiveaway.eShowMoreOptions);
+      state.$giveawayStarsPopup = $('.js-giveaway-stars-popup');
+      $(cont).on('submit.curPage', '.js-giveaway-stars-form', StarsGiveaway.eGiveawayStarsSubmit);
+      state.$giveawayStarsForm = $('.js-giveaway-stars-form');
+      state.$starsSearchField = $('.js-stars-search-field');
+      state.$starsSearchForm = $('.js-stars-form');
       state.$starsSearchForm.on('submit', StarsGiveaway.eSearchSubmit);
       state.$starsSearchForm.field('query').on('input', StarsGiveaway.eSearchInput);
       state.$starsSearchForm.field('query').on('change', StarsGiveaway.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$starsSearchForm).on('click', StarsGiveaway.eSearchClear);
-      state.$starsQuantityField = $('.js?xieworld_vf-stars-quantity-field');
+      $('.js-form-clear', state.$starsSearchForm).on('click', StarsGiveaway.eSearchClear);
+      state.$starsQuantityField = $('.js-stars-quantity-field');
       state.$starsSearchForm.field('quantity').on('change', StarsGiveaway.eQuantityChanged);
-      state.$starsSearchForm.on('change', '.js?xieworld_vf-stars-options input.radio', StarsGiveaway.eRadioChanged);
-      state.$giveawayStarsBtn = $('.js?xieworld_vf-giveaway-stars-btn');
-      state.$starsBuyBtn = $('.js?xieworld_vf-stars-buy-btn');
+      state.$starsSearchForm.on('change', '.js-stars-options input.radio', StarsGiveaway.eRadioChanged);
+      state.$giveawayStarsBtn = $('.js-giveaway-stars-btn');
+      state.$starsBuyBtn = $('.js-stars-buy-btn');
       state.curQuantity = state.$starsSearchForm.field('quantity').value();
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(StarsGiveaway.updateState, Main.UPDATE_PERIOD);
       }
-      $(cont).on('click.curPage', '.js?xieworld_vf-preview-sticker', function() {
+      $(cont).on('click.curPage', '.js-preview-sticker', function() {
         RLottie.playUntilEnd(this);
       });
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -3915,11 +3915,11 @@ var StarsGiveaway = {
       state.$starsSearchForm.off('submit', StarsGiveaway.eSearchSubmit);
       state.$starsSearchForm.field('query').off('input', StarsGiveaway.eSearchInput);
       state.$starsSearchForm.field('query').off('change', StarsGiveaway.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$starsSearchForm).off('click', StarsGiveaway.eSearchClear);
+      $('.js-form-clear', state.$starsSearchForm).off('click', StarsGiveaway.eSearchClear);
       state.$starsSearchForm.field('quantity').off('change', StarsGiveaway.eQuantityChanged);
-      state.$starsSearchForm.off('change', '.js?xieworld_vf-stars-options input.radio', StarsGiveaway.eRadioChanged);
+      state.$starsSearchForm.off('change', '.js-stars-options input.radio', StarsGiveaway.eRadioChanged);
       state.$giveawayStarsForm.off('change', 'input.checkbox', StarsGiveaway.eCheckboxChanged);
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.destroy(this);
       });
     });
@@ -3972,7 +3972,7 @@ var StarsGiveaway = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$starsSearchField;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -3986,7 +3986,7 @@ var StarsGiveaway = {
     $form.field('query').value('').prop('disabled', false).focus();
     $btn.prop('disabled', true);
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     StarsGiveaway.updateUrl();
   },
@@ -4003,14 +4003,14 @@ var StarsGiveaway = {
       var $field = Aj.state.$starsQuantityField;
       var $btn   = Aj.state.$giveawayStarsBtn;
       if (result.error) {
-        $('.js?xieworld_vf-quantity-field-error').html(result.error);
+        $('.js-quantity-field-error').html(result.error);
         $field.addClass('error').removeClass('found');
         quantity = 0;
       } else {
-        $('.js?xieworld_vf-quantity-field-error').html('');
+        $('.js-quantity-field-error').html('');
         $field.removeClass('error');
       }
-      $('.js?xieworld_vf-per-user-value').html(result.per_user);
+      $('.js-per-user-value').html(result.per_user);
       if (result.placeholder) {
         $form.field('quantity').attr('placeholder', result.placeholder);
       }
@@ -4033,7 +4033,7 @@ var StarsGiveaway = {
   },
   eRadioChanged: function(e) {
     var boosts = $(e.target).attr('data-boosts');
-    $('.js?xieworld_vf-boost-value').html(boosts);
+    $('.js-boost-value').html(boosts);
     StarsGiveaway.eQuantityChanged();
     StarsGiveaway.updateButton();
     StarsGiveaway.updateUrl();
@@ -4043,7 +4043,7 @@ var StarsGiveaway = {
     var stars    = $form.field('stars').value();
     var quantity = Aj.state.curQuantity;
     var btn_label = l('WEB_BUY_N_STARS_FOR_GIVEAWAY_BUTTON', {n: stars || 0, __format_number: true});
-    $('.js?xieworld_vf-stars-btn-label').html(btn_label);
+    $('.js-stars-btn-label').html(btn_label);
     Aj.state.$starsBuyBtn.prop('disabled', !quantity || !stars || !$form.field('recipient').value());
   },
   eSearchSubmit: function(e) {
@@ -4073,15 +4073,15 @@ var StarsGiveaway = {
     var $field = Aj.state.$starsSearchField;
     var $btn   = Aj.state.$giveawayStarsBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-stars-search-photo', $field).html(result.found.photo);
+          $('.js-stars-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$starsSearchForm;
@@ -4129,12 +4129,12 @@ var StarsGiveaway = {
   updateOptions: function(html) {
     var $form  = Aj.state.$starsSearchForm;
     var stars = $form.field('stars').value();
-    $('.js?xieworld_vf-stars-options').replaceWith(html);
+    $('.js-stars-options').replaceWith(html);
     $form.field('stars').value(stars);
-    $('.js?xieworld_vf-stars-options .tm-second-option:has(input:checked)').removeClass('tm-second-option');
+    $('.js-stars-options .tm-second-option:has(input:checked)').removeClass('tm-second-option');
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-preview-sticker').each(function() {
+    $('.js-main-content').html(html).find('.js-preview-sticker').each(function() {
       RLottie.init(this, {playUntilEnd: true});
     });
   },
@@ -4153,20 +4153,20 @@ var StarsGiveaway = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-giveaway-stars-content', Aj.state.$giveawayStarsPopup).html(result.content);
-      $('.js?xieworld_vf-giveaway-stars-button', Aj.state.$giveawayStarsPopup).html(result.button);
+      $('.js-giveaway-stars-content', Aj.state.$giveawayStarsPopup).html(result.content);
+      $('.js-giveaway-stars-button', Aj.state.$giveawayStarsPopup).html(result.button);
       Aj.state.giveawayPrice = result.amount;
       Aj.state.itemTitle = result.item_title;
       Aj.state.$giveawayStarsForm.field('id').value(result.req_id);
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$giveawayStarsPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -4215,18 +4215,18 @@ var Gateway = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-howtopay-ton', Ads.eHowToPayTon);
-      state.$howToPayTonPopup = $('.js?xieworld_vf-how-to-pay-ton-popup');
+      $(cont).on('click.curPage', '.js-howtopay-ton', Ads.eHowToPayTon);
+      state.$howToPayTonPopup = $('.js-how-to-pay-ton-popup');
 
-      $(cont).on('click.curPage', '.js?xieworld_vf-more-funds-btn', Gateway.eAddMoreFunds);
-      $(cont).on('click.curPage', '.js?xieworld_vf-recharge-btn', Gateway.eRechargeAccount);
-      state.$rechargeForm = $('.js?xieworld_vf-recharge-form', cont);
+      $(cont).on('click.curPage', '.js-more-funds-btn', Gateway.eAddMoreFunds);
+      $(cont).on('click.curPage', '.js-recharge-btn', Gateway.eRechargeAccount);
+      state.$rechargeForm = $('.js-recharge-form', cont);
       Main.initForm(state.$rechargeForm);
       state.$rechargeForm.on('submit', Gateway.eAmountChanged);
-      state.$curPrice = $('.js?xieworld_vf-cur-price', cont);
+      state.$curPrice = $('.js-cur-price', cont);
 
-      state.$amountField = $('.js?xieworld_vf-credits-quantity-field');
-      $(cont).on('click.curPage', '.js?xieworld_vf-quantity-clear', Gateway.eQuantityClear);
+      state.$amountField = $('.js-credits-quantity-field');
+      $(cont).on('click.curPage', '.js-quantity-clear', Gateway.eQuantityClear);
       state.$rechargeForm.field('credits').on('change', Gateway.eAmountChanged);
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
@@ -4362,7 +4362,7 @@ var Gateway = {
     });
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content').html(html);
+    $('.js-main-content').html(html);
   }
 };
 
@@ -4370,25 +4370,25 @@ var Nft = {
   initTransfer: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-myself-link', Nft.eMoveToMyself);
-      $(cont).on('click.curPage', '.js?xieworld_vf-nft-transfer-btn', Nft.eTransferNft);
-      state.$nftTransferPopup = $('.js?xieworld_vf-nft-transfer-popup');
-      $(cont).on('submit.curPage', '.js?xieworld_vf-nft-transfer-form', Nft.eNftTransferSubmit);
-      state.$nftTransferForm = $('.js?xieworld_vf-nft-transfer-form');
+      $(cont).on('click.curPage', '.js-myself-link', Nft.eMoveToMyself);
+      $(cont).on('click.curPage', '.js-nft-transfer-btn', Nft.eTransferNft);
+      state.$nftTransferPopup = $('.js-nft-transfer-popup');
+      $(cont).on('submit.curPage', '.js-nft-transfer-form', Nft.eNftTransferSubmit);
+      state.$nftTransferForm = $('.js-nft-transfer-form');
       Main.initForm(state.$nftTransferForm);
-      state.$nftTransferSearchField = $('.js?xieworld_vf-nft-transfer-search-field');
-      state.$nftTransferSearchForm = $('.js?xieworld_vf-nft-transfer-search-form');
+      state.$nftTransferSearchField = $('.js-nft-transfer-search-field');
+      state.$nftTransferSearchForm = $('.js-nft-transfer-search-form');
       state.$nftTransferSearchForm.on('submit', Nft.eTransferSearchSubmit);
       state.$nftTransferSearchForm.field('query').on('input', Nft.eSearchInput);
       state.$nftTransferSearchForm.field('query').on('change', Nft.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$nftTransferSearchForm).on('click', Nft.eSearchClear);
+      $('.js-form-clear', state.$nftTransferSearchForm).on('click', Nft.eSearchClear);
       state.$nftTransferForm.on('change', 'input.checkbox', Nft.eCheckboxChanged);
-      state.$nftTransferBtn = $('.js?xieworld_vf-nft-transfer-btn');
+      state.$nftTransferBtn = $('.js-nft-transfer-btn');
       state.updLastReq = +Date.now();
       if (state.needUpdate) {
         state.updStateTo = setTimeout(Nft.updateState, Main.UPDATE_PERIOD);
       }
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.init(this, {playUntilEnd: true});
       });
       RLottie.init();
@@ -4402,9 +4402,9 @@ var Nft = {
       state.$nftTransferSearchForm.off('submit', Nft.eTransferSearchSubmit);
       state.$nftTransferSearchForm.field('query').off('input', Nft.eSearchInput);
       state.$nftTransferSearchForm.field('query').off('change', Nft.eSearchChange);
-      $('.js?xieworld_vf-form-clear', state.$nftTransferSearchForm).off('click', Nft.eSearchClear);
+      $('.js-form-clear', state.$nftTransferSearchForm).off('click', Nft.eSearchClear);
       state.$nftTransferForm.off('change', 'input.checkbox', Nft.eCheckboxChanged);
-      $('.js?xieworld_vf-preview-sticker').each(function() {
+      $('.js-preview-sticker').each(function() {
         RLottie.destroy(this);
       });
       Main.destroyForm(state.$nftTransferForm);
@@ -4441,7 +4441,7 @@ var Nft = {
   },
   eSearchInput: function(e) {
     var $field = Aj.state.$nftTransferSearchField;
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
   },
   eSearchChange: function(e) {
@@ -4456,7 +4456,7 @@ var Nft = {
     $form.removeClass('myself');
     $btn.prop('disabled', true);
     $field.removeClass('found');
-    $('.js?xieworld_vf-search-field-error').html('');
+    $('.js-search-field-error').html('');
     $field.removeClass('error');
     Nft.updateTransferUrl();
   },
@@ -4496,15 +4496,15 @@ var Nft = {
     var $field = Aj.state.$nftTransferSearchField;
     var $btn   = Aj.state.$nftTransferBtn;
     if (result.error) {
-      $('.js?xieworld_vf-search-field-error').html(result.error);
+      $('.js-search-field-error').html(result.error);
       $field.addClass('error').removeClass('found');
       $form.field('query').prop('disabled', false);
     } else {
-      $('.js?xieworld_vf-search-field-error').html('');
+      $('.js-search-field-error').html('');
       $field.removeClass('error');
       if (result.found) {
         if (result.found.photo) {
-          $('.js?xieworld_vf-nft-transfer-search-photo', $field).html(result.found.photo);
+          $('.js-nft-transfer-search-photo', $field).html(result.found.photo);
         }
         if (result.found.name) {
           var $form = Aj.state.$nftTransferSearchForm;
@@ -4551,20 +4551,20 @@ var Nft = {
       if (result.error) {
         return showAlert(result.error);
       }
-      $('.js?xieworld_vf-nft-transfer-content', Aj.state.$nftTransferPopup).html(result.content);
-      $('.js?xieworld_vf-nft-transfer-button', Aj.state.$nftTransferPopup).html(result.button);
+      $('.js-nft-transfer-content', Aj.state.$nftTransferPopup).html(result.content);
+      $('.js-nft-transfer-button', Aj.state.$nftTransferPopup).html(result.button);
       Aj.state.$nftTransferPopup.toggleClass('iam-sender', result.myself);
       Aj.state.itemTitle = result.item_title;
       Aj.state.$nftTransferForm.field('id').value(result.req_id);
       RLottie.WORKERS_LIMIT = 1;
       openPopup(Aj.state.$nftTransferPopup, {
         onOpen: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.init(this, {playUntilEnd: true});
           });
         },
         onClose: function() {
-          $('.js?xieworld_vf-preview-sticker').each(function() {
+          $('.js-preview-sticker').each(function() {
             RLottie.destroy(this);
           });
         }
@@ -4602,11 +4602,11 @@ var Nft = {
   initWithdraw: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-withdraw-btn', Nft.eWithdrawNft);
-      state.$withdrawForm = $('.js?xieworld_vf-withdraw-form', cont);
+      $(cont).on('click.curPage', '.js-withdraw-btn', Nft.eWithdrawNft);
+      state.$withdrawForm = $('.js-withdraw-form', cont);
       Main.initLottie();
       Main.initForm(state.$withdrawForm);
-      state.$withdrawBtn = $('.js?xieworld_vf-withdraw-btn', cont);
+      state.$withdrawBtn = $('.js-withdraw-btn', cont);
       state.updLastReq = +Date.now();
       state.canUpdate = true;
       if (state.needUpdate) {
@@ -4647,10 +4647,10 @@ var Nft = {
     }
   },
   updateContent: function(html) {
-    $('.js?xieworld_vf-main-content .js?xieworld_vf-lottie').each(function() {
+    $('.js-main-content .js-lottie').each(function() {
       RLottie.destroy(this);
     });
-    $('.js?xieworld_vf-main-content').html(html).find('.js?xieworld_vf-lottie').each(function() {
+    $('.js-main-content').html(html).find('.js-lottie').each(function() {
       RLottie.init(this);
     });
   },
@@ -4708,7 +4708,7 @@ var Profile = {
   init: function() {
     Aj.onLoad(function(state) {
       var cont = Aj.ajContainer;
-      $(cont).on('click.curPage', '.js?xieworld_vf-wallet-verify-btn', Profile.eVerifyWallet);
+      $(cont).on('click.curPage', '.js-wallet-verify-btn', Profile.eVerifyWallet);
     });
   },
   eVerifyWallet: function(e) {
@@ -4747,9 +4747,9 @@ var Verify = {
           console.log('idCheck.onApplicantStatusChanged', payload);
           if (payload.reviewStatus == 'completed') {
             Verify.updateKycStatus(payload);
-            $('.js?xieworld_vf-kyc-buttons').show();
+            $('.js-kyc-buttons').show();
           } else {
-            $('.js?xieworld_vf-kyc-buttons').hide();
+            $('.js-kyc-buttons').hide();
           }
         })
         .build();
@@ -4770,16 +4770,16 @@ var Verify = {
   },
   showPopup: function(data, callback) {
     var $confirm = $('<div class="popup-container verify-popup-container hide alert-popup-container"><div class="popup"><div class="popup-body">' + data.popup + '</div><div class="popup-loading-body"><div class="tm-logo tm-logo-progress js-logo js-logo-clickable play"><i class="tm-logo-icon js-logo-icon"></i></div></div></div></div>');
-    $($confirm).on('click', '.js?xieworld_vf-wallet-check-btn', function(e) {
+    $($confirm).on('click', '.js-wallet-check-btn', function(e) {
       Verify.checkWallet($confirm, callback);
     });
-    $($confirm).on('click', '.js?xieworld_vf-wallet-link-btn', function(e) {
+    $($confirm).on('click', '.js-wallet-link-btn', function(e) {
       Verify.linkWallet($confirm, callback);
     });
     $('.popup-body', $confirm).html(data.popup);
     $confirm.one('popup:close', function() {
-      $($confirm).off('click', '.js?xieworld_vf-wallet-check-btn');
-      $($confirm).off('click', '.js?xieworld_vf-wallet-link-btn');
+      $($confirm).off('click', '.js-wallet-check-btn');
+      $($confirm).off('click', '.js-wallet-link-btn');
       $confirm.remove();
     });
     openPopup($confirm);
@@ -4843,8 +4843,8 @@ var QR = {
     var terms_text = options.terms_label ? '<p class="popup-footer-text">' + options.terms_label + '</p>' : '';
     var $popup = $('<div class="popup-container hide qr-code-popup-container' + (options.popup_class ? ' ' + options.popup_class : '') + ' qr-inactive" data-close-outside="popup-body"><div class="popup"><div class="popup-body"><section><h2>' + options.title + '</h2><p class="popup-text">' + options.description + '</p><div class="tm-qr-code"><div class="tm-qr-code-image"></div>' + qr_label + '</div>' + tk_button + hint + terms_text + '</section></div></div></div>');
     var $qrCode = $('.tm-qr-code-image', $popup);
-    var $tonkeeperBtn = $('.js?xieworld_vf-tonkeeper-btn', $popup);
-    var $confirmedBtn = $('.js?xieworld_vf-confirmed-btn', $popup);
+    var $tonkeeperBtn = $('.js-tonkeeper-btn', $popup);
+    var $confirmedBtn = $('.js-confirmed-btn', $popup);
     var tkOpen = function() {
       if ($popup.hasClass('qr-inactive')) {
         return false;
@@ -4878,7 +4878,7 @@ var QR = {
           URL.revokeObjectURL(urlObj);
         }
         $popup.data('qrCodeUrlObj', url);
-        $qrCode.css?xieworld_vf('backgroundImage', "url('" + url + "')");
+        $qrCode.css('backgroundImage', "url('" + url + "')");
         $tonkeeperBtn.attr('data-href', data.link);
         $popup.removeClass('qr-inactive');
       });

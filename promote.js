@@ -130,7 +130,7 @@ var Ads = {
     }
   },
   updateAmountEurValue: function(field) {
-    var $eurEl = $('~*>.js?xieworld_vf-amount-eur', field);
+    var $eurEl = $('~*>.js-amount-eur', field);
     if (Aj.state.ownerCurrencyRate) {
       var float_value = Ads.amountFieldValue(field);
       if (float_value !== false && $(field).value()) {
@@ -293,7 +293,7 @@ var Ads = {
   formInit: function(form) {
     var $form = $(form);
     $('.pr-form-control', $form).each(function(){ Ads.fieldInit(this); });
-    $('.js?xieworld_vf-amount-input', $form).on('keyup change input', Ads.eUpdateAmountField);
+    $('.js-amount-input', $form).on('keyup change input', Ads.eUpdateAmountField);
     $('input.checkbox,input.radio', $form).on('focus blur', Ads.eUpdateField);
     $('input[data-type="schedule"]', $form).initSchedule();
     $('input[type="date"]', $form).initDatePicker();
@@ -302,10 +302,10 @@ var Ads = {
     $('.input-dropdown', $form).on('click', '.input-dropdown-item', Ads.eUpdateDropdown);
     $('.input-dropdown > .input', $form).on('selectval', Ads.eSetDropdownValue);
     $('.input-dropdown', $form).on('shown.bs.dropdown', Ads.eShownDropdown);
-    $('.js?xieworld_vf-hint-tooltip', $form).on('mouseover mouseout click', Ads.eHintEvent);
+    $('.js-hint-tooltip', $form).on('mouseover mouseout click', Ads.eHintEvent);
     $('textarea.pr-form-control', $form).initAutosize();
     $('.upload-input input', $form).on('change', Ads.eFileChange);
-    $('.upload-input .js?xieworld_vf-file-reset', $form).on('click', Ads.eFileReset);
+    $('.upload-input .js-file-reset', $form).on('click', Ads.eFileReset);
     $(document).on('touchstart click', Ads.eHideAllHints);
     $form.on('click.curPage', '.file-upload', stopImmediatePropagation);
     setTimeout(function(){ $form.removeClass('no-transition'); }, 100);
@@ -313,7 +313,7 @@ var Ads = {
   formDestroy: function(form) {
     var $form = $(form);
     $('.pr-form-control', $form).each(function(){ Ads.fieldDestroy(this); });
-    $('.js?xieworld_vf-amount-input', $form).off('keyup change input', Ads.eUpdateAmountField);
+    $('.js-amount-input', $form).off('keyup change input', Ads.eUpdateAmountField);
     $('input.checkbox,input.radio', $form).off('focus blur', Ads.eUpdateField);
     $('input[data-type="schedule"]', $form).destroySchedule();
     $('input[type="date"]', $form).destroyDatePicker();
@@ -322,10 +322,10 @@ var Ads = {
     $('.input-dropdown', $form).off('click', '.input-dropdown-item', Ads.eUpdateDropdown);
     $('.input-dropdown > .input', $form).off('selectval', Ads.eSetDropdownValue);
     $('.input-dropdown', $form).off('shown.bs.dropdown', Ads.eShownDropdown);
-    $('.js?xieworld_vf-hint-tooltip', $form).off('mouseover mouseout click', Ads.eHintEvent);
+    $('.js-hint-tooltip', $form).off('mouseover mouseout click', Ads.eHintEvent);
     $('textarea.pr-form-control', $form).destroyAutosize();
     $('.upload-input input', $form).off('change', Ads.eFileChange);
-    $('.upload-input .js?xieworld_vf-file-reset', $form).off('click', Ads.eFileReset);
+    $('.upload-input .js-file-reset', $form).off('click', Ads.eFileReset);
     $(document).off('touchstart click', Ads.eHideAllHints);
     $form.off('click.curPage', '.file-upload', stopImmediatePropagation);
   },
@@ -340,7 +340,7 @@ var Ads = {
     var files = this.files || [];
     var $field = $(this);
     var $input = $field.parents('.upload-input');
-    var $fileName = $('.js?xieworld_vf-selected-value', $input);
+    var $fileName = $('.js-selected-value', $input);
     if (files.length > 0) {
       var file = files[0];
       $field.data('file', file)
@@ -356,7 +356,7 @@ var Ads = {
   eFileReset: function(e) {
     var $input = $(this).parents('.upload-input');
     var $field = $input.find('input');
-    var $fileName = $('.js?xieworld_vf-selected-value', $input);
+    var $fileName = $('.js-selected-value', $input);
     $field.data('file', null).val('');
     $fileName.attr('data-filename', '');
     $input.removeClass('selected');
@@ -397,8 +397,8 @@ var Ads = {
     }
   },
   eHideAllHints: function(e) {
-    var $closestHint = $(e.target).closest('.js?xieworld_vf-hint-tooltip');
-    $('.js?xieworld_vf-hint-tooltip.show-hint').each(function() {
+    var $closestHint = $(e.target).closest('.js-hint-tooltip');
+    $('.js-hint-tooltip.show-hint').each(function() {
       if (!$closestHint.filter(this).size()) {
         Ads.hideHint($(this), 1);
       }
@@ -421,8 +421,8 @@ var Ads = {
         if (Math.abs(char_rect.right - text_rect.right) > 3) {
           var $infoEl = $(footerEl).find(shadowedSel);
           if ($infoEl.size()) {
-            $(textEl).find('span.js?xieworld_vf-shadow').remove();
-            var $shadowEl = $('<span class="js-shadow">').css?xieworld_vf('display', 'inline-block').width($infoEl.width() + (add_margin || 0));
+            $(textEl).find('span.js-shadow').remove();
+            var $shadowEl = $('<span class="js-shadow">').css('display', 'inline-block').width($infoEl.width() + (add_margin || 0));
             $(textEl).append($shadowEl).addClass('before_footer');
           }
         }
@@ -431,13 +431,13 @@ var Ads = {
   },
   updateAdMessagePreviews: function(cont) {
     NewAd.updateAdPreviewText(cont);
-    $('.pr-review-ad-preview .js?xieworld_vf-preview-text tg-emoji', cont).each(function() {
+    $('.pr-review-ad-preview .js-preview-text tg-emoji', cont).each(function() {
       TEmoji.init(this);
     });
     $('.pr-target-intro-sticker tg-emoji', cont).each(function() {
       TEmoji.init(this);
     });
-    $('.pr-review-ad-preview .js?xieworld_vf-preview-media', cont).each(function() {
+    $('.pr-review-ad-preview .js-preview-media', cont).each(function() {
       NewAd.initAdMedia(this);
     });
   },
@@ -557,30 +557,30 @@ var NewAd = {
   init: function() {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
-      state.$form = $('.js?xieworld_vf-ad-form', cont);
+      state.$form = $('.js-ad-form', cont);
       Ads.formInit(state.$form);
       state.$form.on('submit', preventDefault);
-      cont.on('click.curPage', '.js?xieworld_vf-promote-photo', NewAd.eReplacePromotePhoto);
-      cont.on('change.curPage', '.js?xieworld_vf-promote-photo > .file-upload', NewAd.eUploadPromotePhoto);
-      cont.on('click.curPage', '.js?xieworld_vf-ad-media', NewAd.ePlayAdMedia);
-      cont.on('click.curPage', '.js?xieworld_vf-ad-media-remove', NewAd.eRemoveAdMedia);
-      cont.on('click.curPage', '.js?xieworld_vf-add-media-btn', NewAd.eReplaceAdMedia);
-      cont.on('change.curPage', '.js?xieworld_vf-add-media-btn > .file-upload', NewAd.eUploadAdMedia);
+      cont.on('click.curPage', '.js-promote-photo', NewAd.eReplacePromotePhoto);
+      cont.on('change.curPage', '.js-promote-photo > .file-upload', NewAd.eUploadPromotePhoto);
+      cont.on('click.curPage', '.js-ad-media', NewAd.ePlayAdMedia);
+      cont.on('click.curPage', '.js-ad-media-remove', NewAd.eRemoveAdMedia);
+      cont.on('click.curPage', '.js-add-media-btn', NewAd.eReplaceAdMedia);
+      cont.on('change.curPage', '.js-add-media-btn > .file-upload', NewAd.eUploadAdMedia);
       cont.on('click.curPage', '.clear-draft-btn', NewAd.eClearDraft);
       cont.on('click.curPage', '.create-new-ad-btn', NewAd.eSubmitForm);
-      cont.on('click.curPage', '.js?xieworld_vf-open-daily-budget', NewAd.eOpenDailyBudget);
-      cont.on('click.curPage', '.js?xieworld_vf-remove-daily-budget', NewAd.eRemoveDailyBudget);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-link', NewAd.eOpenStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-link', NewAd.eOpenEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-remove', NewAd.eRemoveStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-remove', NewAd.eRemoveEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-open-schedule', NewAd.eOpenSchedule);
-      cont.on('click.curPage', '.js?xieworld_vf-deselect-all', NewAd.eDeselectAll);
-      cont.on('click.curPage', '.js?xieworld_vf-field-similar_channels', NewAd.eOpenSimilarChannels);
-      cont.on('click.curPage', '.js?xieworld_vf-field-similar_bots', NewAd.eOpenSimilarBots);
-      cont.on('click.curPage', '.js?xieworld_vf-prev-sample-results', NewAd.ePrevSampleResults);
-      cont.on('click.curPage', '.js?xieworld_vf-next-sample-results', NewAd.eNextSampleResults);
-      $('.js?xieworld_vf-schedule-overview', state.$form).html(NewAd.scheduleOverview(state.$form));
+      cont.on('click.curPage', '.js-open-daily-budget', NewAd.eOpenDailyBudget);
+      cont.on('click.curPage', '.js-remove-daily-budget', NewAd.eRemoveDailyBudget);
+      cont.on('click.curPage', '.js-activate-date-link', NewAd.eOpenStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-link', NewAd.eOpenEndDate);
+      cont.on('click.curPage', '.js-activate-date-remove', NewAd.eRemoveStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-remove', NewAd.eRemoveEndDate);
+      cont.on('click.curPage', '.js-open-schedule', NewAd.eOpenSchedule);
+      cont.on('click.curPage', '.js-deselect-all', NewAd.eDeselectAll);
+      cont.on('click.curPage', '.js-field-similar_channels', NewAd.eOpenSimilarChannels);
+      cont.on('click.curPage', '.js-field-similar_bots', NewAd.eOpenSimilarBots);
+      cont.on('click.curPage', '.js-prev-sample-results', NewAd.ePrevSampleResults);
+      cont.on('click.curPage', '.js-next-sample-results', NewAd.eNextSampleResults);
+      $('.js-schedule-overview', state.$form).html(NewAd.scheduleOverview(state.$form));
       NewAd.initSelectList(state);
       state.titleField = state.$form.field('title');
       state.titleField.on('change.curPage', NewAd.onTitleChange);
@@ -621,8 +621,8 @@ var NewAd = {
       state.placementRadio.fieldEl().on('change.curPage', NewAd.onPlacementChange);
       state.confirmedCheckbox = state.$form.field('confirmed');
       state.confirmedCheckbox.on('change.curPage', NewAd.onConfirmedChange);
-      state.similarChannelsPopup = $('.js?xieworld_vf-similar-channels-popup', cont);
-      state.similarBotsPopup = $('.js?xieworld_vf-similar-bots-popup', cont);
+      state.similarChannelsPopup = $('.js-similar-channels-popup', cont);
+      state.similarBotsPopup = $('.js-similar-bots-popup', cont);
       NewAd.updateAdMedia(state.mediaField);
       NewAd.updateAdPreview(state.$form, state.previewData);
       NewAd.updateAdTargetOverview();
@@ -766,14 +766,14 @@ var NewAd = {
     var $form = Aj.state.$form;
     NewAd.updateFieldsVisibility();
 
-    $('.js?xieworld_vf-schedule-overview', $form).html(NewAd.scheduleOverview($form));
+    $('.js-schedule-overview', $form).html(NewAd.scheduleOverview($form));
     NewAd.updateAdTargetOverview();
     NewAd.adPostCheck($form);
   },
   onPlacementChange: function() {
     var cur_placement = this.value;
     var $cont = $(this).parents('.pr-target-options');
-    $('.js?xieworld_vf-preview', $cont).each(function() {
+    $('.js-preview', $cont).each(function() {
       var visible = $(this).attr('data-placement') == cur_placement;
       $(this).toggleClass('hide', !visible);
     });
@@ -809,20 +809,20 @@ var NewAd = {
     }
     var media_on = !!$form.field('media').value();
     var picture_checked = $form.field('picture').prop('checked');
-    var $textWrap = $('.js?xieworld_vf-field-text-wrap', $form);
-    var $mediaWrap = $('.js?xieworld_vf-field-media-wrap', $form);
-    var $buttonWrap = $('.js?xieworld_vf-field-button-wrap', $form);
-    var $pictureWrap = $('.js?xieworld_vf-field-picture-wrap');
+    var $textWrap = $('.js-field-text-wrap', $form);
+    var $mediaWrap = $('.js-field-media-wrap', $form);
+    var $buttonWrap = $('.js-field-button-wrap', $form);
+    var $pictureWrap = $('.js-field-picture-wrap');
     $textWrap.slideToggle(!!fv.text);
     $mediaWrap.slideToggle(!!fv.media);
     $pictureWrap.slideToggle(!!fv.picture);
     $buttonWrap.slideToggle(!!Aj.state.customButton && !!fv.button);
-    $('.js?xieworld_vf-preview', $form).toggleClass('picture', !!fv.picture && picture_checked).toggleClass('media', !!fv.media && media_on);
+    $('.js-preview', $form).toggleClass('picture', !!fv.picture && picture_checked).toggleClass('media', !!fv.media && media_on);
   },
   onPictureChange: function() {
     var $form = $(this.form);
     var picture_checked = $(this).prop('checked');
-    $('.js?xieworld_vf-preview', $form).toggleClass('picture', !!picture_checked);
+    $('.js-preview', $form).toggleClass('picture', !!picture_checked);
     NewAd.updateAdPreviewText($form);
     NewAd.adPostCheck($form);
   },
@@ -853,15 +853,15 @@ var NewAd = {
     var hasActivateDate = !!$form.field('ad_activate_date').value();
     var hasDectivateDate = !!$form.field('ad_deactivate_date').value();
     if ($form.field('active').value() == '1') {
-      $('.js?xieworld_vf-activate-date-link-wrap', $form).slideHide();
-      $('.js?xieworld_vf-activate-date-wrap', $form).slideHide();
-      $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideToggle(!hasDectivateDate);
-      $('.js?xieworld_vf-deactivate-date-wrap', $form).slideToggle(hasDectivateDate);
+      $('.js-activate-date-link-wrap', $form).slideHide();
+      $('.js-activate-date-wrap', $form).slideHide();
+      $('.js-deactivate-date-link-wrap', $form).slideToggle(!hasDectivateDate);
+      $('.js-deactivate-date-wrap', $form).slideToggle(hasDectivateDate);
     } else {
-      $('.js?xieworld_vf-activate-date-link-wrap', $form).slideToggle(!hasActivateDate);
-      $('.js?xieworld_vf-activate-date-wrap', $form).slideToggle(hasActivateDate);
-      $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideToggle(hasActivateDate && !hasDectivateDate);
-      $('.js?xieworld_vf-deactivate-date-wrap', $form).slideToggle(hasActivateDate && hasDectivateDate);
+      $('.js-activate-date-link-wrap', $form).slideToggle(!hasActivateDate);
+      $('.js-activate-date-wrap', $form).slideToggle(hasActivateDate);
+      $('.js-deactivate-date-link-wrap', $form).slideToggle(hasActivateDate && !hasDectivateDate);
+      $('.js-deactivate-date-wrap', $form).slideToggle(hasActivateDate && hasDectivateDate);
     }
     NewAd.saveDraftAuto(true);
   },
@@ -872,9 +872,9 @@ var NewAd = {
       if (schedule == '0;0;0;0;0;0;0') {
         NewAd.openSchedule(Aj.state);
       }
-      $('.js?xieworld_vf-schedule-wrap', $form).slideShow();
+      $('.js-schedule-wrap', $form).slideShow();
     } else {
-      $('.js?xieworld_vf-schedule-wrap', $form).slideHide();
+      $('.js-schedule-wrap', $form).slideHide();
     }
     NewAd.saveDraftAuto(true);
   },
@@ -1156,7 +1156,7 @@ var NewAd = {
   onTargetQueryUpdate: function(field, value, valueFull) {
     NewAd.onSelectUpdate(field, value, valueFull);
     NewAd.openAdSampleResults();
-    $('.js?xieworld_vf-sample-results-wrap', Aj.state.$form).toggleClass('multiple', value.length > 1);
+    $('.js-sample-results-wrap', Aj.state.$form).toggleClass('multiple', value.length > 1);
   },
   onTargetQuerySearch: function(field, value) {
     var $fieldEl = Aj.state.$form.field(field);
@@ -1308,19 +1308,19 @@ var NewAd = {
     var $fieldEl = Aj.state.$form.field(field);
     if (field == 'user_topics') {
       var user_topics_cnt = $fieldEl.data('value').length;
-      $('.js?xieworld_vf-field-intersect_topics-wrap', Aj.state.$form).slideToggle(user_topics_cnt > 1);
+      $('.js-field-intersect_topics-wrap', Aj.state.$form).slideToggle(user_topics_cnt > 1);
     } else if (field == 'channels') {
       var channels_cnt = $fieldEl.data('value').length;
-      $('.js?xieworld_vf-field-similar_channels-wrap[data-field="channels"]', Aj.state.$form).slideToggle(channels_cnt > 0 && channels_cnt < 10);
-      $('.js?xieworld_vf-deselect-all[data-field="channels"]', Aj.state.$form).toggleClass('hide', channels_cnt < 2);
+      $('.js-field-similar_channels-wrap[data-field="channels"]', Aj.state.$form).slideToggle(channels_cnt > 0 && channels_cnt < 10);
+      $('.js-deselect-all[data-field="channels"]', Aj.state.$form).toggleClass('hide', channels_cnt < 2);
     } else if (field == 'exclude_channels') {
       var channels_cnt = $fieldEl.data('value').length;
-      $('.js?xieworld_vf-field-similar_channels-wrap[data-field="exclude_channels"]', Aj.state.$form).slideToggle(channels_cnt > 0 && channels_cnt < 10);
-      $('.js?xieworld_vf-deselect-all[data-field="exclude_channels"]', Aj.state.$form).toggleClass('hide', channels_cnt < 2);
+      $('.js-field-similar_channels-wrap[data-field="exclude_channels"]', Aj.state.$form).slideToggle(channels_cnt > 0 && channels_cnt < 10);
+      $('.js-deselect-all[data-field="exclude_channels"]', Aj.state.$form).toggleClass('hide', channels_cnt < 2);
     } else if (field == 'bots') {
       var bots_cnt = $fieldEl.data('value').length;
-      $('.js?xieworld_vf-field-similar_bots-wrap', Aj.state.$form).slideToggle(bots_cnt > 0 && bots_cnt < 10);
-      $('.js?xieworld_vf-deselect-all[data-field="bots"]', Aj.state.$form).toggleClass('hide', bots_cnt < 2);
+      $('.js-field-similar_bots-wrap', Aj.state.$form).slideToggle(bots_cnt > 0 && bots_cnt < 10);
+      $('.js-deselect-all[data-field="bots"]', Aj.state.$form).toggleClass('hide', bots_cnt < 2);
     }
     var selOpts = $fieldEl.data('selOpts');
     var paired_field = selOpts.pairedField;
@@ -1349,7 +1349,7 @@ var NewAd = {
   eOpenSimilarChannels: function(e) {
     e.preventDefault();
     var $link = $(this);
-    var field = $link.parents('.js?xieworld_vf-field-similar_channels-wrap').attr('data-field') || 'channels';
+    var field = $link.parents('.js-field-similar_channels-wrap').attr('data-field') || 'channels';
     var $fieldEl = Aj.state.$form.field(field);
     var values   = $fieldEl.data('value') || [];
     if (!values.length || $link.data('loading')) {
@@ -1359,10 +1359,10 @@ var NewAd = {
     openPopup(Aj.state.similarChannelsPopup, {
       closeByClickOutside: '.popup-no-close',
       onOpen: function() {
-        var $list = $('.js?xieworld_vf-similar-channels-list', this);
-        var $empty = $('.js?xieworld_vf-similar-channels-empty', this);
-        var $loading = $('.js?xieworld_vf-similar-channels-loading', this);
-        var $button = $('.js?xieworld_vf-add-similar-channels', this);
+        var $list = $('.js-similar-channels-list', this);
+        var $empty = $('.js-similar-channels-empty', this);
+        var $loading = $('.js-similar-channels-loading', this);
+        var $button = $('.js-add-similar-channels', this);
         $list.on('scroll', NewAd.onSimilarScroll);
         $list.on('change', 'input.checkbox', NewAd.eSimilarChannelChange);
         $button.data('field', field);
@@ -1396,8 +1396,8 @@ var NewAd = {
         });
       },
       onClose: function() {
-        var $list = $('.js?xieworld_vf-similar-channels-list', this);
-        var $button = $('.js?xieworld_vf-add-similar-channels', this);
+        var $list = $('.js-similar-channels-list', this);
+        var $button = $('.js-add-similar-channels', this);
         $list.off('scroll', NewAd.onSimilarScroll);
         $list.off('change', 'input.checkbox', NewAd.eSimilarChannelChange);
         $button.off('click', NewAd.eAddSimilarChannels);
@@ -1413,8 +1413,8 @@ var NewAd = {
   },
   updateSimilarChannelButton: function() {
     var $popup = Aj.state.similarChannelsPopup;
-    var $list = $('.js?xieworld_vf-similar-channels-list', $popup);
-    var $button = $('.js?xieworld_vf-add-similar-channels', $popup);
+    var $list = $('.js-similar-channels-list', $popup);
+    var $button = $('.js-add-similar-channels', $popup);
     var count = 0;
     $('input.checkbox', $list).each(function() {
       if ($(this).prop('checked')) {
@@ -1427,8 +1427,8 @@ var NewAd = {
   eAddSimilarChannels: function() {
     var $popup = Aj.state.similarChannelsPopup;
     var field = $(this).data('field') || 'channels';
-    var $list = $('.js?xieworld_vf-similar-channels-list', $popup);
-    var $button = $('.js?xieworld_vf-add-similar-channels', $popup);
+    var $list = $('.js-similar-channels-list', $popup);
+    var $button = $('.js-add-similar-channels', $popup);
     var channel_items = $list.data('channel_items');
     var $fieldEl = Aj.state.$form.field(field);
     var add_items = [];
@@ -1462,10 +1462,10 @@ var NewAd = {
     openPopup(Aj.state.similarBotsPopup, {
       closeByClickOutside: '.popup-no-close',
       onOpen: function() {
-        var $list = $('.js?xieworld_vf-similar-bots-list', this);
-        var $empty = $('.js?xieworld_vf-similar-bots-empty', this);
-        var $loading = $('.js?xieworld_vf-similar-bots-loading', this);
-        var $button = $('.js?xieworld_vf-add-similar-bots', this);
+        var $list = $('.js-similar-bots-list', this);
+        var $empty = $('.js-similar-bots-empty', this);
+        var $loading = $('.js-similar-bots-loading', this);
+        var $button = $('.js-add-similar-bots', this);
         $list.on('scroll', NewAd.onSimilarScroll);
         $list.on('change', 'input.checkbox', NewAd.eSimilarBotChange);
         $button.on('click', NewAd.eAddSimilarBots);
@@ -1497,8 +1497,8 @@ var NewAd = {
         });
       },
       onClose: function() {
-        var $list = $('.js?xieworld_vf-similar-bots-list', this);
-        var $button = $('.js?xieworld_vf-add-similar-bots', this);
+        var $list = $('.js-similar-bots-list', this);
+        var $button = $('.js-add-similar-bots', this);
         $list.off('scroll', NewAd.onSimilarScroll);
         $list.off('change', 'input.checkbox', NewAd.eSimilarBotChange);
         $button.off('click', NewAd.eAddSimilarBots);
@@ -1510,8 +1510,8 @@ var NewAd = {
   },
   updateSimilarBotButton: function() {
     var $popup = Aj.state.similarBotsPopup;
-    var $list = $('.js?xieworld_vf-similar-bots-list', $popup);
-    var $button = $('.js?xieworld_vf-add-similar-bots', $popup);
+    var $list = $('.js-similar-bots-list', $popup);
+    var $button = $('.js-add-similar-bots', $popup);
     var count = 0;
     $('input.checkbox', $list).each(function() {
       if ($(this).prop('checked')) {
@@ -1523,8 +1523,8 @@ var NewAd = {
   },
   eAddSimilarBots: function() {
     var $popup = Aj.state.similarBotsPopup;
-    var $list = $('.js?xieworld_vf-similar-bots-list', $popup);
-    var $button = $('.js?xieworld_vf-add-similar-bots', $popup);
+    var $list = $('.js-similar-bots-list', $popup);
+    var $button = $('.js-add-similar-bots', $popup);
     var bot_items = $list.data('bot_items');
     var $fieldEl = Aj.state.$form.field('bots');
     var add_items = [];
@@ -1549,50 +1549,50 @@ var NewAd = {
   eOpenDailyBudget: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-field-daily_budget-wrap', $form).slideShow();
-    $('.js?xieworld_vf-open-daily-budget', $form).addClass('inactive');
+    $('.js-field-daily_budget-wrap', $form).slideShow();
+    $('.js-open-daily-budget', $form).addClass('inactive');
   },
   eRemoveDailyBudget: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-field-daily_budget-wrap', $form).slideHide();
-    $('.js?xieworld_vf-open-daily-budget', $form).removeClass('inactive');
+    $('.js-field-daily_budget-wrap', $form).slideHide();
+    $('.js-open-daily-budget', $form).removeClass('inactive');
     $form.field('daily_budget').value('');
   },
   eOpenStartDate: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-activate-date-link-wrap', $form).slideHide();
-    $('.js?xieworld_vf-activate-date-wrap', $form).slideShow();
+    $('.js-activate-date-link-wrap', $form).slideHide();
+    $('.js-activate-date-wrap', $form).slideShow();
     if ($form.field('active').value() != '1') {
       var hasDectivateDate = !!$form.field('ad_deactivate_date').value();
-      $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideToggle(!hasDectivateDate);
-      $('.js?xieworld_vf-deactivate-date-wrap', $form).slideToggle(hasDectivateDate);
+      $('.js-deactivate-date-link-wrap', $form).slideToggle(!hasDectivateDate);
+      $('.js-deactivate-date-wrap', $form).slideToggle(hasDectivateDate);
     }
   },
   eOpenEndDate: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideHide();
-    $('.js?xieworld_vf-deactivate-date-wrap', $form).slideShow();
+    $('.js-deactivate-date-link-wrap', $form).slideHide();
+    $('.js-deactivate-date-wrap', $form).slideShow();
   },
   eRemoveStartDate: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-activate-date-link-wrap', $form).slideShow();
-    $('.js?xieworld_vf-activate-date-wrap', $form).slideHide();
+    $('.js-activate-date-link-wrap', $form).slideShow();
+    $('.js-activate-date-wrap', $form).slideHide();
     $form.field('ad_activate_date').trigger('selectval', ['']);
     $form.field('ad_activate_time').trigger('selectval', ['']);
     if ($form.field('active').value() != '1') {
-      $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideHide();
-      $('.js?xieworld_vf-deactivate-date-wrap', $form).slideHide();
+      $('.js-deactivate-date-link-wrap', $form).slideHide();
+      $('.js-deactivate-date-wrap', $form).slideHide();
     }
   },
   eRemoveEndDate: function(e) {
     e.preventDefault();
     var $form = $(this).parents('form');
-    $('.js?xieworld_vf-deactivate-date-link-wrap', $form).slideShow();
-    $('.js?xieworld_vf-deactivate-date-wrap', $form).slideHide();
+    $('.js-deactivate-date-link-wrap', $form).slideShow();
+    $('.js-deactivate-date-wrap', $form).slideHide();
     $form.field('ad_deactivate_date').trigger('selectval', ['']);
     $form.field('ad_deactivate_time').trigger('selectval', ['']);
   },
@@ -1616,7 +1616,7 @@ var NewAd = {
       var promoteUrlField = $form.field('promote_url');
       var websitePhotoField = $form.field('website_photo');
       var $formGroup = promoteUrlField.fieldEl().parents('.form-group');
-      var $promotePhoto = $('.js?xieworld_vf-promote-photo', $form);
+      var $promotePhoto = $('.js-promote-photo', $form);
       $formGroup.addClass('field-loading');
       var xhr = Upload.uploadFile('promote_photo', files[0], function onSuccess(result) {
         $formGroup.removeClass('field-loading');
@@ -1644,7 +1644,7 @@ var NewAd = {
     var $form = $(this).parents('form');
     var $field = $form.field('media');
     var $formGroup = $field.parents('.form-group');
-    var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $formGroup);
+    var $mediaWrap = $('.js-ad-media-wrap', $formGroup);
     $('video', $mediaWrap).first().each(function() {
       if (this.paused) {
         this.play();
@@ -1660,7 +1660,7 @@ var NewAd = {
     var $form = $(this).parents('form');
     var $field = $form.field('media');
     var $formGroup = $field.parents('.form-group');
-    var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $formGroup);
+    var $mediaWrap = $('.js-ad-media-wrap', $formGroup);
     if ($mediaWrap.hasClass('file-loading')) {
       var xhr = $mediaWrap.data('xhr');
       if (xhr) {
@@ -1673,7 +1673,7 @@ var NewAd = {
     NewAd.adPostCheck($form);
   },
   resetAdMediaUpload: function($form) {
-    var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $form);
+    var $mediaWrap = $('.js-ad-media-wrap', $form);
     if ($mediaWrap.hasClass('file-loading')) {
       var xhr = $mediaWrap.data('xhr');
       if (xhr) {
@@ -1710,7 +1710,7 @@ var NewAd = {
         return false;
       }
       var $formGroup = $field.parents('.form-group');
-      var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $formGroup);
+      var $mediaWrap = $('.js-ad-media-wrap', $formGroup);
       NewAd.wrapAdMedia($field, file);
       $mediaWrap.addClass('file-loading');
       var xhr = Upload.uploadFile('ad_media', files[0], function onSuccess(result) {
@@ -1736,8 +1736,8 @@ var NewAd = {
     }
   },
   initAdMedia: function($mediaWrap) {
-    var $content = $('.js?xieworld_vf-ad-media-content', $mediaWrap);
-    var $duration = $('.js?xieworld_vf-ad-media-duration', $mediaWrap);
+    var $content = $('.js-ad-media-content', $mediaWrap);
+    var $duration = $('.js-ad-media-duration', $mediaWrap);
     var $video = $('video', $content);
     if ($video.size()) {
       $video.on('loadedmetadata', function(e) {
@@ -1764,9 +1764,9 @@ var NewAd = {
   updateAdMedia: function($field) {
     var $form = $field.parents('form');
     var $formGroup = $field.parents('.form-group');
-    var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $formGroup);
-    var $content = $('.js?xieworld_vf-ad-media-content', $mediaWrap);
-    var $button = $('.js?xieworld_vf-add-media-btn', $formGroup);
+    var $mediaWrap = $('.js-ad-media-wrap', $formGroup);
+    var $content = $('.js-ad-media-content', $mediaWrap);
+    var $button = $('.js-add-media-btn', $formGroup);
     var has_media = $field.value() || $field.data('has-media');
     NewAd.initAdMedia($mediaWrap);
     if (has_media) {
@@ -1785,8 +1785,8 @@ var NewAd = {
   },
   wrapAdMedia: function($field, file) {
     var $formGroup = $field.parents('.form-group');
-    var $mediaWrap = $('.js?xieworld_vf-ad-media-wrap', $formGroup);
-    var $content = $('.js?xieworld_vf-ad-media-content', $mediaWrap);
+    var $mediaWrap = $('.js-ad-media-wrap', $formGroup);
+    var $content = $('.js-ad-media-content', $mediaWrap);
     $content.html('');
     if (file) {
       var is_video = file.type == 'video/mp4';
@@ -1794,7 +1794,7 @@ var NewAd = {
       if (is_video) {
         $media = $('<video class="pr-ad-media-video" width="100%" height="100%" preload loop muted></video>').attr('src', media_url);
       } else {
-        $media = $('<div class="pr-ad-media-photo"></div>').css?xieworld_vf('backgroundImage', "url('" + media_url + "')");
+        $media = $('<div class="pr-ad-media-photo"></div>').css('backgroundImage', "url('" + media_url + "')");
       }
       $mediaWrap.toggleClass('is-video', is_video);
       $content.append($media);
@@ -1803,8 +1803,8 @@ var NewAd = {
     NewAd.updateAdMedia($field);
   },
   updateAdPreviewText: function($cont) {
-    $('.js?xieworld_vf-preview-wrap', $cont).each(function() {
-      var oneline = $('.js?xieworld_vf-preview-text', this).height() <= 20;
+    $('.js-preview-wrap', $cont).each(function() {
+      var oneline = $('.js-preview-text', this).height() <= 20;
       $(this).toggleClass('oneline-text', oneline);
     });
   },
@@ -1812,37 +1812,37 @@ var NewAd = {
     var $form = Aj.state.$form;
     Aj.state.previewData = previewData;
     if (previewData) {
-      $('.js?xieworld_vf-preview-from', $form).html(previewData.from);
-      $('.js?xieworld_vf-preview-from-desc', $form).html(previewData.from_desc);
-      $('.js?xieworld_vf-preview-wrap', $form).attr('href', uncleanHTML(previewData.button_url));
+      $('.js-preview-from', $form).html(previewData.from);
+      $('.js-preview-from-desc', $form).html(previewData.from_desc);
+      $('.js-preview-wrap', $form).attr('href', uncleanHTML(previewData.button_url));
       for (var i = 1; i <= 3; i++) {
-        $('.js?xieworld_vf-preview-wrap', $form).css?xieworld_vfProp('--preview-color' + i, (previewData.accent_colors || [])[i - 1] || '');
+        $('.js-preview-wrap', $form).cssProp('--preview-color' + i, (previewData.accent_colors || [])[i - 1] || '');
       }
-      $('.js?xieworld_vf-promote-media', $form).html(previewData.media);
-      $('.js?xieworld_vf-promote-photo', $form).html(previewData.photo);
-      $('.js?xieworld_vf-promote-photo-tooltip', $form).html(previewData.from);
-      $('.js?xieworld_vf-preview-text', $form).html(previewData.text);
-      $('.js?xieworld_vf-preview-text tg-emoji', $form).each(function(){ TEmoji.init(this); });
-      $('.js?xieworld_vf-preview-button', $form).html(previewData.button);
-      $('.js?xieworld_vf-preview-footer', $form).each(function() {
-        Ads.updateTextShadow(this, '.js?xieworld_vf-preview-text', '.label', 10);
+      $('.js-promote-media', $form).html(previewData.media);
+      $('.js-promote-photo', $form).html(previewData.photo);
+      $('.js-promote-photo-tooltip', $form).html(previewData.from);
+      $('.js-preview-text', $form).html(previewData.text);
+      $('.js-preview-text tg-emoji', $form).each(function(){ TEmoji.init(this); });
+      $('.js-preview-button', $form).html(previewData.button);
+      $('.js-preview-footer', $form).each(function() {
+        Ads.updateTextShadow(this, '.js-preview-text', '.label', 10);
       });
-      $('.js?xieworld_vf-field-picture-label', $form).html(previewData.picture_label);
-      $('.js?xieworld_vf-preview', $form).toggleClass('picture', !!previewData.picture).toggleClass('media', !!previewData.media_on);
-      $('.js?xieworld_vf-picture-hint', $form).html(previewData.picture_hint);
-      $('.js?xieworld_vf-cpm-extra', $form).html(previewData.cpm_extra);
-      $('.js?xieworld_vf-cpm-extra-tooltip', $form).html(previewData.cpm_extra_tooltip);
+      $('.js-field-picture-label', $form).html(previewData.picture_label);
+      $('.js-preview', $form).toggleClass('picture', !!previewData.picture).toggleClass('media', !!previewData.media_on);
+      $('.js-picture-hint', $form).html(previewData.picture_hint);
+      $('.js-cpm-extra', $form).html(previewData.cpm_extra);
+      $('.js-cpm-extra-tooltip', $form).html(previewData.cpm_extra_tooltip);
       NewAd.updateAdPreviewText($form);
     }
-    $('.js?xieworld_vf-preview', $form).each(function() {
+    $('.js-preview', $form).each(function() {
       var target_type = $(this).attr('data-target-type');
       var avail = previewData && previewData.avail_targets && previewData.avail_targets[target_type] || false;
       $(this).toggleClass('active', avail);
     });
-    NewAd.initAdMedia($('.js?xieworld_vf-promote-media', $form));
-    $('.js?xieworld_vf-promote-photo', $form).parents('.pr-form-control-wrap').toggleClass('has-photo', !!previewData);
-    $('.js?xieworld_vf-cpm-extra', $form).parents('.pr-form-control-wrap').toggleClass('has-extra-cpm', !!(previewData && previewData.cpm_extra));
-    $('.js?xieworld_vf-preview-link', $form).toggleClass('inactive', !previewData);
+    NewAd.initAdMedia($('.js-promote-media', $form));
+    $('.js-promote-photo', $form).parents('.pr-form-control-wrap').toggleClass('has-photo', !!previewData);
+    $('.js-cpm-extra', $form).parents('.pr-form-control-wrap').toggleClass('has-extra-cpm', !!(previewData && previewData.cpm_extra));
+    $('.js-preview-link', $form).toggleClass('inactive', !previewData);
   },
   updateAdForm: function($form, isWebsite, customButton) {
     var $previewPopup = Aj.state.$previewPopup;
@@ -1863,14 +1863,14 @@ var NewAd = {
       $websitePhotoField = Aj.state.$form.field('website_photo');
     }
     if ($cont) {
-      $('.js?xieworld_vf-promote-photo', $cont).toggleClass('can-replace', !!isWebsite);
+      $('.js-promote-photo', $cont).toggleClass('can-replace', !!isWebsite);
       if (!isWebsite) {
         $websiteNameField.value('');
         $websitePhotoField.value('');
       }
-      var $websiteNameWrap = $('.js?xieworld_vf-field-website_name-wrap', $cont);
+      var $websiteNameWrap = $('.js-field-website_name-wrap', $cont);
       $websiteNameWrap.slideToggle(!!isWebsite);
-      var $convEventWrap = $('.js?xieworld_vf-field-conversion_event-wrap', $cont);
+      var $convEventWrap = $('.js-field-conversion_event-wrap', $cont);
       $convEventWrap.slideToggle(!!isWebsite);
       Aj.state.customButton = customButton;
       NewAd.updateFieldsVisibility();
@@ -1948,7 +1948,7 @@ var NewAd = {
     }
     var target_type = $form.field('target_type').value();
 
-    var $scheduleForm = $('.js?xieworld_vf-ad-form', $schedulePopup);
+    var $scheduleForm = $('.js-ad-form', $schedulePopup);
     Ads.formInit($scheduleForm);
     $scheduleForm.on('submit', preventDefault);
 
@@ -1969,7 +1969,7 @@ var NewAd = {
       if (schedule == '0;0;0;0;0;0;0') {
         $form.field('use_schedule').prop('checked', false).trigger('change');
       }
-      $('.js?xieworld_vf-schedule-overview', $form).html(NewAd.scheduleOverview($form));
+      $('.js-schedule-overview', $form).html(NewAd.scheduleOverview($form));
       closePopup($schedulePopup);
       if (state.draftEnabled) {
         NewAd.saveDraftAuto(true);
@@ -1979,7 +1979,7 @@ var NewAd = {
       closePopup($schedulePopup);
     };
     $scheduleForm.on('change', scheduleChanged);
-    var $clearScheduleBtn = $('.js?xieworld_vf-clear-schedule', $schedulePopup);
+    var $clearScheduleBtn = $('.js-clear-schedule', $schedulePopup);
     $clearScheduleBtn.on('click', scheduleClear);
     var $submitBtn = $('.submit-form-btn', $schedulePopup);
     $submitBtn.on('click', scheduleSave);
@@ -2030,7 +2030,7 @@ var NewAd = {
     NewAd.openAdSampleResults(1);
   },
   openAdSampleResults: function(delta) {
-    var curValue = $('.js?xieworld_vf-sample-query', Aj.state.$form).attr('data-value');
+    var curValue = $('.js-sample-query', Aj.state.$form).attr('data-value');
     var $field = Aj.state.$form.field('search_queries');
     var value = $field.data('value') || [];
     var valueFull = $field.data('valueFull') || {};
@@ -2080,9 +2080,9 @@ var NewAd = {
     }
   },
   updateAdSampleResults: function(item) {
-    $('.js?xieworld_vf-sample-query', Aj.state.$form).attr('data-value', item.val || '');
-    $('.js?xieworld_vf-sample-query', Aj.state.$form).html(item.name || '');
-    $('.js?xieworld_vf-sample-results', Aj.state.$form).html(item.sample_results || '');
+    $('.js-sample-query', Aj.state.$form).attr('data-value', item.val || '');
+    $('.js-sample-query', Aj.state.$form).html(item.name || '');
+    $('.js-sample-results', Aj.state.$form).html(item.sample_results || '');
   },
   updateAdTargetOverview: function() {
     var len = {}, lang_params = {};
@@ -2295,7 +2295,7 @@ var NewAd = {
   getPreviewFormData: function($form) {
     if (Aj.state.$previewPopup) {
       var $previewPopup = Aj.state.$previewPopup;
-      var $previewForm = $('.js?xieworld_vf-ad-form', $previewPopup);
+      var $previewForm = $('.js-ad-form', $previewPopup);
       if (!$previewForm.get(0)) return false;
       var values = [
         $previewForm.field('text').value(),
@@ -2889,12 +2889,12 @@ var Account = {
   initToken: function() {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
-      cont.on('click.curPage', '.js?xieworld_vf-copy-token-btn', Account.eCopyToken);
-      cont.on('click.curPage', '.js?xieworld_vf-revoke-token-btn', Account.eRevokeToken);
+      cont.on('click.curPage', '.js-copy-token-btn', Account.eCopyToken);
+      cont.on('click.curPage', '.js-revoke-token-btn', Account.eRevokeToken);
       state.$form = $('.api-edit-form', cont);
       Ads.formInit(state.$form);
       state.$form.on('submit', preventDefault);
-      cont.on('click.curPage', '.js?xieworld_vf-save-settings-btn', Account.eApiSubmitForm);
+      cont.on('click.curPage', '.js-save-settings-btn', Account.eApiSubmitForm);
       cont.on('change.curPage', '.pr-form-control', Account.onFieldChange);
     });
   },
@@ -2939,7 +2939,7 @@ var Account = {
           Aj.state.token = result.new_token;
         }
         if (result.new_token_value) {
-          $('.js?xieworld_vf-token-value', Aj.ajContainer).value(result.new_token_value);
+          $('.js-token-value', Aj.ajContainer).value(result.new_token_value);
         }
         if (result.toast) {
           showToast(result.toast);
@@ -3049,15 +3049,15 @@ var OwnerAds = {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
       state.$searchField = $('.pr-search-input');
-      state.$adsListTable = $('.js?xieworld_vf-ads-table');
-      state.$searchResults = $('.js?xieworld_vf-ads-table-body');
+      state.$adsListTable = $('.js-ads-table');
+      state.$searchResults = $('.js-ads-table-body');
       Ads.fieldInit(state.$searchField);
       cont.on('click.curPage', '.pr-cell-sort', OwnerAds.eSortList);
       cont.on('click.curPage', '.pr-table-settings', OwnerAds.eSettingsOpen);
-      cont.on('click.curPage', '.js?xieworld_vf-clone-ad-btn', EditAd.eCloneAd);
+      cont.on('click.curPage', '.js-clone-ad-btn', EditAd.eCloneAd);
       cont.on('click.curPage', '.delete-ad-btn', EditAd.deleteAd);
-      state.$tableColumnsPopup = $('.js?xieworld_vf-table-columns-popup');
-      state.$tableColumnsForm = $('.js?xieworld_vf-table-columns-form');
+      state.$tableColumnsPopup = $('.js-table-columns-popup');
+      state.$tableColumnsForm = $('.js-table-columns-form');
       state.$tableColumnsForm.on('change.curPage', 'input.checkbox', OwnerAds.eColumnChange);
       state.$tableColumnsForm.on('submit.curPage', preventDefault);
 
@@ -3145,7 +3145,7 @@ var OwnerAds = {
   eColumnChange: function() {
     var column = $(this).prop('name');
     var checked = $(this).prop('checked');
-    Aj.state.$adsListTable.css?xieworld_vfProp('--coldp-' + column, checked ? '' : 'none');
+    Aj.state.$adsListTable.cssProp('--coldp-' + column, checked ? '' : 'none');
     OwnerAds.submitColumns();
   },
   submitColumns: function() {
@@ -3273,8 +3273,8 @@ var ReviewAds = {
       cont.on('click.curPage', '.pr-search-reset', ReviewAds.eClearSearch);
       cont.on('click.curPage', '.ad-approve-btn', ReviewAds.eApproveAd);
       cont.on('click.curPage', '.ad-decline-btn', ReviewAds.eDeclineAd);
-      cont.on('click.curPage', '.js?xieworld_vf-translate-ad', ReviewAds.eTranslateAd);
-      cont.on('click.curPage', '.js?xieworld_vf-show-original-ad', ReviewAds.eOriginalAd);
+      cont.on('click.curPage', '.js-translate-ad', ReviewAds.eTranslateAd);
+      cont.on('click.curPage', '.js-show-original-ad', ReviewAds.eOriginalAd);
       $(window).on('scroll resize', ReviewAds.onScroll);
       ReviewAds.onScroll();
     });
@@ -3285,7 +3285,7 @@ var ReviewAds = {
     });
   },
   onScroll: function() {
-    $('.js?xieworld_vf-load-more').each(function() {
+    $('.js-load-more').each(function() {
       var $loadMore = $(this);
       var top = $loadMore.offset().top - $(window).scrollTop();
       if (top < $(window).height() * 2) {
@@ -3336,17 +3336,17 @@ var ReviewAds = {
   },
   eApproveAd: function(e) {
     e.preventDefault();
-    var $ad      = $(this).parents('.js?xieworld_vf-review-item');
+    var $ad      = $(this).parents('.js-review-item');
     var owner_id = $ad.attr('data-owner-id');
     var ad_id    = $ad.attr('data-ad-id');
     var ad_hash  = $ad.attr('data-ad-hash');
     var $buttons = $ad.find('.pr-btn');
 
     var method, params = {};
-    var $similar_wrap = $(this).parents('.js?xieworld_vf-review-similar-wrap');
+    var $similar_wrap = $(this).parents('.js-review-similar-wrap');
     if ($similar_wrap.size()) {
       var ads_list = [];
-      $('.js?xieworld_vf-review-item', $similar_wrap).each(function() {
+      $('.js-review-item', $similar_wrap).each(function() {
         var owner_id = $(this).attr('data-owner-id');
         var ad_id    = $(this).attr('data-ad-id');
         ads_list.push(owner_id + '/' + ad_id);
@@ -3371,24 +3371,24 @@ var ReviewAds = {
         return showAlert(result.error);
       }
       if (result.similar_status_html) {
-        $ad.find('.js?xieworld_vf-review-similar-status').html(result.similar_status_html);
+        $ad.find('.js-review-similar-status').html(result.similar_status_html);
         ReviewAds.updateSimilarAds($ad, '', '');
         $ad.scrollIntoView();
       } else {
         if (result.status_html) {
-          $ad.find('.js?xieworld_vf-review-ad-status').html(result.status_html);
+          $ad.find('.js-review-ad-status').html(result.status_html);
         }
         if (result.buttons_html) {
-          $ad.find('.js?xieworld_vf-review-buttons').html(result.buttons_html);
+          $ad.find('.js-review-buttons').html(result.buttons_html);
         }
-        $ad.find('.js?xieworld_vf-review-similar-status').html('');
+        $ad.find('.js-review-similar-status').html('');
         if (result.similar_html) {
           ReviewAds.updateSimilarAds($ad, result.similar_html, result.similar_hash);
         }
-        $ad.find('.js?xieworld_vf-reports-badge').hide();
+        $ad.find('.js-reports-badge').hide();
       }
       if (result.ads_html) {
-        var $loadMore = $('.js?xieworld_vf-load-next');
+        var $loadMore = $('.js-load-next');
         var $loadMoreCont = $loadMore.closest('.pr-review-list');
         if ($loadMoreCont.size()) {
           $loadMore.remove();
@@ -3401,7 +3401,7 @@ var ReviewAds = {
   },
   eDeclineAd: function(e) {
     e.preventDefault();
-    var $ad       = $(this).parents('.js?xieworld_vf-review-item');
+    var $ad       = $(this).parents('.js-review-item');
     var owner_id  = $ad.attr('data-owner-id');
     var ad_id     = $ad.attr('data-ad-id');
     var ad_hash   = $ad.attr('data-ad-hash');
@@ -3411,10 +3411,10 @@ var ReviewAds = {
     var method, params = {
       reason_id: reason_id
     };
-    var $similar_wrap = $(this).parents('.js?xieworld_vf-review-similar-wrap');
+    var $similar_wrap = $(this).parents('.js-review-similar-wrap');
     if ($similar_wrap.size()) {
       var ads_list = [];
-      $('.js?xieworld_vf-review-item', $similar_wrap).each(function() {
+      $('.js-review-item', $similar_wrap).each(function() {
         var owner_id = $(this).attr('data-owner-id');
         var ad_id    = $(this).attr('data-ad-id');
         ads_list.push(owner_id + '/' + ad_id);
@@ -3439,24 +3439,24 @@ var ReviewAds = {
         return showAlert(result.error);
       }
       if (result.similar_status_html) {
-        $ad.find('.js?xieworld_vf-review-similar-status').html(result.similar_status_html);
+        $ad.find('.js-review-similar-status').html(result.similar_status_html);
         ReviewAds.updateSimilarAds($ad, '', '');
         $ad.scrollIntoView();
       } else {
         if (result.status_html) {
-          $ad.find('.js?xieworld_vf-review-ad-status').html(result.status_html);
+          $ad.find('.js-review-ad-status').html(result.status_html);
         }
         if (result.buttons_html) {
-          $ad.find('.js?xieworld_vf-review-buttons').html(result.buttons_html);
+          $ad.find('.js-review-buttons').html(result.buttons_html);
         }
-        $ad.find('.js?xieworld_vf-review-similar-status').html('');
+        $ad.find('.js-review-similar-status').html('');
         if (result.similar_html) {
           ReviewAds.updateSimilarAds($ad, result.similar_html, result.similar_hash);
         }
-        $ad.find('.js?xieworld_vf-reports-badge').hide();
+        $ad.find('.js-reports-badge').hide();
       }
       if (result.ads_html) {
-        var $loadMore = $('.js?xieworld_vf-load-next');
+        var $loadMore = $('.js-load-next');
         var $loadMoreCont = $loadMore.closest('.pr-review-list');
         if ($loadMoreCont.size()) {
           $loadMore.remove();
@@ -3469,17 +3469,17 @@ var ReviewAds = {
   },
   updateSimilarAds: function($ad, similar_html, similar_hash) {
     var cont = Aj.ajContainer;
-    var $similar_wrap = $ad.find('.js?xieworld_vf-review-similar-wrap');
+    var $similar_wrap = $ad.find('.js-review-similar-wrap');
     $similar_wrap.html(similar_html).attr('data-similar-hash', similar_hash);
-    $('.js?xieworld_vf-review-item', $similar_wrap).each(function() {
+    $('.js-review-item', $similar_wrap).each(function() {
       var owner_id = $(this).attr('data-owner-id');
       var ad_id    = $(this).attr('data-ad-id');
-      $('.js?xieworld_vf-review-list > .js?xieworld_vf-review-item[data-owner-id="' + owner_id + '"][data-ad-id="' + ad_id + '"]', cont).remove();
+      $('.js-review-list > .js-review-item[data-owner-id="' + owner_id + '"][data-ad-id="' + ad_id + '"]', cont).remove();
     });
   },
   eTranslateAd: function(e) {
     e.preventDefault();
-    var $ad       = $(this).parents('.js?xieworld_vf-review-item');
+    var $ad       = $(this).parents('.js-review-item');
     var owner_id  = $ad.attr('data-owner-id');
     var ad_id     = $ad.attr('data-ad-id');
 
@@ -3503,7 +3503,7 @@ var ReviewAds = {
       $ad.removeClass('ad-translating').addClass('ad-translated');
       $ad.attr('translated', true);
       if (result.preview_html) {
-        $('.js?xieworld_vf-translated-ad', $ad).prepend(result.preview_html);
+        $('.js-translated-ad', $ad).prepend(result.preview_html);
         Ads.updateAdMessagePreviews($ad);
       }
     });
@@ -3511,7 +3511,7 @@ var ReviewAds = {
   },
   eOriginalAd: function(e) {
     e.preventDefault();
-    var $ad = $(this).parents('.js?xieworld_vf-review-item');
+    var $ad = $(this).parents('.js-review-item');
     $ad.removeClass('ad-translated');
     return false;
   }
@@ -3538,7 +3538,7 @@ var ReviewTargets = {
     });
   },
   onScroll: function() {
-    $('.js?xieworld_vf-load-more').each(function() {
+    $('.js-load-more').each(function() {
       var $loadMore = $(this);
       var top = $loadMore.offset().top - $(window).scrollTop();
       if (top < $(window).height() * 2) {
@@ -3589,7 +3589,7 @@ var ReviewTargets = {
   },
   eApproveAd: function(e) {
     e.preventDefault();
-    var $target     = $(this).parents('.js?xieworld_vf-review-item');
+    var $target     = $(this).parents('.js-review-item');
     var target      = $target.attr('data-target');
     var target_hash = $target.attr('data-target-hash');
     var $buttons    = $target.find('.pr-btn');
@@ -3607,13 +3607,13 @@ var ReviewTargets = {
         return showAlert(result.error);
       }
       if (result.status_html) {
-        $target.find('.js?xieworld_vf-review-target-status').html(result.status_html);
+        $target.find('.js-review-target-status').html(result.status_html);
       }
       if (result.buttons_html) {
-        $target.find('.js?xieworld_vf-review-buttons').html(result.buttons_html);
+        $target.find('.js-review-buttons').html(result.buttons_html);
       }
       if (result.targets_html) {
-        var $loadMore = $('.js?xieworld_vf-load-next');
+        var $loadMore = $('.js-load-next');
         var $loadMoreCont = $loadMore.closest('.pr-review-list');
         if ($loadMoreCont.size()) {
           $loadMore.remove();
@@ -3626,7 +3626,7 @@ var ReviewTargets = {
   },
   eDeclineAd: function(e) {
     e.preventDefault();
-    var $target     = $(this).parents('.js?xieworld_vf-review-item');
+    var $target     = $(this).parents('.js-review-item');
     var target      = $target.attr('data-target');
     var target_hash = $target.attr('data-target-hash');
     var $buttons    = $target.find('.pr-btn');
@@ -3646,13 +3646,13 @@ var ReviewTargets = {
         return showAlert(result.error);
       }
       if (result.status_html) {
-        $target.find('.js?xieworld_vf-review-target-status').html(result.status_html);
+        $target.find('.js-review-target-status').html(result.status_html);
       }
       if (result.buttons_html) {
-        $target.find('.js?xieworld_vf-review-buttons').html(result.buttons_html);
+        $target.find('.js-review-buttons').html(result.buttons_html);
       }
       if (result.targets_html) {
-        var $loadMore = $('.js?xieworld_vf-load-next');
+        var $loadMore = $('.js-load-next');
         var $loadMoreCont = $loadMore.closest('.pr-review-list');
         if ($loadMoreCont.size()) {
           $loadMore.remove();
@@ -3669,28 +3669,28 @@ var EditAd = {
   init: function() {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
-      state.$form = $('.js?xieworld_vf-ad-form', cont);
+      state.$form = $('.js-ad-form', cont);
       Ads.formInit(state.$form);
       state.$form.on('submit', preventDefault);
-      cont.on('click.curPage', '.js?xieworld_vf-promote-photo', NewAd.eReplacePromotePhoto);
-      cont.on('change.curPage', '.js?xieworld_vf-promote-photo > .file-upload', NewAd.eUploadPromotePhoto);
-      cont.on('click.curPage', '.js?xieworld_vf-ad-media', NewAd.ePlayAdMedia);
-      cont.on('click.curPage', '.js?xieworld_vf-ad-media-remove', NewAd.eRemoveAdMedia);
-      cont.on('click.curPage', '.js?xieworld_vf-add-media-btn', NewAd.eReplaceAdMedia);
-      cont.on('change.curPage', '.js?xieworld_vf-add-media-btn > .file-upload', NewAd.eUploadAdMedia);
+      cont.on('click.curPage', '.js-promote-photo', NewAd.eReplacePromotePhoto);
+      cont.on('change.curPage', '.js-promote-photo > .file-upload', NewAd.eUploadPromotePhoto);
+      cont.on('click.curPage', '.js-ad-media', NewAd.ePlayAdMedia);
+      cont.on('click.curPage', '.js-ad-media-remove', NewAd.eRemoveAdMedia);
+      cont.on('click.curPage', '.js-add-media-btn', NewAd.eReplaceAdMedia);
+      cont.on('change.curPage', '.js-add-media-btn > .file-upload', NewAd.eUploadAdMedia);
       cont.on('click.curPage', '.edit-ad-btn', EditAd.eSubmitForm);
-      cont.on('click.curPage', '.js?xieworld_vf-clone-ad-btn', EditAd.eCloneAd);
-      cont.on('click.curPage', '.js?xieworld_vf-send-to-review-btn', EditAd.eSendToReview);
+      cont.on('click.curPage', '.js-clone-ad-btn', EditAd.eCloneAd);
+      cont.on('click.curPage', '.js-send-to-review-btn', EditAd.eSendToReview);
       cont.on('click.curPage', '.delete-ad-btn', EditAd.deleteAd);
       cont.on('click.curPage', '.pr-form-select', EditAd.eSelectPlaceholder);
-      cont.on('click.curPage', '.js?xieworld_vf-open-daily-budget', NewAd.eOpenDailyBudget);
-      cont.on('click.curPage', '.js?xieworld_vf-remove-daily-budget', NewAd.eRemoveDailyBudget);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-link', NewAd.eOpenStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-link', NewAd.eOpenEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-remove', NewAd.eRemoveStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-remove', NewAd.eRemoveEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-open-schedule', NewAd.eOpenSchedule);
-      $('.js?xieworld_vf-schedule-overview', state.$form).html(NewAd.scheduleOverview(state.$form));
+      cont.on('click.curPage', '.js-open-daily-budget', NewAd.eOpenDailyBudget);
+      cont.on('click.curPage', '.js-remove-daily-budget', NewAd.eRemoveDailyBudget);
+      cont.on('click.curPage', '.js-activate-date-link', NewAd.eOpenStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-link', NewAd.eOpenEndDate);
+      cont.on('click.curPage', '.js-activate-date-remove', NewAd.eRemoveStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-remove', NewAd.eRemoveEndDate);
+      cont.on('click.curPage', '.js-open-schedule', NewAd.eOpenSchedule);
+      $('.js-schedule-overview', state.$form).html(NewAd.scheduleOverview(state.$form));
       NewAd.initSelectList(state);
       state.titleField = state.$form.field('title');
       state.titleField.on('change.curPage', NewAd.onTitleChange);
@@ -3955,13 +3955,13 @@ var EditAd = {
         OwnerAds.updateAd(result.ad);
       }
       if (result.header_owner_budget) {
-        $('.js?xieworld_vf-header_owner_budget').html(result.header_owner_budget);
+        $('.js-header_owner_budget').html(result.header_owner_budget);
       }
       if (result.owner_budget) {
-        $('.js?xieworld_vf-owner_budget').html(result.owner_budget);
+        $('.js-owner_budget').html(result.owner_budget);
       }
       if (result.ad_budget_val) {
-        $('.js?xieworld_vf-field-budget-val').value(result.ad_budget_val);
+        $('.js-field-budget-val').value(result.ad_budget_val);
       }
     });
     return false;
@@ -4029,12 +4029,12 @@ var EditAd = {
     Aj.onLayerLoad(function(layerState) {
       layerState.$form = $('.pr-popup-edit-form', cont);
       Ads.formInit(layerState.$form);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-link', NewAd.eOpenStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-link', NewAd.eOpenEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-activate-date-remove', NewAd.eRemoveStartDate);
-      cont.on('click.curPage', '.js?xieworld_vf-deactivate-date-remove', NewAd.eRemoveEndDate);
-      cont.on('click.curPage', '.js?xieworld_vf-open-schedule', EditAd.eOpenEditStatusSchedule);
-      $('.js?xieworld_vf-schedule-overview', layerState.$form).html(NewAd.scheduleOverview(layerState.$form));
+      cont.on('click.curPage', '.js-activate-date-link', NewAd.eOpenStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-link', NewAd.eOpenEndDate);
+      cont.on('click.curPage', '.js-activate-date-remove', NewAd.eRemoveStartDate);
+      cont.on('click.curPage', '.js-deactivate-date-remove', NewAd.eRemoveEndDate);
+      cont.on('click.curPage', '.js-open-schedule', EditAd.eOpenEditStatusSchedule);
+      $('.js-schedule-overview', layerState.$form).html(NewAd.scheduleOverview(layerState.$form));
       layerState.activeRadio = layerState.$form.field('active');
       layerState.activeRadio.fieldEl().on('change.curPage', NewAd.onActiveChange);
       layerState.useScheduleCheckbox = layerState.$form.field('use_schedule');
@@ -4058,9 +4058,9 @@ var EditAd = {
       if (schedule == '0;0;0;0;0;0;0') {
         NewAd.openSchedule(Aj.layerState);
       }
-      $('.js?xieworld_vf-schedule-wrap', $form).slideShow();
+      $('.js-schedule-wrap', $form).slideShow();
     } else {
-      $('.js?xieworld_vf-schedule-wrap', $form).slideHide();
+      $('.js-schedule-wrap', $form).slideHide();
     }
   },
   eSubmitEditStatusForm: function(e) {
@@ -4118,9 +4118,9 @@ var EditAd = {
   initShareStatsPopup: function() {
     var cont = Aj.layer;
     Aj.onLayerLoad(function(layerState) {
-      layerState.$urlField = $('.js?xieworld_vf-share-url', cont);
-      layerState.$copyBtn = $('.js?xieworld_vf-copy-link', cont);
-      layerState.$revokeBtn = $('.js?xieworld_vf-revoke-link', cont);
+      layerState.$urlField = $('.js-share-url', cont);
+      layerState.$copyBtn = $('.js-copy-link', cont);
+      layerState.$revokeBtn = $('.js-revoke-link', cont);
       layerState.$urlField.on('click', EditAd.eSelectUrl);
       layerState.$copyBtn.on('click', EditAd.eCopyUrl);
       layerState.$revokeBtn.on('click', EditAd.eRevokeUrl);
@@ -4171,7 +4171,7 @@ var EditAd = {
       Ads.formInit(state.$form);
       state.$form.on('submit', EditAd.eSubmitIncrBudgetForm);
       Aj.state.isDecr = Aj.state.$form.hasClass('decr');
-      cont.on('click.curPage', '.js?xieworld_vf-toggle-sign', EditAd.onToggleAmountSign);
+      cont.on('click.curPage', '.js-toggle-sign', EditAd.onToggleAmountSign);
       cont.on('click.curPage', '.submit-form-btn', EditAd.eSubmitIncrBudgetForm);
     });
     Aj.onUnload(function(state) {
@@ -4218,16 +4218,16 @@ var EditAd = {
       }
       Aj.state.$form.reset();
       if (result.header_owner_budget) {
-        $('.js?xieworld_vf-header_owner_budget').html(result.header_owner_budget);
+        $('.js-header_owner_budget').html(result.header_owner_budget);
       }
       if (result.owner_budget) {
-        $('.js?xieworld_vf-owner_budget').html(result.owner_budget);
+        $('.js-owner_budget').html(result.owner_budget);
       }
       if (result.ad_budget) {
-        $('.js?xieworld_vf-ad_budget').html(result.ad_budget);
+        $('.js-ad_budget').html(result.ad_budget);
       }
       if (result.history) {
-        $('.js?xieworld_vf-history').html(result.history);
+        $('.js-history').html(result.history);
       }
     });
     return false;
@@ -4477,7 +4477,7 @@ var TransferFunds = {
       state.$form = $('form.add-funds-form', cont);
       Ads.formInit(state.$form);
       state.$form.on('submit', preventDefault);
-      cont.on('click.curPage', '.js?xieworld_vf-toggle-sign', TransferFunds.onToggleAmountSign);
+      cont.on('click.curPage', '.js-toggle-sign', TransferFunds.onToggleAmountSign);
       cont.on('click.curPage', '.transfer-funds-btn', TransferFunds.eSubmitForm);
       state.submitBtn = $('.transfer-funds-btn', cont);
       state.amountField = state.$form.field('amount');
@@ -4629,9 +4629,9 @@ var TransferFunds = {
   },
   onAccountChange: function(field, value, valueFull) {
     if (valueFull.budget) {
-      $('.js?xieworld_vf-sel_account_budget', Aj.state.$form).toggleClass('disabled', !!valueFull.disabled).html(valueFull.budget);
+      $('.js-sel_account_budget', Aj.state.$form).toggleClass('disabled', !!valueFull.disabled).html(valueFull.budget);
     } else {
-      $('.js?xieworld_vf-sel_account_budget', Aj.state.$form).addClass('disabled').html(Ads.wrapAmount(0));
+      $('.js-sel_account_budget', Aj.state.$form).addClass('disabled').html(Ads.wrapAmount(0));
     }
   },
   onAmountChange: function() {
@@ -4681,7 +4681,7 @@ var TransferFunds = {
           }
         }
         if (result.budget) {
-          $('.js?xieworld_vf-owner_budget').html(result.budget);
+          $('.js-owner_budget').html(result.budget);
         }
         return showAlert(result.error);
       }
@@ -4712,12 +4712,12 @@ var Audiences = {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
       state.$searchField = $('.pr-search-input');
-      state.$searchResults = $('.js?xieworld_vf-audiences-table-body');
+      state.$searchResults = $('.js-audiences-table-body');
       Ads.fieldInit(state.$searchField);
       cont.on('click.curPage', '.pr-cell-sort', Audiences.eSortList);
-      cont.on('click.curPage', '.js?xieworld_vf-create-audience-ad-btn', Audiences.createAudienceAd);
+      cont.on('click.curPage', '.js-create-audience-ad-btn', Audiences.createAudienceAd);
       cont.on('click.curPage', '.delete-audience-btn', Audiences.deleteAudience);
-      state.$searchResults.on('mouseover mouseout click', '.js?xieworld_vf-hint-tooltip', Ads.eHintEvent);
+      state.$searchResults.on('mouseover mouseout click', '.js-hint-tooltip', Ads.eHintEvent);
       $(document).on('touchstart click', Ads.eHideAllHints);
 
       state.listInited = false;
@@ -4753,7 +4753,7 @@ var Audiences = {
       });
     });
     Aj.onUnload(function(state) {
-      state.$searchResults.off('mouseover mouseout click', '.js?xieworld_vf-hint-tooltip', Ads.eHintEvent);
+      state.$searchResults.off('mouseover mouseout click', '.js-hint-tooltip', Ads.eHintEvent);
       $(document).off('touchstart click', Ads.eHideAllHints);
       clearTimeout(Aj.state.updateStateTo);
       Ads.fieldDestroy(state.$searchField);
@@ -4917,7 +4917,7 @@ var Audiences = {
       }
     }, function(loaded, total) {
       var progress = total ? loaded / total : 0;
-      $('.js?xieworld_vf-progress-value', $formGroup).html(Math.round(progress * 100) + '%');
+      $('.js-progress-value', $formGroup).html(Math.round(progress * 100) + '%');
       $formGroup.each(function() {
         this.style.setProperty('--upload-progress', progress);
       });
@@ -5039,7 +5039,7 @@ var Audiences = {
       }
     }, function(loaded, total) {
       var progress = total ? loaded / total : 0;
-      $('.js?xieworld_vf-progress-value', $formGroup).html(Math.round(progress * 100) + '%');
+      $('.js-progress-value', $formGroup).html(Math.round(progress * 100) + '%');
       $formGroup.each(function() {
         this.style.setProperty('--upload-progress', progress);
       });
@@ -5141,12 +5141,12 @@ var Events = {
     var cont = Aj.ajContainer;
     Aj.onLoad(function(state) {
       state.$searchField = $('.pr-search-input');
-      state.$searchResults = $('.js?xieworld_vf-events-table-body');
+      state.$searchResults = $('.js-events-table-body');
       Ads.fieldInit(state.$searchField);
       cont.on('click.curPage', '.pr-cell-sort', Events.eSortList);
-      cont.on('click.curPage', '.js?xieworld_vf-create-pixel-btn', Events.createPixel);
+      cont.on('click.curPage', '.js-create-pixel-btn', Events.createPixel);
       cont.on('click.curPage', '.delete-event-btn', Events.deleteEvent);
-      state.$searchResults.on('mouseover mouseout click', '.js?xieworld_vf-hint-tooltip', Ads.eHintEvent);
+      state.$searchResults.on('mouseover mouseout click', '.js-hint-tooltip', Ads.eHintEvent);
       $(document).on('touchstart click', Ads.eHideAllHints);
 
       state.listInited = false;
@@ -5183,7 +5183,7 @@ var Events = {
       });
     });
     Aj.onUnload(function(state) {
-      state.$searchResults.off('mouseover mouseout click', '.js?xieworld_vf-hint-tooltip', Ads.eHintEvent);
+      state.$searchResults.off('mouseover mouseout click', '.js-hint-tooltip', Ads.eHintEvent);
       $(document).off('touchstart click', Ads.eHideAllHints);
       clearTimeout(Aj.state.updateStateTo);
       Ads.fieldDestroy(state.$searchField);
@@ -5400,7 +5400,7 @@ var Events = {
   initSetupPopup: function() {
     var cont = Aj.layer;
     Aj.onLayerLoad(function(layerState) {
-      cont.on('click.curLayer', '.js?xieworld_vf-copy-field-btn', Events.eCopyField);
+      cont.on('click.curLayer', '.js-copy-field-btn', Events.eCopyField);
     });
   },
   eCopyField: function(e) {
@@ -5667,10 +5667,10 @@ AB.on(function() {
 
     return this.each(function() {
       var $input = $(this);
-      var $field = $input.parents('.js?xieworld_vf-schedule-input');
-      var $table = $('.js?xieworld_vf-schedule-table', $field);
-      var $table_weeks = $('.js?xieworld_vf-schedule-table-weeks', $field);
-      var $table_hours = $('.js?xieworld_vf-schedule-table-hours', $field);
+      var $field = $input.parents('.js-schedule-input');
+      var $table = $('.js-schedule-table', $field);
+      var $table_weeks = $('.js-schedule-table-weeks', $field);
+      var $table_hours = $('.js-schedule-table-hours', $field);
       var state = {
         curValue: emptyValue(),
         $input: $input,
@@ -5779,15 +5779,15 @@ AB.on(function() {
         closePopup(state.$dpPopup);
       }
       var $dpPopup = $('<div class="popup-container hide alert-popup-container pr-popup-container"><section class="pr-layer-popup pr-layer-date-picker-popup popup-no-close"><h3 class="pr-layer-header js-header"></h3><div class="date-picker-controls"><div class="date-picker-button-up js-month-up"></div><div class="date-picker-button-down js-month-down"></div></div><div class="date-picker-wrap"><div class="date-picker-header"><div class="date-picker-header-content"><div class="date-picker-cell">Mon</div><div class="date-picker-cell">Tue</div><div class="date-picker-cell">Wed</div><div class="date-picker-cell">Thu</div><div class="date-picker-cell">Fri</div><div class="date-picker-cell">Sat</div><div class="date-picker-cell">Sun</div></div></div><div class="date-picker-body"><div class="date-picker-body-content js-body"></div></div></div><div class="popup-buttons"><div class="popup-button popup-button-left clear-form-btn">' + l('WEB_DATEPICKER_CLEAR', 'Clear') + '</div><div class="popup-button cancel-form-btn">' + l('WEB_DATEPICKER_CLOSE', 'Close') + '</div></div></section></div>');
-      var $dpBody = $('.js?xieworld_vf-body', $dpPopup);
-      var $dpMonthDown = $('.js?xieworld_vf-month-down', $dpPopup);
-      var $dpMonthUp = $('.js?xieworld_vf-month-up', $dpPopup);
+      var $dpBody = $('.js-body', $dpPopup);
+      var $dpMonthDown = $('.js-month-down', $dpPopup);
+      var $dpMonthUp = $('.js-month-up', $dpPopup);
 
       function setHeader() {
         var year = currentD.getFullYear();
         var month = currentD.getMonth();
         var header = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][month] + ' ' + year;
-        $('.js?xieworld_vf-header', $dpPopup).html(header);
+        $('.js-header', $dpPopup).html(header);
         var prevMonth = true, nextMonth = true, newD;
         newD = getStartOfMonth(currentD);
         newD.setMonth(month - 1);
@@ -5831,7 +5831,7 @@ AB.on(function() {
         }
         toWeekD = new Date(curD);
         setHeader();
-        $dpBody.animOff().html(body).css?xieworld_vfProp('--row-offset', '').css?xieworld_vfProp('--prepend-offset', '');
+        $dpBody.animOff().html(body).cssProp('--row-offset', '').cssProp('--prepend-offset', '');
         $('.date-picker-cell.month-' + year + '-' + month, $dpBody).addClass('current');
         $dpBody.animOn();
       }
@@ -5865,9 +5865,9 @@ AB.on(function() {
           }
           fromWeekD = new Date(curFromD);
           var weeksOffset = getWeekDiff(fromWeekD, curWeekD);
-          $dpBody.prepend(body).css?xieworld_vfProp('--prepend-offset', -weeksOffset).redraw();
+          $dpBody.prepend(body).cssProp('--prepend-offset', -weeksOffset).redraw();
         }
-        $dpBody.css?xieworld_vfProp('--row-offset', -weeks);
+        $dpBody.cssProp('--row-offset', -weeks);
         $('.date-picker-cell.current', $dpBody).removeClass('current');
         $('.date-picker-cell.month-' + year + '-' + month, $dpBody).addClass('current');
         setHeader();
@@ -5987,8 +5987,8 @@ AB.on(function() {
 
     return this.each(function() {
       var $input = $(this);
-      var $field = $input.parents('.js?xieworld_vf-date-input');
-      var $value = $('.js?xieworld_vf-date-value', $field);
+      var $field = $input.parents('.js-date-input');
+      var $value = $('.js-date-value', $field);
       var minValue = new Date($input.attr('min'));
       var maxValue = new Date($input.attr('max'));
       var state = {
@@ -6187,9 +6187,9 @@ AB.on(function() {
 
     return this.each(function() {
       var $input = $(this);
-      var $field = $input.parents('.js?xieworld_vf-time-input');
-      var $value = $('.js?xieworld_vf-time-value', $field);
-      var $timezone = $('.js?xieworld_vf-time-timezone', $field);
+      var $field = $input.parents('.js-time-input');
+      var $value = $('.js-time-value', $field);
+      var $timezone = $('.js-time-timezone', $field);
       var state = {
         hasValue: false,
         curHoursStr: '',

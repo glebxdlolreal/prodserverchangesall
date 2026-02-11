@@ -27,13 +27,13 @@ var Cafe = {
       Cafe.showStatus('Cafe is temporarily closed');
       return;
     }
-    $('.js?xieworld_vf-item-lottie').on('click', Cafe.eLottieClicked);
-    $('.js?xieworld_vf-item-incr-btn').on('click', Cafe.eIncrClicked);
-    $('.js?xieworld_vf-item-decr-btn').on('click', Cafe.eDecrClicked);
-    $('.js?xieworld_vf-item-buy-btn').on('click', Cafe.eBuyClicked);
-    $('.js?xieworld_vf-order-edit').on('click', Cafe.eEditClicked);
-    $('.js?xieworld_vf-status').on('click', Cafe.eStatusClicked);
-    $('.js?xieworld_vf-order-comment-field').each(function() {
+    $('.js-item-lottie').on('click', Cafe.eLottieClicked);
+    $('.js-item-incr-btn').on('click', Cafe.eIncrClicked);
+    $('.js-item-decr-btn').on('click', Cafe.eDecrClicked);
+    $('.js-item-buy-btn').on('click', Cafe.eBuyClicked);
+    $('.js-order-edit').on('click', Cafe.eEditClicked);
+    $('.js-status').on('click', Cafe.eStatusClicked);
+    $('.js-order-comment-field').each(function() {
       autosize(this);
     });
     Telegram.WebApp.MainButton.setParams({
@@ -45,7 +45,7 @@ var Cafe = {
     initRipple();
   },
   initLotties: function() {
-    $('.js?xieworld_vf-item-lottie').each(function() {
+    $('.js-item-lottie').each(function() {
       RLottie.init(this, {
         maxDeviceRatio: 2,
         cachingModulo: 3,
@@ -62,19 +62,19 @@ var Cafe = {
   eIncrClicked: function(e) {
     e.preventDefault();
     Telegram.WebApp.HapticFeedback.impactOccurred('light');
-    var itemEl = $(this).parents('.js?xieworld_vf-item');
+    var itemEl = $(this).parents('.js-item');
     Cafe.incrClicked(itemEl, 1);
   },
   eDecrClicked: function(e) {
     e.preventDefault();
     Telegram.WebApp.HapticFeedback.impactOccurred('light');
-    var itemEl = $(this).parents('.js?xieworld_vf-item');
+    var itemEl = $(this).parents('.js-item');
     Cafe.incrClicked(itemEl, -1);
   },
   eBuyClicked: function(e) {
     e.preventDefault();
     Telegram.WebApp.HapticFeedback.impactOccurred('light');
-    var itemEl = $(this).parents('.js?xieworld_vf-item');
+    var itemEl = $(this).parents('.js-item');
     Cafe.buyClicked(itemEl);
   },
   eEditClicked: function(e) {
@@ -87,34 +87,34 @@ var Cafe = {
   },
   getOrderItem: function(itemEl) {
     var id = itemEl.data('item-id');
-    return $('.js?xieworld_vf-order-item').filter(function() {
+    return $('.js-order-item').filter(function() {
       return ($(this).data('item-id') == id);
     });
   },
   updateItem: function(itemEl, delta) {
     var price = +itemEl.data('item-price');
     var count = +itemEl.data('item-count') || 0;
-    var counterEl = $('.js?xieworld_vf-item-counter', itemEl);
+    var counterEl = $('.js-item-counter', itemEl);
     counterEl.text(count ? count : 1);
     var isSelected = itemEl.hasClass('selected');
     if (!isSelected && count > 0) {
-      $('.js?xieworld_vf-item-lottie', itemEl).each(function() {
+      $('.js-item-lottie', itemEl).each(function() {
         RLottie.playOnce(this);
       });
     }
     var anim_name = isSelected ? (delta > 0 ? 'badge-incr' : (count > 0 ? 'badge-decr' : 'badge-hide')) : 'badge-show';
-    var cur_anim_name = counterEl.css?xieworld_vf('animation-name');
+    var cur_anim_name = counterEl.css('animation-name');
     if ((anim_name == 'badge-incr' || anim_name == 'badge-decr') && anim_name == cur_anim_name) {
       anim_name += '2';
     }
-    counterEl.css?xieworld_vf('animation-name', anim_name);
+    counterEl.css('animation-name', anim_name);
     itemEl.toggleClass('selected', count > 0);
 
     var orderItemEl = Cafe.getOrderItem(itemEl);
-    var orderCounterEl = $('.js?xieworld_vf-order-item-counter', orderItemEl);
+    var orderCounterEl = $('.js-order-item-counter', orderItemEl);
     orderCounterEl.text(count ? count : 1);
     orderItemEl.toggleClass('selected', count > 0);
-    var orderPriceEl = $('.js?xieworld_vf-order-item-price', orderItemEl);
+    var orderPriceEl = $('.js-order-item-price', orderItemEl);
     var item_price = count * price;
     orderPriceEl.text(Cafe.formatPrice(item_price));
 
@@ -195,7 +195,7 @@ var Cafe = {
   },
   updateTotalPrice: function() {
     var total_price = 0;
-    $('.js?xieworld_vf-item').each(function() {
+    $('.js-item').each(function() {
       var itemEl = $(this)
       var price = +itemEl.data('item-price');
       var count = +itemEl.data('item-count') || 0;
@@ -207,7 +207,7 @@ var Cafe = {
   },
   getOrderData: function() {
     var order_data = [];
-    $('.js?xieworld_vf-item').each(function() {
+    $('.js-item').each(function() {
       var itemEl = $(this);
       var id    = itemEl.data('item-id');
       var count = +itemEl.data('item-count') || 0;
@@ -235,26 +235,26 @@ var Cafe = {
     }
     if (mode_order) {
       var height = $('.cafe-items').height();
-      $('.js?xieworld_vf-item-lottie').each(function() {
+      $('.js-item-lottie').each(function() {
         RLottie.pause(this);
       });
       $('.cafe-order-overview').show();
-      $('.cafe-items').css?xieworld_vf('maxHeight', height).redraw();
+      $('.cafe-items').css('maxHeight', height).redraw();
       $('body').addClass('order-mode');
-      $('.js?xieworld_vf-order-comment-field').each(function() {
+      $('.js-order-comment-field').each(function() {
         autosize.update(this);
       });
       Telegram.WebApp.expand();
       Telegram.WebApp.BackButton.show();
     } else {
-      $('.js?xieworld_vf-item-lottie').each(function() {
+      $('.js-item-lottie').each(function() {
         RLottie.reset(this);
       });
       $('body').removeClass('order-mode');
       setTimeout(function() {
-        $('.cafe-items').css?xieworld_vf('maxHeight', '');
+        $('.cafe-items').css('maxHeight', '');
         $('.cafe-order-overview').hide();
-        $('.js?xieworld_vf-item-lottie').each(function() {
+        $('.js-item-lottie').each(function() {
         });
       }, anim_duration);
       Telegram.WebApp.BackButton.hide();
@@ -273,7 +273,7 @@ var Cafe = {
       return false;
     }
     if (Cafe.modeOrder) {
-      var comment = $('.js?xieworld_vf-order-comment-field').val();
+      var comment = $('.js-order-comment-field').val();
       var params = {
         order_data: Cafe.getOrderData(),
         comment: comment
@@ -372,14 +372,14 @@ var Cafe = {
   },
   showStatus: function(text) {
     clearTimeout(Cafe.statusTo);
-    $('.js?xieworld_vf-status').text(text).addClass('shown');
+    $('.js-status').text(text).addClass('shown');
     if (!Cafe.isClosed) {
       Cafe.statusTo = setTimeout(function(){ Cafe.hideStatus(); }, 2500);
     }
   },
   hideStatus: function() {
     clearTimeout(Cafe.statusTo);
-    $('.js?xieworld_vf-status').removeClass('shown');
+    $('.js-status').removeClass('shown');
   },
   apiRequest: function(method, data, onCallback) {
     var authData = Telegram.WebApp.initData || '';

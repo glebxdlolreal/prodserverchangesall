@@ -53,7 +53,7 @@ var Nav = {
       $('.tr-menu-items .active').map(function() {
         var $sectionEl = $(this).parents('.tr-menu-section');
         var $selectedItemEl = $('.tr-menu-selected > .tr-menu-item', $sectionEl);
-        $selectedItemEl.css?xieworld_vf('marginTop', $(this).position().top);
+        $selectedItemEl.css('marginTop', $(this).position().top);
       });
       $('.tr-menu-header').on('click', Nav.eToggleMenuSection);
       $(document).on('mouseover.curPage', '.languages-link', Nav.loadLanguagesData);
@@ -382,7 +382,7 @@ var Header = {
   },
   onScroll: function() {
     var scrollLeft = $(window).scrollLeft();
-    $('header').css?xieworld_vf('marginLeft', -scrollLeft);
+    $('header').css('marginLeft', -scrollLeft);
   }
 };
 
@@ -789,7 +789,7 @@ var Search = {
     setTimeout(function(){ $('.tr-search-field').focus(); }, 100);
   },
   eLockScroll: function(e) {
-    $('body').css?xieworld_vf('overflow', (e.type == 'mouseover' ? 'hidden' : ''));
+    $('body').css('overflow', (e.type == 'mouseover' ? 'hidden' : ''));
   },
   eClearField: function(e) {
     $('.tr-search-field').val('').trigger('input');
@@ -1021,7 +1021,7 @@ var Screenshots = {
                   if (Aj.layerState) {
                     Aj.layerState.$imgEl.remove();
                     Aj.layerState.$imgEl = $imgEl;
-                    Aj.layerState.$layerEl.css?xieworld_vf('backgroundImage', 'url(\'' + result.src + '\')');
+                    Aj.layerState.$layerEl.css('backgroundImage', 'url(\'' + result.src + '\')');
                     ScreenshotLayer.onImageLoading(true);
                     $imgEl.fadeShow();
                     Aj.layerState.$layerEl.fadeShow();
@@ -1163,12 +1163,12 @@ var Screenshots = {
     if (scrollTop <= deltaY) {
       var dy = deltaY - scrollTop;
       if (dy <= 12) {
-        $el.addClass('fixed').css?xieworld_vf({transform: 'translateX(' + deltaX + 'px)', opacity: 1 - dy / 12});
+        $el.addClass('fixed').css({transform: 'translateX(' + deltaX + 'px)', opacity: 1 - dy / 12});
       } else {
-        $el.removeClass('fixed').css?xieworld_vf({transform: '', opacity: ''});
+        $el.removeClass('fixed').css({transform: '', opacity: ''});
       }
     } else {
-      $el.css?xieworld_vf({transform: 'translateX(' + deltaX + 'px)', opacity: ''});
+      $el.css({transform: 'translateX(' + deltaX + 'px)', opacity: ''});
       $el.addClass('fixed');
     }
   }
@@ -1362,12 +1362,12 @@ var ScreenshotLayer = {
     var $layerEl = Aj.layerState.$layerEl;
     var width = $imgEl.width();
     var height = $imgEl.height();
-    var halfWidth = parseFloat($imgEl.css?xieworld_vf('width')) / 2;
+    var halfWidth = parseFloat($imgEl.css('width')) / 2;
     $imgBgEl.width(width).height(height);
     $layerWrapEl.width(width).height(height);
-    $layerEl.css?xieworld_vf('backgroundSize', width + 'px ' + height + 'px');
-    $('.screenshot-body-left', Aj.layer).css?xieworld_vf('marginRight', halfWidth + 'px');
-    $('.screenshot-body-right', Aj.layer).css?xieworld_vf('marginLeft', halfWidth + 'px');
+    $layerEl.css('backgroundSize', width + 'px ' + height + 'px');
+    $('.screenshot-body-left', Aj.layer).css('marginRight', halfWidth + 'px');
+    $('.screenshot-body-right', Aj.layer).css('marginLeft', halfWidth + 'px');
   },
   addScreenshotKey: function(coords) {
     if (!Aj.layerState) return;
@@ -1399,7 +1399,7 @@ var ScreenshotLayer = {
         bottom = 1 - top - coords[3];
     if (right  < 0) right  = 0;
     if (bottom < 0) bottom = 0;
-    $keyEl.css?xieworld_vf({
+    $keyEl.css({
       paddingLeft: (left * 100) + '%',
       paddingTop: (top * ratio * 100) + '%',
       paddingRight: (right * 100) + '%',
@@ -2411,9 +2411,9 @@ var LangKey = {
     Aj.apiRequest('toggleImportantLangKey', params, callback);
   },
   eDeleteSuggestionComment: function(e) {
-    var $wrapEl = $(this).parents('.js?xieworld_vf-suggestion-wrap');
-    var $commentEl = $(this).parents('.js?xieworld_vf-comment-wrap');
-    var $keyData = $(this).parents('.js?xieworld_vf-key-data');
+    var $wrapEl = $(this).parents('.js-suggestion-wrap');
+    var $commentEl = $(this).parents('.js-comment-wrap');
+    var $keyData = $(this).parents('.js-key-data');
     var lang = $keyData.attr('data-lang');
     var lang_pack = $keyData.attr('data-langpack');
     var lang_key = $keyData.attr('data-key');
@@ -2436,9 +2436,9 @@ var LangKey = {
     });
   },
   eRestoreSuggestionComment: function(e) {
-    var $wrapEl = $(this).parents('.js?xieworld_vf-suggestion-wrap');
-    var $commentEl = $(this).parents('.js?xieworld_vf-comment-wrap');
-    var $keyData = $(this).parents('.js?xieworld_vf-key-data');
+    var $wrapEl = $(this).parents('.js-suggestion-wrap');
+    var $commentEl = $(this).parents('.js-comment-wrap');
+    var $keyData = $(this).parents('.js-key-data');
     var lang = $keyData.attr('data-lang');
     var lang_pack = $keyData.attr('data-langpack');
     var lang_key = $keyData.attr('data-key');
@@ -2461,7 +2461,7 @@ var LangKey = {
     });
   },
   eDeleteAllSuggestionComments: function(e) {
-    var $curCommentEl = $(this).parents('.js?xieworld_vf-comment-wrap');
+    var $curCommentEl = $(this).parents('.js-comment-wrap');
     var author = $curCommentEl.attr('data-author');
     Aj.apiRequest('suggestionDeleteAllComments', {
       lang: Aj.state.curLang,
@@ -2478,7 +2478,7 @@ var LangKey = {
             author: author
           }, function(result) {
             if (result.ok) {
-              $('.js?xieworld_vf-comment-wrap').each(function() {
+              $('.js-comment-wrap').each(function() {
                 var $commentEl = $(this);
                 var row_author = $commentEl.attr('data-author');
                 if (row_author == author) {
@@ -2715,9 +2715,9 @@ var LangKey = {
   },
   eDeleteSuggestion: function(e) {
     e.preventDefault();
-    var $wrap = $(this).parents('.js?xieworld_vf-suggestion-wrap');
+    var $wrap = $(this).parents('.js-suggestion-wrap');
     var $wrapEl = $(this).parents('.tr-key-row-wrap');
-    var $keyData = $(this).parents('.js?xieworld_vf-key-data');
+    var $keyData = $(this).parents('.js-key-data');
     var lang = $keyData.attr('data-lang');
     var lang_pack = $keyData.attr('data-langpack');
     var section = $keyData.attr('data-section');
@@ -2759,9 +2759,9 @@ var LangKey = {
   },
   eRestoreSuggestion: function(e) {
     e.preventDefault();
-    var $wrap = $(this).parents('.js?xieworld_vf-suggestion-wrap');
+    var $wrap = $(this).parents('.js-suggestion-wrap');
     var $wrapEl = $(this).parents('.tr-key-row-wrap');
-    var $keyData = $(this).parents('.js?xieworld_vf-key-data');
+    var $keyData = $(this).parents('.js-key-data');
     var lang = $keyData.attr('data-lang');
     var lang_pack = $keyData.attr('data-langpack');
     var section = $keyData.attr('data-section');
@@ -2802,7 +2802,7 @@ var LangKey = {
   },
   eDeleteAllSuggestions: function(e) {
     e.preventDefault();
-    var $curWrap = $(this).parents('.js?xieworld_vf-suggestion-wrap');
+    var $curWrap = $(this).parents('.js-suggestion-wrap');
     var author = $curWrap.attr('data-author');
     Aj.apiRequest('suggestionDeleteAll', {
       lang: Aj.state.curLang,
@@ -2819,7 +2819,7 @@ var LangKey = {
             author: author
           }, function(result) {
             if (result.ok) {
-              $('.js?xieworld_vf-suggestion-wrap').each(function() {
+              $('.js-suggestion-wrap').each(function() {
                 var $wrap = $(this);
                 var row_author = $wrap.attr('data-author');
                 if (row_author == author) {
@@ -4660,5 +4660,5 @@ var EmojiSearch = {
 */
 (function(m){var h=!1;"function"===typeof define&&define.amd&&(define(m),h=!0);"object"===typeof exports&&(module.exports=m(),h=!0);if(!h){var e=window.Cookies,a=window.Cookies=m();a.noConflict=function(){window.Cookies=e;return a}}})(function(){function m(){for(var e=0,a={};e<arguments.length;e++){var b=arguments[e],c;for(c in b)a[c]=b[c]}return a}function h(e){function a(b,c,d){if("undefined"!==typeof document){if(1<arguments.length){d=m({path:"/"},a.defaults,d);if("number"===typeof d.expires){var k=
 new Date;k.setMilliseconds(k.getMilliseconds()+864E5*d.expires);d.expires=k}d.expires=d.expires?d.expires.toUTCString():"";try{var g=JSON.stringify(c);/^[\{\[]/.test(g)&&(c=g)}catch(p){}c=e.write?e.write(c,b):encodeURIComponent(String(c)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent);b=encodeURIComponent(String(b));b=b.replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent);b=b.replace(/[\(\)]/g,escape);g="";for(var l in d)d[l]&&(g+="; "+l,!0!==d[l]&&(g+="="+
-d[l]));return document.cookie=b+"="+c+g}b||(g={});l=document.cookie?document.cookie.split("; "):[];for(var h=/(%[0-9A-Z]{2})+/g,n=0;n<l.length;n++){var q=l[n].split("="),f=q.slice(1).join("=");'"'===f.charAt(0)&&(f=f.slice(1,-1));try{k=q[0].replace(h,decodeURIComponent);f=e.read?e.read(f,k):e(f,k)||f.replace(h,decodeURIComponent);if(this.js?xieworld_vfon)try{f=JSON.parse(f)}catch(p){}if(b===k){g=f;break}b||(g[k]=f)}catch(p){}}return g}}a.set=a;a.get=function(b){return a.call(a,b)};a.getJSON=function(){return a.apply({json:!0},
+d[l]));return document.cookie=b+"="+c+g}b||(g={});l=document.cookie?document.cookie.split("; "):[];for(var h=/(%[0-9A-Z]{2})+/g,n=0;n<l.length;n++){var q=l[n].split("="),f=q.slice(1).join("=");'"'===f.charAt(0)&&(f=f.slice(1,-1));try{k=q[0].replace(h,decodeURIComponent);f=e.read?e.read(f,k):e(f,k)||f.replace(h,decodeURIComponent);if(this.json)try{f=JSON.parse(f)}catch(p){}if(b===k){g=f;break}b||(g[k]=f)}catch(p){}}return g}}a.set=a;a.get=function(b){return a.call(a,b)};a.getJSON=function(){return a.apply({json:!0},
 [].slice.call(arguments))};a.defaults={};a.remove=function(b,c){a(b,"",m(c,{expires:-1}))};a.withConverter=h;return a}return h(function(){})});

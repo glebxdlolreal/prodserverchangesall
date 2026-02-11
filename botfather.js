@@ -141,7 +141,7 @@ var AuthPage = {
 var BotList = {
   init() {
     $('input[name=query]').on('input', BotList.eSearchInput);
-    $('.js?xieworld_vf-form-clear').on('click', function () {
+    $('.js-form-clear').on('click', function () {
       $('input', this.closest('.tm-field')).val('').trigger('input');
     });
   },
@@ -154,8 +154,8 @@ var BotList = {
       empty = empty && hide;
       $(el).toggleClass('hidden', hide);
     });
-    $('.js?xieworld_vf-results-empty').toggleClass('hidden', !empty);
-    $('.js?xieworld_vf-results-empty-help').text(l('WEB_BOTFATHER_NO_RESULTS_INFO', {query: value}))
+    $('.js-results-empty').toggleClass('hidden', !empty);
+    $('.js-results-empty-help').text(l('WEB_BOTFATHER_NO_RESULTS_INFO', {query: value}))
   }
 }
 
@@ -183,7 +183,7 @@ var CreateBot = {
     $('input[name=username]').on('change', (ev) => {
       usernameDebounce(CreateBot.checkUsername, 0);
     });
-    $('.js?xieworld_vf-upload-button').click(CreateBot.uploadUserpic);
+    $('.js-upload-button').click(CreateBot.uploadUserpic);
     
     $('input[name=username]').on('input', (ev) => {
       var $hint = $('.hint-text[data-for=username]');
@@ -265,7 +265,7 @@ var BotProfile = {
 
     Aj.state.savedModel = BotProfile.model();
 
-    $(document).on('click.curPage', '.js?xieworld_vf-set-lang', BotProfile.eClickLang);
+    $(document).on('click.curPage', '.js-set-lang', BotProfile.eClickLang);
 
     Aj.onUnload(() => {
       WebApp.MainButton.hide();
@@ -283,18 +283,18 @@ var BotProfile = {
       $('.tm-welcome-message-content').text(value);
     });
 
-    $('.js?xieworld_vf-delete-welcome-pic').on('click', BotProfile.eClickRemoveWelcomePic);
-    $('.js?xieworld_vf-upload-button').on('click', BotProfile.eUploadClick);
-    $('.js?xieworld_vf-welcome-pic').on('click', function (e) {
+    $('.js-delete-welcome-pic').on('click', BotProfile.eClickRemoveWelcomePic);
+    $('.js-upload-button').on('click', BotProfile.eUploadClick);
+    $('.js-welcome-pic').on('click', function (e) {
       if ($(this).hasClass('empty')) {
         e.stopPropagation();
-        var $upload_btn = $('.js?xieworld_vf-upload-button[data-target=welcome_msg_pic]');
+        var $upload_btn = $('.js-upload-button[data-target=welcome_msg_pic]');
         BotProfile.eUploadClick.call($upload_btn[0]);
       }
     });
   },
   setWelcomePic(src, loading = false) {
-    $pic = $('.js?xieworld_vf-welcome-pic');
+    $pic = $('.js-welcome-pic');
     if (!src) {
       $pic.attr('style', '').addClass('empty');
       Aj.state.files['welcome_msg_pic'] = 0;
@@ -304,7 +304,7 @@ var BotProfile = {
     $pic.removeClass('empty');
 
     var blur = loading ? 'blur(15px)' : 'blur(0px)';
-    $pic.css?xieworld_vf({ 
+    $pic.css({ 
       'background-image': `url(${src})`,
       'background-size': 'cover',
       'filter': blur,
@@ -420,31 +420,31 @@ var BotProfile = {
 
 var BotCommandsList = {
   init() {
-    $('.js?xieworld_vf-edit-command-list').sortable({items: '.js?xieworld_vf-sortable'}).on('sortchange', function( event, ui ) {
+    $('.js-edit-command-list').sortable({items: '.js-sortable'}).on('sortchange', function( event, ui ) {
       WebApp.HapticFeedback.selectionChanged();
     });
 
     Aj.state.edit = false;
-    $('.js?xieworld_vf-edit-command-list').sortable('disable');
+    $('.js-edit-command-list').sortable('disable');
 
-    $(document).on('click.curPage', '.js?xieworld_vf-set-lang', function (e) {
+    $(document).on('click.curPage', '.js-set-lang', function (e) {
       var lang = $(this).data('value');
       if (lang == Aj.state.lang) return;
       var href = '?lang=' + lang;
       Aj.location(href);
     });
 
-    $('.js?xieworld_vf-edit-command-list').on('click', '.tm-row-close', function(e) {
+    $('.js-edit-command-list').on('click', '.tm-row-close', function(e) {
       e.stopPropagation()
       this.closest('.tm-row')?.remove();
       WebApp.HapticFeedback.impactOccurred('light');
-      if ($('.js?xieworld_vf-sortable').length == 0) {
+      if ($('.js-sortable').length == 0) {
         BotCommandsList.toggleEdit(false);
-        $('.js?xieworld_vf-commands-header').addClass('hidden');
+        $('.js-commands-header').addClass('hidden');
       }
     });
 
-    $('.js?xieworld_vf-edit-command-list').on('click', '.tm-row-link', function () {
+    $('.js-edit-command-list').on('click', '.tm-row-link', function () {
       var command = this.dataset.command;
       if (!Aj.state.edit && command) {
         var q = Aj.state.lang ? '?lang=' + Aj.state.lang : '';
@@ -460,13 +460,13 @@ var BotCommandsList = {
     if (!edit) {
       BotCommandsList.submit();
     }
-    $('.js?xieworld_vf-edit-command-list').toggleClass('list-prevent-edit', !edit);
-    $('.js?xieworld_vf-edit-command-list').sortable(edit ? 'enable' : 'disable');
+    $('.js-edit-command-list').toggleClass('list-prevent-edit', !edit);
+    $('.js-edit-command-list').sortable(edit ? 'enable' : 'disable');
     Aj.state.$editBtn.text(edit ? l('WEB_COMMANDS_DONE_BTN') : l('WEB_COMMANDS_EDIT_BTN'));
   },
   submit() {
-    var commands = $('.js?xieworld_vf-edit-command-list .js?xieworld_vf-sortable').toArray().map(el => {
-      var name = $('.js?xieworld_vf-command-name', el).text().replace('/', '');
+    var commands = $('.js-edit-command-list .js-sortable').toArray().map(el => {
+      var name = $('.js-command-name', el).text().replace('/', '');
       return name;
     });
 
@@ -571,15 +571,15 @@ var BotGeneral = {
     Aj.onLoad(() => {
       $('.tm-api-token-actions .tm-active-button').on('click', BotGeneral.copyToken);
       $('.tm-api-token-actions .tm-revoke-button').on('click', BotGeneral.askRevoke);
-      $('.js?xieworld_vf-delete-button').on('click', BotGeneral.eDeleteClick)
-      $('.js?xieworld_vf-usernames').on('click', BotGeneral.eUsernameClick);
-      $('.js?xieworld_vf-spoiler').each(function () {
+      $('.js-delete-button').on('click', BotGeneral.eDeleteClick)
+      $('.js-usernames').on('click', BotGeneral.eUsernameClick);
+      $('.js-spoiler').each(function () {
         SimpleSpoiler.init(this);
       });
-      $('body').on('click', '.js?xieworld_vf-spoiler', BotGeneral.eClickSpoiler);
+      $('body').on('click', '.js-spoiler', BotGeneral.eClickSpoiler);
     });
     Aj.onUnload(() => {
-      $('body').off('click', '.js?xieworld_vf-spoiler', BotGeneral.eClickSpoiler);
+      $('body').off('click', '.js-spoiler', BotGeneral.eClickSpoiler);
     });
   },
   eClickSpoiler() {
@@ -632,7 +632,7 @@ var BotGeneral = {
           } 
           if (response.ok) {
             $('.tm-api-token').html(`<span class="js-spoiler">${response.token}</span>`);
-            $('.tm-api-token .js?xieworld_vf-spoiler').each(function () {
+            $('.tm-api-token .js-spoiler').each(function () {
               SimpleSpoiler.init(this);
             });
             Main.showSuccessToast(l('WEB_TOKEN_REVOKE_SUCCESS'));
@@ -674,18 +674,18 @@ var BotSettings = {
       }
     });
 
-    $('.js?xieworld_vf-group-admin-rights-toggle').on('click', () => {
-      $('.js?xieworld_vf-group-admin-rights').toggleClass('hidden');
+    $('.js-group-admin-rights-toggle').on('click', () => {
+      $('.js-group-admin-rights').toggleClass('hidden');
       WebApp.HapticFeedback.impactOccurred('soft');
     });
 
-    $('.js?xieworld_vf-broadcast-admin-rights-toggle').on('click', () => {
-      $('.js?xieworld_vf-broadcast-admin-rights').toggleClass('hidden');
+    $('.js-broadcast-admin-rights-toggle').on('click', () => {
+      $('.js-broadcast-admin-rights').toggleClass('hidden');
       WebApp.HapticFeedback.impactOccurred('soft');
     });
 
-    $('.js?xieworld_vf-threaded-mode-toggle').on('click', () => {
-      $('.js?xieworld_vf-threaded-mode-nouser-toggle').toggleClass('hidden');
+    $('.js-threaded-mode-toggle').on('click', () => {
+      $('.js-threaded-mode-nouser-toggle').toggleClass('hidden');
       WebApp.HapticFeedback.impactOccurred('soft');
     });
 
@@ -735,16 +735,16 @@ var BotSettings = {
       Aj.state.webLoginDebounce(submitWebLogic, 0);
     });
 
-    $('.js?xieworld_vf-group-admin-rights-toggle .tm-toggle').on('click', function (event) {
+    $('.js-group-admin-rights-toggle .tm-toggle').on('click', function (event) {
       event.stopPropagation();
 
       var $this = $(this);
       $this.toggleClass('tm-toggle-on');
       var newState = $this.hasClass('tm-toggle-on');
 
-      $('.js?xieworld_vf-group-admin-rights').toggleClass('hidden', !newState);
+      $('.js-group-admin-rights').toggleClass('hidden', !newState);
       Aj.state.blockChecks = true;
-      $('.js?xieworld_vf-group-admin-rights input').prop('checked', newState);
+      $('.js-group-admin-rights input').prop('checked', newState);
       Aj.state.blockChecks = false;
       updateAdminRights();
     });
@@ -752,37 +752,37 @@ var BotSettings = {
     function updateAdminRights() {
       var new_values = [];
       var total = 0;
-      $('.js?xieworld_vf-group-admin-rights input').each((i, el) => {
+      $('.js-group-admin-rights input').each((i, el) => {
         total++;
         if (el.checked) {
           new_values.push(el.name);
         }
       });
-      $('.js?xieworld_vf-group-admin-rights-toggle .tm-row-count').text(new_values.length + '/' + total);
+      $('.js-group-admin-rights-toggle .tm-row-count').text(new_values.length + '/' + total);
       if (new_values.length === 0) {
         new_values = null;
-        $('.js?xieworld_vf-group-admin-rights-toggle .tm-toggle').removeClass('tm-toggle-on');
+        $('.js-group-admin-rights-toggle .tm-toggle').removeClass('tm-toggle-on');
       } else {
-        $('.js?xieworld_vf-group-admin-rights-toggle .tm-toggle').addClass('tm-toggle-on');
+        $('.js-group-admin-rights-toggle .tm-toggle').addClass('tm-toggle-on');
       }
       botChangeSettings('group_admin_rights', new_values);
     }
 
-    $('.js?xieworld_vf-group-admin-rights input').on('change', function () {
+    $('.js-group-admin-rights input').on('change', function () {
       if (Aj.state.blockChecks) return;
       updateAdminRights();
     })
 
-    $('.js?xieworld_vf-broadcast-admin-rights-toggle .tm-toggle').on('click', function (event) {
+    $('.js-broadcast-admin-rights-toggle .tm-toggle').on('click', function (event) {
       event.stopPropagation();
     
       var $this = $(this);
       $this.toggleClass('tm-toggle-on');
       var newState = $this.hasClass('tm-toggle-on');
 
-      $('.js?xieworld_vf-broadcast-admin-rights').toggleClass('hidden', !newState);
+      $('.js-broadcast-admin-rights').toggleClass('hidden', !newState);
       Aj.state.blockChecks = true;
-      $('.js?xieworld_vf-broadcast-admin-rights input').prop('checked', newState);
+      $('.js-broadcast-admin-rights input').prop('checked', newState);
       Aj.state.blockChecks = false;
       updateBroadcastAdminRights();
     });
@@ -790,23 +790,23 @@ var BotSettings = {
     function updateBroadcastAdminRights() {
       var new_values = [];
       var total = 0;
-      $('.js?xieworld_vf-broadcast-admin-rights input').each((i, el) => {
+      $('.js-broadcast-admin-rights input').each((i, el) => {
         total++;
         if (el.checked) {
           new_values.push(el.name);
         }
       });
-      $('.js?xieworld_vf-broadcast-admin-rights-toggle .tm-row-count').text(new_values.length + '/' + total);
+      $('.js-broadcast-admin-rights-toggle .tm-row-count').text(new_values.length + '/' + total);
       if (new_values.length === 0) {
         new_values = null;
-        $('.js?xieworld_vf-broadcast-admin-rights-toggle .tm-toggle').removeClass('tm-toggle-on');
+        $('.js-broadcast-admin-rights-toggle .tm-toggle').removeClass('tm-toggle-on');
       } else {
-        $('.js?xieworld_vf-broadcast-admin-rights-toggle .tm-toggle').addClass('tm-toggle-on');
+        $('.js-broadcast-admin-rights-toggle .tm-toggle').addClass('tm-toggle-on');
       }
       botChangeSettings('broadcast_admin_rights', new_values);
     }
 
-    $('.js?xieworld_vf-broadcast-admin-rights input').on('change', function () {
+    $('.js-broadcast-admin-rights input').on('change', function () {
       if (Aj.state.blockChecks) return;
       updateBroadcastAdminRights();
     });
@@ -832,10 +832,10 @@ var BotSettingsInline = {
       }
     });
 
-    $('.js?xieworld_vf-infdb-dd-item').on('click', function () {
+    $('.js-infdb-dd-item').on('click', function () {
       var value = this.dataset.value;
-      $('.js?xieworld_vf-infdb-value').text(this.text);
-      $('li.selected:has(.js?xieworld_vf-infdb-dd-item)').toggleClass('selected');
+      $('.js-infdb-value').text(this.text);
+      $('li.selected:has(.js-infdb-dd-item)').toggleClass('selected');
       $(this).parent().toggleClass('selected');
       botChangeSettings('infdb', value);
     });
@@ -862,14 +862,14 @@ var BotGames = {
       }
     });
 
-    $('.js?xieworld_vf-game-copy').on('click', function (e) {
+    $('.js-game-copy').on('click', function (e) {
       // e.stopPropagation();
       navigator.clipboard.writeText(this.dataset.value);
       Main.showToast(l('WEB_LINK_COPIED'), { class: 'success' });
       WebApp.HapticFeedback.notificationOccurred('success');
     })
 
-    $('.js?xieworld_vf-game-delete').on('click', function (e) {
+    $('.js-game-delete').on('click', function (e) {
       // e.stopPropagation();
       var gameId = this.dataset.id;
       WebApp.showPopup({
@@ -940,14 +940,14 @@ var BotGameEdit = {
       $('.tm-welcome-message-content').text(value);
     });
 
-    $('.js?xieworld_vf-upload-button').on('click', function () {
+    $('.js-upload-button').on('click', function () {
       var target = this.dataset.target;
       if (!target) return;
 
       if (target == 'game_pic') {
         requestUpload(target, res => {
           if (res.ok) {
-            $('.tm-image-input-container').css?xieworld_vf({
+            $('.tm-image-input-container').css({
               'background-image': `url(${res.media.src})`,
               'background-size': 'cover',
               'filter': 'none',
@@ -962,7 +962,7 @@ var BotGameEdit = {
 
             if (file) {
               var src = URL.createObjectURL(file);
-              $('.tm-image-input-container').css?xieworld_vf({
+              $('.tm-image-input-container').css({
                 'background-image': `url(${src})`,
                 'background-size': 'cover',
                 'filter': 'blur(15px)',
@@ -1048,14 +1048,14 @@ var BotAppEdit = {
       $('.tm-welcome-message-content').text(value);
     });
 
-    $('.js?xieworld_vf-upload-button').on('click', function () {
+    $('.js-upload-button').on('click', function () {
       var target = this.dataset.target;
       if (!target) return;
 
       if (target == 'game_pic') {
         requestUpload(target, res => {
           if (res.ok) {
-            $('.tm-image-input-container').css?xieworld_vf({
+            $('.tm-image-input-container').css({
               'background-image': `url(${res.media.src})`,
               'background-size': 'cover',
               'filter': 'none',
@@ -1070,7 +1070,7 @@ var BotAppEdit = {
 
             if (file) {
               var src = URL.createObjectURL(file);
-              $('.tm-image-input-container').css?xieworld_vf({
+              $('.tm-image-input-container').css({
                 'background-image': `url(${src})`,
                 'background-size': 'cover',
                 'filter': 'blur(15px)',
@@ -1137,13 +1137,13 @@ var BotAppEdit = {
 
 var BotApps = {
   init() {
-    $('.js?xieworld_vf-game-copy').on('click', function (e) {
+    $('.js-game-copy').on('click', function (e) {
       navigator.clipboard.writeText(this.dataset.value);
       Main.showToast(l('WEB_LINK_COPIED'), { class: 'success' });
       WebApp.HapticFeedback.notificationOccurred('success');
     });
 
-    $('.js?xieworld_vf-game-delete').on('click', function (e) {
+    $('.js-game-delete').on('click', function (e) {
       var gameId = this.dataset.id;
       WebApp.showPopup({
         title: l('WEB_GAMES_DELETE_CONFIRM_TITLE'),
@@ -1200,7 +1200,7 @@ var BotMainApp = {
       WebApp.HapticFeedback.impactOccurred('soft');
     });
 
-    $('.js?xieworld_vf-delete-mainapp-button').on('click', function () {
+    $('.js-delete-mainapp-button').on('click', function () {
       WebApp.showPopup({
         title: l('WEB_MENUBTN_DISABLE_TITLE'),
         message: l('WEB_MAINAPP_DISABLE_CONFIRM'),
@@ -1270,7 +1270,7 @@ var BotMenuApp = {
       $('.tm-preview-menu-button span').text(value || 'Open');
     });
 
-    $('.js?xieworld_vf-delete-menu-button').on('click', function () {
+    $('.js-delete-menu-button').on('click', function () {
       WebApp.showPopup({
         title: l('WEB_MENUBTN_DISABLE_TITLE'),
         message: l('WEB_MENUBTN_DISABLE_CONFIRM'),
@@ -1353,7 +1353,7 @@ var BotLaunchScreen = {
       WebApp.MainButton.offClick(BotLaunchScreen.submit);
     });
 
-    $('.js?xieworld_vf-theme-tabs').on('click', '.tm-tab', function () {
+    $('.js-theme-tabs').on('click', '.tm-tab', function () {
       var $tab = $(this);
       if ($tab.hasClass('active')) return;
       $tab.addClass('active').siblings().removeClass('active');
@@ -1378,7 +1378,7 @@ var BotLaunchScreen = {
       BotLaunchScreen.updateColorValues();
     });
 
-    $('.js?xieworld_vf-colors-reset').on('click', function () {
+    $('.js-colors-reset').on('click', function () {
       Aj.state.bg_color = '';
       Aj.state.bg_dark_color = '';
       Aj.state.header_color = '';
@@ -1386,7 +1386,7 @@ var BotLaunchScreen = {
       BotLaunchScreen.updateColorValues();
     });
 
-    $('.js?xieworld_vf-color-picker').on('click', function () {
+    $('.js-color-picker').on('click', function () {
       var color = this.dataset.color;
       if (!color) return;
       var $input = $(`input[data-color="${color}"]`);
@@ -1394,7 +1394,7 @@ var BotLaunchScreen = {
       $input.click();
     });
 
-    $('.js?xieworld_vf-upload-button').on('click', BotLaunchScreen.uploadIcon);
+    $('.js-upload-button').on('click', BotLaunchScreen.uploadIcon);
 
     BotLaunchScreen.updateColorValues();
   },
@@ -1416,7 +1416,7 @@ var BotLaunchScreen = {
       }
       Aj.uploadRequest('uploadIcon', file, {}, res => {
         if (res.ok) {
-          $('.js?xieworld_vf-icon-preview').html(res.svg);
+          $('.js-icon-preview').html(res.svg);
           Aj.state.placeholder_path = res.path;
         } else {
           Main.showErrorToast(res.error);
@@ -1436,10 +1436,10 @@ var BotLaunchScreen = {
     style.setProperty('--header_color', colors.header_color || 'var(--tg-theme-header-bg-color)');
     style.setProperty('--icon_color', BotLaunchScreen.getIconColor());
 
-    $('.js?xieworld_vf-color-picker').each(function () {
+    $('.js-color-picker').each(function () {
       var color = this.dataset.color;
       if (!color) return;
-      $('.js?xieworld_vf-color-value', this).text(colors[color] || 'Default');
+      $('.js-color-value', this).text(colors[color] || 'Default');
       if (!colors[color]) return;
       $(`input[data-color="${color}"]`).val(colors[color]);
     });
@@ -1487,7 +1487,7 @@ var TransferBot = {
   init() {
     Aj.onLoad(() => {
       $('input[name=query]').on('change', TransferBot.searchSubmit);
-      $('.js?xieworld_vf-form-clear').on('click', TransferBot.clear);
+      $('.js-form-clear').on('click', TransferBot.clear);
 
       WebApp.MainButton.onClick(TransferBot.transferSubmit);
       WebApp.MainButton.setText('Continue');
@@ -1523,18 +1523,18 @@ var TransferBot = {
       $form.field('query').focus();
       return;
     }
-    $('.js?xieworld_vf-transfer-search-field').addClass('loading').removeClass('play').redraw().addClass('play');
+    $('.js-transfer-search-field').addClass('loading').removeClass('play').redraw().addClass('play');
     Aj.apiRequest('checkTransferRecipient', {
       bid: Aj.state.botId,
       username: query
     }, function(result) {
       TransferBot.updateResult(result);
-      $('.js?xieworld_vf-transfer-search-field').removeClass('loading');
+      $('.js-transfer-search-field').removeClass('loading');
     });
   },
   clear() {
     var $form = Aj.state.$starsSearchForm;
-    var $field = $('.js?xieworld_vf-transfer-search-field');
+    var $field = $('.js-transfer-search-field');
 
     WebApp.MainButton.setText('Continue');
     Aj.state.recipientId = null;
@@ -1544,7 +1544,7 @@ var TransferBot = {
     $('.hint-text[data-for=recipient]').html('');
   },
   updateResult(result) {
-    var $field = $('.js?xieworld_vf-transfer-search-field');
+    var $field = $('.js-transfer-search-field');
     if (result.error) {
       $('.hint-text[data-for=recipient]').html(result.error);
       $field.addClass('error').removeClass('found');
@@ -1555,7 +1555,7 @@ var TransferBot = {
       $field.removeClass('error');
       if (result.ok) {
         if (result.userpic) {
-          $('.js?xieworld_vf-stars-search-photo', $field).html(`<img src="${result.userpic}">`);
+          $('.js-stars-search-photo', $field).html(`<img src="${result.userpic}">`);
         }
         if (result.name) {
           var $form = Aj.state.$starsSearchForm;
@@ -1576,7 +1576,7 @@ var TransferBot = {
 
 var BotPayments = {
   init() {
-    $('.js?xieworld_vf-copy-token').click(function() {
+    $('.js-copy-token').click(function() {
       navigator.clipboard.writeText(this.dataset.token);
       Main.showSuccessToast(l('WEB_PAYMENTS_TOKEN_COPY_SUCCESS'));
     });

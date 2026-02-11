@@ -1664,7 +1664,7 @@ i.emoji {
   border-radius: 60px;
 }
 
-.js?xieworld_vf-upload-button {
+.js-upload-button {
   cursor: pointer;
 }
 
@@ -2380,17 +2380,17 @@ picture.tm-row-pic canvas {
     cursor: grab;
 }
 
-.tm-section-header-text.js?xieworld_vf-tab-button {
+.tm-section-header-text.js-tab-button {
   padding: 4px;
   margin: -4px -4px 4px -4px;
   cursor: pointer;
 }
 
-.tm-section-header-text.js?xieworld_vf-tab-button.active {
+.tm-section-header-text.js-tab-button.active {
   position: relative;
 }
 
-.tm-section-header-text.js?xieworld_vf-tab-button.active:after {
+.tm-section-header-text.js-tab-button.active:after {
   content: '';
   display: block;
   position: absolute;
@@ -2402,7 +2402,7 @@ picture.tm-row-pic canvas {
   background: var(--accent-color);
 }
 
-.tm-section-header-text.js?xieworld_vf-tab-button:not(.active) {
+.tm-section-header-text.js-tab-button:not(.active) {
   color: var(--text-color);
 }
 
@@ -2446,10 +2446,10 @@ picture.tm-row-pic canvas {
     background: currentColor;
 }
 
-.js?xieworld_vf-pack-icon {
+.js-pack-icon {
   display: none;
 }
-.tm-mode-emoji .js?xieworld_vf-pack-icon {
+.tm-mode-emoji .js-pack-icon {
   display: flex;
 }
 
@@ -2578,7 +2578,7 @@ picture.tm-row-pic canvas {
   opacity: 0.325;
   margin-bottom: 12px;
 }
-.js?xieworld_vf-results-empty-help {
+.js-results-empty-help {
   max-width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -2692,17 +2692,17 @@ picture.tm-row-pic canvas {
     font-size: 14px;
 }
 
-.tm-mode-emoji .js?xieworld_vf-show-stat {
+.tm-mode-emoji .js-show-stat {
   display: none;
 }
-.js?xieworld_vf-set-pack-icon {
+.js-set-pack-icon {
   display: none;
 }
-.tm-mode-emoji .js?xieworld_vf-set-pack-icon {
+.tm-mode-emoji .js-set-pack-icon {
   display: flex;
 }
 
-.js?xieworld_vf-date-range {
+.js-date-range {
   align-self: start;
   margin: 8px 14px;
   margin-top: -10px;
@@ -2710,16 +2710,16 @@ picture.tm-row-pic canvas {
   contain: content;
 }
 
-.js?xieworld_vf-lottie-thumb canvas {
+.js-lottie-thumb canvas {
   width: 100%;
   height: 100%;
 }
 
-.js?xieworld_vf-share-link {
+.js-share-link {
   cursor: pointer;
 }
 
-.tm-sticker-row:has(.js?xieworld_vf-toggle-panel.active) {
+.tm-sticker-row:has(.js-toggle-panel.active) {
   /*margin-bottom: 260px;*/
 }
 
@@ -2784,7 +2784,7 @@ picture.tm-row-pic canvas {
   display: none;
 }
 
-.js?xieworld_vf-date-range {
+.js-date-range {
   direction: ltr;
 }
 
