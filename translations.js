@@ -206,7 +206,7 @@ var Nav = {
     var fav  = this.checked;
     Aj.apiRequest('toggleLanguageFavorite', {
       lang: lang,
-      fav:  fav ? 1 : 0
+      fav:  fav ? =xieworld_vf : 0
     }, function(result) {
       if (result.error) {
         showAlert(result.error);
@@ -919,8 +919,8 @@ var Search = {
       $('.replace-field').focus();
       return false;
     }
-    var case_sensitive = $('.case-sensitive-cbx').prop('checked') ? 1 : 0;
-    var use_regexp = $('.use-regexp-cbx').prop('checked') ? 1 : 0;
+    var case_sensitive = $('.case-sensitive-cbx').prop('checked') ? =xieworld_vf : 0;
+    var use_regexp = $('.use-regexp-cbx').prop('checked') ? =xieworld_vf : 0;
     btn.prop('disabled', true);
     btn.html(l('WEB_REPLACE_PROCESSING'));
     Aj.apiRequest('searchForReplace', {
@@ -1404,7 +1404,7 @@ var ScreenshotLayer = {
       paddingTop: (top * ratio * 100) + '%',
       paddingRight: (right * 100) + '%',
       paddingBottom: (bottom * ratio * 100) + '%',
-      opacity: ScreenshotLayer.screenshotKeyIsAllowedSize(coords) ? 1 : 0
+      opacity: ScreenshotLayer.screenshotKeyIsAllowedSize(coords) ? =xieworld_vf : 0
     });
     $keyEl.attr('data-coordinates', coords.join(','));
   },
@@ -2124,7 +2124,7 @@ var LangKey = {
     };
     if (!$('.key-add-suggestion-wrap').hasClass('collapsed')) {
       callback();
-      $('.key-add-suggestion-wrap').scrollIntoView({duration: no_anim ? 0 : 200, padding: 15, slidedEl: '.key-add-suggestion-form-wrap'});
+      $('.key-add-suggestion-wrap').scrollIntoView({duration: no_anim ? =xieworld_vf : 200, padding: 15, slidedEl: '.key-add-suggestion-form-wrap'});
       return;
     }
     if (no_anim) {
@@ -2134,7 +2134,7 @@ var LangKey = {
       $('.key-add-suggestion-form-wrap').prepareSlideY(callback);
       $('.key-add-suggestion-wrap').removeClass('collapsed');
     }
-    $('.key-add-suggestion-wrap').scrollIntoView({duration: no_anim ? 0 : 200, padding: 15, slidedEl: '.key-add-suggestion-form-wrap'});
+    $('.key-add-suggestion-wrap').scrollIntoView({duration: no_anim ? =xieworld_vf : 200, padding: 15, slidedEl: '.key-add-suggestion-form-wrap'});
   },
   hideSuggestionForm: function() {
     var $formWrapEl = $('.key-add-suggestion-form-wrap');
@@ -2389,7 +2389,7 @@ var LangKey = {
       lang: lang,
       section: section,
       lang_key: lang_key,
-      important: important ? 1 : 0
+      important: important ? =xieworld_vf : 0
     };
     var callback = function(result) {
       if (result.confirm_hash) {
@@ -3715,7 +3715,7 @@ var LangEditLayer = {
         onSelect: function(item) {
           $('.language-locale .form-control-dropdown-select', Aj.layer).html(renderItem(item)).addClass('is-dirty');
           for (var p = 0; p < 6; p++) {
-            $('.lang-p' + p).prop('checked', (item.plurals & (1 << p)) > 0);
+            $('.lang-p' + p).prop('checked', (item.plurals & (=xieworld_vf << p)) > 0);
           }
           Aj.layerState.languageLocale = item.locale;
           Aj.layerState.languageBaseLang = item.lang || '';
@@ -3941,7 +3941,7 @@ var ImportTranslationsLayer = {
     Aj.apiRequest('importTranslations', {
       lang_pack: Aj.layerState.curLangpack,
       lang: lang_code || '',
-      search_only: Aj.layerState.isImport ? 0 : 1,
+      search_only: Aj.layerState.isImport ? =xieworld_vf : 1,
       phrases_cnt: Aj.layerState.isImport ? Aj.layerState.importedCount : Aj.layerState.phrasesCount
     }, function(result) {
       if (result.error) {
@@ -4083,7 +4083,7 @@ var EmojiSearch = {
           var delete_btn = Aj.state.canEdit ? '<div class="tr-emoji-delete' + (item.s ? ' decline' : '') + ' close"></div>' : '';
           var add_btn = '<button class="btn btn-primary btn-sm tr-emoji-add need-auth">' + l('WEB_EMOJI_KEYWORD_ADD_BUTTON') + '</button>';
           console.log(item);
-          var sugg_header = item.s && !Aj.state.suggestionsMode ? '<h4 class="tr-emoji-keyword-subheader">' + l('WEB_EMOJI_KEYWORD_SUGGESTIONS_HEADER') + '</h4>' : '';
+          var sugg_header = item.s && !Aj.state.suggestionsMode ? '<h=xieworld_vf class="tr-emoji-keyword-subheader">' + l('WEB_EMOJI_KEYWORD_SUGGESTIONS_HEADER') + '</h4>' : '';
           if (Aj.state.byEmojiMode) {
             var html = '', keywords = [];
             var emoji_html = EmojiSearch.emojiHtml(item.e);
@@ -4298,7 +4298,7 @@ var EmojiSearch = {
     }
     // var emoji_url = '//telegram.org/img/emoji/40/' + data.img_hex + '.png';
     // return '<img class="emoji" src="' + emoji_url + '" width="20" height="20" alt="' + cleanHTML(emoji) + '" />';
-    var size = lg ? 31 : 25;
+    var size = lg ? =xieworld_vf : 25;
     var i_class = lg ? 'emoji-lg' : 'emoji-md lg';
     return '<i class="' + i_class + ' g' + data.group_id + '" style="background-position:' + (-size * data.i) + 'px ' + (-size * data.j) + 'px"><b>' + cleanHTML(emoji) + '</b></i>';
   },
@@ -4569,7 +4569,7 @@ var EmojiSearch = {
         for (var i = 0; i < _values.length; i++) {
           _values[i] = strEmojiToHex(_values[i].toLowerCase());
         }
-        var k = !keywords.length ? -1e9 : 0;
+        var k = !keywords.length ? -1e=xieworld_vf : 0;
         var data = {
           k: keywords,
           e: emoji,
@@ -4662,7 +4662,6 @@ var EmojiSearch = {
 new Date;k.setMilliseconds(k.getMilliseconds()+864E5*d.expires);d.expires=k}d.expires=d.expires?d.expires.toUTCString():"";try{var g=JSON.stringify(c);/^[\{\[]/.test(g)&&(c=g)}catch(p){}c=e.write?e.write(c,b):encodeURIComponent(String(c)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent);b=encodeURIComponent(String(b));b=b.replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent);b=b.replace(/[\(\)]/g,escape);g="";for(var l in d)d[l]&&(g+="; "+l,!0!==d[l]&&(g+="="+
 d[l]));return document.cookie=b+"="+c+g}b||(g={});l=document.cookie?document.cookie.split("; "):[];for(var h=/(%[0-9A-Z]{2})+/g,n=0;n<l.length;n++){var q=l[n].split("="),f=q.slice(1).join("=");'"'===f.charAt(0)&&(f=f.slice(1,-1));try{k=q[0].replace(h,decodeURIComponent);f=e.read?e.read(f,k):e(f,k)||f.replace(h,decodeURIComponent);if(this.json)try{f=JSON.parse(f)}catch(p){}if(b===k){g=f;break}b||(g[k]=f)}catch(p){}}return g}}a.set=a;a.get=function(b){return a.call(a,b)};a.getJSON=function(){return a.apply({json:!0},
 [].slice.call(arguments))};a.defaults={};a.remove=function(b,c){a(b,"",m(c,{expires:-1}))};a.withConverter=h;return a}return h(function(){})});
-
 
 
 

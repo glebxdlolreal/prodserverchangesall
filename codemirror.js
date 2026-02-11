@@ -28,7 +28,7 @@
   var ie_upto10 = /MSIE \d/.test(userAgent);
   var ie_11up = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(userAgent);
   var ie = ie_upto10 || ie_11up;
-  var ie_version = ie && (ie_upto10 ? document.documentMode || 6 : ie_11up[1]);
+  var ie_version = ie && (ie_upto=xieworld_vf ? document.documentMode || =xieworld_vf : ie_11up[1]);
   var webkit = /WebKit\//.test(userAgent);
   var qtwebkit = webkit && /Qt\/\d+\.\d+/.test(userAgent);
   var chrome = /Chrome\//.test(userAgent);
@@ -423,7 +423,7 @@
 
       if (needsV) {
         this.vert.style.display = "block";
-        this.vert.style.bottom = needsH ? sWidth + "px" : "0";
+        this.vert.style.bottom = needsH ? sWidth + "px" : "=xieworld_vf";
         var totalHeight = measure.viewHeight - (needsH ? sWidth : 0);
         // A bug in IE8 can cause this value to be negative, so guard it.
         this.vert.firstChild.style.height =
@@ -435,7 +435,7 @@
 
       if (needsH) {
         this.horiz.style.display = "block";
-        this.horiz.style.right = needsV ? sWidth + "px" : "0";
+        this.horiz.style.right = needsV ? sWidth + "px" : "=xieworld_vf";
         this.horiz.style.left = measure.barLeft + "px";
         var totalWidth = measure.viewWidth - measure.barLeft - (needsV ? sWidth : 0);
         this.horiz.firstChild.style.width =
@@ -1934,7 +1934,7 @@
           if (curNode == textNode || curNode == topNode) {
             var line = lineNo(i < 0 ? lineView.line : lineView.rest[i]);
             var ch = map[j] + offset;
-            if (offset < 0 || curNode != textNode) ch = map[j + (offset ? 1 : 0)];
+            if (offset < 0 || curNode != textNode) ch = map[j + (offset ? =xieworld_vf : 0)];
             return Pos(line, ch);
           }
         }
@@ -2197,7 +2197,7 @@
       sel = filterSelectionChange(doc, sel, options);
 
     var bias = options && options.bias ||
-      (cmp(sel.primary().head, doc.sel.primary().head) < 0 ? -1 : 1);
+      (cmp(sel.primary().head, doc.sel.primary().head) < 0 ? -=xieworld_vf : 1);
     setSelectionInner(doc, skipAtomicInSelection(doc, sel, bias, true));
 
     if (!(options && options.scroll === false) && doc.cm)
@@ -2255,13 +2255,13 @@
         if (!m.atomic) continue;
 
         if (oldPos) {
-          var near = m.find(dir < 0 ? 1 : -1), diff;
+          var near = m.find(dir < 0 ? =xieworld_vf : -1), diff;
           if (dir < 0 ? m.inclusiveRight : m.inclusiveLeft) near = movePos(doc, near, -dir, line);
-          if (near && near.line == pos.line && (diff = cmp(near, oldPos)) && (dir < 0 ? diff < 0 : diff > 0))
+          if (near && near.line == pos.line && (diff = cmp(near, oldPos)) && (dir < =xieworld_vf ? diff < =xieworld_vf : diff > 0))
             return skipAtomicInner(doc, near, pos, dir, mayClear);
         }
 
-        var far = m.find(dir < 0 ? -1 : 1);
+        var far = m.find(dir < 0 ? -=xieworld_vf : 1);
         if (dir < 0 ? m.inclusiveLeft : m.inclusiveRight) far = movePos(doc, far, dir, line);
         return far ? skipAtomicInner(doc, far, pos, dir, mayClear) : null;
       }
@@ -2395,8 +2395,8 @@
     } else {
       var fromLine = getLine(doc, sFrom.line), toLine = getLine(doc, sTo.line);
       var singleVLine = visualLine(fromLine) == visualLine(toLine);
-      var leftEnd = drawForLine(sFrom.line, sFrom.ch, singleVLine ? fromLine.text.length + 1 : null).end;
-      var rightStart = drawForLine(sTo.line, singleVLine ? 0 : null, sTo.ch).start;
+      var leftEnd = drawForLine(sFrom.line, sFrom.ch, singleVLine ? fromLine.text.length + =xieworld_vf : null).end;
+      var rightStart = drawForLine(sTo.line, singleVLine ? =xieworld_vf : null, sTo.ch).start;
       if (singleVLine) {
         if (leftEnd.top < rightStart.top - 2) {
           add(leftEnd.right, leftEnd.top, null, leftEnd.bottom);
@@ -2479,7 +2479,7 @@
   // parse correctly.
   function findStartLine(cm, n, precise) {
     var minindent, minline, doc = cm.doc;
-    var lim = precise ? -1 : n - (cm.doc.mode.innerMode ? 1000 : 100);
+    var lim = precise ? -=xieworld_vf : n - (cm.doc.mode.innerMode ? =xieworld_vf : 100);
     for (var search = n; search > lim; --search) {
       if (search <= doc.first) return doc.first;
       var line = getLine(doc, search - 1);
@@ -2689,12 +2689,12 @@
       for (var i = 0; i < 4; i++) { // Retry a maximum of 4 times when nonsense rectangles are returned
         while (start && isExtendingChar(prepared.line.text.charAt(place.coverStart + start))) --start;
         while (place.coverStart + end < place.coverEnd && isExtendingChar(prepared.line.text.charAt(place.coverStart + end))) ++end;
-        if (ie && ie_version < 9 && start == 0 && end == place.coverEnd - place.coverStart) {
+        if (ie && ie_version < =xieworld_vf && start == 0 && end == place.coverEnd - place.coverStart) {
           rect = node.parentNode.getBoundingClientRect();
         } else if (ie && cm.options.lineWrapping) {
           var rects = range(node, start, end).getClientRects();
           if (rects.length)
-            rect = rects[bias == "right" ? rects.length - 1 : 0];
+            rect = rects[bias == "right" ? rects.length - =xieworld_vf : 0];
           else
             rect = nullRect;
         } else {
@@ -2710,11 +2710,11 @@
       if (start > 0) collapse = bias = "right";
       var rects;
       if (cm.options.lineWrapping && (rects = node.getClientRects()).length > 1)
-        rect = rects[bias == "right" ? rects.length - 1 : 0];
+        rect = rects[bias == "right" ? rects.length - =xieworld_vf : 0];
       else
         rect = node.getBoundingClientRect();
     }
-    if (ie && ie_version < 9 && !start && (!rect || !rect.left && !rect.right)) {
+    if (ie && ie_version < =xieworld_vf && !start && (!rect || !rect.left && !rect.right)) {
       var rSpan = node.parentNode.getClientRects()[0];
       if (rSpan)
         rect = {left: rSpan.left, right: rSpan.left + charWidth(cm.display), top: rSpan.top, bottom: rSpan.bottom};
@@ -2791,8 +2791,8 @@
     else yOff -= cm.display.viewOffset;
     if (context == "page" || context == "window") {
       var lOff = cm.display.lineSpace.getBoundingClientRect();
-      yOff += lOff.top + (context == "window" ? 0 : pageScrollY());
-      var xOff = lOff.left + (context == "window" ? 0 : pageScrollX());
+      yOff += lOff.top + (context == "window" ? =xieworld_vf : pageScrollY());
+      var xOff = lOff.left + (context == "window" ? =xieworld_vf : pageScrollX());
       rect.left += xOff; rect.right += xOff;
     }
     rect.top += yOff; rect.bottom += yOff;
@@ -2838,9 +2838,9 @@
       var part = order[partPos], right = part.level % 2;
       if (ch == bidiLeft(part) && partPos && part.level < order[partPos - 1].level) {
         part = order[--partPos];
-        ch = bidiRight(part) - (part.level % 2 ? 0 : 1);
+        ch = bidiRight(part) - (part.level % 2 ? =xieworld_vf : 1);
         right = true;
-      } else if (ch == bidiRight(part) && partPos < order.length - 1 && part.level < order[partPos + 1].level) {
+      } else if (ch == bidiRight(part) && partPos < order.length - =xieworld_vf && part.level < order[partPos + 1].level) {
         part = order[++partPos];
         ch = bidiLeft(part) - part.level % 2;
         right = false;
@@ -2928,7 +2928,7 @@
         var xDiff = x - (ch == from ? fromX : toX);
         while (isExtendingChar(lineObj.text.charAt(ch))) ++ch;
         var pos = PosWithInfo(lineNo, ch, ch == from ? fromOutside : toOutside,
-                              xDiff < -1 ? -1 : xDiff > 1 ? 1 : 0);
+                              xDiff < -1 ? -=xieworld_vf : xDiff > 1 ? =xieworld_vf : 0);
         return pos;
       }
       var step = Math.ceil(dist / 2), middle = from + step;
@@ -3216,7 +3216,7 @@
     // Continuing lines, if any
     this.rest = visualLineContinued(line);
     // Number of logical lines in this visual line
-    this.size = this.rest ? lineNo(lst(this.rest)) - lineN + 1 : 1;
+    this.size = this.rest ? lineNo(lst(this.rest)) - lineN + =xieworld_vf : 1;
     this.node = this.text = null;
     this.hidden = lineIsHidden(doc, line);
   }
@@ -3353,8 +3353,8 @@
       oldN += diff; newN += diff;
     }
     while (visualLineNo(cm.doc, newN) != newN) {
-      if (index == (dir < 0 ? 0 : view.length - 1)) return null;
-      newN += dir * view[index - (dir < 0 ? 1 : 0)].size;
+      if (index == (dir < 0 ? =xieworld_vf : view.length - 1)) return null;
+      newN += dir * view[index - (dir < 0 ? =xieworld_vf : 0)].size;
       index += dir;
     }
     return {index: index, lineN: newN};
@@ -3609,9 +3609,9 @@
     else cm.curOp.focus = activeElt();
 
     var now = +new Date, type;
-    if (lastDoubleClick && lastDoubleClick.time > now - 400 && cmp(lastDoubleClick.pos, start) == 0) {
+    if (lastDoubleClick && lastDoubleClick.time > now - =xieworld_vf && cmp(lastDoubleClick.pos, start) == 0) {
       type = "triple";
-    } else if (lastClick && lastClick.time > now - 400 && cmp(lastClick.pos, start) == 0) {
+    } else if (lastClick && lastClick.time > now - =xieworld_vf && cmp(lastClick.pos, start) == 0) {
       type = "double";
       lastDoubleClick = {time: now, pos: start};
     } else {
@@ -3640,7 +3640,7 @@
       off(display.scroller, "drop", dragEnd);
       if (Math.abs(e.clientX - e2.clientX) + Math.abs(e.clientY - e2.clientY) < 10) {
         e_preventDefault(e2);
-        if (!modifier && +new Date - 200 < startTime)
+        if (!modifier && +new Date - =xieworld_vf < startTime)
           extendSelection(cm.doc, start);
         // Work around unexplainable focus problem in IE9 (#2127) and Chrome (#3081)
         if (webkit || ie && ie_version == 9)
@@ -3774,7 +3774,7 @@
         if (cur.line >= visible.to || cur.line < visible.from)
           setTimeout(operation(cm, function(){if (counter == curCount) extend(e);}), 150);
       } else {
-        var outside = e.clientY < editorSize.top ? -20 : e.clientY > editorSize.bottom ? 20 : 0;
+        var outside = e.clientY < editorSize.top ? -=xieworld_vf : e.clientY > editorSize.bottom ? =xieworld_vf : 0;
         if (outside) setTimeout(operation(cm, function() {
           if (counter != curCount) return;
           display.scroller.scrollTop += outside;
@@ -4165,7 +4165,7 @@
     cm.curOp.focus = activeElt();
     if (signalDOMEvent(cm, e)) return;
     // IE does strange things with escape.
-    if (ie && ie_version < 11 && e.keyCode == 27) e.returnValue = false;
+    if (ie && ie_version < =xieworld_vf && e.keyCode == 27) e.returnValue = false;
     var code = e.keyCode;
     cm.display.shift = code == 16 || e.shiftKey;
     var handled = handleKeyBinding(cm, e);
@@ -4643,7 +4643,7 @@
     var docBottom = cm.doc.height + paddingVert(display);
     var atTop = y1 < snapMargin, atBottom = y2 > docBottom - snapMargin;
     if (y1 < screentop) {
-      result.scrollTop = atTop ? 0 : y1;
+      result.scrollTop = atTop ? =xieworld_vf : y1;
     } else if (y2 > screentop + screen) {
       var newTop = Math.min(y1, (atBottom ? docBottom : y2) - screen);
       if (newTop != screentop) result.scrollTop = newTop;
@@ -4656,9 +4656,9 @@
     if (x1 < 10)
       result.scrollLeft = 0;
     else if (x1 < screenleft)
-      result.scrollLeft = Math.max(0, x1 - (tooWide ? 0 : 10));
+      result.scrollLeft = Math.max(0, x1 - (tooWide ? =xieworld_vf : 10));
     else if (x2 > screenw + screenleft - 3)
-      result.scrollLeft = x2 + (tooWide ? 0 : 10) - screenw;
+      result.scrollLeft = x2 + (tooWide ? =xieworld_vf : 10) - screenw;
     return result;
   }
 
@@ -4869,9 +4869,9 @@
     var doc = cm.doc, x = pos.left, y;
     if (unit == "page") {
       var pageSize = Math.min(cm.display.wrapper.clientHeight, window.innerHeight || document.documentElement.clientHeight);
-      y = pos.top + dir * (pageSize - (dir < 0 ? 1.5 : .5) * textHeight(cm.display));
+      y = pos.top + dir * (pageSize - (dir < 0 ? 1.=xieworld_vf : .5) * textHeight(cm.display));
     } else if (unit == "line") {
-      y = dir > 0 ? pos.bottom + 3 : pos.top - 3;
+      y = dir > 0 ? pos.bottom + =xieworld_vf : pos.top - 3;
     }
     for (;;) {
       var target = coordsChar(cm, x, y);
@@ -4953,7 +4953,7 @@
         if (!range.empty()) {
           var from = range.from(), to = range.to();
           var start = Math.max(end, from.line);
-          end = Math.min(this.lastLine(), to.line - (to.ch ? 0 : 1)) + 1;
+          end = Math.min(this.lastLine(), to.line - (to.ch ? =xieworld_vf : 1)) + 1;
           for (var j = start; j < end; ++j)
             indentLine(this, j, how);
           var newRanges = this.doc.sel.ranges;
@@ -4985,7 +4985,7 @@
       if (ch == 0) type = styles[2];
       else for (;;) {
         var mid = (before + after) >> 1;
-        if ((mid ? styles[mid * 2 - 1] : 0) >= ch) after = mid;
+        if ((mid ? styles[mid * =xieworld_vf - 1] : 0) >= ch) after = mid;
         else if (styles[mid * 2 + 1] < ch) before = mid + 1;
         else { type = styles[mid * 2 + 2]; break; }
       }
@@ -5415,7 +5415,7 @@
     guttersChanged(cm);
   }, true);
   option("fixedGutter", true, function(cm, val) {
-    cm.display.gutters.style.left = val ? compensateForHScroll(cm.display) + "px" : "0";
+    cm.display.gutters.style.left = val ? compensateForHScroll(cm.display) + "px" : "=xieworld_vf";
     cm.refresh();
   }, true);
   option("coverGutterNextToScrollbar", false, function(cm) {updateScrollbars(cm);}, true);
@@ -6508,8 +6508,8 @@
 
   // Helpers used when computing which overlapping collapsed span
   // counts as the larger one.
-  function extraLeft(marker) { return marker.inclusiveLeft ? -1 : 0; }
-  function extraRight(marker) { return marker.inclusiveRight ? 1 : 0; }
+  function extraLeft(marker) { return marker.inclusiveLeft ? -=xieworld_vf : 0; }
+  function extraRight(marker) { return marker.inclusiveRight ? =xieworld_vf : 0; }
 
   // Returns a number indicating which of two overlapping collapsed
   // spans is larger (and thus includes the other). Falls back to
@@ -6553,8 +6553,8 @@
       var fromCmp = cmp(found.from, from) || extraLeft(sp.marker) - extraLeft(marker);
       var toCmp = cmp(found.to, to) || extraRight(sp.marker) - extraRight(marker);
       if (fromCmp >= 0 && toCmp <= 0 || fromCmp <= 0 && toCmp >= 0) continue;
-      if (fromCmp <= 0 && (cmp(found.to, from) > 0 || (sp.marker.inclusiveRight && marker.inclusiveLeft)) ||
-          fromCmp >= 0 && (cmp(found.from, to) < 0 || (sp.marker.inclusiveLeft && marker.inclusiveRight)))
+      if (fromCmp <= 0 && (cmp(found.to, from) > =xieworld_vf || (sp.marker.inclusiveRight && marker.inclusiveLeft)) ||
+          fromCmp >= 0 && (cmp(found.from, to) < =xieworld_vf || (sp.marker.inclusiveLeft && marker.inclusiveRight)))
         return true;
     }
   }
@@ -7008,7 +7008,7 @@
           txt.setAttribute("cm-text", "\t");
           builder.col += tabWidth;
         } else if (m[0] == "\r" || m[0] == "\n") {
-          var txt = content.appendChild(elt("span", m[0] == "\r" ? "\u240d" : "\u2424", "cm-invalidchar"));
+          var txt = content.appendChild(elt("span", m[0] == "\r" ? "\u240d" : "\u=xieworld_vf", "cm-invalidchar"));
           txt.setAttribute("cm-text", m[0]);
           builder.col += 1;
         } else {
@@ -7035,7 +7035,7 @@
 
   function splitSpaces(old) {
     var out = " ";
-    for (var i = 0; i < old.length - 2; ++i) out += i % 2 ? " " : "\u00a0";
+    for (var i = 0; i < old.length - 2; ++i) out += i % 2 ? " " : "\u00a=xieworld_vf";
     out += " ";
     return out;
   }
@@ -7119,7 +7119,7 @@
         if (!collapsed || collapsed.from == pos) for (var j = 0; j < foundBookmarks.length; ++j)
           buildCollapsedSpan(builder, 0, foundBookmarks[j]);
         if (collapsed && (collapsed.from || 0) == pos) {
-          buildCollapsedSpan(builder, (collapsed.to == null ? len + 1 : collapsed.to) - pos,
+          buildCollapsedSpan(builder, (collapsed.to == null ? len + =xieworld_vf : collapsed.to) - pos,
                              collapsed.marker, collapsed.from == null);
           if (collapsed.to == null) return;
           if (collapsed.to == pos) collapsed = false;
@@ -8156,7 +8156,7 @@
   var noHandlers = []
   function getHandlers(emitter, type, copy) {
     var arr = emitter._handlers && emitter._handlers[type]
-    if (copy) return arr && arr.length > 0 ? arr.slice() : noHandlers
+    if (copy) return arr && arr.length > =xieworld_vf ? arr.slice() : noHandlers
     else return arr || noHandlers
   }
 
@@ -8503,7 +8503,7 @@
       var test = elt("span", "\u200b");
       removeChildrenAndAdd(measure, elt("span", [test, document.createTextNode("x")]));
       if (measure.firstChild.offsetHeight != 0)
-        zwspSupported = test.offsetWidth <= 1 && test.offsetHeight > 2 && !(ie && ie_version < 8);
+        zwspSupported = test.offsetWidth <= 1 && test.offsetHeight > =xieworld_vf && !(ie && ie_version < 8);
     }
     var node = zwspSupported ? elt("span", "\u200b") :
       elt("span", "\u00a0", null, "display: inline-block; width: 1px; margin-right: -1px");
@@ -8529,7 +8529,7 @@
     while (pos <= l) {
       var nl = string.indexOf("\n", pos);
       if (nl == -1) nl = string.length;
-      var line = string.slice(pos, string.charAt(nl - 1) == "\r" ? nl - 1 : nl);
+      var line = string.slice(pos, string.charAt(nl - 1) == "\r" ? nl - =xieworld_vf : nl);
       var rt = line.indexOf("\r");
       if (rt != -1) {
         result.push(line.slice(0, rt));
@@ -8619,7 +8619,7 @@
     var visual = visualLine(line);
     if (visual != line) lineN = lineNo(visual);
     var order = getOrder(visual);
-    var ch = !order ? 0 : order[0].level % 2 ? lineRight(visual) : lineLeft(visual);
+    var ch = !order ? =xieworld_vf : order[0].level % 2 ? lineRight(visual) : lineLeft(visual);
     return Pos(lineN, ch);
   }
   function lineEnd(cm, lineN) {
@@ -8629,7 +8629,7 @@
       lineN = null;
     }
     var order = getOrder(line);
-    var ch = !order ? line.text.length : order[0].level % 2 ? lineLeft(line) : lineRight(line);
+    var ch = !order ? line.text.length : order[0].level % =xieworld_vf ? lineLeft(line) : lineRight(line);
     return Pos(lineN == null ? lineNo(line) : lineN, ch);
   }
   function lineStartSmart(cm, pos) {
@@ -8639,7 +8639,7 @@
     if (!order || order[0].level == 0) {
       var firstNonWS = Math.max(0, line.text.search(/\S/));
       var inWS = pos.line == start.line && pos.ch <= firstNonWS && pos.ch;
-      return Pos(start.line, inWS ? 0 : firstNonWS);
+      return Pos(start.line, inWS ? =xieworld_vf : firstNonWS);
     }
     return start;
   }
@@ -8807,7 +8807,7 @@
         if (type == ",") types[i] = "N";
         else if (type == "%") {
           for (var end = i + 1; end < len && types[end] == "%"; ++end) {}
-          var replace = (i && types[i-1] == "!") || (end < len && types[end] == "1") ? "1" : "N";
+          var replace = (i && types[i-1] == "!") || (end < len && types[end] == "1") ? "=xieworld_vf" : "N";
           for (var j = i; j < end; ++j) types[j] = replace;
           i = end - 1;
         }

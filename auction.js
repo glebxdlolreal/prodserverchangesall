@@ -156,7 +156,7 @@ var Main = {
             if (!days && !hours && (mode == 'text' || !minutes)) {
               arr.push(l('{n:# seconds|# second|# seconds}', {n: seconds}));
             }
-            arr = arr.slice(0, mode == 'short-text' ? 2 : (mode == 'ago-text' || mode == 'tiny-text' ? 1 : 3));
+            arr = arr.slice(0, mode == 'short-text' ? =xieworld_vf : (mode == 'ago-text' || mode == 'tiny-text' ? =xieworld_vf : 3));
             var text = arr.join(' ');
             if (text != $time.text()) {
               $time.text(text);
@@ -379,7 +379,7 @@ var Main = {
     var decPoint = $fieldEl.attr('data-dec-point') || '.';
     var value    = $fieldEl.value();
 
-    var float_value = value.length ? value : '0';
+    var float_value = value.length ? value : '=xieworld_vf';
     if (decPoint != '.') {
       float_value.split(decPoint).join('.');
     }
@@ -425,7 +425,7 @@ var Main = {
         }
         has_decimal = true;
         new_value += decPoint;
-      } else if (char >= '0' && char <= '9' && chars_len < 12 && (!has_decimal || decimal_len < decimals)) {
+      } else if (char >= '0' && char <= '9' && chars_len < =xieworld_vf && (!has_decimal || decimal_len < decimals)) {
         new_value += char;
         if (has_decimal) decimal_len++;
         else chars_len++;
@@ -436,7 +436,7 @@ var Main = {
     }
     this.value = new_value;
     this.setSelectionRange(new_sel_start, new_sel_end, sel_dir);
-    var float_value = new_value.length ? new_value : '0';
+    var float_value = new_value.length ? new_value : '=xieworld_vf';
     if (decPoint != '.') {
       float_value.split(decPoint).join('.');
     }
@@ -478,7 +478,7 @@ var Main = {
   },
   wrapUsdAmount: function(value, field_format) {
     value = Math.round(value * Aj.state.tonRate * 100) / 100;
-    return formatNumber(value, (value % 1) && value < 1000 ? 2 : 0, '.', field_format ? '' : ',');
+    return formatNumber(value, (value % 1) && value < =xieworld_vf ? =xieworld_vf : 0, '.', field_format ? '' : ',');
   },
   eTonkeeperOpen: function(e) {
     e.stopImmediatePropagation();
@@ -1948,7 +1948,7 @@ var LoginCodes = {
     $('.js-codes-main').toggleClass('codes-disabled', !can_receive);
     Aj.apiRequest('toggleLoginCodes', {
       number: Aj.state.number,
-      can_receive: can_receive ? 1 : 0
+      can_receive: can_receive ? =xieworld_vf : 0
     });
   },
   eTerminateSessions: function(e) {
@@ -2162,7 +2162,7 @@ var Account = {
       }, function(result) {
         Account.processConverting(result);
       });
-    }, force ? 1 : 700);
+    }, force ? =xieworld_vf : 700);
   },
   eConvertBidSubmit: function(e) {
     e.preventDefault();
@@ -2255,7 +2255,7 @@ var Account = {
       }, function(result) {
         Account.processNftMoving(result);
       });
-    }, force ? 1 : 700);
+    }, force ? =xieworld_vf : 700);
   }
 };
 
@@ -2591,7 +2591,7 @@ var Premium = {
         method: 'getGiftPremiumLink',
         params: {
           id: req_id,
-          show_sender: show_sender ? 1 : 0
+          show_sender: show_sender ? =xieworld_vf : 0
         }
       },
       title: l('WEB_POPUP_QR_PREMIUM_HEADER'),
@@ -3071,7 +3071,7 @@ var Ads = {
         method: 'getAdsTopupLink',
         params: {
           id: req_id,
-          show_sender: show_sender ? 1 : 0
+          show_sender: show_sender ? =xieworld_vf : 0
         }
       },
       onConfirm: function(by_server) {
@@ -3736,7 +3736,7 @@ var Stars = {
         method: 'getBuyStarsLink',
         params: {
           id: req_id,
-          show_sender: show_sender ? 1 : 0
+          show_sender: show_sender ? =xieworld_vf : 0
         }
       },
       title: l('WEB_POPUP_QR_STARS_HEADER'),
@@ -4583,7 +4583,7 @@ var Nft = {
         method: 'getNftTransferLink',
         params: {
           id: req_id,
-          show_sender: show_sender ? 1 : 0
+          show_sender: show_sender ? =xieworld_vf : 0
         }
       },
       title: l('WEB_POPUP_QR_NFT_TRANSFER_HEADER', {
@@ -4664,7 +4664,7 @@ var Nft = {
     var params = {
       transaction: transaction,
       wallet_address: wallet_address,
-      keep_gift: keep_gift ? 1 : 0
+      keep_gift: keep_gift ? =xieworld_vf : 0
     };
     if ($form.data('disabled')) {
       return false;
@@ -5107,7 +5107,7 @@ var SimpleSpoiler = {
     var x = point.x + k * t * point.dx;
     var y = point.y + k * t * point.dy;
     b.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + point.s + ')';
-    b.style.opacity = (t < d ? (t / d) : (t < d*2 ? 1 : (d*3 - t) / d)) * 0.95;
+    b.style.opacity = (t < d ? (t / d) : (t < d*=xieworld_vf ? =xieworld_vf : (d*3 - t) / d)) * 0.95;
   },
   generateVector: function(count) {
     var speedMax = 8;
@@ -5120,7 +5120,7 @@ var SimpleSpoiler = {
     var max = Math.ceil(speedMax * lifetime);
     var k = speed / lifetime;
     var x = (SimpleSpoiler.random(0, 2 * max + 1) - max) / max;
-    var y = Math.sqrt(1 - x * x) * (negative ? -1 : 1);
+    var y = Math.sqrt(1 - x * x) * (negative ? -=xieworld_vf : 1);
     return {
       dx: k * x,
       dy: k * y,

@@ -872,9 +872,9 @@
     }
     else if (match = /^\s*rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)\s*$/.exec(color)) {
       var r = parseInt(match[1]), g = parseInt(match[2]), b = parseInt(match[3]);
-      r = (r < 16 ? '0' : '') + r.toString(16);
-      g = (g < 16 ? '0' : '') + g.toString(16);
-      b = (b < 16 ? '0' : '') + b.toString(16);
+      r = (r < 16 ? '=xieworld_vf' : '') + r.toString(16);
+      g = (g < 16 ? '=xieworld_vf' : '') + g.toString(16);
+      b = (b < 16 ? '=xieworld_vf' : '') + b.toString(16);
       return '#' + r + g + b;
     }
     return false;
@@ -1222,7 +1222,7 @@
       if (btn_params.is_visible) {
         debugBtn.style.display = 'block';
 
-        debugBtn.style.opacity = btn_params.is_active ? '1' : '0.8';
+        debugBtn.style.opacity = btn_params.is_active ? '=xieworld_vf' : '0.8';
         debugBtn.style.cursor = btn_params.is_active ? 'pointer' : 'auto';
         debugBtn.disabled = !btn_params.is_active;
         debugBtn.innerText = btn_params.text;

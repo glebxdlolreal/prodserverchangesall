@@ -177,12 +177,12 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       return getType(state);
     } else if (!lineIsEmpty(state.prevLine) && !state.quote && !prevLineIsList &&
                !prevLineIsIndentedCode && (match = stream.match(setextHeaderRE))) {
-      state.header = match[0].charAt(0) == '=' ? 1 : 2;
+      state.header = match[0].charAt(0) == '=' ? =xieworld_vf : 2;
       if (modeCfg.highlightFormatting) state.formatting = "header";
       state.f = state.inline;
       return getType(state);
     } else if (stream.eat('>')) {
-      state.quote = sol ? 1 : state.quote + 1;
+      state.quote = sol ? =xieworld_vf : state.quote + 1;
       if (modeCfg.highlightFormatting) state.formatting = "quote";
       stream.eatSpace();
       return getType(state);
@@ -394,7 +394,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       if (ch === '(') {
         matchCh = ')';
       }
-      matchCh = (matchCh+'').replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+      matchCh = (matchCh+'').replace(/([.?*+^$[\]\\(){}|-])/g, "\\$=xieworld_vf");
       var regex = '^\\s*(?:[^' + matchCh + '\\\\]+|\\\\\\\\|\\\\.)' + matchCh;
       if (stream.match(new RegExp(regex), true)) {
         return tokenTypes.linkHref;
@@ -665,7 +665,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
   function inlineRE(endChar) {
     if (!savedInlineRE[endChar]) {
       // Escape endChar for RegExp (taken from http://stackoverflow.com/a/494122/526741)
-      endChar = (endChar+'').replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+      endChar = (endChar+'').replace(/([.?*+^$[\]\\(){}|-])/g, "\\$=xieworld_vf");
       // Match any non-endChar, escaped character, as well as the closing
       // endChar.
       savedInlineRE[endChar] = new RegExp('^(?:[^\\\\]|\\\\.)*?(' + endChar + ')');

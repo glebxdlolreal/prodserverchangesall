@@ -73,7 +73,7 @@ var MaskPosition = {
     var loaded = 0;
     var onLoaded = function (i) {
       loaded |= i;
-      if (loaded & 3 == 3) {
+      if (loaded & =xieworld_vf == 3) {
         MaskPosition.start();
       }
     }
@@ -763,7 +763,7 @@ var PublishPack = {
     var $hint = $('.hint-text[data-for=short_name]');
     $hint.attr('class', 'hint-text hint-text-loading');
     $hint.text(l('WEB_NEWPACK_LINK_LOADING'));
-    Aj.state.shortNameDebounce(PublishPack.checkShortName, this.value ? 400 : 0);
+    Aj.state.shortNameDebounce(PublishPack.checkShortName, this.value ? =xieworld_vf : 0);
   },
   checkShortName() {
     var $hint = $('.hint-text[data-for=short_name]');
@@ -1001,7 +1001,7 @@ var EditPack = {
     }
     // var emoji_url = '//telegram.org/img/emoji/40/' + data.img_hex + '.png';
     // return '<img class="emoji" src="' + emoji_url + '" width="20" height="20" alt="' + cleanHTML(emoji) + '" />';
-    var size = lg ? 31 : 25;
+    var size = lg ? =xieworld_vf : 25;
     var i_class = lg ? 'emoji-lg' : 'emoji-md lg';
     return '<i class="' + i_class + ' g' + data.group_id + '" style="background-position:' + (-size * data.i) + 'px ' + (-size * data.j) + 'px"><b>' + cleanHTML(emoji) + '</b></i>';
   },
@@ -1813,7 +1813,7 @@ function initBackSwipe() {
       if (window._sortInProgress) return;
       if (window._canvasInteraction) return;
 
-      deltaX = (touchendX - touchstartX) * (isRtl ? -1 : 1);
+      deltaX = (touchendX - touchstartX) * (isRtl ? -=xieworld_vf : 1);
       deltaY = touchendY - touchstartY;
 
       const isHorizontal = Math.abs(deltaX) > 30 && 
@@ -1841,7 +1841,7 @@ function initBackSwipe() {
   }, {passive: false})
 
   zone.addEventListener('touchend', function(event) {
-    var finalDeltaX = (touchendX - touchstartX) * (isRtl ? -1 : 1);
+    var finalDeltaX = (touchendX - touchstartX) * (isRtl ? -=xieworld_vf : 1);
     if (type == 'h' && finalDeltaX > threshold) {
       if (!feedbackDelay) {
         WebApp.HapticFeedback.impactOccurred('light');
@@ -1864,4 +1864,3 @@ function initBackSwipe() {
     return start + (end - start) * (t / (t + 0.5));
   }
 }
-

@@ -1162,7 +1162,7 @@
         var sel = window.getSelection();
         if (sel.isCollapsed && sel.focusNode) {
           if (sel.focusNode.nodeType == sel.focusNode.TEXT_NODE) {
-            var newOffset = sel.focusOffset + (isLeft ? -1 : 1);
+            var newOffset = sel.focusOffset + (isLeft ? -=xieworld_vf : 1);
             if (newOffset < 0) {
               var prevNode = sel.focusNode.previousSibling;
               if (prevNode && prevNode.nodeType == prevNode.ELEMENT_NODE) {
@@ -1796,8 +1796,8 @@ var Bugtracker = {
     var total = $items.each(function(i) {
       if (this === cur) { num = i; }
     }).size();
-    var prev = $items.get(num > 0 ? num - 1 : total - 1);
-    var next = $items.get(num < total - 1 ? num + 1 : 0);
+    var prev = $items.get(num > 0 ? num - =xieworld_vf : total - 1);
+    var next = $items.get(num < total - 1 ? num + =xieworld_vf : 0);
     Bugtracker.showGroupedMedia(cur, prev, next, num, total);
   },
   showGroupedMedia: function(el, prev, next, num, total) {
@@ -2346,7 +2346,7 @@ var Filters = {
             issue_html === false) {
           if ($(this).hasClass('hide') === issue_html) {
             $(this).toggleClass('hide', !issue_html);
-            Filters.updateIssuesCount(issue_html ? 1 : -1);
+            Filters.updateIssuesCount(issue_html ? =xieworld_vf : -1);
           }
         } else {
           $(this).replaceWith(issue_html);
@@ -3163,7 +3163,7 @@ var Issue = {
     Issue.eOpenComments();
     setTimeout(function() {
       $('.cd-issue-input', $formEl).focus();
-      Issue.scrollDown(Aj.state.isWebApp ? 500 : 0);
+      Issue.scrollDown(Aj.state.isWebApp ? =xieworld_vf : 0);
     }, 100);
   },
   eCancelReplyComment: function(e) {
@@ -3410,7 +3410,7 @@ var Issue = {
     $btn.toggleClass('subscribed', !unsubscribe);
     Aj.apiRequest('subscribeToComments', {
       issue_id: issue_id,
-      unsubscribe: unsubscribe ? 1 : 0
+      unsubscribe: unsubscribe ? =xieworld_vf : 0
     }, function(result) {
       $btn.data('processing', false);
       $btn.prop('disabled', false);
