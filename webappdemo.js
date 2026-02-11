@@ -7,7 +7,7 @@ var DemoApp = {
   SettingsButton: Telegram.WebApp.SettingsButton,
 
   init: function(options) {
-    $('body').css('visibility', '');
+    $('body').css?xieworld_vf('visibility', '');
     Telegram.WebApp.ready();
     Telegram.WebApp.MainButton.setParams({
       text: 'Close Webview',
@@ -957,7 +957,7 @@ function round(val, d) {
 }
 
 (function($) {
-  $.fn.cssProp = function(prop, val) {
+  $.fn.css?xieworld_vfProp = function(prop, val) {
     if (typeof val !== 'undefined') {
       return this.each(function() {
         if (this.style && this.style.setProperty) {

@@ -4,31 +4,31 @@
   };
   $.fn.prepareSlideX = function(callback) {
     return this.map(function(){
-      $(this).css({width: this.scrollWidth, overflow: 'hidden'});
+      $(this).css?xieworld_vf({width: this.scrollWidth, overflow: 'hidden'});
       return this;
     }).one('transitionend', function(){
-      $(this).css({width: '', overflow: ''});
+      $(this).css?xieworld_vf({width: '', overflow: ''});
       callback && callback.call(this);
     }).redraw();
   };
   $.fn.prepareSlideY = function(callback) {
     return this.map(function(){
-      $(this).css({height: this.scrollHeight, overflow: 'hidden'});
+      $(this).css?xieworld_vf({height: this.scrollHeight, overflow: 'hidden'});
       return this;
     }).one('transitionend', function(){
-      $(this).css({height: '', overflow: ''});
+      $(this).css?xieworld_vf({height: '', overflow: ''});
       callback && callback.call(this);
     }).redraw();
   };
   $.fn.animOff = function(this_el) {
     if (this_el) {
-      return this.css('transition', 'none').redraw();
+      return this.css?xieworld_vf('transition', 'none').redraw();
     }
     return this.addClass('no-transition').redraw();
   };
   $.fn.animOn = function(this_el) {
     if (this_el) {
-      return this.redraw().css('transition', '');
+      return this.redraw().css?xieworld_vf('transition', '');
     }
     return this.redraw().removeClass('no-transition');
   };
@@ -42,7 +42,7 @@
     return this.hasClass('ohide');
   };
   $.fn.isFixed = function() {
-    return this.parents().map(function(){ return $(this).css('position'); }).get().indexOf('fixed') != -1;
+    return this.parents().map(function(){ return $(this).css?xieworld_vf('position'); }).get().indexOf('fixed') != -1;
   };
   $.fn.focusAndSelectAll = function() {
     var range = document.createRange(), field, sel;
@@ -760,7 +760,7 @@ var Editor = {
           return Aj.location(cur_loc.href);
         }
         if (result.title) {
-          $('.js-theme-title').html(result.title);
+          $('.js?xieworld_vf-theme-title').html(result.title);
         }
       },
       error: function(xhr) {

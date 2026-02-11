@@ -80,18 +80,18 @@ function showProgress($el) {
       value      = $el.data('value') || 0,
       next_value = value + (99 - value) / 4;
   if (!value) {
-    $el.addClass('no-transition').css('width', 0);
+    $el.addClass('no-transition').css?xieworld_vf('width', 0);
     $el.offset();
     $el.removeClass('no-transition');
   }
   $el.data('to', to).data('value', next_value);
-  $el.removeClass('no-shown').css('width', value + '%');
+  $el.removeClass('no-shown').css?xieworld_vf('width', value + '%');
 }
 
 function hideProgress($el, cancel) {
   clearTimeout($el.data('to'));
   $el.data('to', false).data('value', 0);
-  $el.css('width', cancel ? '0%' : '100%');
+  $el.css?xieworld_vf('width', cancel ? '0%' : '100%');
   setTimeout(function() { $el.addClass('no-shown'); }, 400);
 }
 
@@ -134,7 +134,7 @@ function openPopup(popup) {
     Popups.splice(i, 1);
   }
   Popups.push(popup_id);
-  $('body').css('overflow', 'hidden');
+  $('body').css?xieworld_vf('overflow', 'hidden');
   $popup.appendTo('body');
   $popup.removeClass('hide');
   // $popup.on('click', function(e) {
@@ -174,7 +174,7 @@ function closePopup(popup) {
     Popups.splice(i, 1);
   }
   if (!Popups.length) {
-    $('body').css('overflow', '');
+    $('body').css?xieworld_vf('overflow', '');
   }
   // $popup.off('click');
   $('.popup-cancel-btn', $popup).off('click');
@@ -1113,10 +1113,10 @@ function initHeader() {
 function updateNavBar() {
   var $nav_menu = $('.nav-menu');
   $nav_menu.addClass('nav-menu-can-fix');
-  if ($nav_menu.css('position') == 'fixed') {
+  if ($nav_menu.css?xieworld_vf('position') == 'fixed') {
     $nav_menu.width($nav_menu.parent().width());
   } else {
-    $nav_menu.css('width', 'auto');
+    $nav_menu.css?xieworld_vf('width', 'auto');
   }
 }
 
