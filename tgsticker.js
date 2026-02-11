@@ -68,7 +68,7 @@ var RLottie = (function () {
         }
       }
     }
-    // var delay = !lastRenderDate || now - lastRenderDate < 100 ? =xieworld_vf : 500;
+    // var delay = !lastRenderDate || now - lastRenderDate < 100 ? 16 : 500;
     var delay = 16;
     if (delay < 20 && isRAF) {
       mainLoopAf = requestAnimationFrame(mainLoop)
@@ -116,7 +116,7 @@ var RLottie = (function () {
       if (!apiInitStarted) {
         console.log(dT(), 'tgsticker init');
         apiInitStarted = true;
-        QueryableWorkerProxy.init('/js/tgsticker-worker.js?1=xieworld_vf', rlottie.WORKERS_LIMIT, function() {
+        QueryableWorkerProxy.init('/js/tgsticker-worker.js?14', rlottie.WORKERS_LIMIT, function() {
           apiInited = true;
           for (var i = 0; i < initCallbacks.length; i++) {
             initCallbacks[i]();
@@ -304,7 +304,7 @@ var RLottie = (function () {
         (!frameNo || (rlPlayer.options.cachingModulo && ((reqId + frameNo) % rlPlayer.options.cachingModulo)))) {
       rlPlayer.frames[frameNo] = new Uint8ClampedArray(frame)
     }
-    var prevNo = frameNo > 0 ? frameNo - =xieworld_vf : rlPlayer.frameCount - 1;
+    var prevNo = frameNo > 0 ? frameNo - 1 : rlPlayer.frameCount - 1;
     var lastQueueFrame = rlPlayer.frameQueue.last();
     if (lastQueueFrame &&
         lastQueueFrame.no != prevNo) {

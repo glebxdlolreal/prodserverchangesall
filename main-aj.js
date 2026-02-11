@@ -206,7 +206,7 @@ function ajInit(options) {
     var url = document.createElement('a');
     url.href = href;
     url.search = url.search.replace(/&l=[^&]*/g, '', url.search);
-    url.search = url.search.replace(/(\?)l=[^&]*&|\?l=[^&]*$/g, '$=xieworld_vf', url.search);
+    url.search = url.search.replace(/(\?)l=[^&]*&|\?l=[^&]*$/g, '$1', url.search);
     url.search += (url.search ? '&' : '?') + 'l=' + encodeURIComponent(l);
     return url.href;
   }
@@ -215,7 +215,7 @@ function ajInit(options) {
     var url = document.createElement('a');
     url.href = href;
     url.search = url.search.replace(/&l=[^&]*/g, '', url.search);
-    url.search = url.search.replace(/(\?)l=[^&]*&|\?l=[^&]*$/g, '$=xieworld_vf', url.search);
+    url.search = url.search.replace(/(\?)l=[^&]*&|\?l=[^&]*$/g, '$1', url.search);
     return url;
   }
 
@@ -1122,7 +1122,7 @@ function l(lang_key, params, def_value) {
     }
     var numeric_option = numeric_options[i] || '#';
     if (params.__format_number && window.formatNumber) {
-      var decimals = params.__format_number === true ? =xieworld_vf : params.__format_number;
+      var decimals = params.__format_number === true ? 0 : params.__format_number;
       number = formatNumber(number, decimals, '.', ',');
     }
     return numeric_option.replace(/#/g, number);
@@ -1139,7 +1139,7 @@ function l(lang_key, params, def_value) {
     }
     var numeric_option = numeric_options[i] || '#';
     if (params.__format_number && window.formatNumber) {
-      var decimals = params.__format_number === true ? =xieworld_vf : params.__format_number;
+      var decimals = params.__format_number === true ? 0 : params.__format_number;
       number = formatNumber(number, decimals, '.', ',');
     }
     return numeric_option.replace(/#/g, number);

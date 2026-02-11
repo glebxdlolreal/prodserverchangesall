@@ -104,7 +104,7 @@ var Ads = {
   wrapEurAmount: function(value, field_format) {
     var rate = Aj.state.ownerCurrencyRate || 1;
     value = Math.round(value * rate * 100) / 100;
-    return '<span class="amount-sign">~</span><span class="amount-currency currency-euro">€</span>' + formatNumber(value, (value % 1) && value < =xieworld_vf ? =xieworld_vf : 0, '.', field_format ? '' : ',');
+    return '<span class="amount-sign">~</span><span class="amount-currency currency-euro">€</span>' + formatNumber(value, (value % 1) && value < 1000 ? 2 : 0, '.', field_format ? '' : ',');
   },
   amountFieldValue: function($form, field) {
     var $fieldEl = field ? $form.field(field) : $($form);
@@ -114,7 +114,7 @@ var Ads = {
     var decimals = $fieldEl.attr('data-decimals') || Ads.ownerCurrencyDecimals();
     var value    = $fieldEl.value();
 
-    var float_value = value.length ? value : '=xieworld_vf';
+    var float_value = value.length ? value : '0';
     if (decPoint != '.') {
       float_value.split(decPoint).join('.');
     }
@@ -179,7 +179,7 @@ var Ads = {
     }
     this.value = new_value;
     this.setSelectionRange(new_sel_start, new_sel_end, sel_dir);
-    var float_value = new_value.length ? new_value : '=xieworld_vf';
+    var float_value = new_value.length ? new_value : '0';
     if (decPoint != '.') {
       float_value.split(decPoint).join('.');
     }
@@ -1902,7 +1902,7 @@ var NewAd = {
       return ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][w];
     };
     var hour = function (h) {
-      return h < 10 ? '=xieworld_vf' + h : h;
+      return h < 10 ? '0' + h : h;
     };
     var res = [];
     for (var i = 0; i < list.length; i++) {
@@ -1919,7 +1919,7 @@ var NewAd = {
       }
       var hours = [], sh = null, eh = null;
       for (var h = 0; h <= 24; h++) {
-        if ((val & (=xieworld_vf << h)) > 0) {
+        if ((val & (1 << h)) > 0) {
           if (!sh) sh = hour(h);
           eh = hour(h + 1);
         } else if (sh) {
@@ -2257,7 +2257,7 @@ var NewAd = {
       $form.field('ad_activate_time').value(),
       $form.field('ad_deactivate_date').value(),
       $form.field('ad_deactivate_time').value(),
-      $form.field('use_schedule').prop('checked') ? =xieworld_vf : 0,
+      $form.field('use_schedule').prop('checked') ? 1 : 0,
       $form.field('schedule').value(),
       $form.field('schedule_tz_custom').value(),
       $form.field('schedule_tz').value(),
@@ -3173,8 +3173,8 @@ var OwnerAds = {
         $sortEl.toggleClass('sort-asc', sortAsc && sortBy == curSortBy);
       });
       Aj.state.adsList.sort(function(ad1, ad2) {
-        var v1 = sortAsc ? ad=xieworld_vf : ad2;
-        var v2 = sortAsc ? ad=xieworld_vf : ad1;
+        var v1 = sortAsc ? ad1 : ad2;
+        var v2 = sortAsc ? ad2 : ad1;
         return (v1[sortBy] - v2[sortBy]) || (v1.date - v2.date);
       });
     }
@@ -3763,7 +3763,7 @@ var EditAd = {
       $form.field('ad_activate_time').value(),
       $form.field('ad_deactivate_date').value(),
       $form.field('ad_deactivate_time').value(),
-      $form.field('use_schedule').prop('checked') ? =xieworld_vf : 0,
+      $form.field('use_schedule').prop('checked') ? 1 : 0,
       $form.field('schedule').value(),
       $form.field('schedule_tz_custom').value(),
       $form.field('schedule_tz').value(),
@@ -4784,8 +4784,8 @@ var Audiences = {
         $sortEl.toggleClass('sort-asc', sortAsc && sortBy == curSortBy);
       });
       Aj.state.audiencesList.sort(function(ad1, ad2) {
-        var v1 = sortAsc ? ad=xieworld_vf : ad2;
-        var v2 = sortAsc ? ad=xieworld_vf : ad1;
+        var v1 = sortAsc ? ad1 : ad2;
+        var v2 = sortAsc ? ad2 : ad1;
         return (v1[sortBy] - v2[sortBy]) || (v1.date - v2.date);
       });
     }
@@ -5214,8 +5214,8 @@ var Events = {
         $sortEl.toggleClass('sort-asc', sortAsc && sortBy == curSortBy);
       });
       Aj.state.eventsList.sort(function(ad1, ad2) {
-        var v1 = sortAsc ? ad=xieworld_vf : ad2;
-        var v2 = sortAsc ? ad=xieworld_vf : ad1;
+        var v1 = sortAsc ? ad1 : ad2;
+        var v2 = sortAsc ? ad2 : ad1;
         return (v1[sortBy] - v2[sortBy]) || (v1.date - v2.date);
       });
     }
@@ -5640,7 +5640,7 @@ AB.on(function() {
     function updateTableHover(state, val) {
       state.$table.find('tr').each(function(w) {
         $(this).find('td').each(function(h) {
-          var sel = (val[w] & (=xieworld_vf << h)) > 0;
+          var sel = (val[w] & (1 << h)) > 0;
           $(this).toggleClass('hover', sel);
         });
       });
@@ -5648,7 +5648,7 @@ AB.on(function() {
     function updateTableValue(state, val) {
       state.$table.find('tr').each(function(w) {
         $(this).find('td').each(function(h) {
-          var sel = (val[w] & (=xieworld_vf << h)) > 0;
+          var sel = (val[w] & (1 << h)) > 0;
           $(this).toggleClass('selected', sel);
         });
       });
@@ -5836,7 +5836,7 @@ AB.on(function() {
         $dpBody.animOn();
       }
       function appendMonth(diff) {
-        diff = diff > 0 ? =xieworld_vf : -1;
+        diff = diff > 0 ? 1 : -1;
         var newD = getStartOfMonth(currentD);
         newD.setMonth(newD.getMonth() + diff);
         if (state.minMonthD && newD < state.minMonthD ||
@@ -6130,9 +6130,9 @@ AB.on(function() {
           state.curMinutes = 0;
         }
       }
-      else if (e.keyCode >= 48 && e.keyCode < =xieworld_vf || e.keyCode >= 96 && e.keyCode < 106) {
+      else if (e.keyCode >= 48 && e.keyCode < 58 || e.keyCode >= 96 && e.keyCode < 106) {
         e.preventDefault();
-        var digit = e.keyCode >= 96 ? e.keyCode - =xieworld_vf : e.keyCode - 48;
+        var digit = e.keyCode >= 96 ? e.keyCode - 96 : e.keyCode - 48;
         if (state.hoursSelected) {
           state.curHoursStr += digit;
           state.curHours = parseInt(state.curHoursStr);

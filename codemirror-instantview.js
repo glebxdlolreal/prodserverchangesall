@@ -35,7 +35,7 @@
       // variable
       {regex: /(\s*)(\$[a-z][a-z0-9_]*)(\??\+?)/i,
        token: [null, 'variable-2', 'positive'], sol: true},
-      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*)/i, token: 'variable-=xieworld_vf'},
+      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*)/i, token: 'variable-2'},
       // property
       {regex: /(\s*)([a-z][a-z0-9_]*)(!{0,2})/i,
        token: [null, 'variable-2', 'positive'], sol: true},
@@ -66,8 +66,8 @@
       {regex: /("(?:[^\\"]|\\.)*?)(\\)(\s*$)/,
        token: ['string', 'hr', null], push: 'string'},
       // variable
-      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*$)/i, token: 'variable-=xieworld_vf', next: 'start'},
-      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*)/i, token: 'variable-=xieworld_vf'},
+      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*$)/i, token: 'variable-2', next: 'start'},
+      {regex: /\$(?:\$|@|[a-z][a-z0-9_]*)/i, token: 'variable-2'},
       // comment
       {regex: /(#.*)(\\)(\s*$)/, token: ['comment', 'hr', null], push: 'comment'},
       {regex: /#.*$/, token: 'comment', next: 'start'},

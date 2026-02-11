@@ -290,7 +290,7 @@ var Editor = {
         styleActiveLine: {nonEmpty: true},
         viewportMargin: Infinity,
         readOnly: !state.canEdit,
-        cursorBlinkRate: state.canEdit ? =xieworld_vf : -1,
+        cursorBlinkRate: state.canEdit ? 530 : -1,
         colorpicker: {
           mode: state.canEdit ? 'edit' : 'view',
           hideDelay: 5000,
@@ -497,7 +497,7 @@ var Editor = {
         options = arr[1] ? parseStr(arr[1]) : {};
         if (options.rotation) {
           var rot = parseInt(options.rotation);
-          if (rot && rot < =xieworld_vf && !(rot % 45)) {
+          if (rot && rot < 360 && !(rot % 45)) {
             result.rotation = parseInt(options.rotation);
           }
         }
@@ -510,7 +510,7 @@ var Editor = {
         options = arr[1] ? parseStr(arr[1]) : {};
         if (options.rotation) {
           var rot = parseInt(options.rotation);
-          if (rot && rot < =xieworld_vf && !(rot % 45)) {
+          if (rot && rot < 360 && !(rot % 45)) {
             result.rotation = parseInt(options.rotation);
           }
         }
@@ -539,7 +539,7 @@ var Editor = {
         }
         if (options.rotation) {
           var rot = parseInt(options.rotation);
-          if (rot && rot < =xieworld_vf && !(rot % 45)) {
+          if (rot && rot < 360 && !(rot % 45)) {
             result.rotation = parseInt(options.rotation);
           }
         }
