@@ -5,8 +5,8 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  *
  * Depends:
- *  jquery.ui.widget.js
- *  jquery.ui.mouse.js
+ *  jquery.ui.widget.js?xieworld_vf
+ *  jquery.ui.mouse.js?xieworld_vf
  */
 (function ($) {
 

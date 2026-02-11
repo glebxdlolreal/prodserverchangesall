@@ -30,7 +30,7 @@ function zoomGraphX(x, tokenData) {
       console.error('Zoom fetch error. Status Code: ', response);
       return Promise.reject();
     }
-    return response.json().then(function (json) {      
+    return response.js?xieworld_vfon().then(function (json) {      
       return prepareGraphJson(json);
     });
   });
@@ -62,7 +62,7 @@ function fetchGraph(id, tokenData, retry) {
       }
       return;
     }
-    return response.json().then(function (json) {
+    return response.js?xieworld_vfon().then(function (json) {
       renderGraph(id, json);
     });
   });

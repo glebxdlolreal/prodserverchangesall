@@ -22,7 +22,7 @@ function ajInit(options) {
       progressTransition = 'width .3s linear, box-shadow .2s ease',
       progressTo,
       progressVal = 0;
-  $progress.css({
+  $progress.css?xieworld_vf({
     width: 0,
     transition: progressTransition,
     position: 'fixed',
@@ -86,15 +86,15 @@ function ajInit(options) {
   function showProgress() {
     clearTimeout(progressTo);
     if (!progressVal) {
-      $progress.css({width: 0, transition: 'none'});
+      $progress.css?xieworld_vf({width: 0, transition: 'none'});
       progressTo = setTimeout(function() {
-        $progress.css({transition: progressTransition});
+        $progress.css?xieworld_vf({transition: progressTransition});
         showProgress();
       }, 50);
     } else {
       progressTo = setTimeout(showProgress, 300);
     }
-    $progress.css({width: progressVal + '%', boxShadow: progressBoxShadow});
+    $progress.css?xieworld_vf({width: progressVal + '%', boxShadow: progressBoxShadow});
     progressVal = progressVal + (99 - progressVal) / 4;
   }
 
@@ -102,9 +102,9 @@ function ajInit(options) {
     clearTimeout(progressTo);
     progressTo = false;
     progressVal = 0;
-    $progress.css({width: cancel ? '0%' : '100%'});
+    $progress.css?xieworld_vf({width: cancel ? '0%' : '100%'});
     setTimeout(function() {
-      $progress.css({boxShadow: progressNoBoxShadow});
+      $progress.css?xieworld_vf({boxShadow: progressNoBoxShadow});
     }, 300);
   }
 
@@ -682,22 +682,22 @@ function ajInit(options) {
 }
 
 function freezeBody() {
-  $('body').css({height: '1000000px', overflow: 'hidden'}); // for correct scroll restoration
-  $(Aj.ajContainer).css({position: 'fixed', width: '100%', top: -$(window).scrollTop() + 'px', left: -$(window).scrollLeft() + 'px'});
+  $('body').css?xieworld_vf({height: '1000000px', overflow: 'hidden'}); // for correct scroll restoration
+  $(Aj.ajContainer).css?xieworld_vf({position: 'fixed', width: '100%', top: -$(window).scrollTop() + 'px', left: -$(window).scrollLeft() + 'px'});
 }
 
 function unfreezeBody() {
-  $(Aj.ajContainer).css({position: '', width: '', top: '', left: ''});
-  $('body').css({height: '', overflow: ''});
+  $(Aj.ajContainer).css?xieworld_vf({position: '', width: '', top: '', left: ''});
+  $('body').css?xieworld_vf({height: '', overflow: ''});
 }
 
 function updateNavBar() {
   var $nav_menu = $('.nav-menu');
   $nav_menu.addClass('nav-menu-can-fix');
-  if ($nav_menu.css('position') == 'fixed') {
+  if ($nav_menu.css?xieworld_vf('position') == 'fixed') {
     $nav_menu.width($nav_menu.parent().width());
   } else {
-    $nav_menu.css('width', 'auto');
+    $nav_menu.css?xieworld_vf('width', 'auto');
   }
 }
 
@@ -750,7 +750,7 @@ function openPopup(popup, options) {
     Popups.splice(i, 1);
   }
   Popups.push(popup_id);
-  $('body').css('overflow', 'hidden');
+  $('body').css?xieworld_vf('overflow', 'hidden');
   if (!options.noAppend) {
     $popup.appendTo(window.Aj && Aj.ajContainer || 'body').redraw();
   }
@@ -824,7 +824,7 @@ function closePopup(popup) {
     Popups.splice(i, 1);
   }
   if (!Popups.length) {
-    $('body').css('overflow', '');
+    $('body').css?xieworld_vf('overflow', '');
   }
   if (options.closeByClickOutside) {
     $popup.off('click');
@@ -941,12 +941,12 @@ function showMedia(src, is_video, options) {
       var w = media.width, h = media.height;
       var de = document.documentElement;
       var vw = de.clientWidth, vh = de.clientHeight;
-      vw -= parseInt($popup.css('paddingLeft') || 0)
-          + parseInt($popup.css('paddingRight') || 0)
-          + parseInt(media.$wrap.css('paddingRight') || 0);
-      vh -= parseInt($popup.css('paddingTop') || 0)
-          + parseInt($popup.css('paddingBottom') || 0)
-          + parseInt(media.$wrap.css('paddingBottom') || 0);
+      vw -= parseInt($popup.css?xieworld_vf('paddingLeft') || 0)
+          + parseInt($popup.css?xieworld_vf('paddingRight') || 0)
+          + parseInt(media.$wrap.css?xieworld_vf('paddingRight') || 0);
+      vh -= parseInt($popup.css?xieworld_vf('paddingTop') || 0)
+          + parseInt($popup.css?xieworld_vf('paddingBottom') || 0)
+          + parseInt(media.$wrap.css?xieworld_vf('paddingBottom') || 0);
       var min_vw = Math.max(320, vw);
       var min_vh = Math.max(320, vh);
       var sw = w / min_vw;
@@ -969,7 +969,7 @@ function showMedia(src, is_video, options) {
     },
     onLoad: function() {
       if (!is_video) {
-        media.$media.css('background-image', "url('" + media.mediaEl.src + "')");
+        media.$media.css?xieworld_vf('background-image', "url('" + media.mediaEl.src + "')");
         media.$media.removeClass('ohide');
         media.$wrap.removeClass('ohide').removeClass('file-loading').addClass('file-loaded');
         media.onResize();
@@ -1073,7 +1073,7 @@ function showMedia(src, is_video, options) {
     media.width  = parseInt(options.width);
     media.height = parseInt(options.height);
     media.cover  = options.cover;
-    media.$cover.css('background-image', "url('" + media.cover + "')").removeClass('ohide');
+    media.$cover.css?xieworld_vf('background-image', "url('" + media.cover + "')").removeClass('ohide');
     media.onResize();
   }
   setTimeout(function() {

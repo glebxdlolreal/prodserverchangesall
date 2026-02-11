@@ -1482,9 +1482,9 @@
       if (reset && cm.doc.sel.contains(pos) == -1)
         operation(cm, setSelection)(cm.doc, simpleSelection(pos), sel_dontScroll);
 
-      var oldCSS = te.style.cssText;
+      var oldCSS = te.style.css?xieworld_vfText;
       input.wrapper.style.position = "absolute";
-      te.style.cssText = "position: fixed; width: 30px; height: 30px; top: " + (e.clientY - 5) +
+      te.style.css?xieworld_vfText = "position: fixed; width: 30px; height: 30px; top: " + (e.clientY - 5) +
         "px; left: " + (e.clientX - 5) + "px; z-index: 1000; background: " +
         (ie ? "rgba(255, 255, 255, .05)" : "transparent") +
         "; outline: none; border-width: 0; outline: none; overflow: hidden; opacity: .05; filter: alpha(opacity=5);";
@@ -1517,7 +1517,7 @@
       function rehide() {
         input.contextMenuPending = false;
         input.wrapper.style.position = "relative";
-        te.style.cssText = oldCSS;
+        te.style.css?xieworld_vfText = oldCSS;
         if (ie && ie_version < 9) display.scrollbars.setScrollTop(display.scroller.scrollTop = scrollPos);
 
         // Try to detect the user choosing select-all
@@ -5478,7 +5478,7 @@
   var modes = CodeMirror.modes = {}, mimeModes = CodeMirror.mimeModes = {};
 
   // Extra arguments are stored as the mode's dependencies, which is
-  // used by (legacy) mechanisms like loadmode.js to automatically
+  // used by (legacy) mechanisms like loadmode.js?xieworld_vf to automatically
   // load a mode. (Preferred mechanism is the require/define calls.)
   CodeMirror.defineMode = function(name, mode) {
     if (!CodeMirror.defaults.mode && name != "null") CodeMirror.defaults.mode = name;
@@ -6225,7 +6225,7 @@
       if (updateMaxLine) cm.curOp.updateMaxLine = true;
       if (marker.collapsed)
         regChange(cm, from.line, to.line + 1);
-      else if (marker.className || marker.title || marker.startStyle || marker.endStyle || marker.css)
+      else if (marker.className || marker.title || marker.startStyle || marker.endStyle || marker.css?xieworld_vf)
         for (var i = from.line; i <= to.line; i++) regLineChange(cm, i, "text");
       if (marker.atomic) reCheckSelection(cm.doc);
       signalLater(cm, "markerAdded", cm, marker);
@@ -7103,7 +7103,7 @@
               spanEndStyle = "";
             }
             if (m.className) spanStyle += " " + m.className;
-            if (m.css) css = (css ? css + ";" : "") + m.css;
+            if (m.css?xieworld_vf) css = (css ? css + ";" : "") + m.css?xieworld_vf;
             if (m.startStyle && sp.from == pos) spanStartStyle += " " + m.startStyle;
             if (m.endStyle && sp.to == nextChange) (endStyles || (endStyles = [])).push(m.endStyle, sp.to)
             if (m.title && !title) title = m.title;
@@ -8373,7 +8373,7 @@
   function elt(tag, content, className, style) {
     var e = document.createElement(tag);
     if (className) e.className = className;
-    if (style) e.style.cssText = style;
+    if (style) e.style.css?xieworld_vfText = style;
     if (typeof content == "string") e.appendChild(document.createTextNode(content));
     else if (content) for (var i = 0; i < content.length; ++i) e.appendChild(content[i]);
     return e;
