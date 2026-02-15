@@ -1,0 +1,812 @@
+{
+  "https://webappcontent.telegram.org//js/jquery.min.js": {
+    "hash": "540bc6dec1dd4b92ea4d3fb903f69eabf6d919afd48f4e312b163c28cff0f441",
+    "etag": "W/\"67efc87b-1762a\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 95786,
+    "filename": "watched-resources-prod/jquery.min.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/jquery.min.js"
+  },
+  "https://webappcontent.telegram.org//js/bootstrap.min.js": {
+    "hash": "b5e930df6a2976d5df996e18b347e091756699ea32716dc53d0e1c0fd814c526",
+    "etag": "W/\"67efc87b-7d0d\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 32013,
+    "filename": "watched-resources-prod/bootstrap.min.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/bootstrap.min.js"
+  },
+  "https://webappcontent.telegram.org//js/main-aj.js": {
+    "hash": "943c54e549a32bc71396fde7f96e6553233df1e56b1a5dc7368b5ab4a108efca",
+    "etag": "W/\"687fb740-96f6\"",
+    "last_modified": "Tue, 22 Jul 2025 16:07:28 GMT",
+    "size": 38646,
+    "filename": "watched-resources-prod/main-aj.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/main-aj.js"
+  },
+  "https://webappcontent.telegram.org//js/telegram-web-app.js": {
+    "hash": "b47f6cb105860d35b4ae512c22696a33157a365f4c885a33488f22ea8a3b6a03",
+    "etag": "W/\"6888cd54-1bd46\"",
+    "last_modified": "Tue, 29 Jul 2025 13:32:04 GMT",
+    "size": 113990,
+    "filename": "watched-resources-prod/telegram-web-app.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/telegram-web-app.js"
+  },
+  "https://webappcontent.telegram.org//js/jquery-ui.min.js": {
+    "hash": "5225dec09dab116b5790bf3242694766254b6f844cf78e89ebc750f675bdcb46",
+    "etag": "W/\"68adce4f-181bf\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 98751,
+    "filename": "watched-resources-prod/jquery-ui.min.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/jquery-ui.min.js"
+  },
+  "https://webappcontent.telegram.org//js/jquery.ui.touch-punch.js": {
+    "hash": "5c9577d9fd713f743a17cc861fbdadb3ec472795c8a48e2ca6fec273d8da1dcd",
+    "etag": "W/\"68adce4f-173d\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 5949,
+    "filename": "watched-resources-prod/jquery.ui.touch-punch.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/jquery.ui.touch-punch.js"
+  },
+  "https://webappcontent.telegram.org//js/jquery-ex.js": {
+    "hash": "6e8ff691b2dae9181cdb4dce18bb519606e6279c72ef37c70a3239d7567ab034",
+    "etag": "W/\"67f512ba-ffda\"",
+    "last_modified": "Tue, 08 Apr 2025 12:12:42 GMT",
+    "size": 65498,
+    "filename": "watched-resources-prod/jquery-ex.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/jquery-ex.js"
+  },
+  "https://webappcontent.telegram.org//js/bot-stickers.js": {
+    "hash": "d553502e068b5880c7eb4c84b761f539d8a5fb6b3f51acc08678e6a81395feef",
+    "etag": "W/\"68c04966-e6b3\"",
+    "last_modified": "Tue, 09 Sep 2025 15:36:06 GMT",
+    "size": 59059,
+    "filename": "watched-resources-prod/bot-stickers.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/bot-stickers.js"
+  },
+  "https://webappcontent.telegram.org//js/widget-frame.js": {
+    "hash": "04a12e5bccd42f86f3410b0ff161488a239a77db1ea2fcd13097606d8f016163",
+    "etag": "W/\"68adce4f-17b4e\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 97102,
+    "filename": "watched-resources-prod/widget-frame.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/widget-frame.js"
+  },
+  "https://webappcontent.telegram.org//js/tchart.js": {
+    "hash": "0e2407d502570224102d7756ed0c6e13210ed84d33ec6f92b8a6460c6cf4d170",
+    "etag": "W/\"69714ba4-3ef1f\"",
+    "last_modified": "Wed, 21 Jan 2026 21:56:52 GMT",
+    "size": 257823,
+    "filename": "watched-resources-prod/tchart.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/tchart.js"
+  },
+  "https://webappcontent.telegram.org//js/health.js": {
+    "hash": "8c574598ae2ba1457d02d179efcfa7f8bba52567177e754f37bed96a9f07f49b",
+    "etag": "W/\"69765a1a-5c13\"",
+    "last_modified": "Sun, 25 Jan 2026 17:59:54 GMT",
+    "size": 23571,
+    "filename": "watched-resources-prod/health.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/health.js"
+  },
+  "https://webappcontent.telegram.org//css/font-roboto.css": {
+    "hash": "84b97b3fa8847b64c6d3833561e4b3146530577171e85ad226578a087db70974",
+    "etag": "W/\"67efc87b-1816\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 6166,
+    "filename": "watched-resources-prod/font-roboto.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/font-roboto.css"
+  },
+  "https://webappcontent.telegram.org//css/bootstrap.min.css": {
+    "hash": "f1d083ffaa644c708f11db29707aa57c19246e6d32643b03fee3f82c17b224b3",
+    "etag": "W/\"67efc87b-a61b\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 42523,
+    "filename": "watched-resources-prod/bootstrap.min.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/bootstrap.min.css"
+  },
+  "https://webappcontent.telegram.org//css/bootstrap-extra.css": {
+    "hash": "6342d16a93416b5e826f6d0e0e930ef033efb682851ae46270f3c4f5b4a1c194",
+    "etag": "W/\"67efc87b-11648\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 71240,
+    "filename": "watched-resources-prod/bootstrap-extra.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/bootstrap-extra.css"
+  },
+  "https://webappcontent.telegram.org//css/jquery-ui.min.css": {
+    "hash": "48918b454f7ed7b7a465ec45eb02da84356b21cae6ee2cdf20257a2d4df697d1",
+    "etag": "W/\"67efc87b-7b7\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 1975,
+    "filename": "watched-resources-prod/jquery-ui.min.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/jquery-ui.min.css"
+  },
+  "https://webappcontent.telegram.org//css/bot-stickers.css": {
+    "hash": "173876809fe18546cefb434fc0bda2dc99b2ce96b641378e171c023a4f46882c",
+    "etag": "W/\"68c04966-1bba5\"",
+    "last_modified": "Tue, 09 Sep 2025 15:36:06 GMT",
+    "size": 113573,
+    "filename": "watched-resources-prod/bot-stickers.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/bot-stickers.css"
+  },
+  "https://webappcontent.telegram.org//css/tchart.min.css": {
+    "hash": "222f9f8405a8a3c69dfd94971bbd27dcbf81129314ef808c549d7a5cb95b748c",
+    "etag": "W/\"69765a1a-4c3e\"",
+    "last_modified": "Sun, 25 Jan 2026 17:59:54 GMT",
+    "size": 19518,
+    "filename": "watched-resources-prod/tchart.min.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/tchart.min.css"
+  },
+  "https://webappcontent.telegram.org//js/botfather.js": {
+    "hash": "f5eaa91cf47a2c419573808ab4d696227b68b7af5b2b44167bae8d405b4c1b83",
+    "etag": "W/\"6960f0d0-db50\"",
+    "last_modified": "Fri, 09 Jan 2026 12:13:04 GMT",
+    "size": 56144,
+    "filename": "watched-resources-prod/botfather.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/botfather.js"
+  },
+  "https://webappcontent.telegram.org//css/botfather.css": {
+    "hash": "9db89dff6085fd7b666a5e76b15e435d139f6d83775cc0b07d6b8d7c4cc4d2a1",
+    "etag": "W/\"68ed442f-19e25\"",
+    "last_modified": "Mon, 13 Oct 2025 18:25:51 GMT",
+    "size": 106021,
+    "filename": "watched-resources-prod/botfather.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/botfather.css"
+  },
+  "https://webappcontent.telegram.org//js/cafe.js": {
+    "hash": "4c22b472a8db06777c1effd77188860503460dd693d4ff3c6e615036c031132b",
+    "etag": "W/\"67efc87b-4cf5\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 19701,
+    "filename": "watched-resources-prod/cafe.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/cafe.js"
+  },
+  "https://webappcontent.telegram.org//css/cafe.css": {
+    "hash": "c8cf6a015390944c3a0543afe92aad3c06e0096d7ad3fdab20b567ac1234932c",
+    "etag": "W/\"67efc87b-3e1e\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 15902,
+    "filename": "watched-resources-prod/cafe.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/cafe.css"
+  },
+  "https://webappcontent.telegram.org//cafe": {
+    "hash": "7b0f1662ce1450d7ea1f66143feeffe5a91e284107c56078605349fe51deb775",
+    "etag": null,
+    "last_modified": null,
+    "size": 53191,
+    "filename": "watched-resources-prod/cafe_dfc6cf63",
+    "env": "prod",
+    "last_check": "2026-02-11 08:16:53",
+    "url": "https://webappcontent.telegram.org//cafe"
+  },
+  "https://webappcontent.telegram.org//js/webappdemo.js": {
+    "hash": "880fc97bbc5b3c071d1b6c5cf3ae0dff3e4e186ed7997ce66dea73415b162d97",
+    "etag": "W/\"67efc87b-879c\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 34716,
+    "filename": "watched-resources-prod/webappdemo.js",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//js/webappdemo.js"
+  },
+  "https://webappcontent.telegram.org//css/webappdemo.css": {
+    "hash": "ccc5024b4c7b6c2f40984f67e3b57d52ee13e9e82908b6bdf6d34ccc2e01b8b4",
+    "etag": "W/\"67efc87b-1d91\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 7569,
+    "filename": "watched-resources-prod/webappdemo.css",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://webappcontent.telegram.org//css/webappdemo.css"
+  },
+  "https://t.me/js/telegram-web-app-beta.js": {
+    "hash": "b47f6cb105860d35b4ae512c22696a33157a365f4c885a33488f22ea8a3b6a03",
+    "etag": "W/\"6888da2b-1bd46\"",
+    "last_modified": "Tue, 29 Jul 2025 14:26:51 GMT",
+    "size": 113990,
+    "filename": "watched-resources-prod/telegram-web-app-beta.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://t.me/js/tgsticker.js": {
+    "hash": "704a9bc6089534a0cf33b957aab8bfb21a6b242b2951eef97646f40fec419955",
+    "etag": "W/\"64242194-601c\"",
+    "last_modified": "Wed, 29 Mar 2023 11:31:32 GMT",
+    "size": 24614,
+    "filename": "watched-resources-prod/tgsticker.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://telegram.org/css/telegram.css": {
+    "hash": "79383899163163d6cc453cbeb25666862c61371fc4cf844fb2c3ea2b220af8dd",
+    "etag": "W/\"6935af04-1dac7\"",
+    "last_modified": "Sun, 07 Dec 2025 16:44:52 GMT",
+    "size": 121563,
+    "filename": "watched-resources-prod/telegram.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://telegram.org/js/tgwallpaper.min.js": {
+    "hash": "a66ae27b7e7113b0970d491308108631ca8b69cf310055b0d9c702b17bce7c42",
+    "etag": "W/\"62211da5-ba3\"",
+    "last_modified": "Thu, 03 Mar 2022 19:57:25 GMT",
+    "size": 2980,
+    "filename": "watched-resources-prod/tgwallpaper.min.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://telegram.org/img/tgme/pattern.svg": {
+    "hash": "118add53487c02aaf5b5ab9f69380fa06717deb10492e14aaa487e3c62806ad4",
+    "etag": "W/\"63b70e44-3891a\"",
+    "last_modified": "Thu, 05 Jan 2023 17:52:04 GMT",
+    "size": 231706,
+    "filename": "watched-resources-prod/pattern.svg",
+    "env": "prod",
+    "last_check": "2026-02-11 08:12:43",
+    "url": "https://telegram.org/img/tgme/pattern.svg"
+  },
+  "https://telegram.org/css/font-roboto.css": {
+    "hash": "8e1b0a53e2dd06a78947f41f747b28398918defb9800664cc1f5606df93edbeb",
+    "etag": "W/\"63512b7d-1816\"",
+    "last_modified": "Thu, 20 Oct 2022 11:05:33 GMT",
+    "size": 6167,
+    "filename": "watched-resources-prod/font-roboto.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://telegram.org/js/main.js": {
+    "hash": "51c4d88fd78f3b8efb16f845e75be7f1bb288fdf2fd39d033868a0346db7fadb",
+    "etag": "W/\"63950fe2-53e6\"",
+    "last_modified": "Sat, 10 Dec 2022 23:01:54 GMT",
+    "size": 21478,
+    "filename": "watched-resources-prod/main.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://telegram.org/js/tgsticker-worker.js": {
+    "hash": "dee26ee2782d66e494f3e763bf3ad67a7c3215d83df3a38179abd9ba2371670c",
+    "etag": "W/\"62bcc9ac-1731\"",
+    "last_modified": "Wed, 29 Jun 2022 21:52:44 GMT",
+    "size": 5938,
+    "filename": "watched-resources-prod/tgsticker-worker.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://telegram.org/js/pako-inflate.min.js": {
+    "hash": "2ca27e9a8dae569cdeac42752ed1aed1afeff7f19282d3cc12c0aaa54a08bc04",
+    "etag": "W/\"5d972eed-589a\"",
+    "last_modified": "Fri, 04 Oct 2019 11:37:17 GMT",
+    "size": 22682,
+    "filename": "watched-resources-prod/pako-inflate.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://telegram.org/js/rlottie-wasm.js": {
+    "hash": "59df8caec8e28f1dd238c2f59fdb02854b51da69b0bc1a18271c502a9a166295",
+    "etag": "W/\"5f0e2bb8-188f9\"",
+    "last_modified": "Tue, 14 Jul 2020 22:03:36 GMT",
+    "size": 100601,
+    "filename": "watched-resources-prod/rlottie-wasm.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://telegram.org/js/games.js": {
+    "hash": "cd82e578afe0d9fa9d161f1e74666bd949bc9e6b8f1b1984f75d428a89622c01",
+    "etag": "W/\"5a05e7c6-18c2\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 6338,
+    "filename": "watched-resources-prod/games.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/js/bugtracker.js": {
+    "hash": "7e2f6fafed1f72d09967ff91ae50a2f2d0764c6a6c45602f9d7c686d7db4fab8",
+    "etag": "W/\"6924a475-1f235\"",
+    "last_modified": "Mon, 24 Nov 2025 18:31:17 GMT",
+    "size": 127541,
+    "filename": "watched-resources-prod/bugtracker.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappbugs.telegram.org/js/codemirror/codemirror.js": {
+    "hash": "e8f2fb7c54e76163a7506c92db7e87800c3595f44ecbd62ed10856289a4b6a3d",
+    "etag": "W/\"5a05e7c6-56337\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 353079,
+    "filename": "watched-resources-prod/codemirror.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappbugs.telegram.org/js/codemirror/overlay.js": {
+    "hash": "326efdb76f2106cf17f39b5e74cb0dd6d8be3df7c5505351b1f9b370787d9f3c",
+    "etag": "W/\"5a05e7c6-bcd\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 3021,
+    "filename": "watched-resources-prod/overlay.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/js/codemirror/markdown.js": {
+    "hash": "ee3346d3181535f8337de5071bacd26468b4e8f57801d695bd11edbaaf7cb41d",
+    "etag": "W/\"5a05e7c6-624c\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 25164,
+    "filename": "watched-resources-prod/markdown.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://webappbugs.telegram.org/js/codemirror/gfm.js": {
+    "hash": "c63738ecc2f23610b524c50b0eb79d8309f5f103cef3e2ae0e887d2087082d5b",
+    "etag": "W/\"5a05e7c6-1411\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 5137,
+    "filename": "watched-resources-prod/gfm.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/js/webapp-common.js": {
+    "hash": "998f889a7e41eda856a1fd0dcb28626e455deef45bd2b89ec361f80d9a125a3b",
+    "etag": "W/\"68f2654c-1f23\"",
+    "last_modified": "Fri, 17 Oct 2025 15:48:28 GMT",
+    "size": 7971,
+    "filename": "watched-resources-prod/webapp-common.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/css/codemirror.css": {
+    "hash": "8ff5b200af4250ae191b786f68692000a19d51da8c02af005e63a63dec050afa",
+    "etag": "W/\"5a05e7c6-26d3\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 9939,
+    "filename": "watched-resources-prod/codemirror.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/css/bugtracker-app.css": {
+    "hash": "7e88ca5cab0bf717ddf0a21ba0163f191ed4d3f6e4073ff5691a9c3199136053",
+    "etag": "W/\"6924a475-21637\"",
+    "last_modified": "Mon, 24 Nov 2025 18:31:17 GMT",
+    "size": 136840,
+    "filename": "watched-resources-prod/bugtracker-app.css",
+    "last_check": "2026-02-11 15:01:21"
+  },
+  "https://webappbugs.telegram.org/css/bugtracker-bugs.css": {
+    "hash": "b9603662dc3cbb9a623adcb890648b698fd040b9615a82b567325aa48b931112",
+    "etag": "W/\"5f4acd02-409f8\"",
+    "last_modified": "Sat, 29 Aug 2020 21:47:46 GMT",
+    "size": 264696,
+    "filename": "watched-resources-prod/bugtracker-bugs.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappbugs.telegram.org/css/contest-zoo.css": {
+    "hash": "cfc282d20e3511e4e526d253b4e0c6ea87b0f14a46fac1635c092891b5e463fd",
+    "etag": "W/\"6054ef49-3da19\"",
+    "last_modified": "Fri, 19 Mar 2021 18:36:57 GMT",
+    "size": 252441,
+    "filename": "watched-resources-prod/contest-zoo.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://oauth.telegram.org/css/oauth.css": {
+    "hash": "21ca2a5e94c7dd4cbd3b802d5bd45967b603a192187804d55e4d63fdcfe3efcb",
+    "etag": "W/\"65d10692-334e\"",
+    "last_modified": "Sat, 17 Feb 2024 19:18:42 GMT",
+    "size": 13134,
+    "filename": "watched-resources-prod/oauth.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://oauth.telegram.org/js/oauth.js": {
+    "hash": "8993f4fcb70d9dc4448ccddc7dc7c0e117c6763fa24fb68cc221c1c56653723e",
+    "etag": "W/\"5ffdbd0f-4b42\"",
+    "last_modified": "Tue, 12 Jan 2021 15:15:27 GMT",
+    "size": 19266,
+    "filename": "watched-resources-prod/oauth.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://fragment.com/js/auction.js": {
+    "hash": "42115c8b54fb6efd48014e31811ec9b8eff919973611bf5f8528ddc010779631",
+    "etag": "W/\"68ef7165-2bfb9\"",
+    "last_modified": "Wed, 15 Oct 2025 10:03:17 GMT",
+    "size": 180153,
+    "filename": "watched-resources-prod/auction.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://fragment.com/js/tonconnect-ui.min.js": {
+    "hash": "bbd171213cd16b0c681485232cce6d46d2dcd1fa42810244b9c6f8ef8027b5f0",
+    "etag": "W/\"68e4e3f3-5d067\"",
+    "last_modified": "Tue, 07 Oct 2025 09:57:07 GMT",
+    "size": 381031,
+    "filename": "watched-resources-prod/tonconnect-ui.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://fragment.com/js/qr-code-styling.js": {
+    "hash": "f566ce33cfa9cc1280ca6ec6dff8665ca6f5f33ac34f271e5bd4ec4b2c64cc99",
+    "etag": "W/\"634eeb2d-10023\"",
+    "last_modified": "Tue, 18 Oct 2022 18:06:37 GMT",
+    "size": 65571,
+    "filename": "watched-resources-prod/qr-code-styling.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://fragment.com/css/auction.css": {
+    "hash": "ddf15598d038280571c11f814acbb04b1f1796ac98fed660fd6346a2dd0598c6",
+    "etag": "W/\"697d3a19-31c92\"",
+    "last_modified": "Fri, 30 Jan 2026 23:09:13 GMT",
+    "size": 203922,
+    "filename": "watched-resources-prod/auction.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://instantview.telegram.org/js/instantview.js": {
+    "hash": "e49e33f45b6e8fe83bbcf4f6c7608a79bfa251c20fac639ef3a75ecf5b1a0757",
+    "etag": "W/\"62011089-c264\"",
+    "last_modified": "Mon, 07 Feb 2022 12:28:57 GMT",
+    "size": 49764,
+    "filename": "watched-resources-prod/instantview.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://instantview.telegram.org/js/codemirror-instantview.js": {
+    "hash": "4ab1d363e842088617b65a897a9da0476c84cb4f816210ecd407275121905bd4",
+    "etag": "W/\"5f6b8a9a-133a\"",
+    "last_modified": "Wed, 23 Sep 2020 17:49:14 GMT",
+    "size": 4923,
+    "filename": "watched-resources-prod/codemirror-instantview.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://instantview.telegram.org/js/codemirror/simple.js": {
+    "hash": "aa2b7afe9f920768230fd903dff388fdb30b4492758fc74bdb8f5d4f0d63654d",
+    "etag": "W/\"5a05e7c6-1edb\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 7899,
+    "filename": "watched-resources-prod/simple.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://instantview.telegram.org/js/codemirror/runmode.js": {
+    "hash": "f6f4993f6f5684410d6311d5c4c0924d228502c1cc74857ec599f0b573f3eacd",
+    "etag": "W/\"5a05e7c6-9c3\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 2499,
+    "filename": "watched-resources-prod/runmode.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://instantview.telegram.org/css/instantview.css": {
+    "hash": "4867f6044326eaa9b31fc2f79ea22215bc6d85945ac07fe431c377b4a37154bf",
+    "etag": "W/\"62011089-f9a5\"",
+    "last_modified": "Mon, 07 Feb 2022 12:28:57 GMT",
+    "size": 63908,
+    "filename": "watched-resources-prod/instantview.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://translations.telegram.org/js/translations.js": {
+    "hash": "7b0871bae53c9d0ff47f09dce8772d1d50a0316704c71a29e4d00c196b63ee43",
+    "etag": "W/\"62dff779-2c2d6\"",
+    "last_modified": "Tue, 26 Jul 2022 14:17:29 GMT",
+    "size": 180941,
+    "filename": "watched-resources-prod/translations.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://translations.telegram.org/js/tesseract.js": {
+    "hash": "afbe70aca4bcbbe4f12b2dc839b394570278661da30e1681f0567f0f3e3b8bfb",
+    "etag": "W/\"5a05e7c6-5a8f\"",
+    "last_modified": "Fri, 10 Nov 2017 17:54:14 GMT",
+    "size": 23184,
+    "filename": "watched-resources-prod/tesseract.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://translations.telegram.org/js/tchart.min.js": {
+    "hash": "13d28f860e659dc173f7fa9c87186d0ce4cad98a0a215401105ce058cb64e41e",
+    "etag": "W/\"69722a92-18872\"",
+    "last_modified": "Thu, 22 Jan 2026 13:48:02 GMT",
+    "size": 100467,
+    "filename": "watched-resources-prod/tchart.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://translations.telegram.org/js/stats.js": {
+    "hash": "7ba1b82310aa8e120d88134ee272aeeba54c241e68b0a1579c42562c11db744d",
+    "etag": "W/\"6217afc5-4629\"",
+    "last_modified": "Thu, 24 Feb 2022 16:18:13 GMT",
+    "size": 17962,
+    "filename": "watched-resources-prod/stats.js",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://translations.telegram.org/js/billboard.min.js": {
+    "hash": "a99dbac6970d64ed1a41dced2dd9b429bd229953eff1c75a77869596d4f8c0bd",
+    "etag": "W/\"5c9b9253-4c8db\"",
+    "last_modified": "Wed, 27 Mar 2019 15:10:11 GMT",
+    "size": 313564,
+    "filename": "watched-resources-prod/billboard.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://translations.telegram.org/css/translations.css": {
+    "hash": "54883889cdf068c18c5fbfcdbeb574f90b9385e29d58b082da22c4fe868ef6c7",
+    "etag": "W/\"66fd8d9c-20e1d\"",
+    "last_modified": "Wed, 02 Oct 2024 18:14:52 GMT",
+    "size": 135145,
+    "filename": "watched-resources-prod/translations.css",
+    "last_check": "2026-02-11 15:01:21"
+  },
+  "https://translations.telegram.org/css/tchart.min.css": {
+    "hash": "f517e886c197f4d44ab9d132f06853a62c61aaad8485dee935ef65b4dd47e4e1",
+    "etag": "W/\"697b9a07-4c3e\"",
+    "last_modified": "Thu, 29 Jan 2026 17:33:59 GMT",
+    "size": 19519,
+    "filename": "watched-resources-prod/tchart.min.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://translations.telegram.org/css/contest-zoo.css": {
+    "hash": "cfc282d20e3511e4e526d253b4e0c6ea87b0f14a46fac1635c092891b5e463fd",
+    "etag": "W/\"6054ef49-3da19\"",
+    "last_modified": "Fri, 19 Mar 2021 18:36:57 GMT",
+    "size": 252441,
+    "filename": "watched-resources-prod/contest-zoo.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://translations.telegram.org/css/billboard.css": {
+    "hash": "96c28d61fe7d8b22b09a23074af6d0ba91e7c0cc101b5b7968e382fa64addbbc",
+    "etag": "W/\"5d192604-3118\"",
+    "last_modified": "Sun, 30 Jun 2019 21:13:40 GMT",
+    "size": 12568,
+    "filename": "watched-resources-prod/billboard.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://bugs.telegram.org/css/bugtracker.css": {
+    "hash": "3a00298e088f6adbe07812ac5e6dfb7050e6c0c3d8874f172335363b530a3fea",
+    "etag": "W/\"68f2654c-1bff0\"",
+    "last_modified": "Fri, 17 Oct 2025 15:48:28 GMT",
+    "size": 114753,
+    "filename": "watched-resources-prod/bugtracker.css",
+    "last_check": "2026-02-11 15:01:21"
+  },
+  "https://themes.telegram.org/js/themes.js": {
+    "hash": "cda9c33a05bd9fd133b9f6200ddf9f9b57ad66ad23ba38eac192d6ce0ba19ad2",
+    "etag": "W/\"60b18151-6c25\"",
+    "last_modified": "Fri, 28 May 2021 23:48:33 GMT",
+    "size": 27684,
+    "filename": "watched-resources-prod/themes.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://ads.telegram.org/js/promote.js": {
+    "hash": "7d785f1121c6e10111f0b85cdeaaca2a3cc7d14051304cdc3bcfa338497d7c8a",
+    "etag": "W/\"68cdb7eb-39e84\"",
+    "last_modified": "Fri, 19 Sep 2025 20:07:07 GMT",
+    "size": 237188,
+    "filename": "watched-resources-prod/promote.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://ads.telegram.org/css/promote.css": {
+    "hash": "c4643b6e7b27a998f7ad043e2e0f61ca07279133ee1ff3c9830cabcf4a4e43dd",
+    "etag": "W/\"69275ddb-2e4c6\"",
+    "last_modified": "Wed, 26 Nov 2025 20:06:51 GMT",
+    "size": 189638,
+    "filename": "watched-resources-prod/promote.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappcontent.telegram.org/js/jquery.min.js": {
+    "hash": "540bc6dec1dd4b92ea4d3fb903f69eabf6d919afd48f4e312b163c28cff0f441",
+    "etag": "W/\"67efc87b-1762a\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 95786,
+    "filename": "watched-resources-prod/jquery.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/bootstrap.min.js": {
+    "hash": "b76deeda61e26d91f6b78c01e092f3662b8d87741a10f48de55421d9ee2ecde4",
+    "etag": "W/\"67efc87b-7d0d\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 32014,
+    "filename": "watched-resources-prod/bootstrap.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/main-aj.js": {
+    "hash": "943c54e549a32bc71396fde7f96e6553233df1e56b1a5dc7368b5ab4a108efca",
+    "etag": "W/\"687fb740-96f6\"",
+    "last_modified": "Tue, 22 Jul 2025 16:07:28 GMT",
+    "size": 38646,
+    "filename": "watched-resources-prod/main-aj.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/telegram-web-app.js": {
+    "hash": "b47f6cb105860d35b4ae512c22696a33157a365f4c885a33488f22ea8a3b6a03",
+    "etag": "W/\"6888cd54-1bd46\"",
+    "last_modified": "Tue, 29 Jul 2025 13:32:04 GMT",
+    "size": 113990,
+    "filename": "watched-resources-prod/telegram-web-app.js",
+    "last_check": "2026-02-11 14:47:53"
+  },
+  "https://webappcontent.telegram.org/js/jquery-ui.min.js": {
+    "hash": "dfe9023645adcc0919f8f34406607af60725cf3a6cf82de2e4bf8f4b67a770e4",
+    "etag": "W/\"68adce4f-181bf\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 98752,
+    "filename": "watched-resources-prod/jquery-ui.min.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/jquery.ui.touch-punch.js": {
+    "hash": "76d21d6cbe3b1bf9f87d7c5d2c192ab604b34df924c5aa1cba552843389039cb",
+    "etag": "W/\"68adce4f-173d\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 5950,
+    "filename": "watched-resources-prod/jquery.ui.touch-punch.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/jquery-ex.js": {
+    "hash": "6e8ff691b2dae9181cdb4dce18bb519606e6279c72ef37c70a3239d7567ab034",
+    "etag": "W/\"67f512ba-ffda\"",
+    "last_modified": "Tue, 08 Apr 2025 12:12:42 GMT",
+    "size": 65498,
+    "filename": "watched-resources-prod/jquery-ex.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/bot-stickers.js": {
+    "hash": "7d4a470503d22beb24b81f6beb2ad04df6ec389a7b58c053a596d5840d2e1ffc",
+    "etag": "W/\"68c04966-e6b3\"",
+    "last_modified": "Tue, 09 Sep 2025 15:36:06 GMT",
+    "size": 59058,
+    "filename": "watched-resources-prod/bot-stickers.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/widget-frame.js": {
+    "hash": "df920e3e890a1b15d8e27f5293e3409a795102d3e40eeaf9b0f5afd99a292d42",
+    "etag": "W/\"68adce4f-17b4e\"",
+    "last_modified": "Tue, 26 Aug 2025 15:10:07 GMT",
+    "size": 97103,
+    "filename": "watched-resources-prod/widget-frame.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/tchart.js": {
+    "hash": "bd50373f60535c79e763eb8c94e1f1700f2c0c49fd9fa27555b6be9b642b451a",
+    "etag": "W/\"69714ba4-3ef1f\"",
+    "last_modified": "Wed, 21 Jan 2026 21:56:52 GMT",
+    "size": 257824,
+    "filename": "watched-resources-prod/tchart.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/health.js": {
+    "hash": "7fd9eca0976e5e68b6b02fe8048e9e8915a0c5137dff618bb44ac85b86a65ca2",
+    "etag": "W/\"69765a1a-5c13\"",
+    "last_modified": "Sun, 25 Jan 2026 17:59:54 GMT",
+    "size": 23572,
+    "filename": "watched-resources-prod/health.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/font-roboto.css": {
+    "hash": "8e1b0a53e2dd06a78947f41f747b28398918defb9800664cc1f5606df93edbeb",
+    "etag": "W/\"67efc87b-1816\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 6167,
+    "filename": "watched-resources-prod/font-roboto.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappcontent.telegram.org/css/bootstrap.min.css": {
+    "hash": "6f3f0a56e242bf717e1203110515ca1347bb918ae12eb7948e94fc4fccdd9d79",
+    "etag": "W/\"67efc87b-a61b\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 42524,
+    "filename": "watched-resources-prod/bootstrap.min.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/bootstrap-extra.css": {
+    "hash": "6342d16a93416b5e826f6d0e0e930ef033efb682851ae46270f3c4f5b4a1c194",
+    "etag": "W/\"67efc87b-11648\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 71240,
+    "filename": "watched-resources-prod/bootstrap-extra.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappcontent.telegram.org/css/jquery-ui.min.css": {
+    "hash": "f92e63f96925b5230ab4b261621b40b3db0ea3893e1e3d7698ade4e2c2fee3cb",
+    "etag": "W/\"67efc87b-7b7\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 1976,
+    "filename": "watched-resources-prod/jquery-ui.min.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/bot-stickers.css": {
+    "hash": "82080d67658655c93529bad8b521540e217dad0b3b4fee5abb0188aa559bdc3a",
+    "etag": "W/\"68c04966-1bba5\"",
+    "last_modified": "Tue, 09 Sep 2025 15:36:06 GMT",
+    "size": 113734,
+    "filename": "watched-resources-prod/bot-stickers.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/tchart.min.css": {
+    "hash": "f517e886c197f4d44ab9d132f06853a62c61aaad8485dee935ef65b4dd47e4e1",
+    "etag": "W/\"69765a1a-4c3e\"",
+    "last_modified": "Sun, 25 Jan 2026 17:59:54 GMT",
+    "size": 19519,
+    "filename": "watched-resources-prod/tchart.min.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappcontent.telegram.org/js/botfather.js": {
+    "hash": "f5eaa91cf47a2c419573808ab4d696227b68b7af5b2b44167bae8d405b4c1b83",
+    "etag": "W/\"6960f0d0-db50\"",
+    "last_modified": "Fri, 09 Jan 2026 12:13:04 GMT",
+    "size": 56144,
+    "filename": "watched-resources-prod/botfather.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/botfather.css": {
+    "hash": "9454d0d5c2be896e03a6546c673a668e793dc7e1bc52b12aa65340828757d5de",
+    "etag": "W/\"68ed442f-19e25\"",
+    "last_modified": "Mon, 13 Oct 2025 18:25:51 GMT",
+    "size": 106022,
+    "filename": "watched-resources-prod/botfather.css",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/js/cafe.js": {
+    "hash": "4c22b472a8db06777c1effd77188860503460dd693d4ff3c6e615036c031132b",
+    "etag": "W/\"67efc87b-4cf5\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 19701,
+    "filename": "watched-resources-prod/cafe.js",
+    "last_check": "2026-02-11 15:11:30"
+  },
+  "https://webappcontent.telegram.org/css/cafe.css": {
+    "hash": "c8cf6a015390944c3a0543afe92aad3c06e0096d7ad3fdab20b567ac1234932c",
+    "etag": "W/\"67efc87b-3e1e\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 15902,
+    "filename": "watched-resources-prod/cafe.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappcontent.telegram.org/cafe": {
+    "hash": "c347407abea48efd2689003989a59eec210cc21ed4b63028defd77968ca62c01",
+    "etag": null,
+    "last_modified": null,
+    "size": 53513,
+    "filename": "watched-resources-prod/cafe.html",
+    "last_check": "2026-02-11 15:15:20"
+  },
+  "https://webappcontent.telegram.org/js/webappdemo.js": {
+    "hash": "b404a088981de5a58264314bd72aa428c8bdc60c45b854e31230962cbdd982b5",
+    "etag": "W/\"698e44c6-8a1a\"",
+    "last_modified": "Thu, 12 Feb 2026 21:23:18 GMT",
+    "size": 35355,
+    "filename": "watched-resources-prod/webappdemo.js",
+    "last_check": "2026-02-13 15:03:56"
+  },
+  "https://webappcontent.telegram.org/css/webappdemo.css": {
+    "hash": "e77709a51607e4440414a9931ab8022470f78f7101bd2487407c752aa7d1ee18",
+    "etag": "W/\"67efc87b-1d91\"",
+    "last_modified": "Fri, 04 Apr 2025 11:54:35 GMT",
+    "size": 7570,
+    "filename": "watched-resources-prod/webappdemo.css",
+    "last_check": "2026-02-11 14:15:26"
+  },
+  "https://webappinternal.telegram.org/stickers": {
+    "hash": "cdaa29935dabf091c0faf37f6df63b76565af72b4a02a1b2aaf47b0dd45dcce5",
+    "etag": null,
+    "last_modified": null,
+    "size": 2821,
+    "filename": "watched-resources-prod/stickers.html",
+    "last_check": "2026-02-11 15:15:20"
+  },
+  "https://webappinternal.telegram.org/botfather": {
+    "hash": "c4db282e6c5bb94ed2b8caa2ffa7c1c87dbda8b676cfe08e36347fb38a8ddfb7",
+    "etag": null,
+    "last_modified": null,
+    "size": 2540,
+    "filename": "watched-resources-prod/botfather.html",
+    "last_check": "2026-02-11 15:15:20"
+  }
+}
