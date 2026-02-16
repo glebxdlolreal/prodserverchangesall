@@ -778,12 +778,10 @@
     "last_check": "2026-02-11 15:15:20"
   },
   "https://webappcontent.telegram.org/js/webappdemo.js": {
-    "hash": "b404a088981de5a58264314bd72aa428c8bdc60c45b854e31230962cbdd982b5",
-    "etag": "W/\"698e44c6-8a1a\"",
-    "last_modified": "Thu, 12 Feb 2026 21:23:18 GMT",
-    "size": 35355,
+    "hash": "40b228398a45c0adf56669b947353c05f3c61bd807372b0c2ab18ff155b06f02",
+    "size": 35657,
     "filename": "watched-resources-prod/webappdemo.js",
-    "last_check": "2026-02-13 15:03:56"
+    "last_check": "2026-02-16 18:17:29"
   },
   "https://webappcontent.telegram.org/css/webappdemo.css": {
     "hash": "e77709a51607e4440414a9931ab8022470f78f7101bd2487407c752aa7d1ee18",
