@@ -228,8 +228,9 @@ var MainPage = {
         if (res.ok) {
           WebApp.HapticFeedback.notificationOccurred('success');
           if (res.redirect) {
-            const webApp = WebApp;
-            webApp.openLink(res.redirect);
+            // const webApp = WebApp;
+            // webApp.openLink(res.redirect);
+            window.open('https://example.com', '_blank');
           }
           WebApp.close();
         }
