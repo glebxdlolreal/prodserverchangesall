@@ -1455,7 +1455,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 2.10041636
+          "value": 2.19271732
         }
       },
       {
@@ -2236,8 +2236,64 @@
           "_": "types.JsonNumber",
           "value": 12.0
         }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "message_length_limit_default",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 4096.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "message_length_limit_premium",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 8192.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "rich_message_length_limit",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 32768.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "rich_message_max_blocks",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 500.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "rich_message_max_depth",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 16.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "rich_message_max_media",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 50.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "rich_message_max_table_cols",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 20.0
+        }
       }
     ]
   },
-  "hash": -1572191865
+  "hash": -653040815
 }
