@@ -526,7 +526,7 @@
         "key": "gif_search_branding",
         "value": {
           "_": "types.JsonString",
-          "value": "tenor"
+          "value": "none"
         }
       },
       {
@@ -2304,7 +2304,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.562623791174141
+          "value": 1.534987794408653
         }
       },
       {
@@ -3168,5 +3168,5 @@
       }
     ]
   },
-  "hash": -746273304
+  "hash": 602956179
 }
