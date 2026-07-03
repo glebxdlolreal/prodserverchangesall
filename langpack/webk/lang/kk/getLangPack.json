@@ -1619,7 +1619,7 @@
     {
       "_": "types.LangPackString",
       "key": "AiEditor.NewStyle.InstructionsDescription",
-      "value": "Нұсқаулар (мысалы: «Қарақшы сияқты жаз. «Arr», «Ye», «Matey» сөздерін қолданып, қазына, теңіз және ром туралы әңгімелеңіз»)"
+      "value": "Нұсқаулар (мысалы: «Қарақшы сияқты жаз. «Arr», «Ye», «Matey» сөздерін қолданып, қазына және теңіз туралы әңгімелеңіз»)"
     },
     {
       "_": "types.LangPackString",
@@ -1698,6 +1698,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AiEditor.TranslateFrom",
+      "value": "%s"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AiEditor.TranslateTo",
       "value": "%s"
     },
@@ -1736,6 +1741,12 @@
       "key": "AiEditor.ViewStyle.InstallsCount",
       "one_value": "%d адам қолданады",
       "other_value": "%d адам қолданады"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "AiEditor.ViewStyle.InstallsCountCreatedByYou",
+      "one_value": "%d адам қолданады. Сіз жасаған.",
+      "other_value": "%d адам қолданады. Сіз жасаған."
     },
     {
       "_": "types.LangPackString",
@@ -3439,6 +3450,11 @@
       "_": "types.LangPackString",
       "key": "BotCantAddToAttachMenu",
       "value": "Бот тіркеме мәзіріне қосыла алмайды."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "BotCantReadChatTooltip",
+      "value": "Бұл бот чатты оқи алмайды, тек ол атап өтілген хатты оқи алады."
     },
     {
       "_": "types.LangPackString",
@@ -11755,6 +11771,26 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "NotificationsStoriesDisplayAuthor",
+      "value": "Жіберушінің атын көрсету"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "NotificationsStoriesGlobal",
+      "value": "Жаңа хикая"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "NotificationsStoriesImportant",
+      "value": "Маңызды хикая"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "NotificationsStoriesImportantInfo",
+      "value": "Үздік 5 контакт үшін әрқашан қосылған."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "NotificationsStoryMute2",
       "value": "Мәлімдемеу"
     },
@@ -14604,6 +14640,26 @@
       "_": "types.LangPackString",
       "key": "ReactionsByEmotionChartTitle",
       "value": "Реакция"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ReactionsNotifyContacts",
+      "value": "Контактілер"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ReactionsNotifyEveryone",
+      "value": "Бәрі"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ReactionsNotifyMessages",
+      "value": "Хатыма реакция жіберу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ReactionsNotifyStories",
+      "value": "Хикаяма реакция жіберу"
     },
     {
       "_": "types.LangPackString",
@@ -18552,6 +18608,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Story.Notification",
+      "value": "хикая жариялады"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Story.RemoveFromProfile",
       "value": "Бейіннен жою"
     },
@@ -19397,6 +19458,11 @@
       "_": "types.LangPackString",
       "key": "Translate",
       "value": "Аудару"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Translate.Error",
+      "value": "Мәтінді аудару кезінде бірбәлесі бұрыс болды."
     },
     {
       "_": "types.LangPackString",
@@ -20671,5 +20737,5 @@
       "other_value": "%1$d хат"
     }
   ],
-  "version": 298396
+  "version": 299558
 }
