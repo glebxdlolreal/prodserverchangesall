@@ -8790,6 +8790,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "GuestChatFor",
+      "value": ", шақырған"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "HelpUpgradeChannel",
       "value": "Арнаға арналған хикая"
     },
@@ -14650,6 +14655,11 @@
       "_": "types.LangPackString",
       "key": "ReactionsNotifyEveryone",
       "value": "Бәрі"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ReactionsNotifyFrom",
+      "value": "Қайдан"
     },
     {
       "_": "types.LangPackString",
@@ -20737,5 +20747,5 @@
       "other_value": "%1$d хат"
     }
   ],
-  "version": 299558
+  "version": 299562
 }
