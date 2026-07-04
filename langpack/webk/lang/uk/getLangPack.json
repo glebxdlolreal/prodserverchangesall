@@ -11537,7 +11537,7 @@
     {
       "_": "types.LangPackString",
       "key": "MultiAccount.AllAccounts",
-      "value": "Усі акаунти"
+      "value": "З усіх акаунтів"
     },
     {
       "_": "types.LangPackString",
@@ -21273,5 +21273,5 @@
       "other_value": "%1$d повідомлень"
     }
   ],
-  "version": 299685
+  "version": 299687
 }
