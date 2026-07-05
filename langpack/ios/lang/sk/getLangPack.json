@@ -2483,7 +2483,7 @@
     {
       "_": "types.LangPackString",
       "key": "AuthSessions.AddDevice.UrlLoginHint",
-      "value": "Tento kód môže byť použitý na to, aby sa niekto mohol prihlásiť do vášho Telegram účtu.\n\nAk chcete potvrdiť prihlásenie do Telegramu, prejdite do časti Nastavenia> Zariadenia > Prepojiť stolové zariadenie a naskenujte kód."
+      "value": "Tento kód môže byť použitý na to, aby sa niekto mohol prihlásiť do vášho Telegram účtu.\n\nAk chcete potvrdiť prihlásenie do Telegramu, prejdite do časti Nastavenia> Zariadenia > Pridať zariadenie a naskenujte kód."
     },
     {
       "_": "types.LangPackString",
@@ -12048,7 +12048,7 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.PostSuggestion.ApproveTime.AdminConfirmationPriceTon",
-      "value": "Za zverejnenie tohto príspevku dostanete %1$@ TON ({%2$@%)."
+      "value": "Za zverejnenie tohto príspevku dostanete %1$@ GRAM ({%2$@%)."
     },
     {
       "_": "types.LangPackString",
@@ -23009,6 +23009,14 @@
       "value": "Navýšiť ponuku"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "%@ aktívne aukcie",
+      "key": "Gift.ActiveAuctions.Title",
+      "many_value": "%@ aktívnych aukcií",
+      "one_value": "%@ aktívna aukcia",
+      "other_value": "%@ aktívnych aukcií"
+    },
+    {
       "_": "types.LangPackString",
       "key": "Gift.Attribute.Epic",
       "value": "impozantný"
@@ -23300,6 +23308,11 @@
       "_": "types.LangPackString",
       "key": "Gift.AuctionBid.PlaceBid",
       "value": "Ponúknuť cenu %@"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Gift.AuctionBid.Placed.Text",
+      "value": "Ak klesnete pod hornú hranicu %@, vaša ponuka sa presunie do ďalšieho kola."
     },
     {
       "_": "types.LangPackString",
@@ -23786,7 +23799,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Offer.PriceDescriptionTon",
-      "value": "Zadajte, koľko TON chcete ponúknuť za **%@**."
+      "value": "Zadajte, koľko GRAM chcete ponúknuť za **%@**."
     },
     {
       "_": "types.LangPackString",
@@ -25448,7 +25461,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Withdraw.Text",
-      "value": "Na prenos **%@** do blockchainu TON môžete použiť Fragment od tretej strany. Potom ho môžete spravovať ako NFT pomocou akejkoľvek aplikácie peňaženky TON.\n\nCez Fragment môžete takéto NFT presunúť aj späť na váš Telegramový účet."
+      "value": "Na prenos **%@** do blockchainu GRAM môžete použiť Fragment od tretej strany. Potom ho môžete spravovať ako NFT pomocou akejkoľvek aplikácie peňaženky GRAM.\n\nCez Fragment môžete takéto NFT presunúť aj späť na váš Telegramový účet."
     },
     {
       "_": "types.LangPackString",
@@ -26103,8 +26116,21 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Group.Setup.ApproveNewMembersApplyToExistingInviteLinksText.DisableChannel",
+      "value": "Chcete tiež v tomto kanáli vypnúť funkciu **Schváliť nových odberateľov** pre **%@**?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Group.Setup.ApproveNewMembersApplyToExistingInviteLinksText.EnableChannel",
       "value": "Chcete tiež v tomto kanáli zapnúť funkciu **Schvaľovať nových odberateľov** pre **%@** v tomto kanály?"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "%@ existujúce pozvánky",
+      "key": "Group.Setup.ApproveNewMembersApplyToExistingInviteLinksText.Links",
+      "many_value": "%@ existujúcich pozvánok",
+      "one_value": "%@ existujúcu pozvánku",
+      "other_value": "%@ existujúcich pozvánok"
     },
     {
       "_": "types.LangPackString",
@@ -38723,7 +38749,7 @@
     {
       "_": "types.LangPackString",
       "key": "PeerInfo.AllowedReactions.StarReactionsFooter",
-      "value": "Zapnite túto funkciu, aby vaši predplatitelia mohli reagovať na príspevky pomocou telegramových hviezdičiek, ktoré budete môcť neskôr vybrať ako TON. [Zistiť viac >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)"
+      "value": "Zapnite túto funkciu, aby vaši predplatitelia mohli reagovať na príspevky pomocou telegramových hviezdičiek, ktoré budete môcť neskôr vybrať ako GRAM. [Zistiť viac >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)"
     },
     {
       "_": "types.LangPackString",
@@ -47532,7 +47558,7 @@
     {
       "_": "types.LangPackString",
       "key": "Stars.SellGift.OnlyTonInfo",
-      "value": "Ak vám kupujúci zaplatí v TON, nie hviezdičkami, nemôže žiadať o vrátenie platby."
+      "value": "Ak vám kupujúci zaplatí v GRAM, nie hviezdičkami, nemôže žiadať o vrátenie platby."
     },
     {
       "_": "types.LangPackString",
@@ -47652,7 +47678,7 @@
     {
       "_": "types.LangPackString",
       "key": "Stars.Transaction.FragmentTopUpTon.Title",
-      "value": "Dobíjanie Gramu"
+      "value": "Dobíjanie GRAM"
     },
     {
       "_": "types.LangPackString",
@@ -47668,6 +47694,11 @@
       "_": "types.LangPackString",
       "key": "Stars.Transaction.FragmentWithdrawal.Title",
       "value": "Vyber hviezdičiek"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Stars.Transaction.FragmentWithdrawalTon.Title",
+      "value": "Vyberanie GRAM"
     },
     {
       "_": "types.LangPackString",
@@ -56880,6 +56911,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "WebApp.GuardDisclaimerText",
+      "value": "**%1$@** používa **%2$@** na privítanie nových členov. Ak chcete pokračovať, musíte súhlasiť s Podmienkami používania miniaplikácií."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "WebApp.ImportData.AccountHeader",
       "value": "ÚČET, Z KTORÉHO CHCETE IMPORTOVAŤ ÚDAJE"
     },
@@ -57218,6 +57254,11 @@
       "_": "types.LangPackString",
       "key": "WebBrowser.Exception.OpenInBrowser",
       "value": "Túto stránku vždy otvárať v prehliadači"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "WebBrowser.ExceptionAdded.Text",
+      "value": "Táto stránka sa vždy otvorí v aplikácii."
     },
     {
       "_": "types.LangPackString",
@@ -57580,5 +57621,5 @@
       "value": "Zadali ste neplatný bezpečnostný kód."
     }
   ],
-  "version": 21453265
+  "version": 21453335
 }
