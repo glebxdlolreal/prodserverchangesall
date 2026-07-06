@@ -2308,7 +2308,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.5667892521558364
+          "value": 1.7109318052810654
         }
       },
       {
@@ -3116,6 +3116,14 @@
       },
       {
         "_": "types.JsonObjectValue",
+        "key": "community_bot_peers_limit",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 100.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
         "key": "message_length_limit_default",
         "value": {
           "_": "types.JsonNumber",
@@ -3180,5 +3188,5 @@
       }
     ]
   },
-  "hash": 1953422387
+  "hash": -431662922
 }
