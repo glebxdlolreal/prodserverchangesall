@@ -10836,7 +10836,7 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.DeletePaidMessageTon.Text",
-      "value": "لن تستلم TON مقابل هذا المنشور إذا قمت بحذفه الآن. يجب أن يظل المنشور مرئيًا لمدة لا تقل عن **٢٤ ساعة** بعد نشره."
+      "value": "لن تستلم رصيد جرام مقابل هذا المنشور إذا حذفته الآن. يجب أن يظل المنشور مرئيًا لمدة لا تقل عن **٢٤ ساعة** بعد نشره."
     },
     {
       "_": "types.LangPackString",
@@ -12566,7 +12566,7 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.PostApproval.Message.AdminAgreementPriceTon",
-      "value": "💰 تم تحصيل ⁨%1$@⁩ من المستخدم.\n\n⌛ ستحصل قناة **⁨%2$@⁩** على رصيد TON بعد نشر الرسالة لمدة ٢٤ ساعة.\n\n🔄 إذا قمت بإزالة المنشور قبل أن يكون معروضًا لمدة ٢٤ ساعة؛ فستتم إعادة رصيد TON للمستخدم."
+      "value": "💰 تم تحصيل ⁨%1$@⁩ من المستخدم.\n\n⌛ ستحصل قناة **⁨%2$@⁩** على رصيد جرام بعد نشر الرسالة لمدة ٢٤ ساعة.\n\n🔄 إذا أزلت المنشور قبل أن يكون معروضًا لمدة ٢٤ ساعة؛ فسيُعاد رصيد جرام للمستخدم."
     },
     {
       "_": "types.LangPackString",
@@ -12856,7 +12856,7 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.PostSuggestion.Suggest.OfferTon",
-      "value": "TON"
+      "value": "تقديم جرام"
     },
     {
       "_": "types.LangPackString",
@@ -25311,7 +25311,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Offer.OfferTon",
-      "value": "عرض TON"
+      "value": "تقديم جرام"
     },
     {
       "_": "types.LangPackString",
@@ -34436,7 +34436,7 @@
     {
       "_": "types.LangPackString",
       "key": "Monetization.TonTransactions",
-      "value": "عمليات TON"
+      "value": "معاملات جرام"
     },
     {
       "_": "types.LangPackString",
@@ -62044,5 +62044,5 @@
       "value": "لقد قمت بإدخال رمز أمان غير صحيح."
     }
   ],
-  "version": 21463658
+  "version": 21490685
 }
