@@ -1228,6 +1228,21 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_action_community_added",
+      "value": "{from} ha aggiunto questo gruppo alla community {community}."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_action_community_added_unknown",
+      "value": "{from} ha aggiunto questo gruppo alla community."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_action_community_removed",
+      "value": "{from} ha rimosso questo gruppo dalla community."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_action_created_channel",
       "value": "Canale creato"
     },
@@ -4472,6 +4487,11 @@
       "_": "types.LangPackString",
       "key": "lng_article_limit_columns",
       "value": "La tabella dell'articolo contiene troppe colonne."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_limit_depth",
+      "value": "L'articolo è annidato troppo profondamente."
     },
     {
       "_": "types.LangPackString",
@@ -9458,6 +9478,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_admin_promote_title",
+      "value": "Rendi amministratore community"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_admin_title",
       "value": "Sei un amministratore community"
     },
@@ -9732,6 +9757,16 @@
       "_": "types.LangPackString",
       "key": "lng_community_request_invite_only_bot",
       "value": "Questo bot è solo su invito. Solo i membri invitati possono usarlo."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_message_owner",
+      "value": "Scrivi al proprietario del gruppo"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_message_owner_bot",
+      "value": "Scrivi al proprietario del bot"
     },
     {
       "_": "types.LangPackString",
@@ -14061,6 +14096,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_emoji_create_emoji_about",
+      "value": "Scegli le emoji corrispondenti alle tue emoji"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_emoji_create_image_title",
       "value": "Nuova emoji"
     },
@@ -15904,6 +15944,11 @@
       "_": "types.LangPackString",
       "key": "lng_formatting_math_result_label",
       "value": "Risultato"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_separate_line",
+      "value": "Formula su riga separata"
     },
     {
       "_": "types.LangPackString",
@@ -21561,6 +21606,11 @@
       "_": "types.LangPackString",
       "key": "lng_iv_editor_discard_draft_sure",
       "value": "Vuoi davvero scartare questo messaggio? Questa azione non può essere annullata."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_editor_media_invalid_file",
+      "value": "Spiacenti, solo foto, video e file audio sono supportati qui."
     },
     {
       "_": "types.LangPackString",
@@ -40943,5 +40993,5 @@
       "other_value": "Hai pagato {count} stelle."
     }
   ],
-  "version": 5712022
+  "version": 5712036
 }
