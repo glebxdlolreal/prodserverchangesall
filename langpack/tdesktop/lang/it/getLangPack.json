@@ -4375,6 +4375,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_insert_code",
+      "value": "Blocco di codice"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_insert_details",
       "value": "Dettagli"
     },
@@ -4460,8 +4465,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_limit_blocks",
+      "value": "L'articolo contiene troppi blocchi."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_limit_columns",
+      "value": "La tabella dell'articolo contiene troppe colonne."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_limit_length",
       "value": "Questo articolo è troppo lungo."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_limit_media",
+      "value": "L'articolo contiene troppi file multimediali."
     },
     {
       "_": "types.LangPackString",
@@ -4475,8 +4495,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_list_item_change",
+      "value": "Cambia oggetto elenco"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_list_lowercase_letters",
       "value": "Lettere minuscole"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_list_lowercase_roman",
+      "value": "Romano minuscolo"
     },
     {
       "_": "types.LangPackString",
@@ -4485,8 +4515,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_list_reversed",
+      "value": "Invertito"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_list_uppercase_letters",
       "value": "Lettere maiuscole"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_list_uppercase_roman",
+      "value": "Romano maiuscolo"
     },
     {
       "_": "types.LangPackString",
@@ -4510,6 +4550,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_premium_choice_about",
+      "value": "Questo messaggio usa la formattazione avanzata, che richiede {link}."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_premium_choice_about_link",
       "value": "Telegram Premium"
     },
@@ -4522,6 +4567,11 @@
       "_": "types.LangPackString",
       "key": "lng_article_premium_choice_title",
       "value": "Rimuovi formattazione"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_premium_required",
+      "value": "Abbonati a {link} per poter inviare articoli con formattazione avanzata."
     },
     {
       "_": "types.LangPackString",
@@ -9343,8 +9393,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_add_confirm",
+      "value": "Se questo gruppo viene approvato da un amministratore della community, i suoi membri potranno unirsi o richiedere di unirsi ad altre chat della community."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_add_confirm_add",
       "value": "Aggiungi"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_confirm_bot",
+      "value": "Se questo bot viene approvato da un amministratore della community, i membri della community potranno vederlo e usarlo."
     },
     {
       "_": "types.LangPackString",
@@ -9368,6 +9428,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_admin_about",
+      "value": "Ora puoi modificare le info di {community} e usare altri strumenti di amministrazione."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_admin_continue",
       "value": "Continua"
     },
@@ -9378,6 +9443,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_admin_dismiss_title",
+      "value": "Rimuoviti dagli amministratori della community"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_admin_promote",
       "value": "Promuovi"
     },
@@ -9385,6 +9455,11 @@
       "_": "types.LangPackString",
       "key": "lng_community_admin_promote_sure",
       "value": "{user} potrà modificare le info della community e usare altri strumenti di amministrazione."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_admin_title",
+      "value": "Sei un amministratore community"
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -9411,6 +9486,12 @@
       "_": "types.LangPackString",
       "key": "lng_community_ban_warning_title",
       "value": "Attenzione"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_bot_peers_limit",
+      "one_value": "Limite di {count} bot raggiunto.",
+      "other_value": "Limite di {count} bot raggiunto."
     },
     {
       "_": "types.LangPackString",
@@ -9500,6 +9581,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_delete_sure",
+      "value": "Sei sicuro di voler eliminare questa community? Questo separerà tutte le sue chat."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_existing",
       "value": "Aggiungi a una community esistente"
     },
@@ -9512,6 +9598,11 @@
       "_": "types.LangPackString",
       "key": "lng_community_hidden_chat_title",
       "value": "Chat nascosta"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_hidden_not_accessible",
+      "value": "Non puoi unirti o vedere questo gruppo finché un amministratore non ti inviterà."
     },
     {
       "_": "types.LangPackString",
@@ -9560,6 +9651,12 @@
     },
     {
       "_": "types.LangPackStringPluralized",
+      "key": "lng_community_peers_limit",
+      "one_value": "Limite di {count} chat raggiunto.",
+      "other_value": "Limite di {count} chat raggiunto."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
       "key": "lng_community_profile_status",
       "one_value": "Community con {count} chat",
       "other_value": "Community con {count} chat"
@@ -9591,13 +9688,40 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_removed_list_about",
+      "value": "Gli utenti rimossi dalla community saranno mostrati qui."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_request_add",
       "value": "Aggiungi"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_request_added_toast",
+      "one_value": "Chat aggiunta alla community.",
+      "other_value": "{count} chat aggiunte alla community."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_added_toast_undo",
+      "value": "Hai approvato la richiesta di aggiungere {chat} alla community."
     },
     {
       "_": "types.LangPackString",
       "key": "lng_community_request_decline",
       "value": "Rifiuta"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_request_declined_toast",
+      "one_value": "Richiesta di aggiungere chat rifiutata.",
+      "other_value": "{count} richieste di aggiungere chat rifiutate."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_declined_toast_undo",
+      "value": "Hai rifiutato la richiesta di aggiungere {chat} alla community."
     },
     {
       "_": "types.LangPackString",
@@ -9606,8 +9730,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_request_invite_only_bot",
+      "value": "Questo bot è solo su invito. Solo i membri invitati possono usarlo."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_request_only_members",
       "value": "Visibile solo ai suoi membri"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_sent",
+      "value": "La tua richiesta è stata inviata agli amministratori della community."
     },
     {
       "_": "types.LangPackString",
@@ -9640,6 +9774,12 @@
       "value": "Aggiungi tutto"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_requests_add_all_sure",
+      "one_value": "Vuoi aggiungere {count} chat alla community?",
+      "other_value": "Vuoi aggiungere {count} chat alla community?"
+    },
+    {
       "_": "types.LangPackString",
       "key": "lng_community_requests_add_all_title",
       "value": "Aggiungi tutte le chat"
@@ -9651,6 +9791,12 @@
       "other_value": "{count} richieste in sospeso"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_requests_count",
+      "one_value": "{count} chat suggerita per questa community",
+      "other_value": "{count} chat suggerite per questa community"
+    },
+    {
       "_": "types.LangPackString",
       "key": "lng_community_requests_decline_all",
       "value": "Rifiuta tutto"
@@ -9660,6 +9806,11 @@
       "key": "lng_community_requests_decline_all_sure",
       "one_value": "Vuoi davvero rifiutare {count} richiesta di accesso alla community?",
       "other_value": "Vuoi davvero rifiutare tutte le {count} richieste di accesso alla community?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_decline_all_title",
+      "value": "Rifiuta tutto"
     },
     {
       "_": "types.LangPackString",
@@ -9710,6 +9861,11 @@
       "_": "types.LangPackString",
       "key": "lng_community_visibility_hidden",
       "value": "Nascosta"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_hidden_about",
+      "value": "Solo i membri invitati e gli amministratori della community vedranno questa chat."
     },
     {
       "_": "types.LangPackString",
@@ -13920,6 +14076,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_emoji_group_badge",
+      "value": "Emoji gruppo"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_emoji_group_from_featured",
       "value": "Scegli dalle emoji in tendenza"
     },
@@ -14077,6 +14238,16 @@
       "_": "types.LangPackString",
       "key": "lng_ephemeral_command_tooltip",
       "value": "Gli altri membri non vedranno questo messaggio"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_ephemeral_reply_single_message",
+      "value": "Puoi inviare un solo messaggio in risposta a questo messaggio."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_ephemeral_reply_text_only",
+      "value": "Questo tipo di messaggio non può essere inviato in risposta a questo messaggio."
     },
     {
       "_": "types.LangPackString",
@@ -15743,6 +15914,11 @@
       "_": "types.LangPackString",
       "key": "lng_formatting_math_source_label",
       "value": "LaTeX"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_source_placeholder",
+      "value": "Sorgente formula"
     },
     {
       "_": "types.LangPackString",
@@ -23450,6 +23626,16 @@
       "_": "types.LangPackString",
       "key": "lng_media_video_title",
       "value": "Video"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_media_zoom_in",
+      "value": "Ingrandisci"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_media_zoom_out",
+      "value": "Riduci"
     },
     {
       "_": "types.LangPackString",
@@ -40757,5 +40943,5 @@
       "other_value": "Hai pagato {count} stelle."
     }
   ],
-  "version": 5711968
+  "version": 5712022
 }
