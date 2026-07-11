@@ -9581,6 +9581,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_remove_done",
+      "value": "Rimosso dalla community."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_sure",
+      "value": "Rimuovere {group} dalla community?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_request_add",
       "value": "Aggiungi"
     },
@@ -9623,6 +9633,11 @@
       "_": "types.LangPackString",
       "key": "lng_community_requests_about_link",
       "value": "Cambia impostazioni."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_add_all",
+      "value": "Aggiungi tutto"
     },
     {
       "_": "types.LangPackString",
@@ -21370,6 +21385,16 @@
       "_": "types.LangPackString",
       "key": "lng_iv_editor_discard_draft_sure",
       "value": "Vuoi davvero scartare questo messaggio? Questa azione non può essere annullata."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_editor_save_draft_failed",
+      "value": "Impossibile salvare la bozza."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_editor_save_draft_failed_error",
+      "value": "Impossibile salvare la bozza.\n\nErrore: {error}"
     },
     {
       "_": "types.LangPackString",
@@ -40732,5 +40757,5 @@
       "other_value": "Hai pagato {count} stelle."
     }
   ],
-  "version": 5711588
+  "version": 5711968
 }
