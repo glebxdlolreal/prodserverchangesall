@@ -15559,7 +15559,7 @@
     {
       "_": "types.LangPackString",
       "key": "ChatbotSetup.ErrorBotNotBusinessCapable",
-      "value": "Бұл бот әзірге Telegram Business-ті қолдамайды."
+      "value": "Бұл бот әзірге Хатшы режімді қолдамайды."
     },
     {
       "_": "types.LangPackString",
@@ -16506,6 +16506,21 @@
       "_": "types.LangPackString",
       "key": "Common.of",
       "value": "/"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Add.VisibilityHidden",
+      "value": "Жасырын"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Add.VisibilityVisible",
+      "value": "Көрінетін"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Request.AddAll",
+      "value": "Бәрін қосу"
     },
     {
       "_": "types.LangPackString",
@@ -42678,6 +42693,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Premium.RichText",
+      "value": "Пішімдеу құралдары"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Premium.Semiannual",
       "value": "Жарты жыл сайын"
     },
@@ -45441,6 +45461,41 @@
       "_": "types.LangPackString",
       "key": "Resolve.GiftErrorNotFound",
       "value": "Бұндай сыйлық жоқ."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.Menu.List.Bullet",
+      "value": "Маркерленген тізім"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.Menu.List.Checklist",
+      "value": "Тапсырма"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.Menu.List.Numbered",
+      "value": "Нөмірленген тізім"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.Menu.Table.Delete",
+      "value": "Кестені жою"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.MenuQuote",
+      "value": "Дәйексөз"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.SubscribeToPremium",
+      "value": "Premium-ге жазылу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichText.TableMenu.Alignment",
+      "value": "Теңестіру"
     },
     {
       "_": "types.LangPackString",
@@ -53257,6 +53312,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TextProcessing.ActionGenerate",
+      "value": "Генерациялау"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TextProcessing.ActionTitleNonPremium",
       "value": "Шектеуді ұлғайту"
     },
@@ -53475,6 +53535,11 @@
       "_": "types.LangPackString",
       "key": "TextProcessing.TextExpand",
       "value": "тағы"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "TextProcessing.TitleAICompose",
+      "value": "ЖИ арқылы жасау"
     },
     {
       "_": "types.LangPackString",
@@ -59317,5 +59382,5 @@
       "value": "Қауіпсіздік кодын қате енгіздіңіз."
     }
   ],
-  "version": 21491691
+  "version": 21499615
 }

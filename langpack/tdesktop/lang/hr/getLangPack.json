@@ -1231,6 +1231,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_action_community_added",
+      "value": "{from} dodaje ovu grupu u zajednicu {community}."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_action_created_channel",
       "value": "Napravljen je kanal"
     },
@@ -8618,7 +8623,7 @@
     {
       "_": "types.LangPackString",
       "key": "lng_chatbots_not_supported",
-      "value": "Ovaj bot trenutno ne podržava Telegram Business."
+      "value": "Ovaj bot ne podržava način rada kao tajnik."
     },
     {
       "_": "types.LangPackString",
@@ -9103,6 +9108,93 @@
       "_": "types.LangPackString",
       "key": "lng_comments_open_none",
       "value": "Ostavi komentar"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_about",
+      "value": "Dodajte svoju grupu u zajednicu s više povezanih razgovora."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_about_bot",
+      "value": "Dodajte svoj bot u zajednicu s više povezanih razgovora."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_button",
+      "value": "Dodaj grupu u zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_button_bot",
+      "value": "Dodaj bot u zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_button_channel",
+      "value": "Dodaj kanal u zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_chat",
+      "value": "Dodaj razgovor u zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_to",
+      "value": "Dodaj u zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create",
+      "value": "Napravi zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_hidden",
+      "value": "Skrivena grupa"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_name",
+      "value": "Naziv zajednice"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_title",
+      "value": "Nova zajednica"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_created",
+      "value": "Zajednica je napravljena."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_existing",
+      "value": "Dodajte u postojeću zajednicu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_manage_name",
+      "value": "Naziv zajednice"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "Zajednica s {count} razgovora",
+      "key": "lng_community_profile_status",
+      "one_value": "Zajednica s {count} razgovorom",
+      "other_value": "Zajednica sa {count} razgovora"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_show_as_one",
+      "value": "Prikaži kao jedan razgovor"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_show_as_one_about",
+      "value": "Grupirajte sve razgovore zajednice u jednu stavku na popisu razgovora."
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -13195,8 +13287,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_edited_at",
+      "value": "uređivano u {time}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_edited_date",
       "value": "Uređivano: {date}"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_edited_on",
+      "value": "uređivano {date} u {time}"
     },
     {
       "_": "types.LangPackString",
@@ -20838,6 +20940,11 @@
       "_": "types.LangPackString",
       "key": "lng_iv_click_to_view",
       "value": "Kliknite za pregled"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_details_state_expanded",
+      "value": "Prošireno"
     },
     {
       "_": "types.LangPackString",
@@ -30993,6 +31100,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_rights_community_info",
+      "value": "Uredi naziv zajednice"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_rights_default_restrictions_header",
       "value": "Koja dopuštenja imaju članovi ove grupe?"
     },
@@ -32284,6 +32396,11 @@
       "_": "types.LangPackString",
       "key": "lng_sent_date",
       "value": "Poslano: {date}"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_sent_on",
+      "value": "poslano {date} u {time}"
     },
     {
       "_": "types.LangPackString",
@@ -40380,5 +40497,5 @@
       "other_value": "Platili ste {count} zvjezdica."
     }
   ],
-  "version": 5693040
+  "version": 5711779
 }
