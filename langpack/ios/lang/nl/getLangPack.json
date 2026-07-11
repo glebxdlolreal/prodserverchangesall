@@ -13897,6 +13897,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatList.Context.Ungroup",
+      "value": "Apart weergeven"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatList.Context.UnhideArchive",
       "value": "Vastzetten in Chatlijst"
     },
@@ -14951,6 +14956,21 @@
       "_": "types.LangPackString",
       "key": "ChatList.UndoArchiveTitle",
       "value": "Chat gearchiveerd."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.UngroupCommunity.Action",
+      "value": "Apart weergeven"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.UngroupCommunity.Text",
+      "value": "Chats uit deze gemeenschap zullen afzonderlijk verschijnen in je chatlijst."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.UngroupCommunity.Title",
+      "value": "Chats apart weergeven?"
     },
     {
       "_": "types.LangPackString",
@@ -16524,8 +16544,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Add.ActionAddToCommunity",
+      "value": "Toevoegen aan gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Add.Title",
+      "value": "Chat toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Add.VisibilityHeader",
+      "value": "Zichtbaarheid van chat"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Add.VisibilityHidden",
       "value": "Verborgen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Add.VisibilityHiddenInfo",
+      "value": "Alleen uitgenodigde leden en beheerders van de gemeenschap zullen deze chat zien."
     },
     {
       "_": "types.LangPackString",
@@ -16534,8 +16574,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Add.VisibilityVisible",
+      "value": "Zichtbaar"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Add.VisibilityVisibleInfo",
       "value": "Iedereen in de gemeenschap kan deze chat zien."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.AddChat.Description",
+      "value": "Selecteer een chat om aan deze gemeenschap toe te voegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.AddChat.Title",
+      "value": "Een chat toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.AdminActions.BanFromCommunity",
+      "value": "Verbannen uit de gemeenschap"
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -16553,6 +16613,11 @@
       "_": "types.LangPackString",
       "key": "Community.AdminActions.WarningText",
       "value": "Als je **%@** verbant, %@ van deze gebruiker ook uit de gemeenschap verdwijnen."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.AdminActions.WarningTitle",
+      "value": "Waarschuwing"
     },
     {
       "_": "types.LangPackString",
@@ -16593,6 +16658,11 @@
       "_": "types.LangPackString",
       "key": "Community.Blacklist.UsersSectionTitle",
       "value": "Verwijderde gebruikers"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Chat.JoinToView",
+      "value": "Berichten in deze groep zijn alleen voor leden zichtbaar."
     },
     {
       "_": "types.LangPackString",
@@ -16692,6 +16762,22 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.List.AddToExistingHeader",
+      "value": "Toevoegen aan een bestaande gemeenschap"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.List.ChatCount",
+      "one_value": "%@ chat",
+      "other_value": "%@ chats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.List.CreateCommunity",
+      "value": "Creëer een gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.List.SubtitleBot",
       "value": "Maak je bot onderdeel van een gemeenschap met meerdere gerelateerde chats."
     },
@@ -16699,6 +16785,41 @@
       "_": "types.LangPackString",
       "key": "Community.List.SubtitleChannel",
       "value": "Maak je kanaal onderdeel van een gemeenschap met meerdere gerelateerde chats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.List.SubtitleGroup",
+      "value": "Maak je groep onderdeel van een gemeenschap met meerdere gerelateerde chats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.List.Title",
+      "value": "Gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PrivateChat.Info",
+      "value": "Deze groep is alleen op uitnodiging toegankelijk.\nHet is uitsluitend voor leden zichtbaar."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PrivateChat.MessageOwner",
+      "value": "Eigenaar van groep een bericht sturen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveChat.Remove",
+      "value": "Verwijderen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveChat.Text",
+      "value": "Deze chat zal worden verwijderd uit de gemeenschap."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveChat.Title",
+      "value": "Chat uit gemeenschap verwijderen?"
     },
     {
       "_": "types.LangPackString",
@@ -16818,6 +16939,31 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.View.PendingRequests",
+      "value": "Openstaande verzoeken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.SectionHidden",
+      "value": "Verborgen chats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.SectionJoined",
+      "value": "Chats waarin je zit"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.SectionRequestable",
+      "value": "Chats waarvan je lid kunt worden"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.SectionVisible",
+      "value": "Chats die je kunt bekijken"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.View.ShowAsOneChat",
       "value": "Als één chat weergeven"
     },
@@ -16825,6 +16971,11 @@
       "_": "types.LangPackString",
       "key": "Community.View.ShowAsOneChatInfo",
       "value": "Groepeer alle chats in deze gemeenschap onder één item in de chatlijst."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.Title",
+      "value": "Gemeenschap"
     },
     {
       "_": "types.LangPackString",
@@ -32053,6 +32204,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "MediaPicker.SetNewCommunityPhoto",
+      "value": "Nieuwe afbeelding voor gemeenschap instellen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "MediaPicker.SetNewGroupPhoto",
       "value": "Nieuwe groepsfoto instellen"
     },
@@ -40415,6 +40571,51 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "PeerInfo.Community.AddBot",
+      "value": "Bot toevoegen aan een gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.AddChannel",
+      "value": "Kanaal toevoegen aan een gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.AddGroup",
+      "value": "Groep toevoegen aan een gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.BotInfo",
+      "value": "Maak je bot onderdeel van een gemeenschap met meerdere gerelateerde chats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.ChannelInfo",
+      "value": "Maak je kanaal onderdeel van een gemeenschap met meerdere gerelateerde chats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.GroupInfo",
+      "value": "Maak je groep onderdeel van een gemeenschap met meerdere gerelateerde chats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.RemoveBot",
+      "value": "Bot verwijderen uit de gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.RemoveChannel",
+      "value": "Kanaal verwijderen uit de gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.Community.RemoveGroup",
+      "value": "Groep verwijderen uit de gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "PeerInfo.CustomizeNotifications",
       "value": "Aanpassen"
     },
@@ -40793,6 +40994,11 @@
       "_": "types.LangPackString",
       "key": "PeerInfo.GroupAboutItem",
       "value": "over"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PeerInfo.HiddenCommunityStatus",
+      "value": "Verborgen • %@"
     },
     {
       "_": "types.LangPackString",
@@ -43793,6 +43999,11 @@
       "_": "types.LangPackString",
       "key": "Privacy.GroupsAndChannels.InviteToChannelMultipleError",
       "value": "Sorry, vanwege de privacy-instellingen van deze gebruikers kun je geen groep met hen aanmaken."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Privacy.GroupsAndChannels.InviteToCommunityError",
+      "value": "Sorry, je kunt %@ niet aan de gemeenschap toevoegen vanwege de privacy-instellingen van %@."
     },
     {
       "_": "types.LangPackString",
@@ -46939,6 +47150,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Settings.ChangePhoto",
+      "value": "Afbeelding wijzigen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Settings.ChangeProfilePhoto",
       "value": "Profielfoto wijzigen"
     },
@@ -47401,6 +47617,11 @@
       "_": "types.LangPackString",
       "key": "Settings.SetNewProfilePhotoOrVideo",
       "value": "Nieuwe foto instellen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Settings.SetPhoto",
+      "value": "Afbeelding instellen"
     },
     {
       "_": "types.LangPackString",
@@ -59877,5 +60098,5 @@
       "value": "Je hebt een ongeldige beveiligingscode ingevoerd."
     }
   ],
-  "version": 21503529
+  "version": 21503621
 }
