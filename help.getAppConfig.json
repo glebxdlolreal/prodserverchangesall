@@ -2308,7 +2308,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.7109318052810654
+          "value": 1.6745395461460728
         }
       },
       {
@@ -3183,10 +3183,10 @@
         "key": "rich_message_posting",
         "value": {
           "_": "types.JsonString",
-          "value": "disabled"
+          "value": "premium"
         }
       }
     ]
   },
-  "hash": -431662922
+  "hash": -6146386
 }
