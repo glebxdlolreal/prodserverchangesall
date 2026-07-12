@@ -16606,6 +16606,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.AdminActions.WarningText",
+      "value": "%@ қолданушысын бұғаттау оның %@ чатын бірлестіктен жояды."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.AdminActions.WarningTitle",
       "value": "Ескерту"
     },
@@ -60057,5 +60062,5 @@
       "value": "Қауіпсіздік кодын қате енгіздіңіз."
     }
   ],
-  "version": 21505369
+  "version": 21507003
 }
