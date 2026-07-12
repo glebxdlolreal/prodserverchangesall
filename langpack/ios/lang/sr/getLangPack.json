@@ -46621,7 +46621,7 @@
     {
       "_": "types.LangPackString",
       "key": "RichText.Menu.List.Bullet",
-      "value": "Листа са тачкама"
+      "value": "Листа с тачкама"
     },
     {
       "_": "types.LangPackString",
@@ -60812,5 +60812,5 @@
       "value": "Унели сте неважећи безбедносни кôд."
     }
   ],
-  "version": 21504948
+  "version": 21504975
 }
