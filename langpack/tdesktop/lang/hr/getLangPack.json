@@ -4566,12 +4566,12 @@
     {
       "_": "types.LangPackString",
       "key": "lng_article_table_add_column",
-      "value": "Dodaj stupac"
+      "value": "Umetni stupac"
     },
     {
       "_": "types.LangPackString",
       "key": "lng_article_table_add_row",
-      "value": "Dodaj red"
+      "value": "Umetni red"
     },
     {
       "_": "types.LangPackString",
@@ -41203,5 +41203,5 @@
       "other_value": "Platili ste {count} zvjezdica."
     }
   ],
-  "version": 5713981
+  "version": 5713988
 }
