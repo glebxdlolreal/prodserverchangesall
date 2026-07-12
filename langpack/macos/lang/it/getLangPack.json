@@ -29108,6 +29108,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Underline",
+      "value": "Sottolineato"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichTextEditor.Placeholder.AddAuthor",
       "value": "Aggiungi autore"
     },
@@ -41159,5 +41164,5 @@
       "value": "Mostra sostituzioni"
     }
   ],
-  "version": 2230864
+  "version": 2230884
 }
