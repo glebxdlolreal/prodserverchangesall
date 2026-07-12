@@ -1233,6 +1233,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_action_community_added_channel",
+      "value": "Questo canale è stato aggiunto alla community {community}."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_action_community_added_chat",
+      "value": "Questa chat è stata aggiunta alla community {community}."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_action_community_added_unknown",
       "value": "{from} ha aggiunto questo gruppo alla community."
     },
@@ -9478,6 +9488,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_add_confirm_channel",
+      "value": "Se questo canale viene approvato da un amministratore della community, i suoi iscritti potranno unirsi o richiedere di unirsi ad altre chat della community."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_add_done",
       "value": "Gruppo aggiunto alla community."
     },
@@ -9699,6 +9714,16 @@
       "_": "types.LangPackString",
       "key": "lng_community_hidden_not_accessible",
       "value": "Non puoi unirti o vedere questo gruppo finché un amministratore non ti inviterà."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_hidden_not_accessible_bot",
+      "value": "Non puoi usare questo bot finché un amministratore non ti inviterà."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_hidden_not_accessible_channel",
+      "value": "Non puoi unirti o vedere questo canale finché un amministratore non ti inviterà."
     },
     {
       "_": "types.LangPackString",
@@ -41115,5 +41140,5 @@
       "other_value": "Hai pagato {count} stelle."
     }
   ],
-  "version": 5713696
+  "version": 5713703
 }
