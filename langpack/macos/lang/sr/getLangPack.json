@@ -1883,6 +1883,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AuthEmailSetup.Description",
+      "value": "Додајте своју адресу е-поште да бисте задржали приступ свом налогу."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AuthEmailSetup.ErrorEmailNotAllowed",
       "value": "Ова е-пошта се не може користити."
     },
@@ -5487,6 +5492,11 @@
       "_": "types.LangPackString",
       "key": "ChannelBlacklist.Restricted",
       "value": "ОГРАНИЧЕНИ"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChannelBlocklist.CommunityEmptyDescription",
+      "value": "Корисници којима је забрањен приступ се уклањају из заједнице и могу се вратити само ако их дода администратор. За њих не раде позивнице."
     },
     {
       "_": "types.LangPackString",
@@ -14181,8 +14191,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Communities.SubtitleBot",
+      "value": "Учините свог бота делом зајенице са више сродних ћаскања."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Communities.SubtitleChannel",
       "value": "Учините свој канал делом заједнице са више сродних ћаскања."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Communities.SubtitleGroup",
+      "value": "Учините своју групу делом заједнице са више сродних ћаскања."
     },
     {
       "_": "types.LangPackString",
@@ -14377,6 +14397,11 @@
       "_": "types.LangPackString",
       "key": "CommunityAdmins.StatusAdmin",
       "value": "админ"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.StatusCreator",
+      "value": "творац"
     },
     {
       "_": "types.LangPackString",
@@ -14684,6 +14709,11 @@
       "_": "types.LangPackString",
       "key": "CommunityRequests.VisibleOnlyToMembers",
       "value": "видљиво само члановима"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityRequests.VisibleOnlyToMembersSuffix",
+      "value": " · видљиво само њеним члановима"
     },
     {
       "_": "types.LangPackString",
@@ -29918,6 +29948,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "RichTextEditor.FormulaPreviewPlaceholder",
+      "value": "Овде ће се појавити преглед"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichTextEditor.Heading",
       "value": "Заглавље"
     },
@@ -30088,6 +30123,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "RichTextEditor.ShowAsCollage",
+      "value": "Прикажи као колаж"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.ShowAsSlider",
+      "value": "Прикажи као слајдер"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichTextEditor.Table.AddColumnLeft",
       "value": "Додај колону лево"
     },
@@ -30145,6 +30190,11 @@
       "_": "types.LangPackString",
       "key": "RichTextEditor.Text",
       "value": "Текст"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditorWindow.AiPremiumRequired",
+      "value": "ВИ-алати у напредном уређивачу текста доступни су уз Telegram Premium."
     },
     {
       "_": "types.LangPackString",
@@ -35115,6 +35165,11 @@
       "_": "types.LangPackString",
       "key": "StarGift.ViewAllVariants",
       "value": "%1$@ Погледај све варијанте >"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StarGiftNft.ResaleMinPriceInfo",
+      "value": "Ова опција је доступна само за поклоне чија је цена већа од %1$@."
     },
     {
       "_": "types.LangPackString",
@@ -42256,5 +42311,5 @@
       "value": "Прикажи замене"
     }
   ],
-  "version": 2231215
+  "version": 2231236
 }
