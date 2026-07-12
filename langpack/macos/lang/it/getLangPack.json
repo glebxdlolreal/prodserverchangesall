@@ -12764,6 +12764,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatList.UngroupChats",
+      "value": "Separare le chat?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatList.UnhideMuted",
       "value": "Mostra silenziate"
     },
@@ -13941,6 +13946,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityAdmin.BanMembers",
+      "value": "Bannare membri"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.Dismiss",
+      "value": "Rimuovi amministratore"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityAdmin.EditGroupList",
       "value": "Modificare la lista chat"
     },
@@ -13956,8 +13971,34 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityAdmin.PermissionsHeader",
+      "value": "COSA PUÒ FARE QUESTO AMMINISTRATORE"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.Save",
+      "value": "Salva"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.Header",
+      "value": "AMMINISTRATORI"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.Title",
+      "value": "Amministratori"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityInfo.Community",
       "value": "Community"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "CommunityInfo.CommunityWithChats",
+      "one_value": "Community con %1$d chat",
+      "other_value": "Community con %1$d chat"
     },
     {
       "_": "types.LangPackString",
@@ -13987,7 +14028,7 @@
     {
       "_": "types.LangPackStringPluralized",
       "key": "CommunityList.Members",
-      "one_value": "",
+      "one_value": "%1$d membro",
       "other_value": "%1$d membri"
     },
     {
@@ -15012,7 +15053,7 @@
     {
       "_": "types.LangPackStringPluralized",
       "key": "DeleteGroupMessages.MemberCount",
-      "one_value": "",
+      "one_value": "%1$d membro",
       "other_value": "%1$d membri"
     },
     {
@@ -19355,8 +19396,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "GroupInfo.Remove",
+      "value": "Rimuovi"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GroupInfo.RemoveGroupFromCommunity",
+      "value": "Rimuovi gruppo dalla community"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "GroupInfo.ScamWarning",
       "value": "⚠️ Attenzione: molti utenti hanno segnalato questo gruppo come truffa o account falso. Per favore fai attenzione, soprattutto se ti vengono chiesti dei soldi."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GroupInfo.SomethingWentWrong",
+      "value": "Qualcosa è andato storto."
     },
     {
       "_": "types.LangPackString",
@@ -27089,6 +27145,11 @@
       "_": "types.LangPackString",
       "key": "PremiumBoarding.MoreBusinessHeader_countable",
       "value": "%d"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "PremiumBoarding.RichFormattingInfo",
+      "value": "Aggiungi titoli, tabelle, elenchi, IA e media inline ai messaggi."
     },
     {
       "_": "types.LangPackString",
@@ -37232,6 +37293,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TextUtils.AddedToCommunity",
+      "value": "Aggiunto alla community \"%1$@\""
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TextUtils.ManagedBotCreated",
       "value": "%1$@ ha creato %2$@"
     },
@@ -38830,8 +38896,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "UserInfo.AddBotToCommunityInfo",
+      "value": "Rendi il tuo bot parte di una community con più chat correlate."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "UserInfo.ManagedBotCreatedBy",
       "value": "Creato e gestito da "
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "UserInfo.RemoveBotFromCommunityButton",
+      "value": "Rimovi bot dalla community"
     },
     {
       "_": "types.LangPackString",
@@ -41083,5 +41159,5 @@
       "value": "Mostra sostituzioni"
     }
   ],
-  "version": 2230833
+  "version": 2230864
 }
