@@ -10538,12 +10538,12 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.DeletePaidMessageTon.Text",
-      "value": "Du kommer inte få **TON** för detta inlägg om du tar bort det nu. Inlägget måste vara synligt i minst **24 timmar** efter publicering."
+      "value": "Du kommer inte få **Grams** för detta inlägg om du tar bort det nu. Inlägget måste vara synligt i minst **24 timmar** efter publicering."
     },
     {
       "_": "types.LangPackString",
       "key": "Chat.DeletePaidMessageTon.Title",
-      "value": "TON kommer förloras"
+      "value": "Grams kommer förloras"
     },
     {
       "_": "types.LangPackString",
@@ -24732,7 +24732,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Offer.DurationDescriptionTon",
-      "value": "Välj hur lång tid **%@** har på sig att acceptera ditt erbjudande. Om det löper ut kommer din TON automatiskt att återbetalas."
+      "value": "Välj hur lång tid **%@** har på sig att acceptera ditt bud. När det går ut kommer du få tillbaka dina Grams."
     },
     {
       "_": "types.LangPackString",
@@ -24762,7 +24762,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Offer.PriceDescriptionTon",
-      "value": "Ange mängden TON du vill erbjuda för **%@**."
+      "value": "Ange mängden Grams du vill erbjuda för **%@**."
     },
     {
       "_": "types.LangPackString",
@@ -24777,7 +24777,7 @@
     {
       "_": "types.LangPackString",
       "key": "Gift.Offer.PriceSectionTon",
-      "value": "TON ATT ERBJUDA"
+      "value": "GRAMS ATT ERBJUDA"
     },
     {
       "_": "types.LangPackString",
@@ -33469,7 +33469,7 @@
     {
       "_": "types.LangPackString",
       "key": "Monetization.TonTransactions",
-      "value": "TON transaktioner"
+      "value": "Gramtransaktioner"
     },
     {
       "_": "types.LangPackString",
@@ -40241,7 +40241,7 @@
     {
       "_": "types.LangPackString",
       "key": "PeerInfo.AllowedReactions.StarReactionsFooter",
-      "value": "Aktivera för att låta prenumeranter reagera på inlägg med Telegram Stjärnor som du sedan kan ta ut som TON. [Läs mer >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)"
+      "value": "Aktivera för att låta prenumeranter reagera på inlägg med Telegram Stjärnor som du sedan kan ta ut som Grams. [Läs mer >](https://telegram.org/tos/content-creator-rewards#2-3-subscriber-donations)"
     },
     {
       "_": "types.LangPackString",
@@ -60077,5 +60077,5 @@
       "value": "Du har angett en felaktig säkerhetskod."
     }
   ],
-  "version": 21513291
+  "version": 21514733
 }
