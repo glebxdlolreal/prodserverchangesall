@@ -16823,6 +16823,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Request.AddAll",
+      "value": "Añadir todo"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Request.AddAllChats",
       "value": "Añadir todos los chats"
     },
@@ -16845,6 +16850,11 @@
       "_": "types.LangPackString",
       "key": "Community.Request.Decline",
       "value": "Rechazar"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Request.DeclineAll",
+      "value": "Rechazar todo"
     },
     {
       "_": "types.LangPackString",
@@ -60083,5 +60093,5 @@
       "value": "Pusiste un código de seguridad inválido."
     }
   ],
-  "version": 21519303
+  "version": 21519756
 }
