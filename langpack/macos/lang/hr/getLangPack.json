@@ -12823,6 +12823,21 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatList.Ungroup",
+      "value": "Razgrupiraj"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.UngroupChats",
+      "value": "Razgrupirati razgovore?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.UngroupChatsInfo",
+      "value": "Razgovori iz ove zajednice pojavit će se zasebno na vašem popisu razgovora."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatList.UnhideMuted",
       "value": "Prikaži utišane"
     },
@@ -41075,5 +41090,5 @@
       "value": "Prikaži zamjene"
     }
   ],
-  "version": 2233772
+  "version": 2233783
 }
