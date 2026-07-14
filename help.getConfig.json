@@ -8,7 +8,7 @@
   "caption_length_max": 1024,
   "channels_read_media_period": 604800,
   "chat_size_max": 200,
-  "date": 1783982891,
+  "date": 1784035817,
   "dc_options": [
     {
       "_": "types.DcOption",
@@ -266,12 +266,12 @@
   "dc_txt_domain_name": "apv3.stel.com",
   "default_p2p_contacts": true,
   "edit_time_limit": 172800,
-  "expires": 1783986221,
+  "expires": 1784038823,
   "force_try_ipv6": false,
   "forwarded_count_max": 100,
   "gif_search_username": "gif",
   "img_search_username": "bing",
-  "me_url_prefix": "https://telegram.me/",
+  "me_url_prefix": "https://t.me/",
   "megagroup_size_max": 200000,
   "message_length_max": 4096,
   "notify_cloud_delay_ms": 30000,
