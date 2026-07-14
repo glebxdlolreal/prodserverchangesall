@@ -14017,6 +14017,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Communities.SubtitleGroup",
+      "value": "Dodajte svoju grupu u zajednicu s više povezanih razgovora."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityAdd.HiddenInfo",
       "value": "Samo pozvani članovi i administratori zajednice će vidjeti ovaj razgovor."
     },
@@ -41050,5 +41055,5 @@
       "value": "Prikaži zamjene"
     }
   ],
-  "version": 2232702
+  "version": 2233551
 }
