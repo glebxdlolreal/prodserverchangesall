@@ -10751,6 +10751,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "QrCodeCopied",
+      "value": "Codice QR copiato negli appunti."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "QrCodeCopy",
       "value": "Copia QR"
     },
@@ -14388,5 +14393,5 @@
       "value": "Il tuo nome"
     }
   ],
-  "version": 266009
+  "version": 266011
 }
