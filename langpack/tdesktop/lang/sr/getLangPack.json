@@ -4706,7 +4706,7 @@
     {
       "_": "types.LangPackString",
       "key": "lng_article_table_add_cells",
-      "value": "Додај колоне"
+      "value": "Додај ћелије"
     },
     {
       "_": "types.LangPackString",
@@ -41855,5 +41855,5 @@
       "other_value": "Платили сте {count} звездица."
     }
   ],
-  "version": 5734970
+  "version": 5734984
 }
