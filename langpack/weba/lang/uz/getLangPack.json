@@ -161,6 +161,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionNewCreatorPending",
+      "value": "Agar {from} qaytmasa, {user} 7 kundan keyin yangi egaga aylanadi."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionOpenGiftButton",
       "value": "Hadyani ochish"
     },
@@ -8379,5 +8384,5 @@
       "value": "Ismingiz"
     }
   ],
-  "version": 266298
+  "version": 266312
 }

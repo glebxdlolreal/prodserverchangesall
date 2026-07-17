@@ -30678,6 +30678,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Notification.GroupCreatorChangePending",
+      "value": "Agar %1$@ qaytmasa, %2$@ 7 kundan keyin yangi egaga aylanadi."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Notification.GroupInviter",
       "value": "%@ sizni bu guruhga taklif qildi"
     },
@@ -53549,5 +53554,5 @@
       "value": "Tekshirish kodini xato kiritdingiz."
     }
   ],
-  "version": 21554820
+  "version": 21554866
 }
