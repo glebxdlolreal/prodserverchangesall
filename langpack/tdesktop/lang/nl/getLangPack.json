@@ -9018,6 +9018,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_add_about_channel",
+      "value": "Maak je kanaal onderdeel van een gemeenschap met meerdere gerelateerde chats."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_add_button",
       "value": "Groep toevoegen aan een gemeenschap"
     },
@@ -9030,6 +9035,26 @@
       "_": "types.LangPackString",
       "key": "lng_community_add_button_channel",
       "value": "Kanaal toevoegen aan een gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_confirm_channel",
+      "value": "Als dit kanaal wordt goedgekeurd door een beheerder van de gemeenschap, kunnen de leden ook lid worden of een verzoek doen om lid te worden van andere chats in de gemeenschap."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_admin_about",
+      "value": "Je kunt nu de gegevens van {community} bewerken en andere beheerderstools gebruiken."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_hidden_bot",
+      "value": "Verborgen bot"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_hidden_channel",
+      "value": "Verborgen kanaal"
     },
     {
       "_": "types.LangPackString",
@@ -22534,6 +22559,12 @@
     },
     {
       "_": "types.LangPackStringPluralized",
+      "key": "lng_media_selected_message",
+      "one_value": "{count} bericht",
+      "other_value": "{count} berichten"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
       "key": "lng_media_selected_photo",
       "one_value": "{count} Foto",
       "other_value": "{count} Foto's"
@@ -22593,6 +22624,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_media_type_gifts",
+      "value": "Cadeaus"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_media_type_groups",
+      "value": "Groepen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_media_type_links",
       "value": "Gedeelde links"
     },
@@ -22608,13 +22649,33 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_media_type_posts",
+      "value": "Verhalen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_media_type_rounds",
       "value": "Videoberichten"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_media_type_saved",
+      "value": "Bewaard"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_media_type_similar",
+      "value": "Soortgelijk"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_media_type_songs",
       "value": "Audio"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_media_type_stories",
+      "value": "Verhalen"
     },
     {
       "_": "types.LangPackString",
@@ -39872,5 +39933,5 @@
       "other_value": "Je hebt {count} sterren betaald."
     }
   ],
-  "version": 5714726
+  "version": 5730313
 }
