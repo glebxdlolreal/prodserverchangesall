@@ -186,6 +186,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionPaymentRefunded",
+      "value": "{peer} {amount} toʻlovni qaytardi"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionPinnedMediaAlbum",
       "value": "albom"
     },
@@ -276,6 +281,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionStarGiftCraftedSelf",
+      "value": "Siz yangi hadya yaratdingiz!"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionStarGiftOfferAccepted",
       "value": "Bu taklif qabul qilindi."
     },
@@ -293,6 +303,11 @@
       "_": "types.LangPackString",
       "key": "ActionStarGiftOfferRejected",
       "value": "Bu taklif rad etildi."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionStarGiftPrepaidUpgrade",
+      "value": "{peer} hadyangiz uchun {cost} qiymatli yaxshilanish yubordi"
     },
     {
       "_": "types.LangPackString",
@@ -8384,5 +8399,5 @@
       "value": "Ismingiz"
     }
   ],
-  "version": 266312
+  "version": 266316
 }

@@ -1954,6 +1954,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionPrepaidGiftInbound",
+      "value": "un1 hadyangiz uchun **un2** qiymatli yaxshilanish yubordi"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionPrepaidGiftOutbound",
       "value": "Siz **un1**ning hadyasi uchun qiymati **un2** boʻlgan yaxshilanish yubordingiz"
     },
@@ -1966,6 +1971,11 @@
       "_": "types.LangPackString",
       "key": "ActionReactionsChangedList",
       "value": "un1 chat reaksiyalarini oʻzgartirdi:\n %1$s"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionRefunded",
+      "value": "un1 %1$s toʻlovni qaytardi"
     },
     {
       "_": "types.LangPackString",
@@ -2180,6 +2190,11 @@
       "_": "types.LangPackString",
       "key": "ActionTakeScreenshootYou",
       "value": "Siz skrinshot oldingiz!"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionUniqueGiftCrafted",
+      "value": "Siz yangi hadya yaratdingiz!"
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -52115,5 +52130,5 @@
       "value": "Telegram Passport"
     }
   ],
-  "version": 59984095
+  "version": 59984239
 }
