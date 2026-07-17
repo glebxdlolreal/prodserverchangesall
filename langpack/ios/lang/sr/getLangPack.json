@@ -43916,7 +43916,7 @@
     {
       "_": "types.LangPackString",
       "key": "Premium.Stories.Quality.Title",
-      "value": "Већи квалитет"
+      "value": "Виши квалитет"
     },
     {
       "_": "types.LangPackString",
@@ -60847,5 +60847,5 @@
       "value": "Унели сте неважећи безбедносни кôд."
     }
   ],
-  "version": 21559724
+  "version": 21559776
 }
