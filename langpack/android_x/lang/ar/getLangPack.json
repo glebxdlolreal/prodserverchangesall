@@ -12780,6 +12780,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "PollDescriptionEmpty",
+      "value": "إضافة وصف (اختياري)"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "PollDiscard",
       "value": "تجاهل الاستفتاء"
     },
@@ -24374,5 +24379,5 @@
       "zero_value": "⁨%1$s⁩ سنة"
     }
   ],
-  "version": 1618309
+  "version": 1623895
 }
