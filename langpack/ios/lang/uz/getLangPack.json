@@ -48120,6 +48120,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TextProcessing.AlertCreatorDeleteStyle.Text",
+      "value": "Haqiqatan ham bu uslub oʻchirilsinmi? U uni oʻrnatgan barcha uchun olib tashlanadi."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TextProcessing.EditStyle.ActionCreate",
       "value": "Yaratish"
     },
@@ -48140,6 +48145,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TextProcessing.LimitToast.Text",
+      "value": "Kuniga **50 baravar** koʻproq matn tahrirlari uchun **Telegram Premium** oling."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TextProcessing.LimitToast.Title",
       "value": "Kunlik limitga yetdi"
     },
@@ -48157,6 +48167,11 @@
       "_": "types.LangPackString",
       "key": "TextProcessing.ResultBadge",
       "value": "Natija"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "TextProcessing.StyleFooterCreatedBy",
+      "value": "Muallif: [%@]()"
     },
     {
       "_": "types.LangPackString",
@@ -53489,5 +53504,5 @@
       "value": "Tekshirish kodini xato kiritdingiz."
     }
   ],
-  "version": 21516498
+  "version": 21554000
 }
