@@ -17490,8 +17490,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Request.DeclineAllConfirmation",
+      "value": "رفض كل طلبات الانضمام (⁨%@⁩) إلى المجتمع؟"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Request.DeclinedToast",
       "value": "لقد رفضت أنت إضافة المحادثة إلى المجتمع."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.Request.EmptyText",
+      "value": "لا توجد محادثات أخرى مقترحة لهذا المجتمع."
     },
     {
       "_": "types.LangPackString",
@@ -17525,6 +17535,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Request.UnknownRequester",
+      "value": "مجهول"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.View.AddChatButton",
       "value": "إضافة محادثة إلى المجتمع"
     },
@@ -17537,6 +17552,11 @@
       "_": "types.LangPackString",
       "key": "Community.View.HiddenChatToast",
       "value": "لا يمكنك الانضمام أو رؤية هذه المحادثة إلا بعد أن يضيفك أحد المشرفين."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.View.PendingRequestApprovedToast",
+      "value": "لقد أضفت أنت المجموعة إلى المجتمع."
     },
     {
       "_": "types.LangPackString",
@@ -62904,5 +62924,5 @@
       "value": "لقد قمت بإدخال رمز أمان غير صحيح."
     }
   ],
-  "version": 21573417
+  "version": 21573438
 }
