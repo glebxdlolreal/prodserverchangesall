@@ -21661,9 +21661,21 @@
       "value": "%1$s marcó %2$s y %3$s"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "format_ActionChecklistMarkTasksDone",
+      "one_value": "%1$s tarea como hecha",
+      "other_value": "%1$s tareas como hechas"
+    },
+    {
       "_": "types.LangPackString",
       "key": "format_ActionChecklistMarkTasksOut",
       "value": "Marcaste %1$s y %2$s"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "format_ActionChecklistMarkTasksOutDone",
+      "one_value": "%1$s tarea como hecha",
+      "other_value": "%1$s tareas como hechas"
     },
     {
       "_": "types.LangPackString",
@@ -24145,5 +24157,5 @@
       "other_value": "%1$s años"
     }
   ],
-  "version": 1624388
+  "version": 1624396
 }
