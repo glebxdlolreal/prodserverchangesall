@@ -108,6 +108,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionChecklistAddOut",
+      "value": "Ви додаєте «%1$s» до списку"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionCreateChannel",
       "value": "Канал створено"
     },
@@ -24985,5 +24990,5 @@
       "other_value": "%1$s років"
     }
   ],
-  "version": 1624821
+  "version": 1624825
 }
