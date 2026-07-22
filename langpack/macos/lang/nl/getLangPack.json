@@ -1879,6 +1879,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AuthEmailSetup.ErrorInvalidEmail",
+      "value": "Voer een geldig e-mailadres in."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AuthSessions.MessageApp",
       "value": "Je hebt deze bot toestemming gegeven om je berichten te sturen toen je %@ opende."
     },
@@ -12983,6 +12988,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatService.BotAddedToCommunity",
+      "value": "De bot is toegevoegd aan de gemeenschap %1$@."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatService.ChangedToSameWallpaper",
       "value": "%1$@ heeft dezelfde achtergrond voor deze chat ingesteld"
     },
@@ -12990,6 +13000,11 @@
       "_": "types.LangPackString",
       "key": "ChatService.ChangedWallpaper",
       "value": "%1$@ heeft een nieuwe achtergrond voor deze chat ingesteld"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatService.ChannelAddedToCommunity",
+      "value": "Dit kanaal is toegevoegd aan de gemeenschap %1$@."
     },
     {
       "_": "types.LangPackString",
@@ -13293,6 +13308,11 @@
       "_": "types.LangPackString",
       "key": "ChatService.ViewBackground",
       "value": "Achtergrond bekijken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatService.YouAddedGroup",
+      "value": "Je hebt deze groep toegevoegd aan de gemeenschap %1$@."
     },
     {
       "_": "types.LangPackString",
@@ -14030,6 +14050,16 @@
       "_": "types.LangPackString",
       "key": "CommunityRequests.VisibleOnlyToMembers",
       "value": "alleen zichtbaar voor leden"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityView.HideChat",
+      "value": "Verbergen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityView.ShowChat",
+      "value": "Weergeven"
     },
     {
       "_": "types.LangPackString",
@@ -25108,7 +25138,7 @@
     {
       "_": "types.LangPackString",
       "key": "PeerInfo.Group.Menu.Promote",
-      "value": "Promoveren"
+      "value": "Benoemen"
     },
     {
       "_": "types.LangPackString",
@@ -28919,6 +28949,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "RichTextAiCompose.Result",
+      "value": "Resultaat"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichTextEditor.AttachTitle",
       "value": "Artikel"
     },
@@ -28961,6 +28996,61 @@
       "_": "types.LangPackString",
       "key": "RichTextEditor.MakeCollage",
       "value": "Collage maken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Bold",
+      "value": "Vetgedrukt"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Format",
+      "value": "Opmaak"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Italic",
+      "value": "Cursief"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.LookUp",
+      "value": "Opzoeken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Paste",
+      "value": "Plakken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.SelectAll",
+      "value": "Alles selecteren"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Share",
+      "value": "Delen…"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Menu.Underline",
+      "value": "Onderstreept"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Placeholder.AddAuthor",
+      "value": "Auteur toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Placeholder.AddCaption",
+      "value": "Bijschrift toevoegen…"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditor.Placeholder.TypeSomething",
+      "value": "Schrijf iets..."
     },
     {
       "_": "types.LangPackString",
@@ -29036,6 +29126,16 @@
       "_": "types.LangPackString",
       "key": "RichTextEditorWindow.CodeBlock",
       "value": "Codeblok"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditorWindow.PremiumToastEdit",
+      "value": "Om een bericht met deze opmaak te bewerken, heb je [Telegram Premium](premium) nodig."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichTextEditorWindow.PremiumToastSend",
+      "value": "Om een bericht met deze opmaak te versturen, heb je [Telegram Premium](premium) nodig."
     },
     {
       "_": "types.LangPackString",
@@ -40970,5 +41070,5 @@
       "value": "Toon vervangingen"
     }
   ],
-  "version": 2243712
+  "version": 2243773
 }
