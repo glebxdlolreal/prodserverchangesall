@@ -15947,6 +15947,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_filters_tabs_subtitle",
+      "value": "Apparenza schede"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_filters_tabs_text",
       "value": "Solo testo"
     },
@@ -41272,5 +41277,5 @@
       "other_value": "Hai pagato {count} stelle."
     }
   ],
-  "version": 5749429
+  "version": 5749432
 }
