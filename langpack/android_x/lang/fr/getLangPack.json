@@ -7523,6 +7523,26 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "EventLogTranslationOff",
+      "value": "%1$s a désactivé l'auto-traduction"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "EventLogTranslationOffYou",
+      "value": "Vous avez désactivé l'auto-traduction"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "EventLogTranslationOn",
+      "value": "%1$s a activé l'auto-traduction"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "EventLogTranslationOnYou",
+      "value": "Vous avez activé l'auto-traduction"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "EventLogUnmutedNewParticipants",
       "value": "%1$s a autorisé les nouveaux participants du salon vocal à parler"
     },
@@ -24369,5 +24389,5 @@
       "other_value": "%1$s ans"
     }
   ],
-  "version": 1633885
+  "version": 1633918
 }
