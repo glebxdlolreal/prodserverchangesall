@@ -1230,6 +1230,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_action_community_added_unknown",
+      "value": "{from} 已将此群组添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_action_community_added_unknown_channel",
       "value": "该频道已添加到社群。"
     },
@@ -1237,6 +1242,11 @@
       "_": "types.LangPackString",
       "key": "lng_action_community_added_unknown_chat",
       "value": "此聊天记录已添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_action_community_removed",
+      "value": "{from} 已从社群中移除此群组"
     },
     {
       "_": "types.LangPackString",
@@ -3860,6 +3870,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_ai_compose_create_placeholder",
+      "value": "请告诉我们要生成什么……"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_ai_compose_create_title",
       "value": "AI 生成"
     },
@@ -4335,13 +4350,223 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_editor_title",
+      "value": "文章"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_editor_title_editing",
       "value": "正在编辑"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_article_insert_blockquote",
+      "value": "引用"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_bullet_list",
+      "value": "要点列表"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_code",
+      "value": "代码"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_details",
+      "value": "详细信息"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_divider",
+      "value": "分隔线"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_emoji",
+      "value": "表情符号"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_article_insert_footer",
       "value": "页尾"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading",
+      "value": "标题"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading1",
+      "value": "标题 1"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading2",
+      "value": "标题 2"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading3",
+      "value": "标题 3"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading4",
+      "value": "标题 4"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading5",
+      "value": "标题 5"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_heading6",
+      "value": "标题 6"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_math",
+      "value": "数学公式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_media",
+      "value": "附加媒体"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_ordered_list",
+      "value": "社区列表"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_table",
+      "value": "表格"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_task_list",
+      "value": "核对清单"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_insert_text",
+      "value": "文本"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_limit_length",
+      "value": "文章过长。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_list_change",
+      "value": "更改清单"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_list_item_change",
+      "value": "更改清单项目"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_list_numbers",
+      "value": "数字"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_media_slideshow",
+      "value": "炫灯片"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_media_ungroup",
+      "value": "分开显示"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_menu_item",
+      "value": "文章"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_placeholder_author",
+      "value": "添加作者"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_placeholder_cell",
+      "value": "储存格"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_placeholder_quote",
+      "value": "输入引用"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_placeholder_title",
+      "value": "标题"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_premium_choice_about",
+      "value": "此消息包含进皆格式，需要 {link} 才能显示。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_premium_choice_about_link",
+      "value": "Telegram 高级版"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_premium_choice_plain",
+      "value": "以纯文字发送"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_premium_required_link",
+      "value": "Telegram 高级版"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_submit_empty",
+      "value": "文章不能为空。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_table_borderless",
+      "value": "无边框"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_table_split_cell",
+      "value": "分拆单元格"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_tooltip_emoji",
+      "value": "表情符号面板"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_tooltip_list_style",
+      "value": "列表样式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_tooltip_table_style",
+      "value": "表格样式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_article_tooltip_text_style",
+      "value": "文本样式"
     },
     {
       "_": "types.LangPackString",
@@ -8900,13 +9125,78 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_add_about",
+      "value": "将您的群组加入拥有多个相关聊天的社群中。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_about_bot",
+      "value": "让你的机器人成为拥有多个相关聊天的社群的一部分。"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_add_about_channel",
       "value": "让你的频道成为拥有多个相关聊天的社群的一部分。"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_add_button",
+      "value": "将群组添加到社群中"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_button_bot",
+      "value": "将机器人添加到社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_button_channel",
+      "value": "将频道添加到社群中"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_chat",
+      "value": "将聊天添加到社群中"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_confirm",
+      "value": "如果该群组获得社群管理员批准，其成员将能够加入或申请加入社群中的其他聊天。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_confirm_add",
+      "value": "添加"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_confirm_bot",
+      "value": "如果该机器人获得社群管理员批准，社群成员将能够看到并使用它。"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_add_confirm_channel",
       "value": "如果该频道获得社群管理员批准，其订阅者将能够加入或申请加入社群中的其他聊天。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_done",
+      "value": "群组已添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_done_bot",
+      "value": "机器人已添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_done_channel",
+      "value": "频道已添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_add_to",
+      "value": "添加到社群"
     },
     {
       "_": "types.LangPackString",
@@ -8930,13 +9220,98 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_admin_promote",
+      "value": "提权"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_admin_promote_sure",
+      "value": "{user} 将能够编辑社群信息并使用其他管理工具。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_admin_promote_title",
+      "value": "指派社群管理员"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_admin_title",
+      "value": "您是社群管理员"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_ban_button",
       "value": "封禁"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_ban_toggle",
+      "value": "被社群封禁"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_ban_warning_title",
       "value": "警告"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_remove_bot",
+      "value": "移除机器人"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_remove_channel",
+      "value": "移除频道"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_remove_group",
+      "value": "移除群组"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_view_bot",
+      "value": "查看机器人"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_view_channel",
+      "value": "查看频道"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chat_view_group",
+      "value": "查看群组"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_chats",
+      "other_value": "{count} 个聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chats_joined",
+      "value": "已加入的聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chats_requestable",
+      "value": "隐藏聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_chats_viewable",
+      "value": "您可以查看的聊天记录"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create",
+      "value": "创建社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_hidden",
+      "value": "隐藏群组"
     },
     {
       "_": "types.LangPackString",
@@ -8950,8 +9325,48 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_create_name",
+      "value": "社群名称"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_create_title",
+      "value": "新社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_created",
+      "value": "社群已建立！"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_delete",
+      "value": "删除社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_delete_sure",
+      "value": "您确定要删除此社群吗？这将取消与所有聊天的绑定。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_existing",
+      "value": "加入现有社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_hidden_chat_about",
+      "value": "只有受邀成员和社群管理员才能看到此聊天记录。"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_hidden_chat_title",
       "value": "已隐藏聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_hidden_not_accessible",
+      "value": "在获得管理员邀请之前，您无法加入或查看此群组。"
     },
     {
       "_": "types.LangPackString",
@@ -8965,8 +9380,33 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_join_sure",
+      "value": "您想要加入 {group}?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_manage",
+      "value": "管理社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_manage_all_members",
+      "value": "所有成员"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_manage_all_members_about",
       "value": "允许成员将自己的群组和频道添加到社群。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_manage_name",
+      "value": "社群名称"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_manage_only_admins",
+      "value": "仅限管理员"
     },
     {
       "_": "types.LangPackString",
@@ -8975,13 +9415,213 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_manage_who_add",
+      "value": "谁可以添加聊天？"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_profile_status",
+      "other_value": "包含 {count} 个聊天的社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_button",
+      "value": "从社群中移除群组"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_button_bot",
+      "value": "从社群中移除机器人"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_button_channel",
+      "value": "从社群中删除频道"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_done",
+      "value": "已从社群中移除。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_remove_sure",
+      "value": "您确定要将从社群中移除 {group} 吗？"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_add",
+      "value": "添加"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_decline",
+      "value": "拒绝"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_request_invite_only_channel",
       "value": "此频道仅限受邀者加入。只有频道成员才能查看此频道。"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_community_request_message_owner",
+      "value": "私信群组拥有着"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_message_owner_bot",
+      "value": "私信机器人拥有着"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_community_request_message_owner_channel",
       "value": "私信频道拥有者"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_only_members",
+      "value": "仅对成员可见"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_sent",
+      "value": "您的申请已发送给社群管理员。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_suggested_bot",
+      "value": "{user} 推荐了此机器人"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_suggested_channel",
+      "value": "{user} 推荐了此频道"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_request_suggested_group",
+      "value": "{user} 已推荐此群组"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_about",
+      "value": "聊天内容需要经管理员批准后才能添加到社群。{link}"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_about_link",
+      "value": "更改设置。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_add_all",
+      "value": "全部添加"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_requests_add_all_sure",
+      "other_value": "您想要将 {count} 个聊天添加到社群吗？"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_add_all_title",
+      "value": "添加所有聊天"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_requests_button",
+      "other_value": "{count} 个待处理申请"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "lng_community_requests_count",
+      "other_value": "{count} 个聊天已推荐给此社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_decline_all",
+      "value": "全部拒绝"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_decline_all_title",
+      "value": "全部拒绝"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_requests_title",
+      "value": "待处理申请"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_show_as_one",
+      "value": "以单一聊天显示"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_show_as_one_about",
+      "value": "将所有社群聊天汇总为聊天列表中的单个项目。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_status",
+      "value": "社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_title",
+      "value": "社群"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_ungroup",
+      "value": "分开显示"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_ungroup_text",
+      "value": "来自该社区的聊天记录将单独显示在您的聊天列表中。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_ungroup_title",
+      "value": "分开显示聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_view",
+      "value": "查看"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_hidden",
+      "value": "隐藏"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_hidden_about",
+      "value": "只有受邀成员和社群管理员才能看到此聊天记录。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_note",
+      "value": "您之后将无法更改此设置。"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_title",
+      "value": "聊天是否可见"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_visible",
+      "value": "可见"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_community_visibility_visible_about",
+      "value": "社群里的任何人都可以查看此聊天记录。"
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -12975,6 +13615,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_emoji_adapt_sticker",
+      "value": "由贴纸建立"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_emoji_add_existing",
+      "value": "添加现有表情符号"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_emoji_add_to_set",
       "value": "添加到表情包"
     },
@@ -13050,8 +13700,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_emoji_create_image_title",
+      "value": "新表情符号"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_emoji_create_new",
+      "value": "创建新表情符号"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_emoji_featured_unlock",
       "value": "解锁"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_emoji_group_badge",
+      "value": "群组表情符号"
     },
     {
       "_": "types.LangPackString",
@@ -13202,6 +13867,16 @@
       "_": "types.LangPackString",
       "key": "lng_enter_contact_data",
       "value": "新建联系人"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_ephemeral_visible_to",
+      "value": "仅 {user} 可见"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_ephemeral_visible_you",
+      "value": "仅您自己可见"
     },
     {
       "_": "types.LangPackString",
@@ -14797,6 +15472,31 @@
       "_": "types.LangPackString",
       "key": "lng_formatting_link_url",
       "value": "链接"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_create_title",
+      "value": "插入公式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_edit_title",
+      "value": "编辑公式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_result_label",
+      "value": "结果"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_source",
+      "value": "公式"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_formatting_math_source_label",
+      "value": "LaTeX 公式"
     },
     {
       "_": "types.LangPackString",
@@ -19915,6 +20615,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_in_dlg_table",
+      "value": "列表"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_in_dlg_todo_list",
       "value": "核对清单"
     },
@@ -20317,6 +21022,16 @@
       "_": "types.LangPackString",
       "key": "lng_iv_click_to_view",
       "value": "点击查看"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_details_state_collapsed",
+      "value": "已折叠"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_iv_details_state_expanded",
+      "value": "已扩展"
     },
     {
       "_": "types.LangPackString",
@@ -21182,6 +21897,11 @@
       "_": "types.LangPackString",
       "key": "lng_manage_channel_title",
       "value": "管理频道"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_manage_community_title",
+      "value": "管理社群"
     },
     {
       "_": "types.LangPackString",
@@ -26690,6 +27410,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_premium_summary_about_rich_formatting",
+      "value": "在消息中添加标题、表格、内嵌媒体和 AI 内容。"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_premium_summary_about_stories",
       "value": "无限发布数量、优先显示、隐身模式、永久访客历史，以及更多功能。"
     },
@@ -27422,6 +28147,11 @@
       "_": "types.LangPackString",
       "key": "lng_profile_action_short_leave",
       "value": "离开"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_profile_action_short_live_stream",
+      "value": "直播"
     },
     {
       "_": "types.LangPackString",
@@ -30200,6 +30930,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_rights_community_ban",
+      "value": "封禁成员"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_rights_community_info",
+      "value": "编辑社群名称"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_rights_community_linked",
       "value": "编辑聊天清单"
     },
@@ -30840,6 +31580,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_search_filter_from_archive",
+      "value": "来自归档"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_search_filter_group",
       "value": "群聊"
     },
@@ -30890,6 +31635,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_search_tab_archive",
+      "value": "归档"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_search_tab_by_hashtag",
       "value": "输入标签，查找包含该标签的消息。"
     },
@@ -30927,6 +31677,11 @@
       "_": "types.LangPackString",
       "key": "lng_search_tab_this_chat",
       "value": "此聊天"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_search_tab_this_community",
+      "value": "此社群"
     },
     {
       "_": "types.LangPackString",
@@ -35052,6 +35807,16 @@
       "_": "types.LangPackString",
       "key": "lng_sr_country_column_name",
       "value": "国家名称"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_sr_folder_locked",
+      "value": "{text}, 需要高级版订阅"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_sr_folder_locked_about",
+      "value": "点击查看订阅选项。"
     },
     {
       "_": "types.LangPackString",
@@ -39364,5 +40129,5 @@
       "other_value": "您支付了 {count} 颗星星。"
     }
   ],
-  "version": 5747112
+  "version": 5751321
 }
