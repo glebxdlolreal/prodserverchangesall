@@ -141,6 +141,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionChatOwnerLeft",
+      "value": "Чат иесі шығып кетті"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionChatOwnerLeftTo",
       "value": "Чат иесі шығып кетті. Қайтып оралмаса, %1$s жаңа иесі болады"
     },
@@ -504,6 +509,16 @@
       "_": "types.LangPackString",
       "key": "ActionTopicChangedIcon",
       "value": "%2$s тақырып таңбасын өзгертті: %1$s"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionTopicChangedIconName",
+      "value": "%3$s тақырып атауы мен таңбасын %1$s %2$s деп өзгертті"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionTopicChangedIconNameOut",
+      "value": "Тақырып атауы мен таңбасын %1$s %2$s деп өзгерттіңіз"
     },
     {
       "_": "types.LangPackString",
@@ -18561,13 +18576,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "SyncHintRetry2",
+      "value": "Достарыңыз бен туыстарыңызға хат жаза алуыңыз үшін Telegram контактілеріңізді көруге рұқсат сұрауда.\n\nРұқсат ету үшін: **Баптау** > **Рұқсат** > **Контакт**."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "SyncHintTitle",
-      "value": "Контакт табу"
+      "value": "Telegram-мен контактілер үйлестірілсін бе?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "SyncHintTitle2",
+      "value": "Telegram-мен контактілер үйлестірілсін бе?"
     },
     {
       "_": "types.LangPackString",
       "key": "SyncHintUnavailable",
       "value": "Баптау > Рұқсат бөліміне өтіп, Telegram үшін контактілерге кіруге рұқсат етіңіз."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "SyncHintUnavailable2",
+      "value": "Баптау > Рұқсат бөліміне өтіп, **%1$s** үшін контактілерге кіруге рұқсат беріңіз."
     },
     {
       "_": "types.LangPackString",
@@ -23567,6 +23597,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "url_contactsPrivacy",
+      "value": "https://telegram.org/privacy/kk#3-4-telefon-nomiri-men-kontaktiler"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "url_faq",
       "value": "https://telegram.org/faq/kk#zhalpi-suraqtar"
     },
@@ -24344,5 +24379,5 @@
       "other_value": "%1$s жыл"
     }
   ],
-  "version": 1634651
+  "version": 1634662
 }
