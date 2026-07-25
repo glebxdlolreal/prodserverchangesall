@@ -622,7 +622,7 @@
     {
       "_": "types.LangPackString",
       "key": "ActionTopicUnhidden",
-      "value": "%1$s повертає загальну гілку"
+      "value": "%1$s повертає загальну гілку до списку"
     },
     {
       "_": "types.LangPackString",
@@ -25404,5 +25404,5 @@
       "other_value": "%1$s років"
     }
   ],
-  "version": 1634158
+  "version": 1634160
 }
