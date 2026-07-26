@@ -39567,7 +39567,7 @@
     {
       "_": "types.LangPackString",
       "key": "lng_tag_info_text_owner",
-      "value": "Denne lilla taggen {emoji} er {author} sin eier tagg i {group}."
+      "value": "Denne lilla taggen {emoji} er {author} sin eiertagg i {group}."
     },
     {
       "_": "types.LangPackString",
@@ -41232,5 +41232,5 @@
       "other_value": "Du betalte {count} stjerner."
     }
   ],
-  "version": 5745953
+  "version": 5756373
 }
