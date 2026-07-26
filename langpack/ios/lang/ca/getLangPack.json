@@ -30651,7 +30651,7 @@
     {
       "_": "types.LangPackString",
       "key": "Login.Fee.Support.NewTextNone",
-      "value": "Obteniu una subscripció al Telegram Premium per a ajudar a cobrir els costs dels SMS."
+      "value": "Obteniu el Telegram Premium per a ajudar a cobrir els costs dels SMS."
     },
     {
       "_": "types.LangPackString",
@@ -60158,5 +60158,5 @@
       "value": "Heu introduït un codi de seguretat no vàlid."
     }
   ],
-  "version": 21610489
+  "version": 21629275
 }
