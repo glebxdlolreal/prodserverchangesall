@@ -11533,12 +11533,12 @@
     {
       "_": "types.LangPackString",
       "key": "RichEditorEquationToBlock",
-      "value": "Претвори у једначину у блоку"
+      "value": "Претворите у једначину у блоку"
     },
     {
       "_": "types.LangPackString",
       "key": "RichEditorEquationToInline",
-      "value": "Претвори у једначину у тексту"
+      "value": "Претворите у једначину у тексту"
     },
     {
       "_": "types.LangPackString",
@@ -15065,5 +15065,5 @@
       "value": "Ваше име"
     }
   ],
-  "version": 274582
+  "version": 274586
 }
