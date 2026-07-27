@@ -30625,7 +30625,7 @@
     {
       "_": "types.LangPackString",
       "key": "Login.Fee.SignUp",
-      "value": "Por %@"
+      "value": "Activar por %@"
     },
     {
       "_": "types.LangPackString",
@@ -43576,7 +43576,7 @@
     {
       "_": "types.LangPackString",
       "key": "Premium.Week.SignUp",
-      "value": "Por %@"
+      "value": "Activar por %@"
     },
     {
       "_": "types.LangPackString",
@@ -60158,5 +60158,5 @@
       "value": "Pusiste un código de seguridad inválido."
     }
   ],
-  "version": 21653634
+  "version": 21653942
 }
