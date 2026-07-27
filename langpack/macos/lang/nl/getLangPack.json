@@ -1879,8 +1879,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AuthEmailSetup.Description",
+      "value": "Voeg je e-mailadres toe om de toegang tot je account te behouden."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AuthEmailSetup.ErrorEmailNotAllowed",
+      "value": "Sorry, dit e-mailadres kan niet worden gebruikt."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AuthEmailSetup.ErrorInvalidEmail",
       "value": "Voer een geldig e-mailadres in."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AuthEmailSetup.Placeholder",
+      "value": "Noteer je e-mailadres"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AuthEmailSetup.Title",
+      "value": "E-mail toevoegen"
     },
     {
       "_": "types.LangPackString",
@@ -15408,6 +15428,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "DeleteGroupMessages.Ban",
+      "value": "Verbannen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "DeleteGroupMessages.BanFromCommunity",
       "value": "Verbannen uit de gemeenschap"
     },
@@ -15433,6 +15458,12 @@
       "value": "Reactie verwijderen"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "DeleteGroupMessages.MemberCount",
+      "one_value": "",
+      "other_value": "%1$d leden"
+    },
+    {
       "_": "types.LangPackString",
       "key": "DeleteGroupMessages.ReactionTitle",
       "value": "1 reactie verwijderen"
@@ -15442,6 +15473,11 @@
       "key": "DeleteGroupMessages.RemovedFromChatsCount",
       "one_value": "",
       "other_value": "De gebruiker zal worden verwijderd uit %1$d chats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "DeleteGroupMessages.WarningTitle",
+      "value": "Waarschuwing"
     },
     {
       "_": "types.LangPackString",
@@ -38908,6 +38944,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TranslateModal.PromptPlaceholder",
+      "value": "Beschrijf hoe de tekst herschreven moet worden…"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "TranslateModal.PromptStyle",
+      "value": "Prompt"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TranslateModal.ShareStyle",
       "value": "Stijl delen"
     },
@@ -41591,5 +41637,5 @@
       "value": "Toon vervangingen"
     }
   ],
-  "version": 2246026
+  "version": 2246031
 }
