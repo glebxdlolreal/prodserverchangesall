@@ -5435,6 +5435,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChannelBlocklist.CommunityEmptyDescription",
+      "value": "Verbannen gebruikers worden uit de gemeenschap verwijderd en kunnen alleen terugkomen als een beheerder ze toevoegt. Uitnodigingslinks zijn niet bruikbaar voor hen."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChannelBoost.AdditionalFeatures.Text",
       "value": "Dankzij boosts stijgt het niveau van je groep en worden er extra functies ontgrendeld."
     },
@@ -11398,6 +11403,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatInput.EmptyMessageError",
+      "value": "Je kunt geen leeg bericht sturen."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatInput.OpenChat",
       "value": "Chat openen"
     },
@@ -13941,13 +13951,34 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Communities.AdminRequired",
+      "value": "Alleen beheerders van deze chat kunnen een gemeenschap ervoor aanmaken."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Communities.CantChangeLater",
       "value": "Je kunt dit later niet meer wijzigen."
     },
     {
       "_": "types.LangPackString",
+      "key": "Communities.ChatVisibility",
+      "value": "Zichtbaarheid van chat"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Communities.Chats",
+      "one_value": "",
+      "other_value": "%1$d chats"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Communities.CommunityName",
       "value": "Naam van gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Communities.Create",
+      "value": "Creëren"
     },
     {
       "_": "types.LangPackString",
@@ -13965,14 +13996,35 @@
       "value": "Alleen uitgenodigde leden en beheerders van de gemeenschap zullen deze chat zien."
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "Communities.Members",
+      "one_value": "",
+      "other_value": "%1$d leden"
+    },
+    {
       "_": "types.LangPackString",
       "key": "Communities.NewCommunity",
       "value": "Nieuwe gemeenschap"
     },
     {
       "_": "types.LangPackString",
+      "key": "Communities.SomethingWentWrong",
+      "value": "Er ging iets mis."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Communities.SubtitleBot",
+      "value": "Maak je bot onderdeel van een gemeenschap met meerdere gerelateerde chats."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Communities.SubtitleChannel",
       "value": "Maak je kanaal onderdeel van een gemeenschap met meerdere gerelateerde chats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Communities.SubtitleGroup",
+      "value": "Maak je groep onderdeel van een gemeenschap met meerdere gerelateerde chats."
     },
     {
       "_": "types.LangPackString",
@@ -13983,6 +14035,11 @@
       "_": "types.LangPackString",
       "key": "Communities.Visible",
       "value": "Zichtbaar"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Communities.VisibleInfo",
+      "value": "Iedereen in de gemeenschap kan deze chat zien."
     },
     {
       "_": "types.LangPackString",
@@ -14001,8 +14058,19 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Group",
+      "value": "Groep"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.InviteOnlyInfo",
       "value": "Deze chat is alleen op uitnodiging toegankelijk.\nHet is uitsluitend voor leden zichtbaar."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.Members",
+      "one_value": "",
+      "other_value": "%1$d leden"
     },
     {
       "_": "types.LangPackString",
@@ -14036,8 +14104,49 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityAdd.ErrorAdminRequired",
+      "value": "Alleen beheerders van de gemeenschap kunnen chats toevoegen."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.ErrorGeneric",
+      "value": "Er ging iets mis."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.ErrorLimitReached",
+      "value": "Deze gemeenschap heeft het maximale aantal chats bereikt."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.Hidden",
+      "value": "Verborgen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityAdd.HiddenInfo",
       "value": "Alleen uitgenodigde leden en beheerders van de gemeenschap zullen deze chat zien."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "CommunityAdd.Members",
+      "one_value": "",
+      "other_value": "%1$d leden"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.Title",
+      "value": "Chat toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.VisibilityFooter",
+      "value": "Je kunt dit later niet meer wijzigen."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdd.Visible",
+      "value": "Zichtbaar"
     },
     {
       "_": "types.LangPackString",
@@ -14046,13 +14155,83 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityAdmin.AddAdmin",
+      "value": "Beheerder toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityAdmin.BanMembers",
       "value": "Leden verbannen"
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityAdmin.Dismiss",
+      "value": "Beheerder ontslaan"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.DismissConfirm",
+      "value": "Weet je zeker dat je deze beheerder wilt ontslaan?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityAdmin.EditGroupList",
       "value": "Chatlijst bewerken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.EditName",
+      "value": "Naam van gemeenschap wijzigen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.ErrorGeneric",
+      "value": "Er ging iets mis."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.PermissionsHeader",
+      "value": "Bevoegdheden van deze beheerder"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmin.Save",
+      "value": "Opslaan"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.AddAdmin",
+      "value": "Beheerder toevoegen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.Header",
+      "value": "Beheerders"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.Loading",
+      "value": "Laden…"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.StatusAdmin",
+      "value": "beheerder"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.StatusCreator",
+      "value": "oprichter"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.StatusPromotedBy",
+      "value": "benoemd door %1$@"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityAdmins.Title",
+      "value": "Beheerders"
     },
     {
       "_": "types.LangPackString",
@@ -14128,8 +14307,29 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityList.AddChatToCommunity",
+      "value": "Voeg een chat toe aan de gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityList.DefaultTitle",
+      "value": "Gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityList.EditCommunity",
       "value": "Gemeenschap bewerken"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityList.ErrorGeneric",
+      "value": "Er ging iets mis."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "CommunityList.Members",
+      "one_value": "",
+      "other_value": "%1$d leden"
     },
     {
       "_": "types.LangPackString",
@@ -14138,8 +14338,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityList.Remove",
+      "value": "Verwijderen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityList.RemoveChatConfirm",
+      "value": "Wil je deze chat uit de gemeenschap verwijderen?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityList.SectionJoined",
       "value": "Chats waarin je zit"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityList.SectionRequestable",
+      "value": "Chats waarvan je lid kunt worden"
     },
     {
       "_": "types.LangPackString",
@@ -14209,8 +14424,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CommunityView.AddChatToCommunity",
+      "value": "Voeg een chat toe aan de gemeenschap"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CommunityView.HideChat",
       "value": "Verbergen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityView.Remove",
+      "value": "Verwijderen"
     },
     {
       "_": "types.LangPackString",
@@ -14221,6 +14446,11 @@
       "_": "types.LangPackString",
       "key": "CommunityView.ShowChat",
       "value": "Weergeven"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "CommunityView.Title",
+      "value": "Gemeenschap"
     },
     {
       "_": "types.LangPackString",
@@ -34270,6 +34500,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarGiftNft.ResaleMinPriceInfo",
+      "value": "Deze optie is alleen beschikbaar voor cadeaus die meer kosten dan %1$@."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarList.Ton",
       "value": "Grams"
     },
@@ -37480,6 +37715,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "TextUtils.AddedToCommunity",
+      "value": "Toegevoegd aan de gemeenschap \"%1$@\""
+    },
+    {
+      "_": "types.LangPackString",
       "key": "TextUtils.ManagedBotCreated",
       "value": "%1$@ heeft %2$@ aangemaakt"
     },
@@ -37492,6 +37732,11 @@
       "_": "types.LangPackString",
       "key": "TextUtils.PollOptionDeleted",
       "value": "%1$@ heeft een optie verwijderd: %2$@"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "TextUtils.RemovedFromCommunity",
+      "value": "Verwijderd uit een gemeenschap"
     },
     {
       "_": "types.LangPackString",
@@ -41346,5 +41591,5 @@
       "value": "Toon vervangingen"
     }
   ],
-  "version": 2245928
+  "version": 2246026
 }
