@@ -5811,7 +5811,7 @@
     {
       "_": "types.LangPackString",
       "key": "FormattingBoldAria",
-      "value": "Жирний текст"
+      "value": "Жирний"
     },
     {
       "_": "types.LangPackString",
@@ -5826,7 +5826,7 @@
     {
       "_": "types.LangPackString",
       "key": "FormattingItalicAria",
-      "value": "Курсивний текст"
+      "value": "Курсив"
     },
     {
       "_": "types.LangPackString",
@@ -5841,17 +5841,17 @@
     {
       "_": "types.LangPackString",
       "key": "FormattingMonospaceAria",
-      "value": "Моноширинний текст"
+      "value": "Моноширинний"
     },
     {
       "_": "types.LangPackString",
       "key": "FormattingSpoilerAria",
-      "value": "Прихований текст"
+      "value": "Спойлер"
     },
     {
       "_": "types.LangPackString",
       "key": "FormattingStrikethroughAria",
-      "value": "Закреслений текст"
+      "value": "Закреслений"
     },
     {
       "_": "types.LangPackString",
@@ -5866,7 +5866,7 @@
     {
       "_": "types.LangPackString",
       "key": "FormattingUnderlineAria",
-      "value": "Підкреслений текст"
+      "value": "Підкреслений"
     },
     {
       "_": "types.LangPackString",
@@ -15233,5 +15233,5 @@
       "value": "Ваше імʼя"
     }
   ],
-  "version": 275735
+  "version": 275743
 }
