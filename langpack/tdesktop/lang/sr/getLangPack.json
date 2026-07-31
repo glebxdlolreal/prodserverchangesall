@@ -26188,13 +26188,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_passkey_cable_error",
+      "value": "Повезивање са телефоном није успело.\nПокушајте поново."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_passkey_cable_error_title",
       "value": "Нешто је пошло наопако"
     },
     {
       "_": "types.LangPackString",
+      "key": "lng_passkey_cable_follow",
+      "value": "Пратите упутства на телефону."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "lng_passkey_cable_login_title",
       "value": "Пријави ме приступним кључем"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "lng_passkey_cable_no_bluetooth",
+      "value": "Bluetooth није доступан. Укључите Bluetooth да бисте се пријавили помоћу телефона."
     },
     {
       "_": "types.LangPackString",
@@ -41990,5 +42005,5 @@
       "other_value": "Платили сте {count} звездица."
     }
   ],
-  "version": 5762168
+  "version": 5762199
 }
