@@ -257,6 +257,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionPaymentRefunded",
+      "value": "{peer} вярнуў(-ла) {amount}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionPinnedMediaContact",
       "value": "звесткі пра кантакт"
     },
@@ -322,6 +327,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ActionStarGiftAuctionWon",
+      "value": "Вы выйгралі аўкцыён са стаўкай {cost}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ActionStarGiftBoughtFromOffer",
       "value": "{user} прыняў вашу прапанову і прадаў вам {gift} за {cost}"
     },
@@ -339,6 +349,11 @@
       "_": "types.LangPackString",
       "key": "ActionStarGiftCrafted",
       "value": "Створаны падарунак"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ActionStarGiftCraftedSelf",
+      "value": "Вы стварылі новы падарунак!"
     },
     {
       "_": "types.LangPackString",
@@ -786,6 +801,14 @@
       "value": "Ананімная віктарына"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} адказы",
+      "key": "Answer",
+      "many_value": "{count} адказаў",
+      "one_value": "{count} адказ",
+      "other_value": "{count} адказу"
+    },
+    {
       "_": "types.LangPackString",
       "key": "ApiMessageActionPaidMessagesRefundedIncoming",
       "value": "{user} вярнуў(-ла) вам **{stars}**"
@@ -847,6 +870,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AreYouSureDeleteThisChatWithGroup",
+      "value": "Вы ўпэўнены, што хочаце выдаліць чат **{chat}**?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AreYouSureSessions",
       "value": "Вы ўпэўнены, што хочаце скончыць усе іншыя сеансы?"
     },
@@ -869,6 +897,11 @@
       "_": "types.LangPackString",
       "key": "AriaBackToChatList",
       "value": "Вярнуцца ў спіс чатаў"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AriaCancelPollCreation",
+      "value": "Скасаваць стварэнне апытання"
     },
     {
       "_": "types.LangPackString",
@@ -959,6 +992,11 @@
       "_": "types.LangPackString",
       "key": "AriaOpenSymbolMenu",
       "value": "Выберыце эмодзі, стыкер або анімацыю"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AriaPasswordToggle",
+      "value": "Схаваць/паказаць пароль"
     },
     {
       "_": "types.LangPackString",
@@ -1592,6 +1630,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "CallMessageWithDuration",
+      "value": "{time} ({duration})"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "CallMuteAudio",
       "value": "Выкл. аўдыя"
     },
@@ -1654,6 +1697,14 @@
       "_": "types.LangPackString",
       "key": "CallUnmuteAudio",
       "value": "Укл. аўдыя"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "",
+      "key": "CanJoin",
+      "many_value": "",
+      "one_value": "{count} можа далучыцца",
+      "other_value": "{count} могуць далучыцца"
     },
     {
       "_": "types.LangPackString",
@@ -1777,6 +1828,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChannelInaccessible",
+      "value": "канал недаступны"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChannelIntroCreateChannel",
       "value": "Стварыць канал"
     },
@@ -1812,6 +1868,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChannelManagementLinkDiscussion",
+      "value": "Вы хочаце зрабіць **{group}** дошкай абмеркаванняў для **{channel}**?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChannelManagementLinkPrivate",
       "value": "Кожны, хто праглядае канал, зможа бачыць паведамленні ў гэтай суполцы."
     },
@@ -1819,6 +1880,11 @@
       "_": "types.LangPackString",
       "key": "ChannelManagementTitle",
       "value": "Кіраўнікі"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChannelPermissionDeniedSendMessagesUntil",
+      "value": "Кіраўнікі суполкі забаранілі вам адпраўляць сюды паведамленні да {date}."
     },
     {
       "_": "types.LangPackString",
@@ -2052,6 +2118,14 @@
       "value": "Паскардзіцца на спам і выйсці з канала? "
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} рэакцыі",
+      "key": "ChatContextReactionCount",
+      "many_value": "{count} рэакцый",
+      "one_value": "{count} рэакцыя",
+      "other_value": "{count} рэакцыі"
+    },
+    {
       "_": "types.LangPackString",
       "key": "ChatEmptyChat",
       "value": "Пакуль тут няма паведамленняў"
@@ -2096,8 +2170,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatListDeleteAndLeaveGroupConfirmation",
+      "value": "Вы ўпэўнены, што хочаце выйсці і выдаліць {chat}?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatListDeleteChatConfirmation",
+      "value": "Вы ўпэўнены, што хочаце выдаліць чат\nз {chat}?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatListDeleteForCurrentUser",
       "value": "Выдаліць толькі для мяне"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatListDeleteForEveryone",
+      "value": "Выдаліць у мяне і ў {user}"
     },
     {
       "_": "types.LangPackString",
@@ -2156,6 +2245,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatMemberListNoAccess",
+      "value": "У вас няма доступу да спісу ўдзельнікаў суполкі"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatNonContactUserGroups",
       "value": "Агульныя суполкі"
     },
@@ -2185,6 +2279,14 @@
       "value": "Колькасць чатаў у папцы"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "Адмацаваць усе {count} паведамленні",
+      "key": "ChatPinnedUnpinAll",
+      "many_value": "Адмацаваць усе {count} паведамленняў",
+      "one_value": "Адмацаваць {count} паведамленне",
+      "other_value": "Адмацаваць усе {count} паведамлення"
+    },
+    {
       "_": "types.LangPackString",
       "key": "ChatPollTotalVotesResultEmpty",
       "value": "Няма галасоў"
@@ -2198,6 +2300,14 @@
       "_": "types.LangPackString",
       "key": "ChatTypePrivate",
       "value": "Прыватны чат"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "Вы хочаце адмацаваць усе {count} паведамленні ў гэтым чаце?",
+      "key": "ChatUnpinAllMessagesConfirmation",
+      "many_value": "Вы хочаце адмацаваць усе {count} паведамленняў ў гэтым чаце?",
+      "one_value": "Вы хочаце адмацаваць {count} паведамленне ў гэтым чаце?",
+      "other_value": "Вы хочаце адмацаваць усе {count} паведамлення ў гэтым чаце?"
     },
     {
       "_": "types.LangPackString",
@@ -2323,6 +2433,22 @@
       "_": "types.LangPackString",
       "key": "CollectibleStatusesCategory",
       "value": "Калекцыйныя"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} каментарыі",
+      "key": "Comments",
+      "many_value": "{count} каментарыяў",
+      "one_value": "{count} каментарый",
+      "other_value": "{count} каментарыя"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} каментарыі",
+      "key": "CommentsCount",
+      "many_value": "{count} каментарыяў",
+      "one_value": "{count} каментарый",
+      "other_value": "{count} каментарыя"
     },
     {
       "_": "types.LangPackString",
@@ -2548,6 +2674,14 @@
       "value": "Ніхто не праглядзеў"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "",
+      "key": "ConversationContextMenuSeen",
+      "many_value": "",
+      "one_value": "{count} прачытаў(-ла)",
+      "other_value": "{count} прачыталі"
+    },
+    {
       "_": "types.LangPackString",
       "key": "ConversationDefaultRestrictedMedia",
       "value": "У гэтай суполцы забаронена размяшчаць медыя."
@@ -2556,6 +2690,11 @@
       "_": "types.LangPackString",
       "key": "ConversationDeleteManyMessages",
       "value": "Выдаліць паведамленні"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ConversationDeleteMessagesFor",
+      "value": "Выдаліць у мяне і ў {user}"
     },
     {
       "_": "types.LangPackString",
@@ -2586,6 +2725,11 @@
       "_": "types.LangPackString",
       "key": "ConversationPinMessageAlertPinAndNotifyMembers",
       "value": "Замацаваць і апавясціць усіх удзельнікаў"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ConversationPinMessagesFor",
+      "value": "Замацаваць у мяне і ў {user}"
     },
     {
       "_": "types.LangPackString",
@@ -2974,8 +3118,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "DiscussionUnlinkChannelAlert",
+      "value": "Вы ўпэўнены, што хочаце адвязаць **{chat}** ад гэтага канала?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "DiscussionUnlinkGroup",
       "value": "Адвязаць суполку"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "DiscussionUnlinkGroupAlert",
+      "value": "Вы ўпэўнены, што хочаце адвязаць **{channel}** ад гэтай суполкі?"
     },
     {
       "_": "types.LangPackString",
@@ -3216,6 +3370,11 @@
       "_": "types.LangPackString",
       "key": "EmptyChatAppearanceSystem",
       "value": "Сістэмная"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "EmptyGroupInfoLine1",
+      "value": "• Да {count} удзельнікаў"
     },
     {
       "_": "types.LangPackString",
@@ -3665,6 +3824,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "FormattingBoldAria",
+      "value": "Тлусты тэкст"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "FormattingClearAria",
       "value": "Ачысціць фарматаванне"
     },
@@ -3735,6 +3899,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Free",
+      "value": "Вольны"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "FromYou",
       "value": "Вы"
     },
@@ -3782,6 +3951,11 @@
       "_": "types.LangPackString",
       "key": "GetMoreStarsLinkText",
       "value": "Атрымаць больш зорак >"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GifPickerBlocked",
+      "value": "У гэтым чаце забаронена адпраўляць анімацыі"
     },
     {
       "_": "types.LangPackString",
@@ -3957,11 +4131,27 @@
     },
     {
       "_": "types.LangPackStringPluralized",
+      "few_value": "{count} падарункі разыгрываюцца з рознымі інтэрваламі сярод топа {count} удзельнікаў паводле велічыні стаўкі.",
+      "key": "GiftAuctionInfoTopBiddersSubtitle",
+      "many_value": "{count} падарункаў разыгрываецца з рознымі інтэрваламі сярод топа {count} удзельнікаў паводле велічыні стаўкі.",
+      "one_value": "{count} падарунак разыгрываецца з рознымі інтэрваламі сярод топа {count} удзельнікаў паводле велічыні стаўкі.",
+      "other_value": "{count} падарунка разыгрываецца з рознымі інтэрваламі сярод топа {count} удзельнікаў паводле велічыні стаўкі."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
       "few_value": "{count} лепшых удзельнікаў",
       "key": "GiftAuctionInfoTopBiddersTitle",
       "many_value": "{count} лепшых удзельнікаў",
       "one_value": "{count} лепшы удзельнік",
       "other_value": "{count} лепшага удзельніка"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "Куплена {count} падарункі {gift} >",
+      "key": "GiftAuctionItemsBought",
+      "many_value": "Куплена {count} падарункаў {gift} >",
+      "one_value": "Куплены {count} падарунак {gift} >",
+      "other_value": "Куплена {count} падарунку {gift} >"
     },
     {
       "_": "types.LangPackString",
@@ -4489,6 +4679,14 @@
     },
     {
       "_": "types.LangPackStringPluralized",
+      "few_value": "У гэтай калекцыі **{count}** унікальныя фоны  ",
+      "key": "GiftPreviewCountBackdrops",
+      "many_value": "У гэтай калекцыі **{count}** унікальных фонаў  ",
+      "one_value": "У гэтай калекцыі **{count}** унікальны фон  ",
+      "other_value": "У гэтай калекцыі **{count}** унікальныя фоны"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
       "few_value": "У гэтай калекцыі **{count}** унікальныя сімвалы",
       "key": "GiftPreviewCountPatterns",
       "many_value": "У гэтай калекцыі **{count}** унікальных сімвалаў",
@@ -4803,6 +5001,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "GroupInaccessible",
+      "value": "суполка недаступна"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "GroupInfoAdminLog",
       "value": "Нядаўнія дзеянні"
     },
@@ -5010,7 +5213,7 @@
     {
       "_": "types.LangPackString",
       "key": "HideCaption",
-      "value": "Схаваць подпіс"
+      "value": "Хаваць подпіс"
     },
     {
       "_": "types.LangPackString",
@@ -5151,6 +5354,34 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "JoinRequestAcceptAllDescription",
+      "value": "Вы ўпэўнены, што хочаце прыняць усе запыты?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "JoinRequestAcceptAllTitle",
+      "value": "Прыняць усе запыты?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "JoinRequestRejectAllDescription",
+      "value": "Вы ўпэўнены, што хочаце адхіліць усе запыты?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "JoinRequestRejectAllTitle",
+      "value": "Адхіліць усе запыты?"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} запыты на далучэнне",
+      "key": "JoinRequests",
+      "many_value": "{count} запытаў на далучэнне",
+      "one_value": "{count} запыт на далучэнне",
+      "other_value": "{count} запыту на далучэнне"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "JumpToDate",
       "value": "Перайсці да даты"
     },
@@ -5168,6 +5399,11 @@
       "_": "types.LangPackString",
       "key": "LastName",
       "value": "Прозвішча"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "LastSeenAtDate",
+      "value": "быў(-ла) {date}"
     },
     {
       "_": "types.LangPackStringPluralized",
@@ -5199,6 +5435,16 @@
       "_": "types.LangPackString",
       "key": "LastSeenTitle",
       "value": "Хто можа бачыць час вашай апошняй актыўнасці?"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "LastSeenTodayAt",
+      "value": "быў(-ла) сёння а {time}"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "LastSeenYesterdayAt",
+      "value": "быў(-ла) учора а {time}"
     },
     {
       "_": "types.LangPackString",
@@ -5392,6 +5638,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "LinkExpiresIn",
+      "value": "Спасылка дзейнічае да {time}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "LinkLimitReached",
       "value": "Ліміт дасягнуты"
     },
@@ -5535,6 +5786,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ManagementRemoveAdminConfirm",
+      "value": "Вы ўпэўнены, што хочаце адхіліць гэтага кіраўніка?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "MediaAudioEmpty",
       "value": "Пакуль што няма галасавых паведамленняў"
     },
@@ -5557,6 +5813,11 @@
       "_": "types.LangPackString",
       "key": "MediaLocaltionImageAlt",
       "value": "Месца на карце"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "MediaPollSolutionAria",
+      "value": "Паказаць рашэнне"
     },
     {
       "_": "types.LangPackString",
@@ -5808,6 +6069,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "MessageScheduledOn",
+      "value": "Запланавана на {date}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "MessageScheduledRepeatPremium",
       "value": "Падпішыцеся на **Telegram Premium**, каб адпраўляць  рэгулярныя паведамленні."
     },
@@ -5982,6 +6248,14 @@
       "value": "Мой профіль"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} удзельнікі",
+      "key": "NMembers",
+      "many_value": "{count} удзельнікаў",
+      "one_value": "{count} удзельнік",
+      "other_value": "{count} удзельніка"
+    },
+    {
       "_": "types.LangPackString",
       "key": "NeverAllow",
       "value": "Заўсёды забараняць"
@@ -6008,8 +6282,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "NewChannelTitleEmptyError",
+      "value": "Назва канала не можа быць пустой"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "NewChatReturnBackAria",
       "value": "Вярнуцца да выбару ўдзельніка"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "NewChatTitleEmptyError",
+      "value": "Назва чата не можа быць пустой"
     },
     {
       "_": "types.LangPackString",
@@ -6085,6 +6369,11 @@
       "_": "types.LangPackString",
       "key": "NoContactsFound",
       "value": "Кантакты не знойдзены"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "NoDiscussionsLinked",
+      "value": "Суполкі абмеркаванняў не знойдзены"
     },
     {
       "_": "types.LangPackString",
@@ -6307,6 +6596,14 @@
       "value": "у сетцы"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "",
+      "key": "OnlineCount",
+      "many_value": "",
+      "one_value": "{count} у сетцы",
+      "other_value": "{count} у сетцы"
+    },
+    {
       "_": "types.LangPackString",
       "key": "OnlyAcceptGram",
       "value": "Прымаць толькі Gram"
@@ -6335,6 +6632,11 @@
       "_": "types.LangPackString",
       "key": "OptionHint",
       "value": "Варыянт"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Original",
+      "value": "Арыгінал"
     },
     {
       "_": "types.LangPackString",
@@ -6701,6 +7003,22 @@
       "value": "Паскардзіцца на відэа профілю"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} чалавекі могуць далучыцца праз гэту спасылку.",
+      "key": "PeopleCanJoinViaLinkCount",
+      "many_value": "{count} чалавек могуць далучыцца праз гэту спасылку.",
+      "one_value": "{count} чалавек можа далучыцца праз гэту спасылку.",
+      "other_value": "{count} чалавека можа далучыцца праз гэту спасылку."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} чалавекі далучыліся",
+      "key": "PeopleJoined",
+      "many_value": "{count} чалавек далучыліся",
+      "one_value": "{count} чалавек далучыўся",
+      "other_value": "{count} чалавека далучылася"
+    },
+    {
       "_": "types.LangPackString",
       "key": "Permanent",
       "value": "Галоўная спасылка"
@@ -6749,6 +7067,14 @@
       "_": "types.LangPackString",
       "key": "PinnedConfirmUnpin",
       "value": "Вы хочаце адмацаваць гэта паведамленне?"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "{count} замацаваныя паведамленні",
+      "key": "PinnedMessagesCount",
+      "many_value": "{count} замацаваных паведамленняў",
+      "one_value": "{count} замацаванае паведамленне",
+      "other_value": "{count} замацаванага паведамлення"
     },
     {
       "_": "types.LangPackString",
@@ -7779,6 +8105,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ReportChat",
+      "value": "Паскардзіцца на {peer}"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ReportMessageTitle",
       "value": "Паскардзіцца"
     },
@@ -7856,6 +8187,11 @@
       "_": "types.LangPackString",
       "key": "ResellGiftsNoFound",
       "value": "Падарункаў не знойдзена"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RestictionReasonPrivateChannel",
+      "value": "Гэта прыватны канал"
     },
     {
       "_": "types.LangPackString",
@@ -8651,8 +8987,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "SetUrlInvalid",
+      "value": "Спасылка змяшчае недапушчальныя сімвалы"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "SetUrlLong",
+      "value": "Спасылка занадта доўгая"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "SetUrlPlaceholder",
       "value": "Спасылка"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "SetUrlShort",
+      "value": "Спасылка занадта кароткая"
     },
     {
       "_": "types.LangPackString",
@@ -8880,12 +9231,25 @@
       "value": "Паказваць тэгі папак"
     },
     {
+      "_": "types.LangPackString",
+      "key": "ShowFolderTagsHint",
+      "value": "Назва папкі будзе паказвацца побач з кожным чатам у спісе."
+    },
+    {
       "_": "types.LangPackStringPluralized",
       "few_value": "Паказаць яшчэ {count} чаты",
       "key": "ShowMoreChats",
       "many_value": "Паказаць яшчэ {count} чатаў",
       "one_value": "Паказаць яшчэ {count} чат",
       "other_value": "Паказаць яшчэ {count} чата"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "Паказаць яшчэ {count}, якія прагаласавалі",
+      "key": "ShowMoreVoters",
+      "many_value": "Паказаць яшчэ {count}, якія прагаласавалі",
+      "one_value": "Паказаць яшчэ {count}, які прагаласаваў",
+      "other_value": "Паказаць яшчэ {count}, які прагаласаваў"
     },
     {
       "_": "types.LangPackString",
@@ -8896,6 +9260,11 @@
       "_": "types.LangPackString",
       "key": "ShowSendersName",
       "value": "Паказваць імя адпраўніка"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "SlowModeHint",
+      "value": "Уключаны павольны рэжым. Вы зможаце напісаць праз {time}."
     },
     {
       "_": "types.LangPackString",
@@ -8946,6 +9315,11 @@
       "_": "types.LangPackString",
       "key": "SponsoredPeerBadge",
       "value": "Рэклама"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Square",
+      "value": "Квадрат"
     },
     {
       "_": "types.LangPackString",
@@ -9089,6 +9463,11 @@
       "_": "types.LangPackString",
       "key": "StarsGiftHeaderSelf",
       "value": "Купіць падарунак"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StarsNeededTextSendPaidMessages",
+      "value": "Купіце **зоркі**, каб адпраўляць паведамленні."
     },
     {
       "_": "types.LangPackString",
@@ -9255,6 +9634,11 @@
       "_": "types.LangPackString",
       "key": "StatsMessageViews",
       "value": "Прагляды"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StatsNoShares",
+      "value": "Ніхто не абагульваў"
     },
     {
       "_": "types.LangPackString",
@@ -9978,6 +10362,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "UserInfoBlockConfirmationTitle",
+      "value": "Вы хочаце заблакіраваць {user} і тым самым забараніць адпраўляць паведамленні і тэлефанаваць вам у Telegram?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "UserInfoFirstNamePlaceholder",
       "value": "Імя"
     },
@@ -10010,6 +10399,11 @@
       "_": "types.LangPackString",
       "key": "UserPlayingGame",
       "value": "{user} гуляе"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "UserRemovedBy",
+      "value": "Выдаліў: {user}"
     },
     {
       "_": "types.LangPackString",
@@ -10639,5 +11033,5 @@
       "value": "Ваша імя"
     }
   ],
-  "version": 277344
+  "version": 277345
 }
