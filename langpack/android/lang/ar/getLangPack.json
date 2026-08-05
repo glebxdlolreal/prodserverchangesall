@@ -4680,6 +4680,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ArticleCommandOrderedList",
+      "value": "قائمة مرقمة"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ArticleCommandTable",
       "value": "جدول"
     },
@@ -15169,6 +15174,16 @@
       "value": "إنشاء مجتمع"
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "رفض ⁨%1$d⁩ طلبات للانضمام إلى المجتمع؟",
+      "key": "CommunityDeclineAllMessage",
+      "many_value": "رفض ⁨%1$d⁩ طلبًا للانضمام إلى المجتمع؟",
+      "one_value": "رفض طلب واحد للانضمام إلى المجتمع؟",
+      "other_value": "رفض ⁨%1$d⁩ طلب للانضمام إلى المجتمع؟",
+      "two_value": "رفض كلا الطلبين للانضمام إلى المجتمع؟",
+      "zero_value": ""
+    },
+    {
       "_": "types.LangPackString",
       "key": "CommunityDeclineAllTitle",
       "value": "رفض الكل"
@@ -20646,7 +20661,7 @@
     {
       "_": "types.LangPackString",
       "key": "ExpiredViewsStubPremiumDescription",
-      "value": "لفتح قائمة المشاهدين للقصص منتهية الصلاحية المنشورة، يرجى الاشتراك في **تيليجرام المُميّز**."
+      "value": "لفتح قائمة المشاهدين الجدد للقصص المنتهية الصلاحية المنشورة؛ يرجى الاشتراك في **تيليجرام المميز**."
     },
     {
       "_": "types.LangPackString",
@@ -59614,5 +59629,5 @@
       "value": "جواز تيليجرام"
     }
   ],
-  "version": 60234207
+  "version": 60250423
 }
