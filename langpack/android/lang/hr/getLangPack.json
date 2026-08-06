@@ -34117,7 +34117,7 @@
     {
       "_": "types.LangPackString",
       "key": "P2PContactsPlus",
-      "value": "Moji kontakti  (+%1$d)"
+      "value": "Moji kontakti (+%1$d)"
     },
     {
       "_": "types.LangPackString",
@@ -44245,7 +44245,7 @@
     {
       "_": "types.LangPackString",
       "key": "SentAppCodeWithPhone",
-      "value": "Poslali smo kod u **Telegram aplikaciju**  na vašem drugom uređaju na broj %1$s."
+      "value": "Poslali smo kod u **Telegram aplikaciju** na vašem drugom uređaju na broj %1$s."
     },
     {
       "_": "types.LangPackString",
@@ -57416,5 +57416,5 @@
       "value": "Telegram osobna"
     }
   ],
-  "version": 60262279
+  "version": 60262287
 }
