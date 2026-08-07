@@ -6916,6 +6916,12 @@
       "other_value": "%d chat aggiunte alla community."
     },
     {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.RequestsDeclined",
+      "one_value": "%d suggerimento rifiutato.",
+      "other_value": "%d suggerimenti rifiutati."
+    },
+    {
       "_": "types.LangPackString",
       "key": "Community.Retry",
       "value": "Riprova"
@@ -21961,5 +21967,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 322955
+  "version": 322957
 }
