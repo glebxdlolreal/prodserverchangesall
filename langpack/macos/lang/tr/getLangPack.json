@@ -3704,7 +3704,7 @@
     {
       "_": "types.LangPackString",
       "key": "Channel.Persmission.Denied.SendMedia.Forever",
-      "value": "Bu grubun yöneticileri, buraya medya göndermenizi kısıtladı."
+      "value": "Bu grubun yöneticileri, medya gönderme yetkinizi kısıtlamıştır."
     },
     {
       "_": "types.LangPackString",
@@ -6943,7 +6943,7 @@
     {
       "_": "types.LangPackString",
       "key": "Chat.Service.SecretChat.SetTimer.Self1",
-      "value": "Mesajları %@ sonra otomatik olarak silinecek şekilde ayarladınız"
+      "value": "Mesajların %@ sonra otomatik olarak silinmesini ayarladınız"
     },
     {
       "_": "types.LangPackString",
@@ -28424,5 +28424,5 @@
       "value": "Değiştirmeleri Göster"
     }
   ],
-  "version": 2257688
+  "version": 2257691
 }
