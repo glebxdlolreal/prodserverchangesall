@@ -5517,6 +5517,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.BotDescription",
+      "value": "Чаттарыңызды өздігінен өңдегіңіз келетін Telegram боттың қолданушы атын немесе сілтемесін енгізіңіз."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.BotHasAccess",
       "value": "боттың чатқа рұқсаты бар"
     },
@@ -5524,6 +5529,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.BotManagesChat",
       "value": "чатты бос басқарып жатыр"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.BotNotFound",
+      "value": "Чатбот табылмады"
     },
     {
       "_": "types.LangPackString",
@@ -5564,6 +5574,16 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.ConnectionReview.Reject",
       "value": "Жоқ, мен емес!"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.ConnectionReview.Rejected",
+      "value": "Боттың рұқсаттары жойылды."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.ConnectionReview.Text",
+      "value": "тіркелгіңізге қосылды, %s. Бұл сіз бе?"
     },
     {
       "_": "types.LangPackString",
@@ -5652,6 +5672,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.ManageAutomation",
+      "value": "Чатты автоматтандыруды басқару"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.ManageBot",
       "value": "Ботты баптау"
     },
@@ -5732,8 +5757,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.RecipientLimit",
+      "value": "100 қолданушыға дейін таңдай аласыз."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.RecipientSummaryEmpty",
       "value": "Қосу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.RecipientsEmpty",
+      "value": "Кем дегенде бір алушы таңдауыңыз керек."
     },
     {
       "_": "types.LangPackString",
@@ -5742,13 +5777,43 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.RemoveFromChat",
+      "value": "Ботты мына чаттан жою"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.Reply",
       "value": "Хатқа жауап беру"
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.RevokeFromChat",
+      "value": "Чаттың рұқсаттарын жою"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.SaveSuccess",
+      "value": "Чатты автоматтандыру жаңартылды."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.SearchFailed",
+      "value": "Бот іздеу мүмкін емес. Қайталап көріңіз."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.Searching",
+      "value": "Бот іздеу..."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.SelectChats",
       "value": "Чат таңдау"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.Session",
+      "value": "Чатты автоматтандыру боты"
     },
     {
       "_": "types.LangPackString",
@@ -5772,6 +5837,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.SetupNotCompletedTitle",
+      "value": "Бот қосылмады"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.Start",
       "value": "Бастау"
     },
@@ -5779,6 +5849,16 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.Stop",
       "value": "Тоқтату"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.TerminateConnectedBot",
+      "value": "Сондай-ақ %s аяқтау"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.TerminateSession",
+      "value": "Сеансты аяқтау"
     },
     {
       "_": "types.LangPackString",
@@ -5794,6 +5874,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.TransferStars",
       "value": "Жұлдыз жіберу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.ViaBotTooltip",
+      "value": "Бұл хатты бот жібергенін тек сіз көре аласыз."
     },
     {
       "_": "types.LangPackString",
@@ -11897,6 +11982,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "MediaCopied",
+      "value": "Медиа көшірілді"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "MediaCopyFailed",
+      "value": "Медиа көшірілмеді"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "MediaEditor.Adjustments.Brightness",
       "value": "Ашықтық"
     },
@@ -12085,6 +12180,11 @@
       "key": "MediaFiles",
       "one_value": "%d медиафайл",
       "other_value": "%d медиафайл"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "MediaViewer.Context.Copy",
+      "value": "Көшіру"
     },
     {
       "_": "types.LangPackString",
@@ -15809,6 +15909,16 @@
       "_": "types.LangPackString",
       "key": "ProfileStoriesArchiveHint",
       "value": "Мұрағаттағы хикая тек сіз үшін қолжетімді."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ProfileTab.OrderChanged",
+      "value": "Қойынды реті өзгерді."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ProfileTab.SetAsMain",
+      "value": "Негізгі етіп қою"
     },
     {
       "_": "types.LangPackString",
@@ -22170,5 +22280,5 @@
       "other_value": "%1$d хат"
     }
   ],
-  "version": 323392
+  "version": 323424
 }

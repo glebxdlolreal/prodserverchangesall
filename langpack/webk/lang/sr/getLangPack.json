@@ -5624,6 +5624,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.BotUnsupported",
+      "value": "Овај бот још не подржава режим секретара."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.ChangeGiftSettings",
       "value": "Промена подешавања поклона"
     },
@@ -22306,5 +22311,5 @@
       "other_value": "%1$d порука"
     }
   ],
-  "version": 323398
+  "version": 323411
 }
