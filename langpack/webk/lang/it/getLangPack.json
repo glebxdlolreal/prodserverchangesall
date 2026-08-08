@@ -5642,8 +5642,23 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.ExcludedDescription",
+      "value": "Seleziona le chat o le intere categorie di chat a cui il bot **NON AVRÀ** accesso."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.ExistingChats",
       "value": "Chat esistenti"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.GiftsAndStarsWarning",
+      "value": "Il bot **%s** potrà **gestire i tuoi regali e le tue stelle**, incluso il trasferimento ad altri utenti."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.GiftsWarning",
+      "value": "Il bot **@%s** potrà **gestire i tuoi regali**, incluso il trasferimento ad altri utenti."
     },
     {
       "_": "types.LangPackString",
@@ -5654,6 +5669,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.IncludedChats",
       "value": "Chat incluse"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.IncludedDescription",
+      "value": "Seleziona le chat o le intere categorie di chat a cui il bot **AVRÀ** accesso."
     },
     {
       "_": "types.LangPackString",
@@ -5832,6 +5852,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.StarsWarning",
+      "value": "Il bot **%s** potrà **trasferire le tue stelle**."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.Start",
       "value": "Avvia"
     },
@@ -5864,6 +5889,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.TransferStars",
       "value": "Trasferire le stelle"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.UsernameWarning",
+      "value": "Il bot **%s** potrà **impostare e rimuovere username** per il tuo account, il che potrebbe comportare la perdita del tuo attuale username."
     },
     {
       "_": "types.LangPackString",
@@ -22179,5 +22209,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 323796
+  "version": 323811
 }
