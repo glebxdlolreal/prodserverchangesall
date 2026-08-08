@@ -5630,7 +5630,7 @@
     {
       "_": "types.LangPackString",
       "key": "ChatAutomation.BotUnsupported",
-      "value": "Овај бот још не подржава режим секретара."
+      "value": "Овај бот још не подржава секретарски режим."
     },
     {
       "_": "types.LangPackString",
@@ -22636,5 +22636,5 @@
       "other_value": "%1$d порука"
     }
   ],
-  "version": 323663
+  "version": 323665
 }
