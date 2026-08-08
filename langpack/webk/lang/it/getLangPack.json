@@ -5762,6 +5762,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.RecipientsEmpty",
+      "value": "Scegli almeno un destinatario."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.RemoveBot",
       "value": "Rimuovi bot"
     },
@@ -5794,6 +5799,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.SellGifts",
       "value": "Vendere regali"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.Session",
+      "value": "Bot automazione chat"
     },
     {
       "_": "types.LangPackString",
@@ -6706,6 +6716,11 @@
       "_": "types.LangPackString",
       "key": "Community.ChatRemoved",
       "value": "Chat rimossa dalla community"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChatSettings",
+      "value": "Impostazioni chat community"
     },
     {
       "_": "types.LangPackString",
@@ -9953,6 +9968,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "GuardBotEnableMembersText",
+      "value": "I nuovi membri ora dovranno ottenere l'approvazione da **%s** prima di poter inviare messaggi in questo gruppo"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotEnableSubscribersText",
+      "value": "I nuovi iscritti ora dovranno ottenere l'approvazione da **%s** prima di potersi unire al canale"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "GuardBotManagedBy",
       "value": "Gestito da %s"
     },
@@ -9960,6 +9985,16 @@
       "_": "types.LangPackString",
       "key": "GuardBotProcessJoinRequests",
       "value": "Gestire le richieste di accesso"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotProcessJoinRequestsInfo",
+      "value": "Consenti a questo bot di approvare i nuovi membri usando le proprie interfacce, come i captcha."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotReplaceText",
+      "value": "**%1$s** sta attualmente gestendo le richieste di accesso. Passare invece a **%2$s**?"
     },
     {
       "_": "types.LangPackString",
@@ -22144,5 +22179,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 323513
+  "version": 323796
 }
