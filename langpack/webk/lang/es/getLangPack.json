@@ -5154,6 +5154,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Chat.Service.CommunityAdded.Bot",
+      "value": "El bot fue añadido a la comunidad %1$s"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Chat.Service.ConferenceCall.Ended",
       "value": "Llamada grupal finalizada (%1$@)"
     },
@@ -21556,5 +21561,5 @@
       "other_value": "%1$d mensajes"
     }
   ],
-  "version": 324368
+  "version": 325028
 }
