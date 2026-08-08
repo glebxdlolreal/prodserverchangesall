@@ -5729,6 +5729,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.GiftsWarning",
+      "value": "Бот **%s** ће моћи да **управља вашим поклонима**, укључујући и њихово поклањање другим корисницима."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.HeroDescription",
       "value": "Додајте бота на свој налог како би вам помогао да аутоматски обрађујете и одговарате на поруке које примате. [Сазнај више >]()"
     },
@@ -5931,6 +5936,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.SetupNotCompletedTitle",
       "value": "Бот није додат"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.StarsWarning",
+      "value": "Бот **%s** ће моћи да **преноси ваше звездице**."
     },
     {
       "_": "types.LangPackString",
@@ -7056,6 +7066,11 @@
       "key": "Community.PendingRequestsCount",
       "one_value": "Предложено %d ћаскање",
       "other_value": "Предложено %d ћаскања"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PendingRequestsInfo",
+      "value": "Ћаскања захтевају одобрење администратора пре додавања у заједницу."
     },
     {
       "_": "types.LangPackString",
@@ -10136,6 +10151,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "GuardBotEnableMembersText",
+      "value": "Новим члановима ће бити потребно одобрење бота **%s** да би слали поруке у овој групи"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotEnableSubscribersText",
+      "value": "Новим пратиоцима ће бити потребно одобрење бота **%s** да би се придружили овом каналу"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "GuardBotManagedBy",
       "value": "Овим управља %s"
     },
@@ -10143,6 +10168,16 @@
       "_": "types.LangPackString",
       "key": "GuardBotProcessJoinRequests",
       "value": "Обрада захтева"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotProcessJoinRequestsInfo",
+      "value": "Дозвољава овом боту да одобрава нове чланове користећи своје опције, попут капче (captcha)."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GuardBotReplaceText",
+      "value": "**%1$s** тренутно обрађује захтеве за придруживање. Прећи на **%2$s**?"
     },
     {
       "_": "types.LangPackString",
@@ -22339,6 +22374,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "WebAppGuardDisclaimerText",
+      "value": "**%1$s** користи **%2$s** за добродошлицу новим члановима. Морате прихватити [Услове коришћења]() мини-апликација да бисте наставили."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "WebPage.InstantView",
       "value": "БРЗИ ПРЕГЛЕД"
     },
@@ -22469,5 +22509,5 @@
       "other_value": "%1$d порука"
     }
   ],
-  "version": 323560
+  "version": 323612
 }
