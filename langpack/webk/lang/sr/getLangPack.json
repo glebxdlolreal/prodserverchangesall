@@ -1547,7 +1547,7 @@
     {
       "_": "types.LangPackString",
       "key": "AgeVerification.Failed",
-      "value": "Жао нам је, не можете гледати садржај за 18+ година."
+      "value": "Нажалост, не можете гледати садржај за 18+ година."
     },
     {
       "_": "types.LangPackString",
@@ -6880,6 +6880,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.ChannelRequestSent",
+      "value": "Ваш захтев за придруживање каналу је послат његовим администраторима."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.ChatRemoved",
       "value": "Ћаскање уклоењено из заједнице"
     },
@@ -7002,8 +7007,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.GroupRequestSent",
+      "value": "Ваш захтев за придруживање групи је послат њеним администраторима."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Hidden",
       "value": "Скривено"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.HiddenBotInfo",
+      "value": "Не можете користити овог бота док вас администратор не позове."
     },
     {
       "_": "types.LangPackString",
@@ -14177,6 +14192,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "PaymentInvoiceDisabledStarsText",
+      "value": "Нема довољно звездица"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "PaymentInvoiceLinkInvalid",
       "value": "Неважећа фактура"
     },
@@ -19743,6 +19763,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarsNotAvailableText",
+      "value": "Нажалост, куповина звездица није доступна у вашој држави."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarsNotAvailableTitle",
       "value": "Није доступно"
     },
@@ -22581,5 +22606,5 @@
       "other_value": "%1$d порука"
     }
   ],
-  "version": 323640
+  "version": 323649
 }
