@@ -5517,6 +5517,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.AllExcept",
+      "value": "Tutte le chat private tranne..."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.BotDescription",
+      "value": "Inserisci l'username o l'URL del bot di Telegram a cui vuoi far elaborare automaticamente le tue chat."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.BotHasAccess",
       "value": "il bot ha accesso a questa chat"
     },
@@ -5659,6 +5669,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.GiftsWarning",
       "value": "Il bot **@%s** potrà **gestire i tuoi regali**, incluso il trasferimento ad altri utenti."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.HeroDescription",
+      "value": "Aggiungi un bot al tuo account per aiutarti a elaborare e rispondere automaticamente ai messaggi che ricevi. [Scopri di più >]()"
     },
     {
       "_": "types.LangPackString",
@@ -5812,6 +5827,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChatAutomation.SearchFailed",
+      "value": "Impossibile cercare dei bot. Riprova."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.Searching",
+      "value": "Cerco dei bot..."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChatAutomation.SelectChats",
       "value": "Seleziona chat"
     },
@@ -5844,6 +5869,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.SetupNotCompletedLeave",
       "value": "Lascia"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.SetupNotCompletedText",
+      "value": "Non hai aggiunto un bot per gestire il tuo account. Lasciare comunque?"
     },
     {
       "_": "types.LangPackString",
@@ -5894,6 +5924,11 @@
       "_": "types.LangPackString",
       "key": "ChatAutomation.UsernameWarning",
       "value": "Il bot **%s** potrà **impostare e rimuovere username** per il tuo account, il che potrebbe comportare la perdita del tuo attuale username."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatAutomation.ViaBotTooltip",
+      "value": "Solo tu puoi vedere che questo messaggio è stato inviato da un bot."
     },
     {
       "_": "types.LangPackString",
@@ -6652,6 +6687,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.AdminRequired",
+      "value": "Non hai più il permesso di gestire queste richieste."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.AdministratorsInfo",
       "value": "Puoi aggiungere amministratori per farti aiutare a gestire la tua community."
     },
@@ -6674,6 +6714,17 @@
       "_": "types.LangPackString",
       "key": "Community.BanFromCommunity",
       "value": "Banna dalla community"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.BanFromCommunityInfo",
+      "one_value": "L'utente sarà rimosso da %d chat community.",
+      "other_value": "L'utente sarà rimosso da %d chat community."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.BanWarning",
+      "value": "Il ban di %1$s rimuoverà anche %2$d sue chat dalla community."
     },
     {
       "_": "types.LangPackString",
@@ -6945,6 +6996,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.NoCommunities",
+      "value": "Non hai ancora community."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.NoPendingRequests",
       "value": "Nessuna richiesta in sospeso"
     },
@@ -6992,6 +7048,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.PendingRequestsInfo",
+      "value": "Le chat richiedono l'approvazione dell'amministratore prima di essere aggiunte alla community."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.PrivateBotInfo",
       "value": "Questo bot è solo su invito. Solo i membri invitati possono usarlo."
     },
@@ -7015,6 +7076,11 @@
       "_": "types.LangPackString",
       "key": "Community.Promote",
       "value": "Promuovi"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PromoteAdminConfirm",
+      "value": "Rendere %s un amministratore di questa community?"
     },
     {
       "_": "types.LangPackString",
@@ -7088,6 +7154,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.RequestFailed",
+      "value": "Non è stato possibile aggiornare la richiesta. Riprova."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.RequestSent",
       "value": "Richiesta inviata"
     },
@@ -7102,6 +7173,11 @@
       "key": "Community.RequestsDeclined",
       "one_value": "%d suggerimento rifiutato.",
       "other_value": "%d suggerimenti rifiutati."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RequestsLoadFailed",
+      "value": "Impossibile caricare le richieste in sospeso. Riprova."
     },
     {
       "_": "types.LangPackString",
@@ -8715,6 +8791,11 @@
       "_": "types.LangPackString",
       "key": "Ephemeral.Retry",
       "value": "Riprova"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Ephemeral.SendFailed",
+      "value": "Invio del messaggio privato fallito."
     },
     {
       "_": "types.LangPackString",
@@ -11958,6 +12039,11 @@
       "_": "types.LangPackString",
       "key": "MediaCopied",
       "value": "Media copiato negli appunti"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "MediaCopyFailed",
+      "value": "Impossibile copiare i media negli appunti"
     },
     {
       "_": "types.LangPackString",
@@ -22112,6 +22198,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "WebAppGuardDisclaimerText",
+      "value": "**%1$s** usa **%2$s** per accogliere i nuovi membri. Dovrai accettare le [Condizioni d'uso]() delle mini app per continuare."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "WebPage.InstantView",
       "value": "APERTURA RAPIDA"
     },
@@ -22239,5 +22330,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 325140
+  "version": 325167
 }
