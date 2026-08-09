@@ -6744,6 +6744,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.ChannelRequestSent",
+      "value": "La tua richiesta di accesso al canale è stata inviata ai suoi amministratori."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.ChatRemoved",
       "value": "Chat rimossa dalla community"
     },
@@ -6860,13 +6865,28 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.GroupRequestSent",
+      "value": "La tua richiesta di accesso al gruppo è stata inviata ai suoi amministratori."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Hidden",
       "value": "Nascosta"
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.HiddenBotInfo",
+      "value": "Non puoi usare questo bot finché un amministratore non ti inviterà."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.HiddenChannelInfo",
       "value": "Non puoi unirti o vedere questo canale finché un amministratore non ti inviterà."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.HiddenChatInfo",
+      "value": "Non puoi unirti o vedere questa chat finché un amministratore non ti inviterà."
     },
     {
       "_": "types.LangPackString",
@@ -19408,6 +19428,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarsNotAvailableText",
+      "value": "Spiacenti, non sono disponibili acquisti di stelle dal tuo paese."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarsNotAvailableTitle",
       "value": "Non disponibile"
     },
@@ -19415,6 +19440,11 @@
       "_": "types.LangPackString",
       "key": "StarsPending",
       "value": "In attesa"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StarsPurchaseUnavailable",
+      "value": "L'acquisto di stelle non è disponibile in questo momento."
     },
     {
       "_": "types.LangPackString",
@@ -22209,5 +22239,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 323811
+  "version": 325140
 }
