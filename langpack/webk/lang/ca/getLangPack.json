@@ -6056,8 +6056,24 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.BotAdded",
+      "value": "S'ha afegit el bot a la comunitat"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.BotDescription",
       "value": "Feu que el bot formi part d'una comunitat amb molts altres xats relacionats."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.BotPeersLimit",
+      "one_value": "S'ha assolit el límit d'%d bot.",
+      "other_value": "S'ha assolit el límit de %d bots."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChannelAdded",
+      "value": "S'ha afegit el canal a la comunitat"
     },
     {
       "_": "types.LangPackString",
@@ -6068,6 +6084,26 @@
       "_": "types.LangPackString",
       "key": "Community.ChatVisibility",
       "value": "Visibilitat dels xats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChatsHidden",
+      "value": "Xats ocults"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChatsJoined",
+      "value": "Xats en què esteu"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChatsRequestable",
+      "value": "Xats a què podeu demanar unir-vos"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ChatsVisible",
+      "value": "Xats que podeu veure"
     },
     {
       "_": "types.LangPackString",
@@ -6086,8 +6122,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.Delete",
+      "value": "Elimina la comunitat"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.Description",
       "value": "Feu que el grup formi part d'una comunitat amb molts altres xats relacionats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.GroupAdded",
+      "value": "S'ha afegit el grup a la comunitat"
     },
     {
       "_": "types.LangPackString",
@@ -6096,8 +6142,38 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.HiddenBotInfo",
+      "value": "No podreu usar el bot fins que l'administració us hi convidi."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.HiddenChannelInfo",
+      "value": "No podeu veure ni unir-vos al canal fins que l'administració us hi convidi."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.HiddenChatInfo",
+      "value": "No podeu veure ni unir-vos al xat fins que l'administració us hi convidi."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.HiddenInfo",
       "value": "Només els membres convidats i l'administració de la comunitat veuran el xat."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.MessageBotOwner",
+      "value": "Escriu al propietari del bot"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.MessageChannelOwner",
+      "value": "Escriu al propietari del canal"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.MessageOwner",
+      "value": "Escriu al propietari del grup"
     },
     {
       "_": "types.LangPackString",
@@ -6108,6 +6184,12 @@
       "_": "types.LangPackString",
       "key": "Community.OnlyAdminsInfo",
       "value": "Cal que l'administració aprovi els xats suggerits pels membres de la comunitat."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.PeersLimit",
+      "one_value": "S'ha assolit el límit d'%d xat.",
+      "other_value": "S'ha assolit el límit de %d xats."
     },
     {
       "_": "types.LangPackString",
@@ -6126,6 +6208,42 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Community.PrivateBotInfo",
+      "value": "El bot és restringit. Només els membres convidats el poden usar."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PrivateChannelInfo",
+      "value": "El canal és restringit. Només els membres el poden veure."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.PrivateChatInfo",
+      "value": "El xat és restringit. Només els membres el poden veure."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "key": "Community.ProfileStatus",
+      "one_value": "Comunitat amb %d xat",
+      "other_value": "Comunitat amb %d xats"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveBot",
+      "value": "Elimina el bot de la comunitat"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveChannel",
+      "value": "Elimina el canal de la comunitat"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.RemoveGroup",
+      "value": "Elimina el grup de la comunitat"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Community.RemovedUsersInfo",
       "value": "Els usuaris que l'administració ha eliminat de la comunitat no s'hi poden tornar a unir amb enllaços."
     },
@@ -6134,6 +6252,21 @@
       "key": "Community.RequestsAdded",
       "one_value": "El xat s'ha afegit a la comunitat.",
       "other_value": "Els %d xats s'han afegit a la comunitat."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ShowAsOne",
+      "value": "Mostra com a un xat"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ShowAsOneInfo",
+      "value": "Agrupa tots els xats de la comunitat en un element a la llista de xats."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Community.ShowSeparately",
+      "value": "Mostra com a xats separats"
     },
     {
       "_": "types.LangPackString",
@@ -7600,6 +7733,31 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Ephemeral.CantSchedule",
+      "value": "Els missatges efímers no es poden programar."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Ephemeral.CommandTooltip",
+      "value": "Altres membres no veuran el missatge"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Ephemeral.ReplySingleMessage",
+      "value": "Només podeu enviar un missatge en resposta a aquest missatge."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Ephemeral.VisibleTo",
+      "value": "Només %s el pot veure"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Ephemeral.VisibleYou",
+      "value": "Ningú més el pot veure"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Error.AnError",
       "value": "S'ha produït un error. Torneu a provar-ho més tard."
     },
@@ -8720,6 +8878,11 @@
       "_": "types.LangPackString",
       "key": "GlobalSendMessageRestricted",
       "value": "No es permet enviar missatges al grup."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "GramBalance",
+      "value": "Saldo de Grams"
     },
     {
       "_": "types.LangPackString",
@@ -20752,5 +20915,5 @@
       "other_value": "%1$d missatges"
     }
   ],
-  "version": 326145
+  "version": 326202
 }
