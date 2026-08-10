@@ -2297,7 +2297,7 @@
     {
       "_": "types.LangPackString",
       "key": "CameraRatio",
-      "value": "Raportul aspectului"
+      "value": "Raport de Aspect"
     },
     {
       "_": "types.LangPackString",
@@ -10798,7 +10798,7 @@
     {
       "_": "types.LangPackString",
       "key": "MediaRestricted",
-      "value": "Media indisponibile"
+      "value": "Articol indisponibil"
     },
     {
       "_": "types.LangPackString",
@@ -24914,5 +24914,5 @@
       "other_value": "%1$s de ani"
     }
   ],
-  "version": 1642014
+  "version": 1642017
 }

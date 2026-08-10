@@ -10957,7 +10957,7 @@
     {
       "_": "types.LangPackString",
       "key": "MediaEditor.AspectRatio",
-      "value": "Raportul aspectului"
+      "value": "Raport de aspect"
     },
     {
       "_": "types.LangPackString",
@@ -21273,5 +21273,5 @@
       "other_value": "%1$d de mesaje"
     }
   ],
-  "version": 326610
+  "version": 326614
 }

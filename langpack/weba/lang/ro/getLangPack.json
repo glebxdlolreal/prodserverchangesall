@@ -2010,7 +2010,7 @@
     {
       "_": "types.LangPackString",
       "key": "AspectRatio",
-      "value": "Raportul aspectului"
+      "value": "Raport de aspect"
     },
     {
       "_": "types.LangPackString",
@@ -15065,5 +15065,5 @@
       "value": "Numele tău"
     }
   ],
-  "version": 283402
+  "version": 283405
 }
