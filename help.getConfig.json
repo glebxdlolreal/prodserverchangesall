@@ -8,7 +8,7 @@
   "caption_length_max": 1024,
   "channels_read_media_period": 604800,
   "chat_size_max": 200,
-  "date": 1784035817,
+  "date": 1786555498,
   "dc_options": [
     {
       "_": "types.DcOption",
@@ -266,7 +266,7 @@
   "dc_txt_domain_name": "apv3.stel.com",
   "default_p2p_contacts": true,
   "edit_time_limit": 172800,
-  "expires": 1784038823,
+  "expires": 1786559641,
   "force_try_ipv6": false,
   "forwarded_count_max": 100,
   "gif_search_username": "gif",
@@ -286,7 +286,7 @@
   "rating_e_decay": 2419200,
   "reactions_default": {
     "_": "types.ReactionEmoji",
-    "emoticon": "❤"
+    "emoticon": "❤‍🔥"
   },
   "revoke_pm_inbox": true,
   "revoke_pm_time_limit": 2147483647,
