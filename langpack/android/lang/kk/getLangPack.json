@@ -502,6 +502,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrCheckbox",
+      "value": "Жалауша"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrChecked",
+      "value": "Белгіленген"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrCloseMenu",
       "value": "Мәзірді жабу"
     },
@@ -647,6 +657,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrIVButtons",
+      "value": "Батырмалар"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrIVCode",
       "value": "Код"
     },
@@ -692,8 +707,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrIVInsertDate",
+      "value": "Күнді енгізу"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrIVKicker",
       "value": "Тақырып үсті"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrIVListStyle",
+      "value": "Тізім стилі"
     },
     {
       "_": "types.LangPackString",
@@ -719,6 +744,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrIVTable",
       "value": "Кесте"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrIVTextStyle",
+      "value": "Мәтін стилі"
     },
     {
       "_": "types.LangPackString",
@@ -830,6 +860,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrMyLocation",
       "value": "Орным"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrNotChecked",
+      "value": "Белгіленбеген"
     },
     {
       "_": "types.LangPackString",
@@ -1283,6 +1318,16 @@
       "_": "types.LangPackString",
       "key": "AccDescrVoipMicOn",
       "value": "Микрофон қосулы"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrWithAdminTag",
+      "value": "әкімші белгісі бар: %1$s"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrWithMemberTag",
+      "value": "мүше белгісі бар: %1$s"
     },
     {
       "_": "types.LangPackString",
@@ -4650,6 +4695,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ArticleHighlightCells",
+      "value": "Ұяшықтарды бояу"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ArticleHighlightColumn",
       "value": "Бағанды бояу"
     },
@@ -4802,6 +4852,16 @@
       "_": "types.LangPackString",
       "key": "ArticleSplitCells",
       "value": "Ұяшықты бөлу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ArticleTableBordered",
+      "value": "Жиектелген"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ArticleTableCompact",
+      "value": "Ықшам"
     },
     {
       "_": "types.LangPackString",
@@ -40311,6 +40371,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Redo",
+      "value": "Алға"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Reduce",
       "value": "Азайту"
     },
@@ -41863,13 +41928,33 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "RichEditorButtonCopyText",
+      "value": "Мәтінді көшіру батырмасы"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichEditorButtonText",
       "value": "Батырма мәтіні"
     },
     {
       "_": "types.LangPackString",
+      "key": "RichEditorButtonURL",
+      "value": "Батырма сілтемесі"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "RichEditorChangeUser",
       "value": "Қолданушыны өзгерту"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichEditorCreateCopyButton",
+      "value": "Көшіру батырмасын жасау"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichEditorCreateLinkButton",
+      "value": "Сілтеме батырмасын жасау"
     },
     {
       "_": "types.LangPackString",
@@ -41880,6 +41965,16 @@
       "_": "types.LangPackString",
       "key": "RichEditorDraftSaved",
       "value": "Шимай сақталды."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichEditorEditCopyButton",
+      "value": "Көшіру батырмасын өңдеу"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "RichEditorEditLinkButton",
+      "value": "Сілтемені батырмасын өңдеу"
     },
     {
       "_": "types.LangPackString",
@@ -52608,6 +52703,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "UnsupportedBlockMessage",
+      "value": "Хаттың осы бөлігін көру үшін Telegram-ды жаңартыңыз"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "UnsupportedBlockTitle",
+      "value": "Қолдауы жоқ блок"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "UnsupportedMedia",
       "value": "Бұл хат Telegram нұсқаңызда қолжетімсіз. Көру үшін қолданбаны соңғы нұсқаға дейін жаңартыңыз."
     },
@@ -56896,5 +57001,5 @@
       "value": "Telegram төлқұжат"
     }
   ],
-  "version": 60374551
+  "version": 60374940
 }
