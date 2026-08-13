@@ -14021,6 +14021,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "PaymentInvoiceDisabledStarsText",
+      "value": "Non hai abbastanza stelle"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "PaymentInvoiceLinkInvalid",
       "value": "Fattura non valida"
     },
@@ -22350,5 +22355,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 329018
+  "version": 329071
 }
