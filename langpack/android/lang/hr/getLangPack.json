@@ -504,6 +504,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrCheckbox",
+      "value": "Potvrdni okvir"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrChecked",
+      "value": "Potvrđeno"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrCloseMenu",
       "value": "Zatvori izbornik"
     },
@@ -524,6 +534,16 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrCodeBlock",
+      "value": "Blok koda"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrCodeBlockLanguage",
+      "value": "Blok koda, %1$s"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrCollage",
       "value": "Kolaž"
     },
@@ -536,6 +556,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrCollapsePanel",
       "value": "Sažmi panel"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrCollapsed",
+      "value": "Sažeto"
     },
     {
       "_": "types.LangPackString",
@@ -584,6 +609,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrExpanded",
+      "value": "Prošireno"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrFingerprint",
       "value": "Otisak prsta"
     },
@@ -626,6 +656,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrIVBlockquote",
       "value": "Citat"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrIVButtons",
+      "value": "Gumbi"
     },
     {
       "_": "types.LangPackString",
@@ -674,8 +709,18 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrIVInsertDate",
+      "value": "Unesite datum"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrIVKicker",
       "value": "Nadnaslov"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrIVListStyle",
+      "value": "Stil popisa"
     },
     {
       "_": "types.LangPackString",
@@ -701,6 +746,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrIVTable",
       "value": "Tablica"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrIVTextStyle",
+      "value": "Stil teksta"
     },
     {
       "_": "types.LangPackString",
@@ -813,6 +863,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrMyLocation",
       "value": "Moja lokacija"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrNotChecked",
+      "value": "Nije potvrđeno"
     },
     {
       "_": "types.LangPackString",
@@ -999,6 +1054,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrReceivedDate",
       "value": "Preuzeto %s"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrRemoveRoundVideo",
+      "value": "Ukloni videoporuku"
     },
     {
       "_": "types.LangPackString",
@@ -1269,6 +1329,11 @@
       "_": "types.LangPackString",
       "key": "AccDescrVoipMicOn",
       "value": "Mikrofon je uključen"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AccDescrWithAdminTag",
+      "value": "s oznakom administratora: %1$s"
     },
     {
       "_": "types.LangPackString",
@@ -57628,5 +57693,5 @@
       "value": "Telegram osobna"
     }
   ],
-  "version": 60378973
+  "version": 60379002
 }
