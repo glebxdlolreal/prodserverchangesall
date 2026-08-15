@@ -38784,7 +38784,7 @@
     {
       "_": "types.LangPackString",
       "key": "lng_stories_album_all",
-      "value": "Todas"
+      "value": "Todos"
     },
     {
       "_": "types.LangPackString",
@@ -41507,5 +41507,5 @@
       "other_value": "Pagaste {count} estrellas."
     }
   ],
-  "version": 5801615
+  "version": 5815041
 }
