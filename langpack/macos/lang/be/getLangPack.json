@@ -641,6 +641,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AffiliateProgram.JoinSubtitle",
+      "value": "**%1$@** будзе **%3$@** плаціць вам **%2$@** ад свайго даходу за кожнага накіраванага вамі карыстальніка."
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AffiliateProgram.JoinSubtitleLifetime",
       "value": "**{bot}** будзе **заўсёды** дзяліцца **{commission}** даходу ад кожнага карыстальніка, якога вы запросіце."
     },
@@ -781,6 +786,11 @@
       "_": "types.LangPackString",
       "key": "AffiliateProgram.UserCountFooter_ZeroValueHolder",
       "value": "Яшчэ ніхто не адкрыў %@ па гэтай спасылцы."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AffiliateProgram.UserCountFooter_any",
+      "value": "Колькасць тых, хто адкрыў {bot} па гэтай спасылцы: %d."
     },
     {
       "_": "types.LangPackString",
@@ -976,6 +986,11 @@
       "_": "types.LangPackString",
       "key": "AffiliateSetup.SectionDurationFooter",
       "value": "Задайце час, на працягу якога партнёры будуць атрымліваць камісію за накіраваных карыстальнікаў."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "AffiliateSetup.SortSectionHeader",
+      "value": "САРТАВАЦЬ ПА"
     },
     {
       "_": "types.LangPackString",
@@ -5648,6 +5663,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "ChannelBoost.EnableReactionsText",
+      "value": "Ваш канал павінен дасягнуць **%1$@ узроўню**, каб дадаць %2$@ эмодзі з любых набораў у якасці рэакцый.\n\nПрапануйце падпісчыкам **Premium** падтрымаць ваш канал па гэтай спасылцы:"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "ChannelBoost.EnableReactionsText.Group",
       "value": "Каб дадаць %2$@ эмодзі ў якасці рэакцый, ваша суполка мусіць дасягнуць **узроўню %1$@**.\n\nПапрасіце ўдзельнікаў з Premium падтрымаць суполку па гэтай спасылцы:"
     },
@@ -9186,6 +9206,14 @@
     },
     {
       "_": "types.LangPackStringPluralized",
+      "few_value": "Заплаціць за %d паведамленні",
+      "key": "Chat.PayStars.Confirm.Pay",
+      "many_value": "Заплаціць за %d паведамленняў",
+      "one_value": "Заплаціць за %d паведамленне",
+      "other_value": "Заплаціць за %d паведамлення"
+    },
+    {
+      "_": "types.LangPackStringPluralized",
       "few_value": "Аплаціць %d медыя",
       "key": "Chat.PayStars.Confirm.Pay.Media",
       "many_value": "Аплаціць %d медыя",
@@ -12560,6 +12588,11 @@
       "_": "types.LangPackString",
       "key": "ChatList.FreezeAccount.Alert.Appeal",
       "value": "Падаць апеляцыю"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "ChatList.FreezeAccount.Alert.Title",
+      "value": "Ваш уліковы запіс замарожаны"
     },
     {
       "_": "types.LangPackString",
@@ -19359,6 +19392,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Gifting.PremWithStars.Confirm.Info",
+      "value": "Вы сапраўды хочаце для **%1$@** падарыць **Telegram Premium** за **%2$@**?"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Gifting.PremWithStars.Confirm.Title",
       "value": "Адправіць падарунак"
     },
@@ -20087,6 +20125,11 @@
       "_": "types.LangPackString",
       "key": "Group.LeaveInfoAdmin",
       "value": "Калі вы выйдзеце, %1$@ стане новым кіраўніком %2$@ праз 1 тыдзень."
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "Group.LeaveInfoOwner",
+      "value": "Калі вы сыдзеце, **%1$@** стане новым уладальнікам **%2$@** праз 1 тыдзень."
     },
     {
       "_": "types.LangPackString",
@@ -34988,6 +35031,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarGift.Craft.Crafted",
+      "value": " (створаны)"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarGift.Craft.Description",
       "value": "Дадайце да 4 падарункаў, каб стварыць\n%1$@**%2$@**.\n\nКалі стварэнне не ўдасца, гэтыя падарункі будуць страчаныя."
     },
@@ -35033,8 +35081,21 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarGift.Craft.GiftLost",
+      "value": "1 падарунак быў страчаны"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarGift.Craft.GiftTooEarly",
       "value": "Гэты падарунак стане даступным для стварэння %1$@."
+    },
+    {
+      "_": "types.LangPackStringPluralized",
+      "few_value": "%1$d падарункі былі страчаны",
+      "key": "StarGift.Craft.GiftsLost",
+      "many_value": "%1$d падарункаў былі страчаны",
+      "one_value": "%1$d падарунак быў страчаны",
+      "other_value": "%1$d падарунка быў страчаны"
     },
     {
       "_": "types.LangPackString",
@@ -35045,6 +35106,11 @@
       "_": "types.LangPackString",
       "key": "StarGift.Craft.HeaderTitle",
       "value": "Стварэнне падарунка"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StarGift.Craft.MenuItem",
+      "value": "Стварыць"
     },
     {
       "_": "types.LangPackString",
@@ -35103,6 +35169,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "StarGift.Marketplace.SuitableGiftsOnSale",
+      "value": "ПАДАРУНКІ У ПРОДАЖЫ (%1$d)"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "StarGift.Marketplace.YourGifts",
       "value": "Вашы падарункі"
     },
@@ -35123,6 +35194,11 @@
       "_": "types.LangPackString",
       "key": "StarGift.ModelBuilder.CollectionFeatures_countable",
       "value": "Гэтая калекцыя ўключае %d унікальных мадэляў.\n"
+    },
+    {
+      "_": "types.LangPackString",
+      "key": "StarGift.ModelBuilder.Craftable",
+      "value": "можна стварыць"
     },
     {
       "_": "types.LangPackString",
@@ -42586,5 +42662,5 @@
       "value": "Паказаць замены"
     }
   ],
-  "version": 2261193
+  "version": 2261194
 }
