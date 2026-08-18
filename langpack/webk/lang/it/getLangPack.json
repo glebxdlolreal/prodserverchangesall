@@ -14236,6 +14236,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "Peer.Activity.Chat.Pair.ChoosingSticker",
+      "value": "%1$@ e %2$@ stanno scegliendo uno sticker"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "Peer.Activity.Chat.Pair.PlayingGame",
       "value": "%1$@ e %2$@ stanno giocando"
     },
@@ -22415,5 +22420,5 @@
       "other_value": "%1$d messaggi"
     }
   ],
-  "version": 330075
+  "version": 331227
 }
