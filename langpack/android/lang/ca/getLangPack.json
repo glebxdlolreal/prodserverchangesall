@@ -767,6 +767,11 @@
     },
     {
       "_": "types.LangPackString",
+      "key": "AccDescrLiked",
+      "value": "Agradament"
+    },
+    {
+      "_": "types.LangPackString",
       "key": "AccDescrLiteBatteryLevelAnnounce",
       "value": "%s%%"
     },
@@ -57001,5 +57006,5 @@
       "value": "Telegram Passport"
     }
   ],
-  "version": 60379132
+  "version": 60437112
 }
