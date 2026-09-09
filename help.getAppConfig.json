@@ -2316,7 +2316,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.5841643436112138
+          "value": 1.3734900156755574
         }
       },
       {
@@ -3193,8 +3193,24 @@
           "_": "types.JsonString",
           "value": "premium"
         }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "wallet_transfer_min_nanos",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 100000000.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "wallet_gasless_min_nanos",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 100000000.0
+        }
       }
     ]
   },
-  "hash": 562256013
+  "hash": -1187748467
 }
