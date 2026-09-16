@@ -2316,7 +2316,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.3230567491242546
+          "value": 1.309683809915661
         }
       },
       {
@@ -3214,11 +3214,11 @@
         "_": "types.JsonObjectValue",
         "key": "wallet_gasless_daily_transfers",
         "value": {
-          "_": "types.JsonString",
-          "value": "5"
+          "_": "types.JsonNumber",
+          "value": 5.0
         }
       }
     ]
   },
-  "hash": 579700966
+  "hash": -1812311434
 }
