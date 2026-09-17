@@ -2100,7 +2100,7 @@
         "key": "ton_blockchain_explorer_url",
         "value": {
           "_": "types.JsonString",
-          "value": "https://tonviewer.com/"
+          "value": "https://tonscan.org/"
         }
       },
       {
@@ -2316,7 +2316,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.309683809915661
+          "value": 1.3375963410153056
         }
       },
       {
@@ -3220,5 +3220,5 @@
       }
     ]
   },
-  "hash": -1812311434
+  "hash": 1948365990
 }
