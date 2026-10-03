@@ -1,11 +1,4 @@
 {
-  "_": "types.help.PromoData",
-  "chats": [],
-  "dismissed_suggestions": [],
-  "expires": 1791063112,
-  "pending_suggestions": [
-    "AUTOARCHIVE_POPULAR"
-  ],
-  "proxy": false,
-  "users": []
+  "_": "types.help.PromoDataEmpty",
+  "expires": 1791064001
 }
