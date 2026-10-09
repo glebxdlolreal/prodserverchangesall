@@ -1,11 +1,4 @@
 {
-  "_": "types.help.PromoData",
-  "chats": [],
-  "dismissed_suggestions": [],
-  "expires": 1791547720,
-  "pending_suggestions": [
-    "WALLET_FIRST_INCOMING_TRANSFER"
-  ],
-  "proxy": false,
-  "users": []
+  "_": "types.help.PromoDataEmpty",
+  "expires": 1791548367
 }
