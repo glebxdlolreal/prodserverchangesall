@@ -2316,7 +2316,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.5928281026137536
+          "value": 1.4534134301956425
         }
       },
       {
@@ -3199,7 +3199,7 @@
         "key": "wallet_available",
         "value": {
           "_": "types.JsonBool",
-          "value": false
+          "value": true
         }
       },
       {
@@ -3228,5 +3228,5 @@
       }
     ]
   },
-  "hash": 1809570545
+  "hash": 1083692186
 }
