@@ -1,0 +1,17 @@
+[
+  {
+    "_": "types.wallet.HolderDc",
+    "dc": 1,
+    "public_key": "b'>\\n\\x96\\xc1\\x90\\xc8\\xc4\\x02\\x12\\x89(\\x9f\\xe0YSlALD!DD\\xb4\\xd1\\xf4\\xc7G\\xbd\\xb2([F'"
+  },
+  {
+    "_": "types.wallet.HolderDc",
+    "dc": 4,
+    "public_key": "b'\\x92X\\xca\\x9e\\xd9\\xf7g\\xe0\\xa5\\x8d\\xb0.\\x15\\xf5=\\xd6&=7\\xe9\\x8359/-\\xc8\\xd4\\xb3\\xcc\\x07\\xce}'"
+  },
+  {
+    "_": "types.wallet.HolderDc",
+    "dc": 5,
+    "public_key": "b'\\xa0\\x95r\\xd0S\\xc7\\x07\\x1f\\x90m>\\x10\\xbe\\xf8\\xbe\\xba\\xda\\x8c\\x86\\x01\\x05\\x1e\\x8fje\\x96\\x1d\\xdf`\\x8a6\\x83'"
+  }
+]
