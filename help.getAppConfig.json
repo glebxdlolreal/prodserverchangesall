@@ -2316,7 +2316,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.4534134301956425
+          "value": 1.4616674598664483
         }
       },
       {
@@ -3225,8 +3225,16 @@
           "_": "types.JsonNumber",
           "value": 5.0
         }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "round_video_recorder_2_allowed",
+        "value": {
+          "_": "types.JsonBool",
+          "value": false
+        }
       }
     ]
   },
-  "hash": 1083692186
+  "hash": 1537731502
 }
