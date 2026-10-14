@@ -1304,6 +1304,38 @@
             {
               "_": "types.JsonString",
               "value": "translations.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "instantview.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "contest.dev"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "contest.com"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "bugs.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "suggestions.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "themes.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "promote.telegram.org"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "ads.telegram.org"
             }
           ]
         }
@@ -2316,7 +2348,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.4616674598664483
+          "value": 1.34686765208949
         }
       },
       {
@@ -3236,5 +3268,5 @@
       }
     ]
   },
-  "hash": 1537731502
+  "hash": 396446327
 }
