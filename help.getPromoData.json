@@ -1,11 +1,4 @@
 {
-  "_": "types.help.PromoData",
-  "chats": [],
-  "dismissed_suggestions": [],
-  "expires": 1792517589,
-  "pending_suggestions": [
-    "VALIDATE_PHONE_NUMBER"
-  ],
-  "proxy": false,
-  "users": []
+  "_": "types.help.PromoDataEmpty",
+  "expires": 1792517921
 }
