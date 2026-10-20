@@ -2348,7 +2348,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.3411921006264635
+          "value": 1.3350030243248385
         }
       },
       {
@@ -3260,6 +3260,43 @@
       },
       {
         "_": "types.JsonObjectValue",
+        "key": "bot_allowed_suffixes",
+        "value": {
+          "_": "types.JsonArray",
+          "value": [
+            {
+              "_": "types.JsonString",
+              "value": "agent"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "ai"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "app"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "game"
+            },
+            {
+              "_": "types.JsonString",
+              "value": "gay"
+            }
+          ]
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "bot_additional_usernames_limit",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 2.0
+        }
+      },
+      {
+        "_": "types.JsonObjectValue",
         "key": "wallet_card_bg_gifts",
         "value": {
           "_": "types.JsonArray",
@@ -3285,5 +3322,5 @@
       }
     ]
   },
-  "hash": 1205163117
+  "hash": 230243440
 }
