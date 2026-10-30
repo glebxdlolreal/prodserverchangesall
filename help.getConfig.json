@@ -1,5 +1,6 @@
 {
   "_": "types.Config",
+  "base_lang_pack_version": 0,
   "blocked_mode": true,
   "call_connect_timeout_ms": 30000,
   "call_packet_timeout_ms": 10000,
@@ -8,7 +9,7 @@
   "caption_length_max": 1024,
   "channels_read_media_period": 604800,
   "chat_size_max": 200,
-  "date": 1786555498,
+  "date": 1793347710,
   "dc_options": [
     {
       "_": "types.DcOption",
@@ -266,11 +267,12 @@
   "dc_txt_domain_name": "apv3.stel.com",
   "default_p2p_contacts": true,
   "edit_time_limit": 172800,
-  "expires": 1786559641,
+  "expires": 1793351661,
   "force_try_ipv6": false,
   "forwarded_count_max": 100,
   "gif_search_username": "gif",
   "img_search_username": "bing",
+  "lang_pack_version": 2402919,
   "me_url_prefix": "https://t.me/",
   "megagroup_size_max": 200000,
   "message_length_max": 4096,
@@ -292,6 +294,7 @@
   "revoke_pm_time_limit": 2147483647,
   "revoke_time_limit": 2147483647,
   "stickers_recent_limit": 200,
+  "suggested_lang_code": "en",
   "test_mode": false,
   "venue_search_username": "foursquare",
   "webfile_dc_id": 4
