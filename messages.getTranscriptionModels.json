@@ -1,0 +1,186 @@
+[
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 5614224786343994720,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "tinylid.bin.gz"
+        }
+      ],
+      "date": 1794580755,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98()\\xf43\\x0f\\x94\\xee\\xf5uKG\\x82C5\\xe9\\x80'",
+      "id": 5456570613139286127,
+      "mime_type": "application/gzip",
+      "size": 3859718,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "tinylid"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 975210563734223615,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "silero_vad.onnx.gz"
+        }
+      ],
+      "date": 1794580803,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\xaaJs\\x8c\\xa5\\x99\\x94\\x13A\\xaf\\x8b\\xe0\\x85\\x12\\xfcA'",
+      "id": 5456570613139286128,
+      "mime_type": "application/gzip",
+      "size": 1945092,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "silero-vad"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 1854087060249980667,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "en-ru-uk.tzf.gz"
+        }
+      ],
+      "date": 1794580810,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\x98\\xee\\xe2\\xba\\xba\\xda^\\xe3\\xf8\\xb2\\xf3\\xba\\xc2\\xc2\\xa1?'",
+      "id": 5456570613139286129,
+      "mime_type": "application/gzip",
+      "size": 31227550,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "en",
+      "ru",
+      "uk"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 7081687879968583000,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "en-es-it-pt.tzf.gz"
+        }
+      ],
+      "date": 1794580821,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\xa4\\xde\\xc0|\\x19>\\xacao\\x06\\xc7\\xc5\\xd55\\x95/'",
+      "id": 5456570613139286130,
+      "mime_type": "application/gzip",
+      "size": 32201827,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "en",
+      "es",
+      "it",
+      "pt"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 8349316675868681187,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "en-ru-uz.tzf.gz"
+        }
+      ],
+      "date": 1794580851,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\xd2*dW\\x9e\\x85O\\x86D2D\\xf9\\x08\\xd9\\xee\\x8e'",
+      "id": 5456570613139286132,
+      "mime_type": "application/gzip",
+      "size": 31070412,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "en",
+      "ru",
+      "uz"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 7454867244401896575,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "en-fa.tzf.gz"
+        }
+      ],
+      "date": 1794580860,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\x9d\\xc5o+{\\xfc\\xd2\\x97U\\x0c\\x07\\xf5\\xbc\\xecu;'",
+      "id": 5456570613139286134,
+      "mime_type": "application/gzip",
+      "size": 30123498,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "en",
+      "fa"
+    ],
+    "version": 1
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
+      "access_hash": 7020667729770685038,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "en-km.tzf.gz"
+        }
+      ],
+      "date": 1794580868,
+      "dc_id": 2,
+      "file_reference": "b'\\x00j\\xf8@\\x98\\xb9\\xbc\\x16\\xe9\"PBp?\\x9c\\x87\\x92\\xa5\\x1ez^'",
+      "id": 5456570613139286135,
+      "mime_type": "application/gzip",
+      "size": 30127681,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "en",
+      "km"
+    ],
+    "version": 1
+  }
+]
