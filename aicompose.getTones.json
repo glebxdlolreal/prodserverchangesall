@@ -1,0 +1,47 @@
+{
+  "_": "types.aicompose.Tones",
+  "tones": [
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5442983582882601962,
+      "title": "Zen",
+      "tone": "zen"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5350460637182993292,
+      "title": "Short",
+      "tone": "short"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5359785904535774578,
+      "title": "Corp",
+      "tone": "corp"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5470159421512359552,
+      "title": "Tribal",
+      "tone": "tribal"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5357080225463149588,
+      "title": "Formal",
+      "tone": "formal"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5350571717922167592,
+      "title": "Biblical",
+      "tone": "biblical"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
+      "emoji_id": 5350341795437911403,
+      "title": "Viking",
+      "tone": "viking"
+    }
+  ]
+}
