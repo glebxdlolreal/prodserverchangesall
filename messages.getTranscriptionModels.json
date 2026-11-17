@@ -12,7 +12,7 @@
       ],
       "date": 1794580755,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca\\x88\\x08\\xf6\\xb8\\xbe)DD5y\\xdbS\\xd7f\\xc5x'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04\\xdaQ%=\\x1b;D%\\xe8\\xd5g\\x90\\x9d\\xbb\\xf8\\x1f'",
       "id": 5456570613139286127,
       "mime_type": "application/gzip",
       "size": 3859718,
@@ -37,7 +37,7 @@
       ],
       "date": 1794580803,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca_o\\x1a\\x14\\xc9]Y\\xd6\\xfa*\\xd0\\xaa\\xbe\\x93\\x99\\xc5'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04)\\x16QC{\\x15J\\xd2\\x94\\xc4\\x08o\\xea\\xb3\\xd7S'",
       "id": 5456570613139286128,
       "mime_type": "application/gzip",
       "size": 1945092,
@@ -53,19 +53,19 @@
     "_": "types.TranscriptionModel",
     "document": {
       "_": "types.Document",
-      "access_hash": 1854087060249980667,
+      "access_hash": 5960936261255660071,
       "attributes": [
         {
           "_": "types.DocumentAttributeFilename",
           "file_name": "en-ru-uk.tzf.gz"
         }
       ],
-      "date": 1794580810,
+      "date": 1794920276,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca]:\\xae\\x80\\xb0#.c\\xf8\\xb6:\\x12\\x98\\xd5iu'",
-      "id": 5456570613139286129,
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04@\\x84\\xb3\\xea\\xad\\xf8u\\x82\\xac\\xedP\\xc3\\x14\\xed\\xdb['",
+      "id": 5467792662604066006,
       "mime_type": "application/gzip",
-      "size": 31227550,
+      "size": 33400924,
       "thumbs": [],
       "video_thumbs": []
     },
@@ -74,7 +74,7 @@
       "ru",
       "uk"
     ],
-    "version": 1
+    "version": 2
   },
   {
     "_": "types.TranscriptionModel",
@@ -89,7 +89,7 @@
       ],
       "date": 1794580821,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca\\xf6\\xd8\\xe5\\x19\\xa36\\xde\\x0c\\xe0\\xcd\\xbe\\x97\\xe9\\xc1\\xf6\\xb6'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04\\x87\\xf1mm\\xb9\\xab\\xa8\\x11f\\x8e\\x0fl\\xefR2d'",
       "id": 5456570613139286130,
       "mime_type": "application/gzip",
       "size": 32201827,
@@ -116,7 +116,7 @@
       ],
       "date": 1794580851,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca\\x853\\x94\\x11\\xa9\\xcf\\x88\\xf1\\xf9\\x8b\\x02-\\xf2\\xdc\\xb6\\xaa'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04\\x88\\xe5\\t3\\xe3\\x0e\\xac\\xd7f2\\xc2\\x8e\\xa3\\xb7\\xf9\\xdc'",
       "id": 5456570613139286132,
       "mime_type": "application/gzip",
       "size": 31070412,
@@ -141,7 +141,7 @@
       ],
       "date": 1794580860,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca\\xc1\\x85\\xe1\\xeer8\\xb1\\xcb\\xdd\\x85\\x96\\x8b\\xc1\\xaf7\\x00'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04\\xb5\\x17\\xc1\\xfe\\xf1\\xec\\x86\\x04g\\x81\\xb2\\xf6\\x0f\\xc0\\xf2\\xd7'",
       "id": 5456570613139286134,
       "mime_type": "application/gzip",
       "size": 30123498,
@@ -166,7 +166,7 @@
       ],
       "date": 1794580868,
       "dc_id": 2,
-      "file_reference": "b'\\x00j\\xf9\\xe4\\xca\\xd8\\xb5+\\x9c\\xed\\xc3,;\\x160\\xcb\\x83^\\xb0x\\x03'",
+      "file_reference": "b'\\x00j\\xfc\\x92\\x04\\xe3 Nk\\x1d\\xdaIMM5\\xa0\\x8e\\xb1\\x01\\x1a\\x14'",
       "id": 5456570613139286135,
       "mime_type": "application/gzip",
       "size": 30127681,
