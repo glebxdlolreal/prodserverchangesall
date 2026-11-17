@@ -2348,7 +2348,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 1.1513468780822882
+          "value": 1.063418655204869
         }
       },
       {
@@ -2405,22 +2405,6 @@
         "value": {
           "_": "types.JsonNumber",
           "value": 1000.0
-        }
-      },
-      {
-        "_": "types.JsonObjectValue",
-        "key": "stargifts_fragment_resale_enabled",
-        "value": {
-          "_": "types.JsonBool",
-          "value": false
-        }
-      },
-      {
-        "_": "types.JsonObjectValue",
-        "key": "stargifts_fixed_sale_enabled",
-        "value": {
-          "_": "types.JsonBool",
-          "value": false
         }
       },
       {
@@ -3338,5 +3322,5 @@
       }
     ]
   },
-  "hash": -918126321
+  "hash": 1697514578
 }
