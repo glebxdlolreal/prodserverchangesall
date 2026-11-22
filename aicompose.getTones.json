@@ -3,6 +3,12 @@
   "tones": [
     {
       "_": "types.AiComposeToneDefault",
+      "emoji_id": 5350341795437911403,
+      "title": "Viking",
+      "tone": "viking"
+    },
+    {
+      "_": "types.AiComposeToneDefault",
       "emoji_id": 5442983582882601962,
       "title": "Zen",
       "tone": "zen"
@@ -36,12 +42,6 @@
       "emoji_id": 5350571717922167592,
       "title": "Biblical",
       "tone": "biblical"
-    },
-    {
-      "_": "types.AiComposeToneDefault",
-      "emoji_id": 5350341795437911403,
-      "title": "Viking",
-      "tone": "viking"
     }
   ]
 }
