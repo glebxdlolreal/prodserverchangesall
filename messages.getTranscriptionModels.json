@@ -3,26 +3,26 @@
     "_": "types.TranscriptionModel",
     "document": {
       "_": "types.Document",
-      "access_hash": 5614224786343994720,
+      "access_hash": 1675587658045989372,
       "attributes": [
         {
           "_": "types.DocumentAttributeFilename",
           "file_name": "tinylid.bin.gz"
         }
       ],
-      "date": 1794580755,
+      "date": 1795438134,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xf3\\x86\\xfa~B\\x00\\xb4U|\\xc8H.\\xdee\\xe2W'",
-      "id": 5456570613139286127,
+      "file_reference": "b'\\x00k\\x04K\\x8f\\x1f\\x85\\xf9\\x07\\xbd\\x03\\xabH\\x05\\xacM\\r\\x0e\\xbf{\\xc4'",
+      "id": 5197431034030894146,
       "mime_type": "application/gzip",
-      "size": 3859718,
+      "size": 3873157,
       "thumbs": [],
       "video_thumbs": []
     },
     "languages": [
       "tinylid"
     ],
-    "version": 1
+    "version": 5
   },
   {
     "_": "types.TranscriptionModel",
@@ -37,7 +37,7 @@
       ],
       "date": 1794580803,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2GY\\xf4\\r5!f\\x19\\xee\\x08\\x86\\x86\\x95\\x88\\x14:\\x0b'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\"{7\\xf4\\x02\\xde\\xa1e\\xefp\\x94v\\xf6\\x84Z\\x9a'",
       "id": 5456570613139286128,
       "mime_type": "application/gzip",
       "size": 1945092,
@@ -62,7 +62,7 @@
       ],
       "date": 1794920276,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xed[\\xfb\\x9b\\xc0\\xdcj\\xbd\\x10\\xb5\\xb4\\x1f\\xf2\\xdeL\\x0f'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\\x9b\\xbaj61\\x95?\\xfeH_\\xbbe\\x12g\\xae\\x8d'",
       "id": 5467792662604066006,
       "mime_type": "application/gzip",
       "size": 33400924,
@@ -80,6 +80,32 @@
     "_": "types.TranscriptionModel",
     "document": {
       "_": "types.Document",
+      "access_hash": 4887354210094855649,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "fr-de.tzf.gz"
+        }
+      ],
+      "date": 1795438134,
+      "dc_id": 2,
+      "file_reference": "b'\\x00k\\x04K\\x8f3\\xd7\\xa1\\x9a\\xf3n\\x94)\\x08{\\x1cT\\xeeq<.'",
+      "id": 5197431034030894145,
+      "mime_type": "application/gzip",
+      "size": 32274593,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "de",
+      "fr"
+    ],
+    "version": 5
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
       "access_hash": 7081687879968583000,
       "attributes": [
         {
@@ -89,7 +115,7 @@
       ],
       "date": 1794580821,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xce\\xb3\\xf08v\\xed\\xf7[R\\x85R\\xb4I\\xa6\\x065'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\\xed\\x96R\\x17\\xfa0\\xd2`\\xb5\\xab\\xb1\\xb0\\xbd\\xdf!\\x10'",
       "id": 5456570613139286130,
       "mime_type": "application/gzip",
       "size": 32201827,
@@ -116,7 +142,7 @@
       ],
       "date": 1795384137,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xa9\\x84\\xcd\\xa4\\xb4\\x19O$\\xfe#\\x99\\xc5\\xda\\xb6\\x9d.'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\\x9f$_\\xf6<Nt\\x7f\\x8ar\\xd0)\\xfc\\xe3\\xddC'",
       "id": 5195349688584287871,
       "mime_type": "application/gzip",
       "size": 31301696,
@@ -152,7 +178,7 @@
       ],
       "date": 1795384080,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\x05\\xa3\\xcdQ\\xccG\\xc6\\x00\\xf2\\xb6\\x99\\xe6\\x1e\\xfa\\x9f\\xb8'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\\xd6\\x90Z\\x89y\\x14\\x90\\xd5\\x85<u\\x87\\xf7M|.'",
       "id": 5195349688584287865,
       "mime_type": "application/gzip",
       "size": 31305909,
@@ -168,6 +194,32 @@
     "_": "types.TranscriptionModel",
     "document": {
       "_": "types.Document",
+      "access_hash": -1089757540697118515,
+      "attributes": [
+        {
+          "_": "types.DocumentAttributeFilename",
+          "file_name": "id-ms.tzf.gz"
+        }
+      ],
+      "date": 1795438136,
+      "dc_id": 2,
+      "file_reference": "b'\\x00k\\x04K\\x8f\\xac\\x0c\\x8a\\xbfQ\\x07A\\xa7\\xc3\\x88|\\x0c\\xe5\\x95yM'",
+      "id": 5197431034030894147,
+      "mime_type": "application/gzip",
+      "size": 31307751,
+      "thumbs": [],
+      "video_thumbs": []
+    },
+    "languages": [
+      "id",
+      "ms"
+    ],
+    "version": 5
+  },
+  {
+    "_": "types.TranscriptionModel",
+    "document": {
+      "_": "types.Document",
       "access_hash": 5262728660486284099,
       "attributes": [
         {
@@ -177,7 +229,7 @@
       ],
       "date": 1795187035,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\x1dUX\\xf8\\xaf/\\x85.\\xcc\\xc6RBdrtN'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\"a\\xbd\\x81\\x13\\x08i\\x05\\x957\\xbd\\x80+v\\xcb\\xea'",
       "id": 5188256567274809944,
       "mime_type": "application/gzip",
       "size": 32238677,
@@ -202,7 +254,7 @@
       ],
       "date": 1795092500,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xf5\\x8eZP\\x08N\\x9f\\x05\\x9d\\x9c\\xf6F0\\x15Vg'",
+      "file_reference": "b'\\x00k\\x04K\\x8fT\\xe0\\x93}\"\\x99\\xfaF\\x84\\xbaZ\\xc7*\\xd7e\\x12'",
       "id": 5474531461996523219,
       "mime_type": "application/gzip",
       "size": 34192850,
@@ -229,7 +281,7 @@
       ],
       "date": 1794580860,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xaef\\x10\\xfa\\xa0\\xea\\x13R\\xe4\\xb2\\xc5\\ncA\\xbd1'",
+      "file_reference": "b'\\x00k\\x04K\\x8flY\\xac\\xdf\\xa1c\\xf3|p\\x19\\xd4\\xccC\\xcc\\xb1\\xaa'",
       "id": 5456570613139286134,
       "mime_type": "application/gzip",
       "size": 30123498,
@@ -254,7 +306,7 @@
       ],
       "date": 1794580868,
       "dc_id": 2,
-      "file_reference": "b'\\x00k\\x03\\xa2G\\xbc4\\x82\\x1d\\xd7(d\\xbb\\xf0\\x82\\xe1%a\\xc7\\xccS'",
+      "file_reference": "b'\\x00k\\x04K\\x8f\\xe3]G\\xd4\\xbf\\xb2d\\x90i\\xeeN\\x826e\\xac\\x0b'",
       "id": 5456570613139286135,
       "mime_type": "application/gzip",
       "size": 30127681,
