@@ -1,0 +1,241 @@
+/* Premium Bot Mini App: local additions on top of the design-system stylesheets
+   (premiumbot-tokens/base/components/fx/screens-*.css). No framework, no preprocessor. */
+
+/* The site chrome's base styles colour and underline links in every state, and ring them on any focus. Cells and
+   segments that are links keep the kit's ink there: a row's text colour, an action's accent, a destructive row's red.
+   Only a pointer's focus loses its ring: a keyboard's keeps the kit's, which a segment draws on its thumb
+   (components.css). */
+a.cell:is(:link, :visited, :hover, :active, :focus) {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a.cell--action:is(:link, :visited, :hover, :active, :focus) {
+  color: var(--accent);
+}
+
+a.cell--destructive:is(:link, :visited, :hover, :active, :focus) {
+  color: var(--destructive-ink);
+}
+
+a.segment:is(:link, :visited, :hover, :active, :focus) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.cell:focus:not(:focus-visible),
+a.segment:focus {
+  outline: none;
+}
+
+button.cell {
+  width: 100%;
+  text-align: start;
+}
+
+/* The server prints these parts of a row even when they are empty, and an empty one still takes the gap beside it:
+   4 px off the centre of a plan's name, 12 px at a row's end. */
+.cell-subtitle:empty,
+.cell-trail:empty {
+  display: none;
+}
+
+/* The plan's billing period under its price. */
+.plan-period {
+  color: var(--hint);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* The hero mark's box, as large as its stage's mark (fx.css --fx-mark): 120 px, or 88 on a compact stage. */
+.pm-mark {
+  position: relative;
+  display: block;
+  width: var(--fx-mark, 120px);
+  height: var(--fx-mark, 120px);
+  margin: 0 auto var(--space-16);
+}
+
+/* The flat glyph is the mark's fallback, Telegram's Premium glyph or the Star. It shows only under .is-flat, which
+   premiumbot-3d.js sets where the 3D mark cannot draw or is slow to, so a normal load never flashes it. */
+.pm-mark-glyph {
+  position: absolute;
+  inset: 6%;
+  display: none;
+  background: var(--brand-gradient, linear-gradient(90deg, #6b93ff, #976fff, #e169a0));
+  -webkit-mask: url(../img/premiumbot/ui-premium.svg) center / contain no-repeat;
+  mask: url(../img/premiumbot/ui-premium.svg) center / contain no-repeat;
+}
+
+.pm-mark--stars .pm-mark-glyph {
+  background: linear-gradient(180deg, #ffe071, #f5a623);
+  -webkit-mask-image: url(../img/premiumbot/ui-star.svg);
+  mask-image: url(../img/premiumbot/ui-star.svg);
+}
+
+/* The golden star's soft halo: the 3D star's own silhouette added as light, so in dark only and only behind that
+   star, not the flat glyph, whose star is another shape. premiumbot-3d.js sets its box and turns it with the star. */
+.pm-mark-bloom {
+  position: absolute;
+  display: none;
+  background: url(../img/premiumbot/star-bloom.svg) center / 100% 100% no-repeat;
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+}
+
+.theme-dark .pm-mark.is-3d .pm-mark-bloom {
+  display: block;
+}
+
+/* The WebGL mark's canvas, which premiumbot-3d.js sizes and centres on the mark. Where the mark falls back the script
+   hides it, and the glyph shows in its place. */
+.pm-mark-gl {
+  position: absolute;
+}
+
+.pm-mark.is-flat .pm-mark-glyph {
+  display: block;
+}
+
+/* Twinkling sparkles around the flat glyph, shown with it alone: the 3D mark has the stage's own particles. */
+.pm-twinkle {
+  position: absolute;
+  display: none;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, var(--twinkle-c), transparent 80%);
+  opacity: 0;
+  animation: pm-twinkle 3.1s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.pm-mark.is-flat .pm-twinkle {
+  display: block;
+}
+
+@keyframes pm-twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  45% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pm-twinkle {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* Toasts: created by premiumbot.js inside .toast-region (base styles live in premiumbot-components.css). */
+
+/* Peer picker status line under the picker cell. */
+.pm-picker-status {
+  display: block;
+  margin-top: var(--space-8);
+  color: var(--hint);
+  font-size: var(--fs-sub);
+  line-height: var(--lh-sub);
+}
+
+.pm-picker-status.is-error {
+  color: var(--destructive, var(--fb-destructive));
+}
+
+.pm-picker-status:empty {
+  display: none;
+}
+
+/* On the gift pages the footer under the choose row holds the status alone: it keeps no room while the status is
+   empty, and the status text starts where a footer's text does. */
+.commerce--gift .section-footer:has(> .pm-picker-status:empty) {
+  display: none;
+}
+
+.commerce--gift .pm-picker-status {
+  margin-top: 0;
+}
+
+/* Two choice cells in one row (Choose Channel / Choose Group). */
+/* One choice under the other: side by side a label of two words wraps in a phone's column. */
+.pm-choice-cells {
+  display: grid;
+  gap: var(--space-12);
+}
+
+/* Each choice is an island of its own: no row separator between them. */
+.pm-choice-cells .cell + .cell::before {
+  display: none;
+}
+
+/* Hidden giveaway option records; the client resolves selections against them. */
+.js-gw-matrix {
+  display: none;
+}
+
+/* Error screen actions: an island each, inside the page's gutters. Islands of their own have no row separator. */
+.pm-error-actions {
+  display: grid;
+  gap: var(--space-12);
+  margin: var(--space-16) var(--gutter) 0;
+}
+
+.pm-error-actions .cell + .cell::before {
+  display: none;
+}
+
+/* A purchase page shorter than the screen still docks its pay bar at the bottom: the block is a column as tall as
+   the viewport under the screen's 16 px top padding, and the bar takes the far end. */
+.subscription--paywall {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--tg-viewport-stable-height, 100vh) - var(--tg-safe-area-inset-top, 0px) - var(--tg-content-safe-area-inset-top, 0px) - var(--space-16));
+}
+
+.subscription--paywall > .cta-bar {
+  margin-top: auto;
+}
+
+/* Results. Where the client has no native button, premiumbot.js ends a result with the page's own bar. The screen is
+   a column as tall as the viewport under its 16 px top padding, so the stage takes what that bar leaves and the page
+   does not scroll by the bar's height. */
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--tg-viewport-stable-height, 100vh) - var(--tg-safe-area-inset-top, 0px) - var(--tg-content-safe-area-inset-top, 0px) - var(--space-16));
+}
+
+@supports (min-height: round(down, 100vh, 4px)) {
+  .result-screen {
+    min-height: calc(round(down, var(--tg-viewport-stable-height, 100vh) - var(--tg-safe-area-inset-top, 0px) - var(--tg-content-safe-area-inset-top, 0px), 4px) - var(--space-16));
+  }
+}
+
+.result-screen > .fx-stage {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+/* Hero artwork: the server-rendered Lottie marks. Telegram's colour art plays as it is, with no disc behind it
+   (design §11.7), as large as the stage's mark (fx.css --fx-mark); the server sets no size on the element. */
+.hero-media > .lottie,
+.hero.fx-field > .lottie {
+  width: var(--fx-mark, 120px);
+  height: var(--fx-mark, 120px);
+  margin-inline: auto;
+}
+
+.hero-media > .lottie canvas,
+.lottie > canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The lone winners row states facts the user must read: its value takes the readable grey, not the hint. */
+.pm-gw-fixed .cell-value {
+  color: var(--secondary-text);
+}
