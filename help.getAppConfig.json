@@ -2356,7 +2356,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 0.9440066772650079
+          "value": 0.9501287400629621
         }
       },
       {
@@ -3343,8 +3343,16 @@
           "_": "types.JsonString",
           "value": "premium"
         }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "bot_invites_enabled",
+        "value": {
+          "_": "types.JsonBool",
+          "value": true
+        }
       }
     ]
   },
-  "hash": 554047618
+  "hash": 703324369
 }
