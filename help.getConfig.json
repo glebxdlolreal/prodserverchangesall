@@ -8,7 +8,7 @@
   "caption_length_max": 1024,
   "channels_read_media_period": 604800,
   "chat_size_max": 200,
-  "date": 1793348041,
+  "date": 1795650918,
   "dc_options": [
     {
       "_": "types.DcOption",
@@ -266,9 +266,10 @@
   "dc_txt_domain_name": "apv3.stel.com",
   "default_p2p_contacts": true,
   "edit_time_limit": 172800,
-  "expires": 1793351211,
+  "expires": 1795654257,
   "force_try_ipv6": false,
   "forwarded_count_max": 100,
+  "fpnv_allowed": false,
   "gif_search_username": "gif",
   "img_search_username": "bing",
   "me_url_prefix": "https://t.me/",
