@@ -2356,7 +2356,7 @@
         "key": "ton_usd_rate",
         "value": {
           "_": "types.JsonNumber",
-          "value": 0.9501287400629621
+          "value": 0.9632774393311903
         }
       },
       {
@@ -3351,8 +3351,16 @@
           "_": "types.JsonBool",
           "value": true
         }
+      },
+      {
+        "_": "types.JsonObjectValue",
+        "key": "stargifts_merged_resale_collections_limit",
+        "value": {
+          "_": "types.JsonNumber",
+          "value": 5.0
+        }
       }
     ]
   },
-  "hash": 703324369
+  "hash": -767152223
 }
